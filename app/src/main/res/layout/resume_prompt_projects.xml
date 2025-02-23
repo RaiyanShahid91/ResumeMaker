@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:elevation="@dimen/dp_10"
+    app:cardCornerRadius="@dimen/dp_15"
+    app:cardElevation="@dimen/dp_10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/projects"
+                    android:textColor="@color/dodgerblue"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/project_name_title"
+                    android:textColor="@color/dodgerblue"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/edittext_project_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittext_focused_effect"
+                    android:hint="@string/sign_language_interpreter"
+                    android:inputType="textCapSentences"
+                    android:maxLength="200"
+                    android:padding="15dp"
+                    android:textCursorDrawable="@drawable/custom_cursor"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/description"
+                    android:textColor="@color/dodgerblue"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/edittext_project_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittext_focused_effect"
+                    android:gravity="top"
+                    android:hint="@string/a_sign_language_interpreter_is_a_professional_who_is_fluent_in_two_or_more_sign_languages_and_interprets_between_a_source_language_and_a_target_language_and_mediate_across_cultures_the_interpreter_apos_s_task_is_to_facilitate_communication_in_a_neutral_manner_ensuring_equal_access_to_information_and_participation"
+                    android:inputType="none|text|textCapSentences|textMultiLine"
+                    android:maxLength="200"
+                    android:padding="15dp"
+                    android:textCursorDrawable="@drawable/custom_cursor"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/duration"
+                    android:textColor="@color/dodgerblue"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/duration_from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_focused_effect"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:text="@string/start"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_14" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:text=" - "
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/sp_14" />
+
+                    <TextView
+                        android:id="@+id/duration_to"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_focused_effect"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:text="@string/end"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_14" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/project_link"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/edittext_project_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittext_focused_effect"
+                    android:gravity="top"
+                    android:hint="@string/provide_your_project_link"
+                    android:inputType="text"
+                    android:maxLength="500"
+                    android:padding="15dp"
+                    android:textCursorDrawable="@drawable/custom_cursor"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/button_save_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/button_ripple_effect"
+                android:paddingLeft="50dp"
+                android:paddingTop="10dp"
+                android:paddingRight="50dp"
+                android:paddingBottom="10dp"
+                android:text="@string/save_details"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/button_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:paddingLeft="50dp"
+                android:paddingTop="10dp"
+                android:paddingRight="50dp"
+                android:paddingBottom="10dp"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/red"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

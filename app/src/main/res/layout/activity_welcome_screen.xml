@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="co.resume.welcome.WelcomeScreen">
+
+    <TextView
+        android:id="@+id/selectedLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:gravity="center"
+        android:text="@string/english"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toBottomOf="@+id/langauge_txt"
+        app:layout_constraintEnd_toStartOf="@+id/langauge_txt"
+        app:layout_constraintTop_toTopOf="@+id/langauge_txt" />
+
+    <Spinner
+        android:id="@+id/langauge_txt"
+        android:layout_width="@dimen/dp_35"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:padding="@dimen/dp_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_250"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginEnd="@dimen/dp_40"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/resume" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:fontFamily="@font/abyssinica_sil"
+        android:gravity="center"
+        android:text="@string/build_a_professional_resume_for_free"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_30"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="@+id/lottieAnimationView"
+        app:layout_constraintStart_toStartOf="@+id/lottieAnimationView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:fontFamily="@font/avenirltstd_medium"
+        android:gravity="center"
+        android:text="@string/create_a_resume_easily_with_our_free_builder_and_professional_templates"
+        android:textColor="@color/light_grey"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toTopOf="@+id/btn_started"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/btn_started"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:background="@drawable/round_button"
+        android:fontFamily="@font/abyssinica_sil"
+        android:text="@string/get_started"
+        android:paddingTop="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_20"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toTopOf="@+id/ll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/txt_login_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/avenirltstd_medium"
+            android:text="@string/already_have_an_account"
+            android:textColor="@color/light_grey"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:fontFamily="@font/avenirltstd_medium"
+            android:text="@string/login"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_login_label"
+            app:layout_constraintStart_toEndOf="@+id/txt_login_label"
+            app:layout_constraintTop_toTopOf="@+id/txt_login_label" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

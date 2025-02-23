@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@drawable/gradient" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/layout_bottom">
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/imageView" android:layout_width="match_parent" android:layout_height="500dp" android:src="@drawable/benefits_of_subscription" android:scaleType="fitCenter"/>
+                <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="16sp" android:textColor="#fff" android:layout_gravity="center" android:id="@+id/subscription_status" android:background="@null" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="0dp" android:layout_marginBottom="10dp" android:text="Status: " android:textAlignment="center"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/layout_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <TextView android:textSize="14sp" android:textColor="@color/white" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="One Time Purchase"/>
+        <Button android:textSize="14sp" android:textStyle="bold" android:textColor="@color/dodgerblue" android:layout_gravity="center" android:id="@+id/download_pro_version" android:background="@drawable/button_ripple_effect" android:padding="12.5dp" android:layout_width="300dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="30dp" android:text="Download PRO Version" app:backgroundTint="@color/white"/>
+    </LinearLayout>
+</RelativeLayout>

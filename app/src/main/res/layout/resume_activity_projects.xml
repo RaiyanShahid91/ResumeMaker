@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/button_add_project_details">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:id="@+id/layout_no_data_found"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_60"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/lottieAnimationView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_150"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_empty_box" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_10"
+                        android:text="@string/nothing_to_show"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_14" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <ImageView
+            android:id="@+id/button_add_project_details"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ad_btn"
+            android:scaleType="centerInside"
+            app:maxImageSize="@dimen/dp_25"
+            android:src="@drawable/ic_baseline_add_24"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:contentDescription="TODO"
+            app:tint="@color/white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

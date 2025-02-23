@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1e90ff</color>
+    <color name="colorPrimaryDark">#1e90ff</color>
+    <color name="colorAccent">#1e90ff</color>
+
+    <color name="primarymain">#1e90ff</color>
+    <color name="colorlight">#d2e8ff</color>
+
+    <color name="colorlightdark">#d2e8ff</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="blackads">#1a1a1a</color>
+    <color name="black1">#4c4c4c</color>
+
+
+
+
+    <color name="adstext">#000000</color>
+
+
+    <color name="colorbtn1">#ffb979</color>
+    <color name="colorbtn2">#7f90ff</color>
+    <color name="colorbtn3">#ff7b7c</color>
+    <color name="colorbtn4">#c67cff</color>
+    <color name="colorbtn5">#7abe20</color>
+    <color name="colorbtn6">#ff447f</color>
+    <color name="colorbtn7">#ff791b</color>
+    <color name="colorbtn8">#ff7ce8</color>
+    <color name="colorGrey">#808080</color>
+
+
+    <color name="dodgerblue">#1e90ff</color>
+    <color name="gray">#808080</color>
+    <color name="lightgray">#eeeeee</color>
+    <color name="orange">#ffa500</color>
+    <color name="purple_200">#ffbb86fc</color>
+    <color name="purple_500">#ff6200ee</color>
+    <color name="purple_700">#1e90ff</color>
+    <color name="seagreen">#2e8b57</color>
+    <color name="teal_200">#ff03dac5</color>
+    <color name="teal_700">#ff018786</color>
+    <color name="tomato">#ff6347</color>
+    <color name="red">#B61D01</color>
+
+    <color name="Olive_Green">#a2bd6b</color>
+    <color name="Olive_Green2">#c2e969</color>
+    <color name="Mint_Green">#79be86</color>
+    <color name="Dark_Green">#1d543d</color>
+    <color name="Periwinkle">#c5caff</color>
+    <color name="Light_Gray">#f4f4f4</color>
+    <color name="Charcoal">#3c4041</color>
+    <color name="light_grey">#A2A0A0</color>
+    <color name="new_light_gray">#F0F0F0</color>
+    <color name="loader_background">#E9000000</color>
+
+</resources>

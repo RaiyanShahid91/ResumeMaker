@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btm1"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/name"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edittext_person_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_focused_effect"
+                android:hint="@string/name"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"
+                android:maxLength="200"
+                android:padding="15dp"
+                android:textCursorDrawable="@drawable/custom_cursor"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/email_id"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edittext_person_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_focused_effect"
+                android:hint="@string/email_id"
+                android:textColor="@color/black"
+                android:inputType="textEmailAddress"
+                android:maxLength="200"
+                android:padding="15dp"
+                android:textCursorDrawable="@drawable/custom_cursor"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/phone"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edittext_person_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_focused_effect"
+                android:hint="@string/phone_number"
+                android:inputType="phone"
+                android:textColor="@color/black"
+                android:maxLength="200"
+                android:padding="15dp"
+                android:textCursorDrawable="@drawable/custom_cursor"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/address"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edittext_person_address"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_focused_effect"
+                android:gravity="top"
+                android:hint="@string/address"
+                android:inputType="none|text|textCapSentences|textMultiLine"
+                android:maxLength="500"
+                android:padding="15dp"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@drawable/custom_cursor"
+                android:textSize="@dimen/sp_14" />
+
+            <Button
+                android:id="@+id/button_save_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/button_ripple_effect"
+                android:paddingLeft="50dp"
+                android:paddingTop="10dp"
+                android:paddingRight="50dp"
+                android:paddingBottom="10dp"
+                android:text="@string/save_details"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                app:backgroundTint="@color/colorAccent" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/btm1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <include
+            android:id="@+id/reguler_banner_ad"
+            layout="@layout/ads_layout_banner"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

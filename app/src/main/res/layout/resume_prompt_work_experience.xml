@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:elevation="@dimen/dp_10"
+    app:cardCornerRadius="@dimen/dp_15"
+    app:cardElevation="@dimen/dp_10">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                android:text="@string/work_experience"
+                android:textColor="@color/dodgerblue"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/job_title_role"
+                android:textColor="@color/dodgerblue"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edittext_work_experience_job"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_focused_effect"
+                android:hint="@string/software_engineer"
+                android:inputType="textCapSentences"
+                android:maxLength="200"
+                android:padding="15dp"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@drawable/custom_cursor"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/company_organization"
+                android:textColor="@color/dodgerblue"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edittext_work_experience_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_focused_effect"
+                android:hint="@string/aloask_technologies"
+                android:inputType="textCapSentences"
+                android:maxLength="200"
+                android:padding="15dp"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@drawable/custom_cursor"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/duration"
+                android:textColor="@color/dodgerblue"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/duration_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_focused_effect"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="@string/start"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text=" - "
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/duration_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_focused_effect"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="@string/end"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <CheckBox
+                    android:id="@+id/ongoing_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:text="@string/ongoing"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/description"
+                android:textColor="@color/dodgerblue"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edittext_work_experience_description"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_focused_effect"
+                android:gravity="top"
+                android:hint="@string/write_some_description_regarding_your_work"
+                android:inputType="none|text|textCapSentences|textMultiLine"
+                android:maxLength="500"
+                android:padding="15dp"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@drawable/custom_cursor"
+                android:textSize="@dimen/sp_14" />
+
+            <Button
+                android:id="@+id/button_save_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/button_ripple_effect"
+                android:paddingLeft="50dp"
+                android:paddingTop="10dp"
+                android:paddingRight="50dp"
+                android:paddingBottom="10dp"
+                android:text="@string/save_details"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/button_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:paddingLeft="50dp"
+                android:paddingTop="10dp"
+                android:paddingRight="50dp"
+                android:paddingBottom="10dp"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/red"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.cardview.widget.CardView>

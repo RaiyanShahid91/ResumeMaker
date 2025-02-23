@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "771460177790",
+    "project_id": "resume-maker-aec81",
+    "storage_bucket": "resume-maker-aec81.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771460177790:android:85b34252636052a86ddd2f",
+        "android_client_info": {
+          "package_name": "app.craft.myresume"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "771460177790-bfkhe00nngs52krj2rrfst95lf6an9fb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.craft.myresume",
+            "certificate_hash": "5d5123ec54ffda7fedee09ec0dcc278fb567bc8f"
+          }
+        },
+        {
+          "client_id": "771460177790-fcqctfoquq4kome96ootlkt70l8c0001.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP7X5aPh2x3r9Q5D0b7H6eUy97VAMiy1o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "771460177790-fcqctfoquq4kome96ootlkt70l8c0001.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

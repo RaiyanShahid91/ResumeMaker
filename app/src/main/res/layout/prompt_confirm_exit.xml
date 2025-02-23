@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm Exit?"
+        android:gravity="center"
+        android:textColor="@color/dodgerblue"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/prompt_textview"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Are you sure you want to exit?"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp">
+        <Button android:textColor="@color/white" android:id="@+id/prompt_button_yes" android:background="@drawable/button_ripple_effect" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Yes" app:backgroundTint="@null"/>
+        <Button android:textColor="@color/white" android:id="@+id/prompt_button_no" android:background="@drawable/button_ripple_effect" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="No" app:backgroundTint="@color/tomato"/>
+    </LinearLayout>
+</LinearLayout>

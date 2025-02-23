@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient">
+
+    <RelativeLayout
+        android:layout_above="@+id/btm1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="⚙️  Settings"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Primary Color:"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner_color_one"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_weight="4"
+                        android:padding="0dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_radius_small"
+                        android:orientation="horizontal"
+                        android:padding="2.5dp"
+                        app:backgroundTint="@color/white">
+
+                        <LinearLayout
+                            android:id="@+id/layout_color_one"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border_radius_small"
+                            android:orientation="horizontal" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp">
+                <TextView android:textSize="16sp" android:textColor="@color/white" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Secondary Color:"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <Spinner android:id="@+id/spinner_color_two" android:padding="0dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="15dp" android:layout_weight="4"/>
+                    <LinearLayout android:orientation="horizontal" android:background="@drawable/border_radius_small" android:padding="2.5dp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="15dp" android:layout_weight="1" app:backgroundTint="@color/white">
+                        <LinearLayout android:orientation="horizontal" android:id="@+id/layout_color_two" android:background="@drawable/border_radius_small" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp">
+                <TextView android:textSize="16sp" android:textColor="@color/white" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Font:"/>
+                <Spinner android:id="@+id/spinner_font_family" android:padding="0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/gradient"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/button_save_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_ripple_effect"
+                android:paddingLeft="50dp"
+                android:paddingTop="10dp"
+                android:paddingRight="50dp"
+                android:paddingBottom="10dp"
+                android:text="Save Settings"
+                android:textColor="@color/dodgerblue"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+   <RelativeLayout
+            android:id="@+id/btm1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+
+            <include
+                android:id="@+id/reguler_banner_ad"
+                layout="@layout/ads_layout_banner"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+</RelativeLayout>

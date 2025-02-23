@@ -1,0 +1,7 @@
+<!-- res/drawable/button_background.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Enabled State -->
+    <item android:drawable="@drawable/round_button" android:state_enabled="true" />
+    <!-- Disabled State -->
+    <item android:drawable="@drawable/round_disable_button" android:state_enabled="false" />
+</selector>

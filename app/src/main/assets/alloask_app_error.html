@@ -1,0 +1,78 @@
+<meta name='viewport' content='user-scalable=0,width=device-width'/>
+
+<center>
+    <div class='container'>
+        <img src='logo.png' />
+        <h1>No Internet Connection</h1>
+        <p>Please check your internet connection and try again.</p>
+        <button onclick='history.go(-1)'>Refresh</button>
+    </div>
+
+    <div class='footer'>
+        <center>
+            Resume Builder
+        </center>
+    </div>
+</center>
+
+
+
+<style>
+    @font-face {
+        font-family: 'Quicksand';
+        src: url('file:///android_asset/font/quicksand_font.ttf');
+    }
+
+    :root{
+        --theme-color: #1E90FF;
+        --secondary-color: #00BFFF;
+        --white-color: white;
+    }
+    button, html{
+        font-family: 'Quicksand';
+    }
+    html{
+        font-family: 'Quicksand';
+        color: var(--white-color);
+        background: linear-gradient(to right, var(--theme-color) 0%, var(--secondary-color) 100%);
+    }
+    .container{
+        width: 90%;
+        margin-top: 100px;
+        text-align: center;
+    }
+    img{
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+        margin-bottom: 20px;
+    }
+    h1{
+        font-size: 25px;
+    }
+    p{
+        font-size: 20px;
+    }
+    button{
+        color: var(--theme-color);
+        background: var(--white-color);
+        width: 90%;
+        height: 60px;
+        border-radius: 30px;
+        border: none;
+        outline: none;
+        font-size: 20px;
+    }
+    button:active{
+        transform: scale(0.95);
+    }
+
+    .footer{
+        font-size: 22px;
+        font-weight: bold;
+        bottom: 20px;
+        text-align: center;
+        width: 100%;
+        position: fixed;
+    }
+</style>

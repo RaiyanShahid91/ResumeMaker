@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:padding="15dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="20sp" android:textColor="@color/dodgerblue" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Subscription Required"/>
+    <TextView android:textSize="16sp" android:textColor="@color/black" android:id="@+id/prompt_textview" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text=""/>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp">
+        <Button android:textColor="@color/white" android:id="@+id/prompt_button_yes" android:background="@drawable/button_ripple_effect" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Subscribe PRO" app:backgroundTint="@null"/>
+        <Button android:textColor="@color/gray" android:id="@+id/prompt_button_no" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="No, Thanks" app:backgroundTint="@null"/>
+    </LinearLayout>
+</LinearLayout>
