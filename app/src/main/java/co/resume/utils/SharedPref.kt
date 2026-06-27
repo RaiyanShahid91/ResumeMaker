@@ -2,8 +2,12 @@ package co.resume.utils
 
 import android.content.Context
 import android.content.SharedPreferences
+import dagger.hilt.android.qualifiers.ApplicationContext
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class SharedPref(context: Context) {
+@Singleton
+class SharedPref @Inject constructor(@ApplicationContext context: Context) {
 
     private val sharedPreferences: SharedPreferences =
         context.getSharedPreferences(Constants.RESUME_MAKER_PREF, Context.MODE_PRIVATE)

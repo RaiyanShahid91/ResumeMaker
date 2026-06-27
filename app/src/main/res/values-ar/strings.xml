@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Navigation -->
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_my_resume">سيرتي الذاتية</string>
+    <string name="nav_settings">الإعدادات</string>
+    <string name="nav_create_resume">إنشاء سيرة ذاتية</string>
+
+    <!-- Home screen -->
+    <string name="home_welcome">مرحباً بعودتك!</string>
+    <string name="home_subtitle">أنشئ سيرتك الذاتية المثالية واحصل على وظيفة أحلامك.</string>
+    <string name="home_create_btn">إنشاء سيرة ذاتية جديدة</string>
+    <string name="home_featured_templates">قوالب مميزة</string>
+    <string name="home_see_all">عرض الكل</string>
+    <string name="home_quick_actions">إجراءات سريعة</string>
+    <string name="home_action_create">إنشاء سيرة ذاتية</string>
+    <string name="home_action_create_desc">أنشئ سيرة ذاتية جديدة من الصفر.</string>
+    <string name="home_action_resumes">سيراتي الذاتية</string>
+    <string name="home_action_resumes_desc">عرض وإدارة سيراتك الذاتية المحفوظة.</string>
+    <string name="home_action_templates">جميع القوالب</string>
+    <string name="home_action_templates_desc">تصفح القوالب حسب الفئة.</string>
+    <string name="home_tips_title">نصائح للسيرة الذاتية</string>
+    <string name="tip_one_page_title">التزم بصفحة واحدة</string>
+    <string name="tip_one_page_body">يقضي المسؤولون عن التوظيف ~7 ثوانٍ على السيرة. ركّز على الأثر لا على الطول.</string>
+    <string name="tip_quantify_title">قيّم إنجازاتك بالأرقام</string>
+    <string name="tip_quantify_body">استخدم الأرقام – \'زادت المبيعات 30%\' أفضل من \'حسّنت المبيعات.\'</string>
+    <string name="tip_tailor_title">خصّص كل سيرة ذاتية</string>
+    <string name="tip_tailor_body">اضبط هدفك ومهاراتك لكل إعلان وظيفي.</string>
+    <string name="tip_verbs_title">استخدم أفعال النشاط</string>
+    <string name="tip_verbs_body">ابدأ النقاط بأفعال مثل قدتُ، بنيتُ، صمّمتُ، سلّمتُ.</string>
+    <string name="tip_skills_title">أبرز أهم مهاراتك</string>
+    <string name="tip_skills_body">ضع مهاراتك الأقوى والأكثر صلة في أعلى السيرة الذاتية.</string>
+    <string name="home_did_you_know">هل تعلم؟</string>
+    <string name="home_did_you_know_body">يتم رفض 75% من السير الذاتية بواسطة أنظمة التتبع قبل أن يراها أي إنسان. استخدام قالب نظيف وكلمات مفتاحية مطابقة يساعدك على الاجتياز.</string>
+
+    <!-- Settings -->
+    <string name="settings_language">اللغة</string>
+    <string name="settings_select_language">اختر اللغة</string>
+    <string name="settings_help">مساعدة</string>
+    <string name="settings_user_guide">دليل المستخدم</string>
+    <string name="settings_about">حول</string>
+    <string name="settings_privacy">سياسة الخصوصية</string>
+    <string name="settings_contact">اتصل بنا</string>
+    <string name="settings_rate_app">قيّم التطبيق</string>
+    <string name="settings_write_us">راسلنا</string>
+    <string name="settings_version">إصدار التطبيق: %1$s</string>
+    <string name="settings_currently">الحالي: %1$s</string>
+
+    <!-- Create / Edit -->
+    <string name="create_resume_heading">إنشاء سيرة ذاتية جديدة</string>
+    <string name="label_full_name">الاسم الكامل</string>
+    <string name="label_designation">المسمى الوظيفي</string>
+    <string name="btn_create">إنشاء</string>
+    <string name="no_resumes_hint">لا توجد سير ذاتية بعد. انقر على + لإنشاء أولى سيرة.</string>
+
+    <!-- Templates -->
+    <string name="choose_template">اختر قالباً</string>
+    <string name="browse_templates">تصفح القوالب</string>
+    <string name="use_this_template">استخدم هذا القالب</string>
+    <string name="already_using_template">تستخدم هذا القالب بالفعل</string>
+    <string name="create_with_template">إنشاء سيرة ذاتية بهذا القالب</string>
+
+    <!-- Template categories -->
+    <string name="template_cat_all">الكل</string>
+    <string name="template_cat_professional">احترافي</string>
+    <string name="template_cat_creative">إبداعي</string>
+    <string name="template_cat_developer">مطور</string>
+    <string name="template_cat_designer">مصمم</string>
+    <string name="template_cat_teacher">معلم</string>
+
+    <!-- Resume editor sections -->
+    <string name="section_personal">البيانات الشخصية</string>
+    <string name="section_photo">الصورة الشخصية</string>
+    <string name="section_objective">الهدف</string>
+    <string name="section_education">التعليم</string>
+    <string name="section_work_experience">الخبرة العملية</string>
+    <string name="section_skills">المهارات</string>
+    <string name="section_projects">المشاريع</string>
+    <string name="section_achievements">الإنجازات</string>
+    <string name="section_languages">اللغات</string>
+    <string name="section_interests">الاهتمامات</string>
+    <string name="section_hobbies">الهوايات</string>
+    <string name="section_declaration">الإقرار</string>
+    <string name="section_signature">التوقيع</string>
+</resources>

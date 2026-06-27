@@ -4,7 +4,7 @@ import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import androidx.multidex.BuildConfig
+import co.resumeai.BuildConfig
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.jsoup.Jsoup
@@ -12,7 +12,7 @@ import org.jsoup.Jsoup
 object VersionCheckUtils {
 
     // Replace with your actual package name
-    private const val PACKAGE_NAME = "app.craft.myresume"
+    private const val PACKAGE_NAME = "co.resumeai"
 
     // Check for newer version on the Play Store
     suspend fun isUpdateAvailable(context: Context): Boolean {

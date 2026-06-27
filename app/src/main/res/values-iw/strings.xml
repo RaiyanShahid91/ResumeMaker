@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Navigation -->
+    <string name="nav_home">דף הבית</string>
+    <string name="nav_my_resume">קורות החיים שלי</string>
+    <string name="nav_settings">הגדרות</string>
+    <string name="nav_create_resume">צור קורות חיים</string>
+
+    <!-- Home screen -->
+    <string name="home_welcome">ברוך שובך!</string>
+    <string name="home_subtitle">צור את קורות החיים המושלמים שלך וקבל את עבודת חלומותיך.</string>
+    <string name="home_create_btn">צור קורות חיים חדשים</string>
+    <string name="home_featured_templates">תבניות מומלצות</string>
+    <string name="home_see_all">ראה הכל</string>
+    <string name="home_quick_actions">פעולות מהירות</string>
+    <string name="home_action_create">צור קורות חיים</string>
+    <string name="home_action_create_desc">בנה קורות חיים חדשים מאפס.</string>
+    <string name="home_action_resumes">קורות החיים שלי</string>
+    <string name="home_action_resumes_desc">הצג ונהל את קורות החיים השמורים שלך.</string>
+    <string name="home_action_templates">כל התבניות</string>
+    <string name="home_action_templates_desc">עיין בתבניות לפי קטגוריה.</string>
+    <string name="home_tips_title">טיפים לקורות חיים</string>
+    <string name="tip_one_page_title">הישאר בדף אחד</string>
+    <string name="tip_one_page_body">מגייסים מקדישים ~7 שניות לקורות חיים. התמקד בהשפעה, לא באורך.</string>
+    <string name="tip_quantify_title">כמת את ההישגים</string>
+    <string name="tip_quantify_body">השתמש במספרים – \'הגדלתי את המכירות ב-30%\' עדיף על \'שיפרתי את המכירות.\'</string>
+    <string name="tip_tailor_title">התאם כל קורות חיים</string>
+    <string name="tip_tailor_body">התאם את המטרה ואת הכישורים שלך לכל מודעת דרושים.</string>
+    <string name="tip_verbs_title">השתמש בפעלי פעולה</string>
+    <string name="tip_verbs_body">התחל נקודות בפעלים כגון הובלתי, בניתי, עיצבתי, סיפקתי.</string>
+    <string name="tip_skills_title">הדגש את הכישורים המובילים</string>
+    <string name="tip_skills_body">מקם את הכישורים החזקים והרלוונטיים ביותר שלך קרוב לחלק העליון.</string>
+    <string name="home_did_you_know">ידעת?</string>
+    <string name="home_did_you_know_body">75% מקורות החיים נדחים על ידי ATS לפני שאדם רואה אותם. שימוש בתבנית נקייה ומילות מפתח תואמות עוזר לך לעבור.</string>
+
+    <!-- Settings -->
+    <string name="settings_language">שפה</string>
+    <string name="settings_select_language">בחר שפה</string>
+    <string name="settings_help">עזרה</string>
+    <string name="settings_user_guide">מדריך למשתמש</string>
+    <string name="settings_about">אודות</string>
+    <string name="settings_privacy">מדיניות פרטיות</string>
+    <string name="settings_contact">יצירת קשר</string>
+    <string name="settings_rate_app">דרג את האפליקציה</string>
+    <string name="settings_write_us">כתוב לנו</string>
+    <string name="settings_version">גרסת האפליקציה: %1$s</string>
+    <string name="settings_currently">כרגע: %1$s</string>
+
+    <!-- Create / Edit -->
+    <string name="create_resume_heading">צור קורות חיים חדשים</string>
+    <string name="label_full_name">שם מלא</string>
+    <string name="label_designation">תפקיד</string>
+    <string name="btn_create">צור</string>
+    <string name="no_resumes_hint">אין עדיין קורות חיים. הקש + כדי ליצור את הראשון שלך.</string>
+
+    <!-- Templates -->
+    <string name="choose_template">בחר תבנית</string>
+    <string name="browse_templates">עיין בתבניות</string>
+    <string name="use_this_template">השתמש בתבנית זו</string>
+    <string name="already_using_template">כבר משתמש בתבנית זו</string>
+    <string name="create_with_template">צור קורות חיים עם תבנית זו</string>
+
+    <!-- Template categories -->
+    <string name="template_cat_all">הכל</string>
+    <string name="template_cat_professional">מקצועי</string>
+    <string name="template_cat_creative">יצירתי</string>
+    <string name="template_cat_developer">מפתח</string>
+    <string name="template_cat_designer">מעצב</string>
+    <string name="template_cat_teacher">מורה</string>
+
+    <!-- Resume editor sections -->
+    <string name="section_personal">פרטים אישיים</string>
+    <string name="section_photo">תמונת פרופיל</string>
+    <string name="section_objective">מטרה</string>
+    <string name="section_education">השכלה</string>
+    <string name="section_work_experience">ניסיון עבודה</string>
+    <string name="section_skills">כישורים</string>
+    <string name="section_projects">פרויקטים</string>
+    <string name="section_achievements">הישגים</string>
+    <string name="section_languages">שפות</string>
+    <string name="section_interests">תחומי עניין</string>
+    <string name="section_hobbies">תחביבים</string>
+    <string name="section_declaration">הצהרה</string>
+    <string name="section_signature">חתימה</string>
+</resources>

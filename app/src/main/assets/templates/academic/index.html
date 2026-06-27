@@ -1,0 +1,227 @@
+<meta name='viewport' content='user-scalable=0, width=device-width' />
+
+<html>
+
+    <body>
+
+        <div class="header">
+            <p class="template_resume_name"></p>
+            <div class="rule_header"></div>
+            <div class="contact_row">
+                <span class="template_resume_email"></span>
+                <span class="dot"> · </span>
+                <span class="template_resume_phone"></span>
+                <span class="dot"> · </span>
+                <span class="template_resume_address"></span>
+            </div>
+            <div class="template_resume_image"></div>
+        </div>
+
+        <div class="content">
+
+            <div class="div_objective">
+                <p class="heading">Research Interest &amp; Profile</p>
+                <div class="template_objective"></div>
+            </div>
+
+            <div class="div_educational_details">
+                <p class="heading">Education</p>
+                <div class="template_educational_details"></div>
+            </div>
+
+            <div class="div_work_experience">
+                <p class="heading">Academic Experience</p>
+                <div class="template_work_experience"></div>
+            </div>
+
+            <div class="div_projects_details">
+                <p class="heading">Research &amp; Publications</p>
+                <div class="template_projects_details"></div>
+            </div>
+
+            <div class="div_achievements_details">
+                <p class="heading">Honors &amp; Awards</p>
+                <div class="template_achievements_details"></div>
+            </div>
+
+            <div class="div_skills_details">
+                <p class="heading">Technical Skills</p>
+                <div class="template_skills_details"></div>
+            </div>
+
+            <div class="div_languages_details">
+                <p class="heading">Languages</p>
+                <div class="template_languages_details"></div>
+            </div>
+
+            <div class="div_interests_details">
+                <p class="heading">Research Interests</p>
+                <div class="template_interests_details"></div>
+            </div>
+
+            <div class="div_hobbies_details">
+                <p class="heading">Activities &amp; Hobbies</p>
+                <div class="template_hobbies_details"></div>
+            </div>
+
+            <div class="div_declaration">
+                <p class="heading">Declaration</p>
+                <div class="template_declaration"></div>
+            </div>
+
+            <div class="outer_div_signature">
+                <div class="div_declaration_place_date">
+                    <div class="template_declaration_place"></div>
+                    <div class="template_declaration_date"></div>
+                </div>
+                <div class="div_signature">
+                    <div class="template_resume_signature"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
+
+<script>
+    function moveEverything(){
+        document.getElementsByClassName("template_resume_image")[0].innerHTML = document.getElementsByClassName("sample_resume_image")[0].innerHTML;
+        document.getElementsByClassName("sample_resume_image")[0].innerHTML = "";
+        document.getElementsByClassName("template_resume_name")[0].innerHTML = document.getElementsByClassName("sample_resume_name")[0].innerHTML;
+        document.getElementsByClassName("sample_resume_name")[0].innerHTML = "";
+        document.getElementsByClassName("template_resume_email")[0].innerHTML = document.getElementsByClassName("sample_resume_email")[0].innerHTML;
+        document.getElementsByClassName("sample_resume_email")[0].innerHTML = "";
+        document.getElementsByClassName("template_resume_phone")[0].innerHTML = document.getElementsByClassName("sample_resume_phone")[0].innerHTML;
+        document.getElementsByClassName("sample_resume_phone")[0].innerHTML = "";
+        document.getElementsByClassName("template_resume_address")[0].innerHTML = document.getElementsByClassName("sample_resume_address")[0].innerHTML;
+        document.getElementsByClassName("sample_resume_address")[0].innerHTML = "";
+        document.getElementsByClassName("template_objective")[0].innerHTML = document.getElementsByClassName("sample_objective")[0].innerHTML;
+        document.getElementsByClassName("sample_objective")[0].innerHTML = "";
+        document.getElementsByClassName("template_educational_details")[0].innerHTML = document.getElementsByClassName("sample_educational_details")[0].innerHTML;
+        document.getElementsByClassName("sample_educational_details")[0].innerHTML = "";
+        document.getElementsByClassName("template_work_experience")[0].innerHTML = document.getElementsByClassName("sample_work_experience")[0].innerHTML;
+        document.getElementsByClassName("sample_work_experience")[0].innerHTML = "";
+        document.getElementsByClassName("template_projects_details")[0].innerHTML = document.getElementsByClassName("sample_projects_details")[0].innerHTML;
+        document.getElementsByClassName("sample_projects_details")[0].innerHTML = "";
+        document.getElementsByClassName("template_skills_details")[0].innerHTML = document.getElementsByClassName("sample_skills_details")[0].innerHTML;
+        document.getElementsByClassName("sample_skills_details")[0].innerHTML = "";
+        document.getElementsByClassName("template_hobbies_details")[0].innerHTML = document.getElementsByClassName("sample_hobbies_details")[0].innerHTML;
+        document.getElementsByClassName("sample_hobbies_details")[0].innerHTML = "";
+        document.getElementsByClassName("template_achievements_details")[0].innerHTML = document.getElementsByClassName("sample_achievements_details")[0].innerHTML;
+        document.getElementsByClassName("sample_achievements_details")[0].innerHTML = "";
+        document.getElementsByClassName("template_interests_details")[0].innerHTML = document.getElementsByClassName("sample_interests_details")[0].innerHTML;
+        document.getElementsByClassName("sample_interests_details")[0].innerHTML = "";
+        document.getElementsByClassName("template_languages_details")[0].innerHTML = document.getElementsByClassName("sample_languages_details")[0].innerHTML;
+        document.getElementsByClassName("sample_languages_details")[0].innerHTML = "";
+        document.getElementsByClassName("template_declaration")[0].innerHTML = document.getElementsByClassName("sample_declaration")[0].innerHTML;
+        document.getElementsByClassName("sample_declaration")[0].innerHTML = "";
+        document.getElementsByClassName("template_declaration_place")[0].innerHTML = document.getElementsByClassName("sample_declaration_place")[0].innerHTML;
+        document.getElementsByClassName("sample_declaration_place")[0].innerHTML = "";
+        document.getElementsByClassName("template_declaration_date")[0].innerHTML = document.getElementsByClassName("sample_declaration_date")[0].innerHTML;
+        document.getElementsByClassName("sample_declaration_date")[0].innerHTML = "";
+        document.getElementsByClassName("template_resume_signature")[0].innerHTML = document.getElementsByClassName("sample_resume_signature")[0].innerHTML;
+        document.getElementsByClassName("sample_resume_signature")[0].innerHTML = "";
+    }
+    moveEverything();
+</script>
+
+<style>
+    :root{
+        --color-one: #1a3a5c;
+        --color-two: #8b0000;
+        --white-color: #ffffff;
+        --black-color: #222222;
+        --gray-color: #555555;
+        --light-rule: #c0c0c0;
+        --font-size: 12px;
+    }
+
+    html{ font-size: var(--font-size); word-wrap: break-word; }
+    body{ margin: 20px 24px; background: var(--white-color); color: var(--black-color); }
+    p{ margin: 2px; }
+
+    .header{ text-align: center; padding-bottom: 12px; }
+
+    .template_resume_image{
+        width: 54px; height: 54px; border-radius: 50%; overflow: hidden;
+        margin: 8px auto 0 auto; background: #eee;
+    }
+    .template_resume_image img{ width: 100%; height: 100%; object-fit: cover; }
+
+    .template_resume_name{
+        font-size: calc(var(--font-size) + 8px); font-weight: 700; color: var(--color-one);
+        margin: 0 0 6px 0; letter-spacing: 0.5px; text-transform: uppercase;
+    }
+
+    .rule_header{ height: 2px; background: var(--color-one); margin: 6px 0; }
+
+    .contact_row{ font-size: calc(var(--font-size) - 1px); color: var(--gray-color); }
+    .contact_row span{ margin: 0 2px; }
+    .dot{ color: var(--light-rule); }
+
+    .heading{
+        font-size: calc(var(--font-size) + 1px); font-weight: 700; color: var(--color-one);
+        text-transform: uppercase; letter-spacing: 1.5px; margin: 16px 0 6px 0;
+        padding-bottom: 3px; border-bottom: 1px solid var(--color-one);
+    }
+
+    .template_objective, .template_declaration{
+        font-size: var(--font-size); color: var(--black-color); line-height: 1.8; text-align: justify;
+    }
+
+    .element_educational_details, .element_work_experience{
+        margin-top: 8px; display: flex; justify-content: space-between; align-items: flex-start;
+        padding-bottom: 6px; border-bottom: 1px dotted var(--light-rule);
+    }
+
+    .element_projects_details, .element_achievements_details{
+        margin-top: 6px; padding-left: 14px; position: relative;
+    }
+    .element_projects_details::before, .element_achievements_details::before{
+        content: "–"; position: absolute; left: 0; color: var(--color-two);
+    }
+
+    .element_skills_details, .element_languages_details,
+    .element_interests_details, .element_hobbies_details{ margin-top: 4px; }
+
+    .template_education_course, .template_experience_job{
+        font-weight: 700; color: var(--black-color); font-size: calc(var(--font-size) + 0px);
+    }
+
+    .template_education_university, .template_experience_company{
+        color: var(--color-two); font-style: italic; font-size: var(--font-size);
+    }
+
+    .template_education_duration, .template_experience_duration{
+        font-size: calc(var(--font-size) - 1px); color: var(--gray-color); white-space: nowrap;
+    }
+
+    .template_education_grade b{ color: var(--color-one); }
+
+    .template_project_name{ font-weight: 700; color: var(--black-color); }
+    .template_project_link{ color: var(--color-two); font-style: italic; font-size: var(--font-size); }
+    .template_project_duration{ color: var(--gray-color); font-size: calc(var(--font-size) - 1px); }
+    .template_project_description{ color: #333; line-height: 1.6; font-size: var(--font-size); }
+
+    .template_experience_description{ color: #333; line-height: 1.6; font-size: var(--font-size); }
+
+    .template_achievement_name{
+        display: block; color: var(--black-color); font-size: var(--font-size); margin: 3px 0;
+    }
+
+    .template_skill_name{
+        display: inline-block; margin-right: 12px; color: var(--black-color); font-size: var(--font-size);
+    }
+    .template_skill_level{ color: var(--gray-color); font-size: calc(var(--font-size) - 1px); }
+
+    .template_language_name, .template_interest_name, .template_hobby_name{
+        display: inline-block; margin-right: 12px; color: var(--black-color); font-size: var(--font-size);
+    }
+
+    .outer_div_signature{ margin-top: 24px; display: flex; padding-bottom: 16px; }
+    .div_declaration_place_date{ flex: 2; font-size: var(--font-size); color: var(--gray-color); }
+    .div_signature{ flex: 1; text-align: right; font-weight: 600; }
+    .signature-img{ width: 70px; object-fit: contain; }
+</style>

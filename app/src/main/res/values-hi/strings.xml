@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Navigation -->
+    <string name="nav_home">होम</string>
+    <string name="nav_my_resume">मेरा रेज़्यूमे</string>
+    <string name="nav_settings">सेटिंग्स</string>
+    <string name="nav_create_resume">रेज़्यूमे बनाएं</string>
+
+    <!-- Home screen -->
+    <string name="home_welcome">वापस स्वागत है!</string>
+    <string name="home_subtitle">अपना परफेक्ट रेज़्यूमे बनाएं और अपनी सपनों की नौकरी पाएं।</string>
+    <string name="home_create_btn">नया रेज़्यूमे बनाएं</string>
+    <string name="home_featured_templates">फीचर्ड टेम्पलेट्स</string>
+    <string name="home_see_all">सभी देखें</string>
+    <string name="home_quick_actions">त्वरित कार्य</string>
+    <string name="home_action_create">रेज़्यूमे बनाएं</string>
+    <string name="home_action_create_desc">स्क्रैच से नया रेज़्यूमे बनाएं।</string>
+    <string name="home_action_resumes">मेरे रेज़्यूमे</string>
+    <string name="home_action_resumes_desc">अपने सहेजे गए रेज़्यूमे देखें और प्रबंधित करें।</string>
+    <string name="home_action_templates">सभी टेम्पलेट्स</string>
+    <string name="home_action_templates_desc">श्रेणी के अनुसार टेम्पलेट्स ब्राउज़ करें।</string>
+    <string name="home_tips_title">रेज़्यूमे टिप्स</string>
+    <string name="tip_one_page_title">एक पेज पर रहें</string>
+    <string name="tip_one_page_body">रिक्रूटर्स रेज़्यूमे पर ~7 सेकंड बिताते हैं। लंबाई नहीं, प्रभाव पर ध्यान दें।</string>
+    <string name="tip_quantify_title">उपलब्धियों को मापें</string>
+    <string name="tip_quantify_body">संख्याओं का उपयोग करें – \'बिक्री 30% बढ़ाई\' \'बिक्री सुधारी\' से बेहतर है।</string>
+    <string name="tip_tailor_title">हर रेज़्यूमे को कस्टमाइज़ करें</string>
+    <string name="tip_tailor_body">हर नौकरी के लिए अपना उद्देश्य और कौशल बदलें।</string>
+    <string name="tip_verbs_title">क्रिया शब्दों का प्रयोग करें</string>
+    <string name="tip_verbs_body">बुलेट पॉइंट क्रियाओं से शुरू करें जैसे नेतृत्व किया, बनाया, डिज़ाइन किया, दिया।</string>
+    <string name="tip_skills_title">शीर्ष कौशल उजागर करें</string>
+    <string name="tip_skills_body">अपने सबसे मजबूत और प्रासंगिक कौशल शीर्ष पर रखें।</string>
+    <string name="home_did_you_know">क्या आप जानते हैं?</string>
+    <string name="home_did_you_know_body">75% रेज़्यूमे किसी इंसान द्वारा देखे जाने से पहले ATS द्वारा अस्वीकार कर दिए जाते हैं। साफ़ टेम्पलेट और मेलखाने वाले कीवर्ड का उपयोग मदद करता है।</string>
+
+    <!-- Settings -->
+    <string name="settings_language">भाषा</string>
+    <string name="settings_select_language">भाषा चुनें</string>
+    <string name="settings_help">सहायता</string>
+    <string name="settings_user_guide">उपयोगकर्ता मार्गदर्शिका</string>
+    <string name="settings_about">हमारे बारे में</string>
+    <string name="settings_privacy">गोपनीयता नीति</string>
+    <string name="settings_contact">संपर्क करें</string>
+    <string name="settings_rate_app">ऐप रेट करें</string>
+    <string name="settings_write_us">हमें लिखें</string>
+    <string name="settings_version">ऐप संस्करण: %1$s</string>
+    <string name="settings_currently">वर्तमान: %1$s</string>
+
+    <!-- Create / Edit -->
+    <string name="create_resume_heading">नया रेज़्यूमे बनाएं</string>
+    <string name="label_full_name">पूरा नाम</string>
+    <string name="label_designation">पदनाम</string>
+    <string name="btn_create">बनाएं</string>
+    <string name="no_resumes_hint">अभी तक कोई रेज़्यूमे नहीं। पहला बनाने के लिए + दबाएं।</string>
+
+    <!-- Templates -->
+    <string name="choose_template">टेम्पलेट चुनें</string>
+    <string name="browse_templates">टेम्पलेट्स ब्राउज़ करें</string>
+    <string name="use_this_template">यह टेम्पलेट उपयोग करें</string>
+    <string name="already_using_template">यह टेम्पलेट पहले से उपयोग में है</string>
+    <string name="create_with_template">इस टेम्पलेट के साथ रेज़्यूमे बनाएं</string>
+
+    <!-- Template categories -->
+    <string name="template_cat_all">सभी</string>
+    <string name="template_cat_professional">व्यावसायिक</string>
+    <string name="template_cat_creative">रचनात्मक</string>
+    <string name="template_cat_developer">डेवलपर</string>
+    <string name="template_cat_designer">डिज़ाइनर</string>
+    <string name="template_cat_teacher">शिक्षक</string>
+
+    <!-- Resume editor sections -->
+    <string name="section_personal">व्यक्तिगत विवरण</string>
+    <string name="section_photo">प्रोफ़ाइल फ़ोटो</string>
+    <string name="section_objective">उद्देश्य</string>
+    <string name="section_education">शिक्षा</string>
+    <string name="section_work_experience">कार्य अनुभव</string>
+    <string name="section_skills">कौशल</string>
+    <string name="section_projects">परियोजनाएं</string>
+    <string name="section_achievements">उपलब्धियां</string>
+    <string name="section_languages">भाषाएं</string>
+    <string name="section_interests">रुचियां</string>
+    <string name="section_hobbies">शौक</string>
+    <string name="section_declaration">घोषणा</string>
+    <string name="section_signature">हस्ताक्षर</string>
+</resources>

@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Resume Maker</string>
-    <string name="subscribe_KEY1">com.price.removeads</string>
+    <string name="app_name">ResumeAI</string>
     <string name="first_check">不適切なコンテンツの共有は許容されないことを理解しています。</string>
     <string name="second_check">私は18歳以上であることを確認します。</string>
     <string name="clickforprivacy">「開始」をクリックすると、上記のプライバシーポリシーと利用規約に同意したものとみなされます。</string>
-    <string name="qintitle"><![CDATA[プレイしてコインを獲得]]></string>
-    <string name="qintdes"><![CDATA[500,000コイン以上を獲得]]></string>
-    <string name="qintitle1">今すぐプレイして最大50,000を獲得</string>
-    <string name="qintdes1"><![CDATA[プレイして500,000コイン以上を獲得]]></string>
-    <string name="qnativetitle"><![CDATA[プレイしてコインを獲得]]></string>
     <string name="string_no_data_found">データが見つかりませんでした。以下のボタンをクリックして詳細を追加してください。</string>
-    <string name="string_pro_publish_resume">履歴書を公開するにはPRO版を購入する必要があります。</string>
-    <string name="string_pro_resume_template">テンプレートを変更するにはPRO版を購入する必要があります。</string>
     <string name="string_prompt_webview_information">必要に応じて、履歴書のテキストをクリックしてPDFファイルを生成する前に詳細を編集できます。</string>
     <string name="string_resume_details_instructions">以下の詳細をすべて入力し、画面下部の「履歴書を表示」ボタンをクリックしてください。</string>
     <string name="string_resume_publishing_instructions">あなたの履歴書はまだオンラインで公開されていません。以下の手順に従って履歴書を公開してください。\n1. 「履歴書を表示」ウィンドウに移動します。\n2. 画面下部の「公開」ボタンをクリックします。\n3. これで履歴書が公開されます。</string>
@@ -38,7 +30,7 @@
     <string name="build_a_professional_resume_for_free">無料でプロフェッショナルな履歴書を作成</string>
     <string name="create_a_resume_easily_with_our_free_builder_and_professional_templates">無料のビルダーとプロフェッショナルなテンプレートで簡単に履歴書を作成できます。</string>
     <string name="already_have_an_account">既にアカウントをお持ちですか？</string>
-    <string name="new_to_craft_cv">Resume Makerは初めてですか？</string>
+    <string name="new_to_craft_cv">ResumeAIは初めてですか？</string>
     <string name="joined_us_before">以前に参加しましたか？</string>
     <string name="login">ログイン</string>
     <string name="register">登録</string>
@@ -56,7 +48,6 @@
     <string name="login_with_google">Googleでログイン</string>
     <string name="please_wait">お待ちください...！</string>
     <string name="accept_term_condition">サインアップすることで、利用規約とプライバシーポリシーに同意したものとみなされます。</string>
-    <string name="default_web_client_id">771460177790-bfkhe00nngs52krj2rrfst95lf6an9fb.apps.googleusercontent.com</string>
     <string name="hello_blank_fragment">こんにちは、空のフラグメント</string>
     <string name="create_resume">履歴書を作成</string>
     <string name="cancel">キャンセル</string>
@@ -85,13 +76,13 @@
     <string name="point_6"><b>関連するスキルを含める</b>\n技術スキルとソフトスキルの両方をリストアップします。</string>
     <string name="point_7"><b>資格と教育を紹介する</b>\n学位、関連するコース、および資格を記載します。</string>
     <string name="point_8"><b>個人情報を避ける</b>\n年齢、婚姻状況、宗教など、不要な詳細は記載しないでください。</string>
-    <string name="p_first_point"><b>Resume Maker</b>をご利用いただきありがとうございます。あなたのプライバシーは私たちにとって重要です。このプライバシーポリシーは、アプリを使用する際にどのように情報を収集、使用、保護するかを説明します。</string>
+    <string name="p_first_point"><b>ResumeAI</b>をご利用いただきありがとうございます。あなたのプライバシーは私たちにとって重要です。このプライバシーポリシーは、アプリを使用する際にどのように情報を収集、使用、保護するかを説明します。</string>
     <string name="p_second_point"><b>収集する情報</b> サービスを提供および改善するために、以下の個人情報を収集します：\n<b>個人詳細：</b>名前、メールアドレス、電話番号、プロフィール写真、住所。\n<b>教育と職務経験：</b>学歴、スキル、職務経歴に関する情報。\n<b>デバイスの権限：</b>アプリは、カメラ、ストレージ、ネットワークへのアクセスを要求する場合があります。</string>
     <string name="p_third_point"><b>情報の使用方法</b> 収集した情報は以下の目的で使用します：\n履歴書の作成と管理。\nユーザー体験と機能の向上。\nカスタマーサポートの提供と問題の解決。\n法的およびセキュリティ要件の遵守。</string>
     <string name="p_fourth_point"><b>データの共有とセキュリティ</b>\n法律で要求される場合を除き、個人情報を第三者に販売または共有しません。\n不正アクセスや誤用からデータを保護するためのセキュリティ対策を実施します。</string>
     <string name="p_fifth_point"><b>使用する権限</b>\nインターネット：オンラインアクセスとデータ同期を許可します。\nカメラ：プロフィール/履歴書の写真を撮影します。\n外部ストレージへの書き込み：履歴書をデバイスに保存します。\nネットワーク状態へのアクセス：データ同期のためにインターネット接続を確認します。</string>
     <string name="p_sixth_point"><b>あなたの権利と選択</b> あなたには以下の権利があります：\nアプリ内で個人情報にアクセス、更新、または削除する。\nデバイスの設定でアプリに付与された権限を取り消す。\nプライバシーに関する懸念があればお問い合わせください。</string>
-    <string name="t_first_point"><b>利用規約の同意</b> Resume Makerを使用することで、これらの利用規約に従うことに同意します。同意しない場合は、アプリを使用しないでください。</string>
+    <string name="t_first_point"><b>利用規約の同意</b> ResumeAIを使用することで、これらの利用規約に従うことに同意します。同意しない場合は、アプリを使用しないでください。</string>
     <string name="t_second_point"><b>ユーザーの責任</b>\nログイン資格情報の機密性を維持する責任があります。\nアプリを使用する際に正確で真実な情報を提供することに同意します。\nアプリを悪用したり、その機能に干渉しようとしないでください。</string>
     <string name="t_third_point"><b>ライセンスと制限</b>\nアプリを使用するための限定的で非独占的、非譲渡可能なライセンスを付与します。\nアプリの一部を改変、配布、またはリバースエンジニアリングしないでください。</string>
     <string name="t_fourth_point"><b>終了</b> これらの規約に違反した場合、アプリへのアクセスを終了または制限する権利を留保します。</string>
@@ -197,7 +188,6 @@
     <string name="new_password">新しいパスワード</string>
     <string name="current_password">現在のパスワード</string>
     <string name="build_your_resume_from_scratch">履歴書を一から作成します。</string>
-    <string name="choose_template">テンプレートを選択</string>
     <string name="your_resume">あなたの履歴書</string>
     <string name="a_glimpse_of_your_resume">あなたの履歴書がどのように見えるかを見てみましょう。</string>
     <string name="choose_from_templaye">数多くのプロフェッショナルなテンプレートから選択。</string>
@@ -208,4 +198,87 @@
     <string name="version_info">Resume maker の最新バージョンが Play ストアで入手可能です。すべての新機能を使用するには、アプリを更新してください。</string>
     <string name="delete_account">アカウントを削除</string>
     <string name="are_you_sure_want_to_delete_account">本当にアカウントを削除してもよろしいですか?</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">ホーム</string>
+    <string name="nav_my_resume">私の履歴書</string>
+    <string name="nav_settings">設定</string>
+    <string name="nav_create_resume">履歴書を作成</string>
+
+    <!-- Home screen -->
+    <string name="home_welcome">おかえりなさい！</string>
+    <string name="home_subtitle">完璧な履歴書を作って、夢の仕事を手に入れよう。</string>
+    <string name="home_create_btn">新しい履歴書を作成</string>
+    <string name="home_featured_templates">おすすめテンプレート</string>
+    <string name="home_see_all">すべて見る</string>
+    <string name="home_quick_actions">クイックアクション</string>
+    <string name="home_action_create">履歴書を作成</string>
+    <string name="home_action_create_desc">ゼロから新しい履歴書を作成する。</string>
+    <string name="home_action_resumes">私の履歴書</string>
+    <string name="home_action_resumes_desc">保存した履歴書を表示・管理する。</string>
+    <string name="home_action_templates">すべてのテンプレート</string>
+    <string name="home_action_templates_desc">カテゴリ別にテンプレートを閲覧する。</string>
+    <string name="home_tips_title">履歴書のコツ</string>
+    <string name="tip_one_page_title">1ページに収める</string>
+    <string name="tip_one_page_body">採用担当者は履歴書に~7秒しかかけません。長さより影響力を重視してください。</string>
+    <string name="tip_quantify_title">成果を数値化する</string>
+    <string name="tip_quantify_body">数字を使う – 「売上を30%増加」は「売上を改善」より効果的。</string>
+    <string name="tip_tailor_title">毎回カスタマイズする</string>
+    <string name="tip_tailor_body">各求人に合わせて目標とスキルをカスタマイズする。</string>
+    <string name="tip_verbs_title">行動動詞を使う</string>
+    <string name="tip_verbs_body">箇条書きは「リードした」「構築した」「設計した」「提供した」などの動詞で始める。</string>
+    <string name="tip_skills_title">主要スキルを強調する</string>
+    <string name="tip_skills_body">最も強く関連性の高いスキルを上部に配置する。</string>
+    <string name="home_did_you_know">ご存知でしたか？</string>
+    <string name="home_did_you_know_body">履歴書の75%は人間の目に触れる前にATSに弾かれています。清潔感のあるテンプレートとキーワードの一致が突破の鍵です。</string>
+
+    <!-- Settings -->
+    <string name="settings_language">言語</string>
+    <string name="settings_select_language">言語を選択</string>
+    <string name="settings_help">ヘルプ</string>
+    <string name="settings_user_guide">ユーザーガイド</string>
+    <string name="settings_about">アプリについて</string>
+    <string name="settings_privacy">プライバシーポリシー</string>
+    <string name="settings_contact">お問い合わせ</string>
+    <string name="settings_rate_app">アプリを評価する</string>
+    <string name="settings_write_us">メッセージを送る</string>
+    <string name="settings_version">アプリバージョン: %1$s</string>
+    <string name="settings_currently">現在: %1$s</string>
+
+    <!-- Create / Edit -->
+    <string name="create_resume_heading">新しい履歴書を作成</string>
+    <string name="label_full_name">フルネーム</string>
+    <string name="label_designation">役職</string>
+    <string name="btn_create">作成</string>
+    <string name="no_resumes_hint">まだ履歴書がありません。+をタップして最初の履歴書を作成してください。</string>
+
+    <!-- Templates -->
+    <string name="choose_template">テンプレートを選択</string>
+    <string name="browse_templates">テンプレートを閲覧</string>
+    <string name="use_this_template">このテンプレートを使用</string>
+    <string name="already_using_template">すでにこのテンプレートを使用中</string>
+    <string name="create_with_template">このテンプレートで履歴書を作成</string>
+
+    <!-- Template categories -->
+    <string name="template_cat_all">すべて</string>
+    <string name="template_cat_professional">プロフェッショナル</string>
+    <string name="template_cat_creative">クリエイティブ</string>
+    <string name="template_cat_developer">開発者</string>
+    <string name="template_cat_designer">デザイナー</string>
+    <string name="template_cat_teacher">教師</string>
+
+    <!-- Resume editor sections -->
+    <string name="section_personal">個人情報</string>
+    <string name="section_photo">プロフィール写真</string>
+    <string name="section_objective">目標</string>
+    <string name="section_education">学歴</string>
+    <string name="section_work_experience">職歴</string>
+    <string name="section_skills">スキル</string>
+    <string name="section_projects">プロジェクト</string>
+    <string name="section_achievements">実績</string>
+    <string name="section_languages">言語</string>
+    <string name="section_interests">興味</string>
+    <string name="section_hobbies">趣味</string>
+    <string name="section_declaration">申告</string>
+    <string name="section_signature">署名</string>
 </resources>

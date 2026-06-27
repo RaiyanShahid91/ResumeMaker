@@ -1,22 +1,11 @@
 <resources>
-    <string name="app_name">Resume Maker</string>
-
-    <string name="subscribe_KEY1">com.price.removeads</string>
+    <string name="app_name">ResumeAI</string>
 
     <string name="first_check">I understand that sharing of inappropriate content will not be tolerated.</string>
     <string name="second_check">I confirm that Im 18 years old or above.</string>
     <string name="clickforprivacy">"By Clicking 'Get Started'. You are agree to above Privacy Policy and Terms of Use. "</string>
 
-    <string name="qintitle"><![CDATA[Play & Win Coins]]></string>
-    <string name="qintdes"><![CDATA[Win 5,00,000 Coins & More]]></string>
-    <string name="qintitle1">Play Now and Earn Up to 50,000</string>
-    <string name="qintdes1"><![CDATA[Play and Earn 5,00,000 Coins & Mores]]></string>
-    <string name="qnativetitle"><![CDATA[Play & Win Coins]]></string>
-
-
     <string name="string_no_data_found">No data found. Click on the button below to add the details.</string>
-    <string name="string_pro_publish_resume">You need to buy the PRO version to publish your resume.</string>
-    <string name="string_pro_resume_template">You need to buy the PRO version to change the template.</string>
     <string name="string_prompt_webview_information">If you wish, you can click on the text in your resume and edit the details before generating the PDF file.</string>
     <string name="string_resume_details_instructions">Please kindly fill all the below details and click on the view resume button at the bottom of the screen.</string>
     <string name="string_resume_publishing_instructions">Your resume is not published online yet. Please kindly do the following steps to publish your resume.\n 1. Go to View Resume window.\n 2. Click on the Publish button at the bottom of the screen.\n 3. That\'s it your resume will be published.</string>
@@ -50,7 +39,7 @@
     <string name="build_a_professional_resume_for_free">Build a Professional Resume for Free</string>
     <string name="create_a_resume_easily_with_our_free_builder_and_professional_templates">Create a resume easily with our free builder and professional templates.</string>
     <string name="already_have_an_account">Already have an account?</string>
-    <string name="new_to_craft_cv">New to Resume Maker?</string>
+    <string name="new_to_craft_cv">New to ResumeAI?</string>
     <string name="joined_us_before">Joined us before?</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
@@ -68,7 +57,6 @@
     <string name="login_with_google">Login with Google</string>
     <string name="please_wait">Please wait...!</string>
     <string name="accept_term_condition">By Signing up, you\'re agree to our Terms &amp; Condition and Privacy Policy</string>
-    <string name="default_web_client_id">771460177790-bfkhe00nngs52krj2rrfst95lf6an9fb.apps.googleusercontent.com</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="create_resume">Create Resume</string>
     <string name="cancel">Cancel</string>
@@ -99,7 +87,7 @@
     <string name="point_8"><b>Avoid Personal Details</b>\nSkip unnecessary details like age, marital status, or religion unless required.</string>
 
     //privacy policy
-    <string name="p_first_point">Thank you for using <b>Resume Maker</b>. Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you use our App.</string>
+    <string name="p_first_point">Thank you for using <b>ResumeAI</b>. Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you use our App.</string>
     <string name="p_second_point"><b>Information We Collect</b> We collect the following personal information to provide and improve our services:\n<b>Personal Details:</b>Name, email,mobile no, profile photo and address.\n<b>Education &amp; Work Experience:</b>Information about your education, skills, and work history.\n<b>Device Permissions:</b>The App may request access to your camera, storage, and network to enhance your experience.</string>
     <string name="p_third_point"><b>How We Use Your Information</b>We use your information to:\nCreate and manage your resume.\nImprove user experience and functionality.\nProvide customer support and resolve issues.\nEnsure compliance with legal and security requirements.</string>
     <string name="p_fourth_point"><b>Data Sharing and Security</b>\nWe do not sell or share your personal information with third parties except as required by law.\nWe implement security measures to protect your data from unauthorized access or misuse.</string>
@@ -107,7 +95,7 @@
     <string name="p_sixth_point"><b>Your Rights and Choices</b>You have the right to:\nAccess, update, or delete your personal information within the App.\nRevoke permissions granted to the App via your device settings.\nContact us for any concerns related to your privacy.</string>
 
     //term of use
-    <string name="t_first_point"><b>Acceptance of Terms</b> By using Resume Maker, you agree to comply with these Terms of Use. If you do not agree, please do not use the App.</string>
+    <string name="t_first_point"><b>Acceptance of Terms</b> By using ResumeAI, you agree to comply with these Terms of Use. If you do not agree, please do not use the App.</string>
     <string name="t_second_point"><b>User Responsibilities</b>\nYou are responsible for maintaining the confidentiality of your login credentials.\nYou agree to provide accurate and truthful information while using the App.\nYou must not misuse the App or attempt to interfere with its functionality.</string>
     <string name="t_third_point"><b>License and Restrictions</b>\nWe grant you a limited, non-exclusive, and non-transferable license to use the App.\nYou may not modify, distribute, or reverse-engineer any part of the App.</string>
     <string name="t_fourth_point"><b>Termination</b> We reserve the right to terminate or restrict your access to the App if you violate these terms.</string>
@@ -214,7 +202,6 @@
     <string name="new_password">New password</string>
     <string name="current_password">Current password</string>
     <string name="build_your_resume_from_scratch">Build your resume from scratch.</string>
-    <string name="choose_template">Choose Template</string>
     <string name="your_resume">Your Resume</string>
     <string name="a_glimpse_of_your_resume">A glimpse at how your resume looks.</string>
     <string name="choose_from_templaye">Choose from many professional templates.</string>
@@ -225,4 +212,124 @@
     <string name="version_info">A brand new version of Resume maker is available in the Play store. Please update your app to use all of new features.</string>
     <string name="delete_account">Delete account</string>
     <string name="are_you_sure_want_to_delete_account">Are you sure you want to delete your account?</string>
+
+    <!-- Compose UI – Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_my_resume">My Resume</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_create_resume">Create resume</string>
+
+    <!-- Compose UI – Home screen -->
+    <string name="home_welcome">Welcome back!</string>
+    <string name="home_subtitle">Build your perfect resume and land your dream job.</string>
+    <string name="home_create_btn">Create New Resume</string>
+    <string name="home_featured_templates">Featured Templates</string>
+    <string name="home_see_all">See all</string>
+    <string name="home_quick_actions">Quick Actions</string>
+    <string name="home_action_create">Create Resume</string>
+    <string name="home_action_create_desc">Build a new resume from scratch.</string>
+    <string name="home_action_resumes">My Resumes</string>
+    <string name="home_action_resumes_desc">View and manage your saved resumes.</string>
+    <string name="home_action_templates">All Templates</string>
+    <string name="home_action_templates_desc">Browse templates by category.</string>
+    <string name="home_tips_title">Resume Tips</string>
+    <string name="tip_one_page_title">Keep it to one page</string>
+    <string name="tip_one_page_body">Recruiters spend ~7 seconds on a resume. Focus on impact, not length.</string>
+    <string name="tip_quantify_title">Quantify achievements</string>
+    <string name="tip_quantify_body">Use numbers – \'Increased sales by 30%\' beats \'Improved sales.\'</string>
+    <string name="tip_tailor_title">Tailor every resume</string>
+    <string name="tip_tailor_body">Customize your objective and skills for each job posting.</string>
+    <string name="tip_verbs_title">Use action verbs</string>
+    <string name="tip_verbs_body">Start bullet points with verbs like Led, Built, Designed, Delivered.</string>
+    <string name="tip_skills_title">Highlight top skills</string>
+    <string name="tip_skills_body">Put your strongest and most relevant skills near the top.</string>
+    <string name="home_did_you_know">Did you know?</string>
+    <string name="home_did_you_know_body">75% of resumes are rejected by ATS before a human sees them. Using a clean template and matching keywords helps you get through.</string>
+
+    <!-- Compose UI – Settings -->
+    <string name="settings_language">Language</string>
+    <string name="settings_select_language">Select Language</string>
+    <string name="settings_help">Help</string>
+    <string name="settings_user_guide">User Guide</string>
+    <string name="settings_about">About</string>
+    <string name="settings_privacy">Privacy Policy</string>
+    <string name="settings_contact">Contact</string>
+    <string name="settings_rate_app">Rate Our App</string>
+    <string name="settings_write_us">Write Us</string>
+    <string name="settings_version">App version: %1$s</string>
+    <string name="settings_currently">Currently: %1$s</string>
+
+    <!-- Compose UI – Create / Edit resume -->
+    <string name="create_resume_heading">Create a new resume</string>
+    <string name="label_full_name">Full name</string>
+    <string name="label_designation">Designation</string>
+    <string name="btn_create">Create</string>
+    <string name="no_resumes_hint">No resumes yet. Tap + to create your first resume.</string>
+
+    <!-- Compose UI – Template picker -->
+    <string name="choose_template">Choose Template</string>
+    <string name="browse_templates">Browse Templates</string>
+    <string name="use_this_template">Use this template</string>
+    <string name="already_using_template">Already using this template</string>
+    <string name="create_with_template">Create Resume with this Template</string>
+
+    <!-- Template categories -->
+    <string name="template_cat_all">All</string>
+    <string name="template_cat_professional">Professional</string>
+    <string name="template_cat_creative">Creative</string>
+    <string name="template_cat_developer">Developer</string>
+    <string name="template_cat_designer">Designer</string>
+    <string name="template_cat_teacher">Teacher</string>
+
+    <!-- Resume editor section names -->
+    <string name="section_personal">Personal Details</string>
+    <string name="section_photo">Profile Photo</string>
+    <string name="section_objective">Objective</string>
+    <string name="section_education">Education</string>
+    <string name="section_work_experience">Work Experience</string>
+    <string name="section_skills">Skills</string>
+    <string name="section_projects">Projects</string>
+    <string name="section_achievements">Achievements</string>
+    <string name="section_languages">Languages</string>
+    <string name="section_interests">Interests</string>
+    <string name="section_hobbies">Hobbies</string>
+    <string name="section_declaration">Declaration</string>
+    <string name="section_signature">Signature</string>
+
+    <!-- Color picker -->
+    <string name="color_picker_title">Resume Color</string>
+    <string name="color_picker_subtitle">This color appears in your resume header, section titles, and dividers</string>
+    <string name="color_picker_apply">Apply Color</string>
+
+    <!-- Toolbar tooltips -->
+    <string name="tooltip_accent_color">Accent Color</string>
+    <string name="tooltip_change_template">Change Template</string>
+    <string name="tooltip_preview">Preview &amp; Download</string>
+
+    <!-- Settings – AI section -->
+    <string name="settings_ai">AI Assistant</string>
+    <string name="settings_ai_status">Status</string>
+    <string name="settings_ai_active">Active</string>
+    <string name="settings_ai_not_configured">Not configured</string>
+    <string name="settings_ai_model">AI Model</string>
+    <string name="settings_ai_model_name">Llama 3.1 8B Instant</string>
+    <string name="settings_ai_provider">Powered by</string>
+    <string name="settings_ai_provider_name">Groq Cloud API</string>
+    <string name="settings_ai_available_in">Available in</string>
+    <string name="settings_ai_available_in_value">Objective · Work Experience · Skills · Projects · Achievements · AI Chat</string>
+
+    <!-- AI Chat -->
+    <string name="ai_chat_title">AI Resume Assistant</string>
+    <string name="ai_chat_input_hint">Ask me to write an objective, improve a description…</string>
+    <string name="ai_chat_send">Send</string>
+    <string name="ai_chat_thinking">Thinking…</string>
+    <string name="ai_chat_not_configured">AI features are not set up. Add your Groq API key to enable them.</string>
+    <string name="ai_chat_welcome">Hi! I\'m your AI resume assistant. Ask me to write an objective, improve a job description, suggest skills, generate a project summary, or anything else resume-related.</string>
+
+    <!-- Home AI section -->
+    <string name="home_ai_section_title">AI Features</string>
+    <string name="home_action_ai_chat">AI Assistant</string>
+    <string name="home_action_ai_chat_desc">Chat with AI to write and improve resume content.</string>
+    <string name="home_ai_banner_title">Powered by AI</string>
+    <string name="home_ai_banner_body">Use the AI sparkle button ✨ in Objective, Work Experience, Skills, Projects, and Achievements to generate and improve content instantly.</string>
 </resources>

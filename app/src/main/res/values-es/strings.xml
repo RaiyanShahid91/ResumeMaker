@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Resume Maker</string>
+    <string name="app_name">ResumeAI</string>
 
-    <string name="subscribe_KEY1">com.price.removeads</string>
 
     <string name="first_check">Entiendo que no se tolerará el intercambio de contenido inapropiado.</string>
     <string name="second_check">Confirmo que tengo 18 años o más.</string>
     <string name="clickforprivacy">"Al hacer clic en 'Comenzar', aceptas la Política de Privacidad y los Términos de Uso mencionados anteriormente."</string>
 
-    <string name="qintitle"><![CDATA[Juega y Gana Monedas]]></string>
-    <string name="qintdes"><![CDATA[Gana 5,00,000 Monedas y Más]]></string>
-    <string name="qintitle1">Juega Ahora y Gana Hasta 50,000</string>
-    <string name="qintdes1"><![CDATA[Juega y Gana 5,00,000 Monedas y Más]]></string>
-    <string name="qnativetitle"><![CDATA[Juega y Gana Monedas]]></string>
 
     <string name="string_no_data_found">No se encontraron datos. Haz clic en el botón de abajo para agregar los detalles.</string>
-    <string name="string_pro_publish_resume">Necesitas comprar la versión PRO para publicar tu currículum.</string>
-    <string name="string_pro_resume_template">Necesitas comprar la versión PRO para cambiar la plantilla.</string>
     <string name="string_prompt_webview_information">Si lo deseas, puedes hacer clic en el texto de tu currículum y editar los detalles antes de generar el archivo PDF.</string>
     <string name="string_resume_details_instructions">Por favor, completa todos los detalles a continuación y haz clic en el botón de ver currículum en la parte inferior de la pantalla.</string>
     <string name="string_resume_publishing_instructions">Tu currículum aún no está publicado en línea. Por favor, sigue los siguientes pasos para publicar tu currículum.\n 1. Ve a la ventana de Ver Currículum.\n 2. Haz clic en el botón Publicar en la parte inferior de la pantalla.\n 3. Eso es todo, tu currículum será publicado.</string>
@@ -49,7 +41,7 @@
     <string name="build_a_professional_resume_for_free">Crea un Currículum Profesional Gratis</string>
     <string name="create_a_resume_easily_with_our_free_builder_and_professional_templates">Crea un currículum fácilmente con nuestro creador gratuito y plantillas profesionales.</string>
     <string name="already_have_an_account">¿Ya tienes una cuenta?</string>
-    <string name="new_to_craft_cv">¿Nuevo en Resume Maker?</string>
+    <string name="new_to_craft_cv">¿Nuevo en ResumeAI?</string>
     <string name="joined_us_before">¿Ya te has unido antes?</string>
     <string name="login">Iniciar Sesión</string>
     <string name="register">Registrarse</string>
@@ -67,7 +59,6 @@
     <string name="login_with_google">Iniciar Sesión con Google</string>
     <string name="please_wait">Por favor, espera...!</string>
     <string name="accept_term_condition">Al registrarte, aceptas nuestros Términos y Condiciones y la Política de Privacidad</string>
-    <string name="default_web_client_id">771460177790-bfkhe00nngs52krj2rrfst95lf6an9fb.apps.googleusercontent.com</string>
     <string name="hello_blank_fragment">Hola fragmento en blanco</string>
     <string name="create_resume">Crear Currículum</string>
     <string name="cancel">Cancelar</string>
@@ -213,7 +204,7 @@
     <string name="new_password">Nueva contraseña</string>
     <string name="current_password">Contraseña actual</string>
     <string name="build_your_resume_from_scratch">Construye tu currículum desde cero.</string>
-    <string name="choose_template">Elija una plantilla</string>
+
     <string name="your_resume">Tu currículum</string>
     <string name="a_glimpse_of_your_resume">Un vistazo a cómo se ve tu currículum.</string>
     <string name="choose_from_templaye">Elija entre muchas plantillas profesionales.</string>
@@ -221,7 +212,90 @@
     <string name="new_update_is_available">Nueva actualización disponible</string>
     <string name="update">Actualizar ahora</string>
     <string name="udpate_app_with_new_version">Actualiza tu aplicación a la última versión</string>
-    <string name="version_info">Hay una nueva versión de Resume Maker disponible en Play Store. Actualiza tu aplicación para usar todas las nuevas funciones.</string>
+    <string name="version_info">Hay una nueva versión de ResumeAI disponible en Play Store. Actualiza tu aplicación para usar todas las nuevas funciones.</string>
     <string name="delete_account">Eliminar cuenta</string>
     <string name="are_you_sure_want_to_delete_account">¿Estás segura de que quieres eliminar tu cuenta?</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Inicio</string>
+    <string name="nav_my_resume">Mi Currículum</string>
+    <string name="nav_settings">Configuración</string>
+    <string name="nav_create_resume">Crear currículum</string>
+
+    <!-- Home screen -->
+    <string name="home_welcome">¡Bienvenido de nuevo!</string>
+    <string name="home_subtitle">Crea tu currículum perfecto y consigue el trabajo de tus sueños.</string>
+    <string name="home_create_btn">Crear nuevo currículum</string>
+    <string name="home_featured_templates">Plantillas destacadas</string>
+    <string name="home_see_all">Ver todo</string>
+    <string name="home_quick_actions">Acciones rápidas</string>
+    <string name="home_action_create">Crear currículum</string>
+    <string name="home_action_create_desc">Crear un nuevo currículum desde cero.</string>
+    <string name="home_action_resumes">Mis currículums</string>
+    <string name="home_action_resumes_desc">Ver y gestionar tus currículums guardados.</string>
+    <string name="home_action_templates">Todas las plantillas</string>
+    <string name="home_action_templates_desc">Explorar plantillas por categoría.</string>
+    <string name="home_tips_title">Consejos para tu currículum</string>
+    <string name="tip_one_page_title">Limítalo a una página</string>
+    <string name="tip_one_page_body">Los reclutadores dedican ~7 segundos a un currículum. Enfócate en el impacto, no en la extensión.</string>
+    <string name="tip_quantify_title">Cuantifica los logros</string>
+    <string name="tip_quantify_body">Usa números – \'Aumenté las ventas un 30%\' es mejor que \'Mejoré las ventas.\'</string>
+    <string name="tip_tailor_title">Personaliza cada currículum</string>
+    <string name="tip_tailor_body">Personaliza tu objetivo y habilidades para cada oferta de trabajo.</string>
+    <string name="tip_verbs_title">Usa verbos de acción</string>
+    <string name="tip_verbs_body">Empieza los puntos con verbos como Lideré, Construí, Diseñé, Entregué.</string>
+    <string name="tip_skills_title">Destaca tus mejores habilidades</string>
+    <string name="tip_skills_body">Coloca tus habilidades más fuertes y relevantes cerca de la parte superior.</string>
+    <string name="home_did_you_know">¿Sabías que?</string>
+    <string name="home_did_you_know_body">El 75% de los currículums son rechazados por el ATS antes de que un humano los vea. Usar una plantilla limpia y palabras clave ayuda a que pasen.</string>
+
+    <!-- Settings -->
+    <string name="settings_language">Idioma</string>
+    <string name="settings_select_language">Seleccionar idioma</string>
+    <string name="settings_help">Ayuda</string>
+    <string name="settings_user_guide">Guía del usuario</string>
+    <string name="settings_about">Acerca de</string>
+    <string name="settings_privacy">Política de privacidad</string>
+    <string name="settings_contact">Contacto</string>
+    <string name="settings_rate_app">Valorar la app</string>
+    <string name="settings_write_us">Escríbenos</string>
+    <string name="settings_version">Versión de la app: %1$s</string>
+    <string name="settings_currently">Actualmente: %1$s</string>
+
+    <!-- Create / Edit -->
+    <string name="create_resume_heading">Crear un nuevo currículum</string>
+    <string name="label_full_name">Nombre completo</string>
+    <string name="label_designation">Cargo</string>
+    <string name="btn_create">Crear</string>
+    <string name="no_resumes_hint">Aún no hay currículums. Toca + para crear el primero.</string>
+
+    <!-- Templates -->
+    <string name="choose_template">Elegir plantilla</string>
+    <string name="browse_templates">Explorar plantillas</string>
+    <string name="use_this_template">Usar esta plantilla</string>
+    <string name="already_using_template">Ya estás usando esta plantilla</string>
+    <string name="create_with_template">Crear currículum con esta plantilla</string>
+
+    <!-- Template categories -->
+    <string name="template_cat_all">Todos</string>
+    <string name="template_cat_professional">Profesional</string>
+    <string name="template_cat_creative">Creativo</string>
+    <string name="template_cat_developer">Desarrollador</string>
+    <string name="template_cat_designer">Diseñador</string>
+    <string name="template_cat_teacher">Docente</string>
+
+    <!-- Resume editor sections -->
+    <string name="section_personal">Datos personales</string>
+    <string name="section_photo">Foto de perfil</string>
+    <string name="section_objective">Objetivo</string>
+    <string name="section_education">Educación</string>
+    <string name="section_work_experience">Experiencia laboral</string>
+    <string name="section_skills">Habilidades</string>
+    <string name="section_projects">Proyectos</string>
+    <string name="section_achievements">Logros</string>
+    <string name="section_languages">Idiomas</string>
+    <string name="section_interests">Intereses</string>
+    <string name="section_hobbies">Pasatiempos</string>
+    <string name="section_declaration">Declaración</string>
+    <string name="section_signature">Firma</string>
 </resources>

@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs ls -la)",
+      "Bash(awk -F: '{print $1}')",
+      "Bash(xargs -I {} basename {})",
+      "Bash(./gradlew compileDebugKotlin compileDebugJavaWithJavac -q)",
+      "Bash(./gradlew assembleDebug -q)",
+      "Bash(xargs cat)",
+      "Bash(./gradlew assembleDebug)",
+      "Bash(grep -n \"color\\\\|#[0-9a-fA-F]\\\\{3,6\\\\}\\\\|--primary\\\\|--accent\" /Users/raiyanshahid/Downloads/ResumeMaker/app/src/main/assets/templates/modern/index.html)",
+      "Bash(./gradlew --stop)",
+      "Bash(git stash *)",
+      "Bash(/usr/libexec/java_home -V)",
+      "Bash(./gradlew :app:compileDebugKotlin)",
+      "Read(//Users/raiyanshahid/Library/Android/sdk/platform-tools/**)",
+      "Bash(/Users/raiyanshahid/Library/Android/sdk/platform-tools/adb uninstall *)",
+      "Bash(/Users/raiyanshahid/Library/Android/sdk/platform-tools/adb devices *)",
+      "Bash(javap -p /Users/raiyanshahid/Library/Android/sdk/platforms/android-34/android.jar)",
+      "Bash(javap -classpath /Users/raiyanshahid/Library/Android/sdk/platforms/android-34/android.jar android.print.PrintDocumentAdapter)",
+      "Bash(javap -classpath /Users/raiyanshahid/Library/Android/sdk/platforms/android-34/android.jar 'android.print.PrintDocumentAdapter$LayoutResultCallback')",
+      "Bash(javap -classpath /Users/raiyanshahid/Library/Android/sdk/platforms/android-34/android.jar 'android.print.PrintDocumentAdapter$WriteResultCallback')"
+    ]
+  }
+}
