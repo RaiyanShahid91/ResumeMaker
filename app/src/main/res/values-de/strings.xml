@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Navigation -->
+    <string name="nav_home">Startseite</string>
+    <string name="nav_my_resume">Mein Lebenslauf</string>
+    <string name="nav_settings">Einstellungen</string>
+    <string name="nav_create_resume">Lebenslauf erstellen</string>
+
+    <!-- Home screen -->
+    <string name="home_welcome">Willkommen zurück!</string>
+    <string name="home_subtitle">Erstelle deinen perfekten Lebenslauf und lande deinen Traumjob.</string>
+    <string name="home_create_btn">Neuen Lebenslauf erstellen</string>
+    <string name="home_featured_templates">Empfohlene Vorlagen</string>
+    <string name="home_see_all">Alle anzeigen</string>
+    <string name="home_quick_actions">Schnellaktionen</string>
+    <string name="home_action_create">Lebenslauf erstellen</string>
+    <string name="home_action_create_desc">Neuen Lebenslauf von Grund auf erstellen.</string>
+    <string name="home_action_resumes">Meine Lebensläufe</string>
+    <string name="home_action_resumes_desc">Gespeicherte Lebensläufe anzeigen und verwalten.</string>
+    <string name="home_action_templates">Alle Vorlagen</string>
+    <string name="home_action_templates_desc">Vorlagen nach Kategorie durchsuchen.</string>
+    <string name="home_tips_title">Lebenslauf-Tipps</string>
+    <string name="tip_one_page_title">Auf einer Seite bleiben</string>
+    <string name="tip_one_page_body">Personaler verbringen ~7 Sekunden mit einem Lebenslauf. Fokussiere auf Wirkung, nicht Länge.</string>
+    <string name="tip_quantify_title">Erfolge quantifizieren</string>
+    <string name="tip_quantify_body">Zahlen nutzen – \'Umsatz um 30 % gesteigert\' schlägt \'Umsatz verbessert.\'</string>
+    <string name="tip_tailor_title">Jeden Lebenslauf anpassen</string>
+    <string name="tip_tailor_body">Passe dein Ziel und deine Fähigkeiten für jede Stellenausschreibung an.</string>
+    <string name="tip_verbs_title">Aktionsverben verwenden</string>
+    <string name="tip_verbs_body">Beginne Stichpunkte mit Verben wie Geleitet, Entwickelt, Gestaltet, Geliefert.</string>
+    <string name="tip_skills_title">Top-Fähigkeiten hervorheben</string>
+    <string name="tip_skills_body">Lege deine stärksten und relevantesten Fähigkeiten an den Anfang.</string>
+    <string name="home_did_you_know">Wusstest du schon?</string>
+    <string name="home_did_you_know_body">75 % der Lebensläufe werden vom ATS abgelehnt, bevor ein Mensch sie sieht. Eine saubere Vorlage und passende Schlüsselwörter helfen dir, durchzukommen.</string>
+
+    <!-- Settings -->
+    <string name="settings_language">Sprache</string>
+    <string name="settings_select_language">Sprache auswählen</string>
+    <string name="settings_help">Hilfe</string>
+    <string name="settings_user_guide">Benutzerhandbuch</string>
+    <string name="settings_about">Über uns</string>
+    <string name="settings_privacy">Datenschutzrichtlinie</string>
+    <string name="settings_contact">Kontakt</string>
+    <string name="settings_rate_app">App bewerten</string>
+    <string name="settings_write_us">Schreib uns</string>
+    <string name="settings_version">App-Version: %1$s</string>
+    <string name="settings_currently">Aktuell: %1$s</string>
+
+    <!-- Create / Edit -->
+    <string name="create_resume_heading">Neuen Lebenslauf erstellen</string>
+    <string name="label_full_name">Vollständiger Name</string>
+    <string name="label_designation">Berufsbezeichnung</string>
+    <string name="btn_create">Erstellen</string>
+    <string name="no_resumes_hint">Noch keine Lebensläufe. Tippe auf + um deinen ersten zu erstellen.</string>
+
+    <!-- Templates -->
+    <string name="choose_template">Vorlage wählen</string>
+    <string name="browse_templates">Vorlagen durchsuchen</string>
+    <string name="use_this_template">Diese Vorlage verwenden</string>
+    <string name="already_using_template">Diese Vorlage wird bereits verwendet</string>
+    <string name="create_with_template">Lebenslauf mit dieser Vorlage erstellen</string>
+
+    <!-- Template categories -->
+    <string name="template_cat_all">Alle</string>
+    <string name="template_cat_professional">Professionell</string>
+    <string name="template_cat_creative">Kreativ</string>
+    <string name="template_cat_developer">Entwickler</string>
+    <string name="template_cat_designer">Designer</string>
+    <string name="template_cat_teacher">Lehrer</string>
+
+    <!-- Resume editor sections -->
+    <string name="section_personal">Persönliche Daten</string>
+    <string name="section_photo">Profilfoto</string>
+    <string name="section_objective">Zielsetzung</string>
+    <string name="section_education">Ausbildung</string>
+    <string name="section_work_experience">Berufserfahrung</string>
+    <string name="section_skills">Fähigkeiten</string>
+    <string name="section_projects">Projekte</string>
+    <string name="section_achievements">Erfolge</string>
+    <string name="section_languages">Sprachen</string>
+    <string name="section_interests">Interessen</string>
+    <string name="section_hobbies">Hobbys</string>
+    <string name="section_declaration">Erklärung</string>
+    <string name="section_signature">Unterschrift</string>
+</resources>

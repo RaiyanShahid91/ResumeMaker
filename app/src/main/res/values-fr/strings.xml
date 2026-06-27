@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Navigation -->
+    <string name="nav_home">Accueil</string>
+    <string name="nav_my_resume">Mon CV</string>
+    <string name="nav_settings">Paramètres</string>
+    <string name="nav_create_resume">Créer un CV</string>
+
+    <!-- Home screen -->
+    <string name="home_welcome">Bon retour !</string>
+    <string name="home_subtitle">Créez votre CV parfait et décrochez l\'emploi de vos rêves.</string>
+    <string name="home_create_btn">Créer un nouveau CV</string>
+    <string name="home_featured_templates">Modèles en vedette</string>
+    <string name="home_see_all">Voir tout</string>
+    <string name="home_quick_actions">Actions rapides</string>
+    <string name="home_action_create">Créer un CV</string>
+    <string name="home_action_create_desc">Créez un nouveau CV à partir de zéro.</string>
+    <string name="home_action_resumes">Mes CV</string>
+    <string name="home_action_resumes_desc">Voir et gérer vos CV enregistrés.</string>
+    <string name="home_action_templates">Tous les modèles</string>
+    <string name="home_action_templates_desc">Parcourir les modèles par catégorie.</string>
+    <string name="home_tips_title">Conseils pour votre CV</string>
+    <string name="tip_one_page_title">Tenez-vous en à une page</string>
+    <string name="tip_one_page_body">Les recruteurs passent ~7 secondes sur un CV. Concentrez-vous sur l\'impact, pas sur la longueur.</string>
+    <string name="tip_quantify_title">Quantifiez vos réussites</string>
+    <string name="tip_quantify_body">Utilisez des chiffres – \'Augmenté les ventes de 30%\' vaut mieux que \'Amélioré les ventes.\'</string>
+    <string name="tip_tailor_title">Adaptez chaque CV</string>
+    <string name="tip_tailor_body">Personnalisez votre objectif et vos compétences pour chaque offre d\'emploi.</string>
+    <string name="tip_verbs_title">Utilisez des verbes d\'action</string>
+    <string name="tip_verbs_body">Commencez les points par des verbes comme Dirigé, Créé, Conçu, Livré.</string>
+    <string name="tip_skills_title">Mettez en avant vos meilleures compétences</string>
+    <string name="tip_skills_body">Placez vos compétences les plus fortes et les plus pertinentes en haut.</string>
+    <string name="home_did_you_know">Le saviez-vous ?</string>
+    <string name="home_did_you_know_body">75 % des CV sont rejetés par l\'ATS avant qu\'un humain ne les voie. Utiliser un modèle propre et des mots-clés correspondants vous aide à passer.</string>
+
+    <!-- Settings -->
+    <string name="settings_language">Langue</string>
+    <string name="settings_select_language">Sélectionner la langue</string>
+    <string name="settings_help">Aide</string>
+    <string name="settings_user_guide">Guide d\'utilisation</string>
+    <string name="settings_about">À propos</string>
+    <string name="settings_privacy">Politique de confidentialité</string>
+    <string name="settings_contact">Contact</string>
+    <string name="settings_rate_app">Évaluer l\'application</string>
+    <string name="settings_write_us">Nous écrire</string>
+    <string name="settings_version">Version de l\'application : %1$s</string>
+    <string name="settings_currently">Actuellement : %1$s</string>
+
+    <!-- Create / Edit -->
+    <string name="create_resume_heading">Créer un nouveau CV</string>
+    <string name="label_full_name">Nom complet</string>
+    <string name="label_designation">Poste</string>
+    <string name="btn_create">Créer</string>
+    <string name="no_resumes_hint">Pas encore de CV. Appuyez sur + pour créer le vôtre.</string>
+
+    <!-- Templates -->
+    <string name="choose_template">Choisir un modèle</string>
+    <string name="browse_templates">Parcourir les modèles</string>
+    <string name="use_this_template">Utiliser ce modèle</string>
+    <string name="already_using_template">Vous utilisez déjà ce modèle</string>
+    <string name="create_with_template">Créer un CV avec ce modèle</string>
+
+    <!-- Template categories -->
+    <string name="template_cat_all">Tous</string>
+    <string name="template_cat_professional">Professionnel</string>
+    <string name="template_cat_creative">Créatif</string>
+    <string name="template_cat_developer">Développeur</string>
+    <string name="template_cat_designer">Designer</string>
+    <string name="template_cat_teacher">Enseignant</string>
+
+    <!-- Resume editor sections -->
+    <string name="section_personal">Informations personnelles</string>
+    <string name="section_photo">Photo de profil</string>
+    <string name="section_objective">Objectif</string>
+    <string name="section_education">Formation</string>
+    <string name="section_work_experience">Expérience professionnelle</string>
+    <string name="section_skills">Compétences</string>
+    <string name="section_projects">Projets</string>
+    <string name="section_achievements">Réalisations</string>
+    <string name="section_languages">Langues</string>
+    <string name="section_interests">Intérêts</string>
+    <string name="section_hobbies">Loisirs</string>
+    <string name="section_declaration">Déclaration</string>
+    <string name="section_signature">Signature</string>
+</resources>

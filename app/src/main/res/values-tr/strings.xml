@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Navigation -->
+    <string name="nav_home">Ana Sayfa</string>
+    <string name="nav_my_resume">Özgeçmişim</string>
+    <string name="nav_settings">Ayarlar</string>
+    <string name="nav_create_resume">Özgeçmiş oluştur</string>
+
+    <!-- Home screen -->
+    <string name="home_welcome">Tekrar hoş geldiniz!</string>
+    <string name="home_subtitle">Mükemmel özgeçmişinizi oluşturun ve hayalinizdeki işe kavuşun.</string>
+    <string name="home_create_btn">Yeni özgeçmiş oluştur</string>
+    <string name="home_featured_templates">Öne çıkan şablonlar</string>
+    <string name="home_see_all">Tümünü gör</string>
+    <string name="home_quick_actions">Hızlı işlemler</string>
+    <string name="home_action_create">Özgeçmiş oluştur</string>
+    <string name="home_action_create_desc">Sıfırdan yeni bir özgeçmiş oluşturun.</string>
+    <string name="home_action_resumes">Özgeçmişlerim</string>
+    <string name="home_action_resumes_desc">Kayıtlı özgeçmişlerinizi görüntüleyin ve yönetin.</string>
+    <string name="home_action_templates">Tüm şablonlar</string>
+    <string name="home_action_templates_desc">Şablonlara kategoriye göre göz atın.</string>
+    <string name="home_tips_title">Özgeçmiş İpuçları</string>
+    <string name="tip_one_page_title">Bir sayfada tutun</string>
+    <string name="tip_one_page_body">İşe alım uzmanları özgeçmişe ~7 saniye harcar. Uzunluğa değil, etkiye odaklanın.</string>
+    <string name="tip_quantify_title">Başarıları sayısallaştırın</string>
+    <string name="tip_quantify_body">Sayıları kullanın – \'Satışları %30 artırdım\' ifadesi \'Satışları iyileştirdim\'den daha güçlüdür.</string>
+    <string name="tip_tailor_title">Her özgeçmişi özelleştirin</string>
+    <string name="tip_tailor_body">Hedefinizi ve becerilerinizi her iş ilanı için uyarlayın.</string>
+    <string name="tip_verbs_title">Eylem fiilleri kullanın</string>
+    <string name="tip_verbs_body">Maddelere Yönettim, İnşa ettim, Tasarladım, Teslim ettim gibi fiillerle başlayın.</string>
+    <string name="tip_skills_title">En iyi becerilerinizi öne çıkarın</string>
+    <string name="tip_skills_body">En güçlü ve ilgili becerilerinizi üst kısıma yerleştirin.</string>
+    <string name="home_did_you_know">Biliyor muydunuz?</string>
+    <string name="home_did_you_know_body">Özgeçmişlerin %75\'i bir insan görmeden ATS tarafından reddedilir. Temiz bir şablon ve eşleşen anahtar kelimeler geçmenize yardımcı olur.</string>
+
+    <!-- Settings -->
+    <string name="settings_language">Dil</string>
+    <string name="settings_select_language">Dil seçin</string>
+    <string name="settings_help">Yardım</string>
+    <string name="settings_user_guide">Kullanıcı Kılavuzu</string>
+    <string name="settings_about">Hakkında</string>
+    <string name="settings_privacy">Gizlilik Politikası</string>
+    <string name="settings_contact">İletişim</string>
+    <string name="settings_rate_app">Uygulamayı değerlendir</string>
+    <string name="settings_write_us">Bize yazın</string>
+    <string name="settings_version">Uygulama sürümü: %1$s</string>
+    <string name="settings_currently">Şu anda: %1$s</string>
+
+    <!-- Create / Edit -->
+    <string name="create_resume_heading">Yeni özgeçmiş oluştur</string>
+    <string name="label_full_name">Tam ad</string>
+    <string name="label_designation">Unvan</string>
+    <string name="btn_create">Oluştur</string>
+    <string name="no_resumes_hint">Henüz özgeçmiş yok. İlkini oluşturmak için + tuşuna dokunun.</string>
+
+    <!-- Templates -->
+    <string name="choose_template">Şablon seç</string>
+    <string name="browse_templates">Şablonlara göz at</string>
+    <string name="use_this_template">Bu şablonu kullan</string>
+    <string name="already_using_template">Bu şablon zaten kullanılıyor</string>
+    <string name="create_with_template">Bu şablonla özgeçmiş oluştur</string>
+
+    <!-- Template categories -->
+    <string name="template_cat_all">Tümü</string>
+    <string name="template_cat_professional">Profesyonel</string>
+    <string name="template_cat_creative">Yaratıcı</string>
+    <string name="template_cat_developer">Geliştirici</string>
+    <string name="template_cat_designer">Tasarımcı</string>
+    <string name="template_cat_teacher">Öğretmen</string>
+
+    <!-- Resume editor sections -->
+    <string name="section_personal">Kişisel Bilgiler</string>
+    <string name="section_photo">Profil Fotoğrafı</string>
+    <string name="section_objective">Hedef</string>
+    <string name="section_education">Eğitim</string>
+    <string name="section_work_experience">İş Deneyimi</string>
+    <string name="section_skills">Beceriler</string>
+    <string name="section_projects">Projeler</string>
+    <string name="section_achievements">Başarılar</string>
+    <string name="section_languages">Diller</string>
+    <string name="section_interests">İlgi Alanları</string>
+    <string name="section_hobbies">Hobiler</string>
+    <string name="section_declaration">Beyan</string>
+    <string name="section_signature">İmza</string>
+</resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_my_resume">Il Mio CV</string>
+    <string name="nav_settings">Impostazioni</string>
+    <string name="nav_create_resume">Crea curriculum</string>
+
+    <!-- Home screen -->
+    <string name="home_welcome">Bentornato!</string>
+    <string name="home_subtitle">Crea il tuo curriculum perfetto e ottieni il lavoro dei tuoi sogni.</string>
+    <string name="home_create_btn">Crea nuovo curriculum</string>
+    <string name="home_featured_templates">Modelli in primo piano</string>
+    <string name="home_see_all">Vedi tutto</string>
+    <string name="home_quick_actions">Azioni rapide</string>
+    <string name="home_action_create">Crea curriculum</string>
+    <string name="home_action_create_desc">Crea un nuovo curriculum da zero.</string>
+    <string name="home_action_resumes">I miei curriculum</string>
+    <string name="home_action_resumes_desc">Visualizza e gestisci i tuoi curriculum salvati.</string>
+    <string name="home_action_templates">Tutti i modelli</string>
+    <string name="home_action_templates_desc">Sfoglia i modelli per categoria.</string>
+    <string name="home_tips_title">Consigli per il curriculum</string>
+    <string name="tip_one_page_title">Rimani su una pagina</string>
+    <string name="tip_one_page_body">I recruiter trascorrono ~7 secondi su un curriculum. Concentrati sull\'impatto, non sulla lunghezza.</string>
+    <string name="tip_quantify_title">Quantifica i risultati</string>
+    <string name="tip_quantify_body">Usa i numeri – \'Aumentato le vendite del 30%\' vale più di \'Migliorato le vendite.\'</string>
+    <string name="tip_tailor_title">Personalizza ogni curriculum</string>
+    <string name="tip_tailor_body">Adatta il tuo obiettivo e le tue competenze per ogni offerta di lavoro.</string>
+    <string name="tip_verbs_title">Usa verbi di azione</string>
+    <string name="tip_verbs_body">Inizia i punti con verbi come Guidato, Costruito, Progettato, Consegnato.</string>
+    <string name="tip_skills_title">Evidenzia le competenze principali</string>
+    <string name="tip_skills_body">Metti le tue competenze più forti e rilevanti nella parte superiore.</string>
+    <string name="home_did_you_know">Lo sapevi?</string>
+    <string name="home_did_you_know_body">Il 75% dei curriculum viene rifiutato dall\'ATS prima che un essere umano li veda. Usare un modello pulito e parole chiave corrispondenti ti aiuta a superare il filtro.</string>
+
+    <!-- Settings -->
+    <string name="settings_language">Lingua</string>
+    <string name="settings_select_language">Seleziona lingua</string>
+    <string name="settings_help">Aiuto</string>
+    <string name="settings_user_guide">Guida utente</string>
+    <string name="settings_about">Chi siamo</string>
+    <string name="settings_privacy">Informativa sulla privacy</string>
+    <string name="settings_contact">Contatti</string>
+    <string name="settings_rate_app">Valuta l\'app</string>
+    <string name="settings_write_us">Scrivici</string>
+    <string name="settings_version">Versione dell\'app: %1$s</string>
+    <string name="settings_currently">Corrente: %1$s</string>
+
+    <!-- Create / Edit -->
+    <string name="create_resume_heading">Crea un nuovo curriculum</string>
+    <string name="label_full_name">Nome completo</string>
+    <string name="label_designation">Qualifica</string>
+    <string name="btn_create">Crea</string>
+    <string name="no_resumes_hint">Nessun curriculum ancora. Tocca + per crearne il primo.</string>
+
+    <!-- Templates -->
+    <string name="choose_template">Scegli modello</string>
+    <string name="browse_templates">Sfoglia modelli</string>
+    <string name="use_this_template">Usa questo modello</string>
+    <string name="already_using_template">Stai già usando questo modello</string>
+    <string name="create_with_template">Crea curriculum con questo modello</string>
+
+    <!-- Template categories -->
+    <string name="template_cat_all">Tutti</string>
+    <string name="template_cat_professional">Professionale</string>
+    <string name="template_cat_creative">Creativo</string>
+    <string name="template_cat_developer">Sviluppatore</string>
+    <string name="template_cat_designer">Designer</string>
+    <string name="template_cat_teacher">Insegnante</string>
+
+    <!-- Resume editor sections -->
+    <string name="section_personal">Dati personali</string>
+    <string name="section_photo">Foto profilo</string>
+    <string name="section_objective">Obiettivo</string>
+    <string name="section_education">Istruzione</string>
+    <string name="section_work_experience">Esperienza lavorativa</string>
+    <string name="section_skills">Competenze</string>
+    <string name="section_projects">Progetti</string>
+    <string name="section_achievements">Risultati</string>
+    <string name="section_languages">Lingue</string>
+    <string name="section_interests">Interessi</string>
+    <string name="section_hobbies">Hobby</string>
+    <string name="section_declaration">Dichiarazione</string>
+    <string name="section_signature">Firma</string>
+</resources>
