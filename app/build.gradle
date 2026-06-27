@@ -5,14 +5,14 @@ apply plugin: 'dagger.hilt.android.plugin'
 
 android {
     namespace "co.resumeai"
-    compileSdkVersion 34
+    compileSdkVersion 35
 
     defaultConfig {
         applicationId "co.resumeai"
         minSdkVersion 24
-        targetSdkVersion 34
-        versionCode 4
-        versionName "1.0.1"
+        targetSdkVersion 35
+        versionCode 2
+        versionName "1.1"
 testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
 
         // Get a free key at https://aistudio.google.com/ then add GEMINI_API_KEY=your_key to local.properties
@@ -26,6 +26,9 @@ testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            ndk {
+                debugSymbolLevel 'FULL'
+            }
         }
         debug {
             minifyEnabled true
