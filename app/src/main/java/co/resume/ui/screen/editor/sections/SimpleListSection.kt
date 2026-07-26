@@ -19,7 +19,6 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -27,7 +26,6 @@ import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -39,8 +37,13 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import co.resumeai.R
+import co.resume.ui.component.AppDialog
+import co.resume.ui.component.AppTextField
 import kotlinx.coroutines.launch
 
 @Composable
@@ -53,26 +56,34 @@ fun SimpleListSection(
 ) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
+    val fillMandatoryMsg = stringResource(R.string.msg_fill_mandatory)
+    val deletedMsg = stringResource(R.string.msg_deleted_successfully)
+    val aiFailedMsg = stringResource(R.string.work_msg_ai_failed)
+    val savedMsg = stringResource(R.string.list_msg_saved)
+    val addCd = stringResource(R.string.list_cd_add, fieldLabel)
+    val editTitle = stringResource(R.string.list_title_edit, fieldLabel)
+    val addTitle = stringResource(R.string.list_title_add, fieldLabel)
     var showDialog by remember { mutableStateOf(false) }
     var editingIndex by remember { mutableStateOf(-1) }
     var fieldValue by remember { mutableStateOf("") }
     var isGenerating by remember { mutableStateOf(false) }
 
     Scaffold(
+        containerColor = Color.Transparent,
         floatingActionButton = {
             FloatingActionButton(onClick = {
                 editingIndex = -1
                 fieldValue = ""
                 showDialog = true
             }) {
-                Icon(Icons.Filled.Add, contentDescription = "Add $fieldLabel")
+                Icon(Icons.Filled.Add, contentDescription = addCd)
             }
         }
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             if (items.isEmpty()) {
                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    Text("Nothing to show", color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text(stringResource(R.string.msg_nothing_to_show), color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             } else {
                 LazyColumn(contentPadding = PaddingValues(20.dp)) {
@@ -95,7 +106,7 @@ fun SimpleListSection(
                                         onSave(updated)
                                     }
                                 }, enabled = index > 0) {
-                                    Icon(Icons.Filled.KeyboardArrowUp, contentDescription = "Move up")
+                                    Icon(Icons.Filled.KeyboardArrowUp, contentDescription = stringResource(R.string.cd_move_up))
                                 }
                                 IconButton(onClick = {
                                     if (index < items.size - 1) {
@@ -106,21 +117,21 @@ fun SimpleListSection(
                                         onSave(updated)
                                     }
                                 }, enabled = index < items.size - 1) {
-                                    Icon(Icons.Filled.KeyboardArrowDown, contentDescription = "Move down")
+                                    Icon(Icons.Filled.KeyboardArrowDown, contentDescription = stringResource(R.string.cd_move_down))
                                 }
                                 IconButton(onClick = {
                                     editingIndex = index
                                     fieldValue = value
                                     showDialog = true
                                 }) {
-                                    Icon(Icons.Filled.Edit, contentDescription = "Edit")
+                                    Icon(Icons.Filled.Edit, contentDescription = stringResource(R.string.cd_edit))
                                 }
                                 IconButton(onClick = {
                                     val updated = items.toMutableList().apply { removeAt(index) }
                                     onSave(updated)
-                                    Toast.makeText(context, "Deleted successfully.", Toast.LENGTH_SHORT).show()
+                                    Toast.makeText(context, deletedMsg, Toast.LENGTH_SHORT).show()
                                 }) {
-                                    Icon(Icons.Filled.Delete, contentDescription = "Delete")
+                                    Icon(Icons.Filled.Delete, contentDescription = stringResource(R.string.cd_delete))
                                 }
                             }
                         }
@@ -131,12 +142,12 @@ fun SimpleListSection(
     }
 
     if (showDialog) {
-        AlertDialog(
+        AppDialog(
             onDismissRequest = { showDialog = false },
-            title = { Text(if (editingIndex >= 0) "Edit $fieldLabel" else "Add $fieldLabel") },
+            title = { Text(if (editingIndex >= 0) editTitle else addTitle) },
             text = {
                 Column {
-                    OutlinedTextField(
+                    AppTextField(
                         value = fieldValue,
                         onValueChange = { fieldValue = it },
                         placeholder = { Text(placeholder) },
@@ -154,13 +165,13 @@ fun SimpleListSection(
                                                 val result = onAiGenerate(fieldValue)
                                                 if (result.isNotBlank()) fieldValue = result
                                             } catch (e: Exception) {
-                                                Toast.makeText(context, "AI failed. Try again.", Toast.LENGTH_SHORT).show()
+                                                Toast.makeText(context, aiFailedMsg, Toast.LENGTH_SHORT).show()
                                             } finally {
                                                 isGenerating = false
                                             }
                                         }
                                     }) {
-                                        Icon(Icons.Filled.AutoAwesome, contentDescription = "Generate with AI", tint = MaterialTheme.colorScheme.primary)
+                                        Icon(Icons.Filled.AutoAwesome, contentDescription = stringResource(R.string.proj_cd_generate_ai), tint = MaterialTheme.colorScheme.primary)
                                     }
                                 }
                             }
@@ -171,18 +182,18 @@ fun SimpleListSection(
             confirmButton = {
                 TextButton(onClick = {
                     if (fieldValue.isBlank()) {
-                        Toast.makeText(context, "Please fill the mandatory details.", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, fillMandatoryMsg, Toast.LENGTH_SHORT).show()
                     } else {
                         val updated = items.toMutableList()
                         if (editingIndex >= 0) updated[editingIndex] = fieldValue else updated.add(fieldValue)
                         onSave(updated)
                         showDialog = false
-                        Toast.makeText(context, "Saved successfully.", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, savedMsg, Toast.LENGTH_SHORT).show()
                     }
-                }) { Text("Save") }
+                }) { Text(stringResource(R.string.btn_save)) }
             },
             dismissButton = {
-                TextButton(onClick = { showDialog = false }) { Text("Cancel") }
+                TextButton(onClick = { showDialog = false }) { Text(stringResource(R.string.btn_cancel)) }
             }
         )
     }

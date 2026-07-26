@@ -10,9 +10,11 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.compose.ui.res.stringResource
@@ -41,12 +43,14 @@ fun SectionEditorScreen(
     val resumeId = viewModel.resumeId
 
     Scaffold(
+        containerColor = Color.Transparent,
         topBar = {
             TopAppBar(
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Transparent),
                 title = { Text(stringResource(type.titleRes)) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(co.resumeai.R.string.cd_back))
                     }
                 }
             )
@@ -55,7 +59,7 @@ fun SectionEditorScreen(
         val resumeDetails = details ?: return@Scaffold
         Box(modifier = Modifier.padding(padding)) {
             when (type) {
-                EditorSectionType.PERSONAL -> PersonalDetailsSection(resumeDetails.resume) { name, designation, email, phone, address ->
+                EditorSectionType.PERSONAL -> PersonalDetailsSection(resumeDetails.resume, onBack = onBack) { name, designation, email, phone, address ->
                     viewModel.updatePersonalDetails(name, designation, email, phone, address)
                 }
                 EditorSectionType.PHOTO -> ImageCaptureSection(
@@ -63,24 +67,20 @@ fun SectionEditorScreen(
                     currentPath = resumeDetails.resume.profilePhotoPath,
                     storageFileName = "profile_$resumeId.jpg",
                     jpegQuality = 70,
-                    onImageSaved = { path -> viewModel.setProfilePhoto(path) }
-                )
-                EditorSectionType.SIGNATURE -> ImageCaptureSection(
-                    title = stringResource(EditorSectionType.SIGNATURE.titleRes),
-                    currentPath = resumeDetails.resume.signaturePath,
-                    storageFileName = "signature_$resumeId.jpg",
-                    jpegQuality = 80,
-                    onImageSaved = { path -> viewModel.setSignature(path) }
+                    onImageSaved = { path -> viewModel.setProfilePhoto(path) },
+                    onBack = onBack
                 )
                 EditorSectionType.OBJECTIVE -> ObjectiveSection(
                     initialObjective = resumeDetails.resume.objective,
                     designation = resumeDetails.resume.designation,
+                    onBack = onBack,
                     onSave = { viewModel.updateObjective(it) }
                 )
                 EditorSectionType.DECLARATION -> DeclarationSection(
                     resumeDetails.resume.declaration,
                     resumeDetails.resume.declarationPlace,
-                    resumeDetails.resume.declarationDate
+                    resumeDetails.resume.declarationDate,
+                    onBack = onBack
                 ) { declaration, place, date -> viewModel.updateDeclaration(declaration, place, date) }
                 EditorSectionType.EDUCATION -> EducationSection(resumeDetails.education, resumeId) { viewModel.saveEducation(it) }
                 EditorSectionType.WORK_EXPERIENCE -> WorkExperienceSection(resumeDetails.workExperience, resumeId) { viewModel.saveWorkExperience(it) }
@@ -93,8 +93,8 @@ fun SectionEditorScreen(
                 EditorSectionType.PROJECTS -> ProjectsSection(resumeDetails.projects, resumeId) { viewModel.saveProjects(it) }
                 EditorSectionType.ACHIEVEMENTS -> SimpleListSection(
                     items = resumeDetails.achievements.map { it.achievementName },
-                    fieldLabel = "Achievement",
-                    placeholder = "Secured first place in the national level hackathon",
+                    fieldLabel = stringResource(co.resumeai.R.string.field_achievement),
+                    placeholder = stringResource(co.resumeai.R.string.field_achievement_placeholder),
                     onAiGenerate = if (AiClient.isConfigured) { current ->
                         ResumeAiService.suggestAchievement(resumeDetails.resume.designation, current)
                     } else null
@@ -105,29 +105,11 @@ fun SectionEditorScreen(
                 }
                 EditorSectionType.LANGUAGES -> SimpleListSection(
                     items = resumeDetails.languages.map { it.languageName },
-                    fieldLabel = "Language",
-                    placeholder = "English"
+                    fieldLabel = stringResource(co.resumeai.R.string.field_language),
+                    placeholder = stringResource(co.resumeai.R.string.field_language_placeholder)
                 ) { updated ->
                     viewModel.saveLanguages(updated.mapIndexed { index, value ->
                         co.resume.data.local.entity.LanguageEntity(resumeId = resumeId, orderIndex = index, languageName = value)
-                    })
-                }
-                EditorSectionType.INTERESTS -> SimpleListSection(
-                    items = resumeDetails.interests.map { it.interestName },
-                    fieldLabel = "Interest",
-                    placeholder = "Full stack application development"
-                ) { updated ->
-                    viewModel.saveInterests(updated.mapIndexed { index, value ->
-                        co.resume.data.local.entity.InterestEntity(resumeId = resumeId, orderIndex = index, interestName = value)
-                    })
-                }
-                EditorSectionType.HOBBIES -> SimpleListSection(
-                    items = resumeDetails.hobbies.map { it.hobbyName },
-                    fieldLabel = "Hobby",
-                    placeholder = "Reading books"
-                ) { updated ->
-                    viewModel.saveHobbies(updated.mapIndexed { index, value ->
-                        co.resume.data.local.entity.HobbyEntity(resumeId = resumeId, orderIndex = index, hobbyName = value)
                     })
                 }
             }

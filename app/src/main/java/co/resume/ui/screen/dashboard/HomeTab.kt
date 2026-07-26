@@ -1,6 +1,5 @@
 package co.resume.ui.screen.dashboard
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -17,6 +16,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AddCircle
 import androidx.compose.material.icons.filled.AutoAwesome
@@ -29,8 +29,6 @@ import androidx.compose.material.icons.filled.GridView
 import androidx.compose.material.icons.filled.Lightbulb
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.TrendingUp
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -48,8 +46,13 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import co.resumeai.R
 import co.resume.ai.AiClient
+import co.resume.ui.component.AppCard
 import co.resume.ui.component.BannerAdView
+import co.resume.ui.component.ListRowSkeleton
 import co.resume.ui.component.ResumeTemplateThumbnail
+import co.resume.ui.component.StaggeredEntrance
+import co.resume.ui.component.TemplateThumbnailSkeleton
+import co.resume.ui.component.rememberShimmerGate
 import co.resume.ui.viewmodel.TemplateBrowseViewModel
 import co.resume.ui.viewmodel.TemplateUiModel
 
@@ -71,7 +74,9 @@ fun HomeTab(
     viewModel: TemplateBrowseViewModel = hiltViewModel()
 ) {
     val templates by viewModel.templates.collectAsStateWithLifecycle()
-    val isLoading by viewModel.isLoading.collectAsStateWithLifecycle()
+    val templatesFetching by viewModel.isLoading.collectAsStateWithLifecycle()
+    val shimmerGate = rememberShimmerGate()
+    val isLoading = templatesFetching || shimmerGate
 
     val actions = listOf(
         HomeAction(Icons.Filled.AddCircle,   stringResource(R.string.home_action_create),    stringResource(R.string.home_action_create_desc),    onCreateResume),
@@ -88,59 +93,35 @@ fun HomeTab(
         ResumeTip(Icons.Filled.Star,              stringResource(R.string.tip_skills_title),   stringResource(R.string.tip_skills_body))
     )
 
-    Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
+    // No background fill here — the single app-wide gradient (painted once behind the nav
+    // host in MainActivity) shows through this whole screen, glass cards included.
+    Box(modifier = Modifier.fillMaxSize()) {
         LazyColumn(contentPadding = PaddingValues(bottom = 16.dp)) {
 
             // ── Hero header ─────────────────────────────────────────────────
             item {
-                Box(
+                Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .background(MaterialTheme.colorScheme.primaryContainer)
                         .padding(horizontal = 20.dp, vertical = 24.dp)
                 ) {
-                    Column {
-                        Text(
-                            stringResource(R.string.home_welcome),
-                            style = MaterialTheme.typography.headlineMedium,
-                            fontWeight = FontWeight.Bold,
-                            color = MaterialTheme.colorScheme.onPrimaryContainer
-                        )
-                        Spacer(modifier = Modifier.height(4.dp))
-                        Text(
-                            stringResource(R.string.home_subtitle),
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.8f)
-                        )
-                        Spacer(modifier = Modifier.height(12.dp))
-                        Card(
-                            onClick = onCreateResume,
-                            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primary)
-                        ) {
-                            Row(
-                                modifier = Modifier.padding(horizontal = 16.dp, vertical = 10.dp),
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Icon(
-                                    Icons.Filled.AddCircle,
-                                    contentDescription = null,
-                                    tint = MaterialTheme.colorScheme.onPrimary,
-                                    modifier = Modifier.size(18.dp)
-                                )
-                                Spacer(modifier = Modifier.width(8.dp))
-                                Text(
-                                    stringResource(R.string.home_create_btn),
-                                    style = MaterialTheme.typography.labelLarge,
-                                    color = MaterialTheme.colorScheme.onPrimary
-                                )
-                            }
-                        }
-                    }
+                    Text(
+                        stringResource(R.string.home_welcome),
+                        style = MaterialTheme.typography.headlineMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onPrimaryContainer
+                    )
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Text(
+                        stringResource(R.string.home_subtitle),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.8f)
+                    )
                 }
             }
 
             // ── Featured templates carousel ──────────────────────────────────
-            if (!isLoading && templates.isNotEmpty()) {
+            if (isLoading || templates.isNotEmpty()) {
                 item {
                     SectionHeader(
                         title = stringResource(R.string.home_featured_templates),
@@ -153,8 +134,12 @@ fun HomeTab(
                         contentPadding = PaddingValues(horizontal = 20.dp),
                         horizontalArrangement = Arrangement.spacedBy(12.dp)
                     ) {
-                        items(templates.take(8)) { template ->
-                            TemplateThumbnailCard(template = template, onClick = onBrowseTemplates)
+                        if (isLoading) {
+                            items(4) { TemplateThumbnailSkeleton() }
+                        } else {
+                            items(templates.take(8)) { template ->
+                                TemplateThumbnailCard(template = template, onClick = onBrowseTemplates)
+                            }
                         }
                     }
                 }
@@ -163,15 +148,17 @@ fun HomeTab(
             // ── Quick actions ────────────────────────────────────────────────
             item { SectionHeader(title = stringResource(R.string.home_quick_actions)) }
 
-            items(actions) { action ->
-                Card(
-                    onClick = action.onClick,
+            itemsIndexed(actions) { index, action ->
+                StaggeredEntrance(index = index) {
+                AppCard(
+                    onClick = if (shimmerGate) null else action.onClick,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = 20.dp, vertical = 5.dp),
-                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-                    elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
+                        .padding(horizontal = 20.dp, vertical = 5.dp)
                 ) {
+                    if (shimmerGate) {
+                        ListRowSkeleton()
+                    } else {
                     Row(
                         modifier = Modifier.fillMaxWidth().padding(16.dp),
                         verticalAlignment = Alignment.CenterVertically
@@ -203,20 +190,24 @@ fun HomeTab(
                             tint = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
+                    }
+                }
                 }
             }
 
             // ── Resume tips ──────────────────────────────────────────────────
             item { SectionHeader(title = stringResource(R.string.home_tips_title)) }
 
-            items(tips) { tip ->
-                Card(
+            itemsIndexed(tips) { index, tip ->
+                StaggeredEntrance(index = index) {
+                AppCard(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = 20.dp, vertical = 5.dp),
-                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-                    elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
+                        .padding(horizontal = 20.dp, vertical = 5.dp)
                 ) {
+                    if (shimmerGate) {
+                        ListRowSkeleton(iconSize = 20.dp)
+                    } else {
                     Row(modifier = Modifier.padding(16.dp), verticalAlignment = Alignment.Top) {
                         Icon(
                             tip.icon,
@@ -234,19 +225,24 @@ fun HomeTab(
                             )
                         }
                     }
+                    }
+                }
                 }
             }
 
             // ── AI features banner ───────────────────────────────────────────
             item {
-                Card(
-                    onClick = onOpenAiChat,
+                AppCard(
+                    onClick = if (shimmerGate) null else onOpenAiChat,
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(start = 20.dp, end = 20.dp, top = 14.dp),
-                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.secondaryContainer),
-                    elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+                    containerColor = MaterialTheme.colorScheme.secondaryContainer,
+                    restingElevation = 2.dp
                 ) {
+                    if (shimmerGate) {
+                        ListRowSkeleton()
+                    } else {
                     Row(
                         modifier = Modifier.padding(16.dp),
                         verticalAlignment = Alignment.CenterVertically
@@ -283,6 +279,7 @@ fun HomeTab(
                             tint = MaterialTheme.colorScheme.onSecondaryContainer
                         )
                     }
+                    }
                 }
             }
 
@@ -291,12 +288,15 @@ fun HomeTab(
 
             // ── Insight / motivational card ──────────────────────────────────
             item {
-                Card(
+                AppCard(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(start = 20.dp, end = 20.dp, top = 14.dp),
-                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.tertiaryContainer)
+                    containerColor = MaterialTheme.colorScheme.tertiaryContainer
                 ) {
+                    if (shimmerGate) {
+                        ListRowSkeleton(iconSize = 28.dp)
+                    } else {
                     Row(
                         modifier = Modifier.padding(16.dp),
                         verticalAlignment = Alignment.CenterVertically
@@ -321,6 +321,7 @@ fun HomeTab(
                                 modifier = Modifier.padding(top = 4.dp)
                             )
                         }
+                    }
                     }
                 }
             }
@@ -353,10 +354,10 @@ private fun SectionHeader(
 
 @Composable
 private fun TemplateThumbnailCard(template: TemplateUiModel, onClick: () -> Unit) {
-    Card(
+    AppCard(
         onClick = onClick,
         modifier = Modifier.width(130.dp),
-        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+        restingElevation = 2.dp
     ) {
         Column {
             Box(modifier = Modifier.fillMaxWidth().aspectRatio(0.7f)) {

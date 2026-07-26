@@ -36,6 +36,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -48,6 +49,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
@@ -74,6 +76,8 @@ fun AiChatScreen(onBack: () -> Unit) {
     var inputText by remember { mutableStateOf("") }
     var isThinking by remember { mutableStateOf(false) }
     var menuOpenIndex by remember { mutableIntStateOf(-1) }
+    val errorResponseMsg = stringResource(R.string.ai_chat_error_response)
+    val copiedMsg = stringResource(R.string.ai_chat_copied)
 
     LaunchedEffect(messages.size) {
         if (messages.isNotEmpty()) listState.animateScrollToItem(messages.size - 1)
@@ -94,7 +98,7 @@ fun AiChatScreen(onBack: () -> Unit) {
                 val reply = AiClient.chat(history)
                 messages.add(Message("assistant", reply))
             } catch (e: Exception) {
-                messages.add(Message("assistant", "Sorry, I couldn't get a response. Please try again."))
+                messages.add(Message("assistant", errorResponseMsg))
             } finally {
                 isThinking = false
             }
@@ -102,8 +106,10 @@ fun AiChatScreen(onBack: () -> Unit) {
     }
 
     Scaffold(
+        containerColor = Color.Transparent,
         topBar = {
             TopAppBar(
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Transparent),
                 title = {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Icon(
@@ -118,7 +124,7 @@ fun AiChatScreen(onBack: () -> Unit) {
                 },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(R.string.cd_back))
                     }
                 }
             )
@@ -191,16 +197,16 @@ fun AiChatScreen(onBack: () -> Unit) {
                                 onDismissRequest = { menuOpenIndex = -1 }
                             ) {
                                 DropdownMenuItem(
-                                    text = { Text("Copy") },
+                                    text = { Text(stringResource(R.string.ai_chat_copy)) },
                                     onClick = {
                                         clipboard.setText(AnnotatedString(msg.content))
-                                        Toast.makeText(context, "Copied", Toast.LENGTH_SHORT).show()
+                                        Toast.makeText(context, copiedMsg, Toast.LENGTH_SHORT).show()
                                         menuOpenIndex = -1
                                     }
                                 )
                                 if (isUser) {
                                     DropdownMenuItem(
-                                        text = { Text("Edit") },
+                                        text = { Text(stringResource(R.string.cd_edit)) },
                                         onClick = {
                                             inputText = msg.content
                                             menuOpenIndex = -1

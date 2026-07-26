@@ -15,7 +15,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Person
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -31,9 +30,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
+import co.resumeai.R
 import co.resume.domain.ImageStorage
+import co.resume.ui.component.AppDialog
 import com.yalantis.ucrop.UCrop
 import java.io.File
 
@@ -43,9 +45,12 @@ fun ImageCaptureSection(
     currentPath: String?,
     storageFileName: String,
     jpegQuality: Int,
-    onImageSaved: (path: String) -> Unit
+    onImageSaved: (path: String) -> Unit,
+    onBack: () -> Unit
 ) {
     val context = LocalContext.current
+    val saveErrorMsg = stringResource(R.string.img_msg_save_error)
+    val cameraDeniedMsg = stringResource(R.string.img_msg_camera_denied)
     var pendingCameraUri by remember { mutableStateOf<Uri?>(null) }
     var showPickerDialog by remember { mutableStateOf(false) }
 
@@ -56,8 +61,9 @@ fun ImageCaptureSection(
                 val savedPath = ImageStorage.recompressAndSave(context, resultUri, storageFileName, jpegQuality)
                 if (savedPath != null) {
                     onImageSaved(savedPath)
+                    onBack()
                 } else {
-                    Toast.makeText(context, "Error saving image", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, saveErrorMsg, Toast.LENGTH_SHORT).show()
                 }
             }
         }
@@ -86,7 +92,7 @@ fun ImageCaptureSection(
             pendingCameraUri = uri
             cameraLauncher.launch(uri)
         } else {
-            Toast.makeText(context, "Camera permission denied", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, cameraDeniedMsg, Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -118,26 +124,26 @@ fun ImageCaptureSection(
             onClick = { showPickerDialog = true },
             modifier = Modifier.fillMaxWidth().padding(top = 24.dp)
         ) {
-            Text("Add / Change $title")
+            Text(stringResource(R.string.img_btn_add_change, title))
         }
     }
 
     if (showPickerDialog) {
-        AlertDialog(
+        AppDialog(
             onDismissRequest = { showPickerDialog = false },
-            title = { Text("Select Image") },
-            text = { Text("Choose a source for your $title") },
+            title = { Text(stringResource(R.string.img_dialog_title)) },
+            text = { Text(stringResource(R.string.img_dialog_text, title)) },
             confirmButton = {
                 TextButton(onClick = {
                     showPickerDialog = false
                     cameraPermissionLauncher.launch(android.Manifest.permission.CAMERA)
-                }) { Text("Camera") }
+                }) { Text(stringResource(R.string.img_btn_camera)) }
             },
             dismissButton = {
                 TextButton(onClick = {
                     showPickerDialog = false
                     galleryLauncher.launch(androidx.activity.result.PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
-                }) { Text("Gallery") }
+                }) { Text(stringResource(R.string.img_btn_gallery)) }
             }
         )
     }

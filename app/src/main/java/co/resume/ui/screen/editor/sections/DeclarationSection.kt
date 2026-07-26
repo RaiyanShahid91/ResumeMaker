@@ -11,7 +11,6 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.DatePicker
 import androidx.compose.material3.DatePickerDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberDatePickerState
@@ -23,7 +22,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import co.resumeai.R
+import co.resume.ui.component.AppTextField
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -36,9 +38,11 @@ fun DeclarationSection(
     initialDeclaration: String,
     initialPlace: String,
     initialDate: String,
+    onBack: () -> Unit,
     onSave: (declaration: String, place: String, date: String) -> Unit
 ) {
     val context = LocalContext.current
+    val savedMsg = stringResource(R.string.msg_details_saved)
     var declaration by remember { mutableStateOf(initialDeclaration) }
     var place by remember { mutableStateOf(initialPlace) }
     var date by remember { mutableStateOf(initialDate.ifBlank { displayFormat.format(Date()) }) }
@@ -56,39 +60,40 @@ fun DeclarationSection(
             .verticalScroll(rememberScrollState())
             .padding(20.dp)
     ) {
-        OutlinedTextField(
+        AppTextField(
             value = declaration,
             onValueChange = { declaration = it },
-            label = { Text("Declaration") },
-            placeholder = { Text("I do hereby confirm that the information given above is true to the best of my knowledge") },
+            label = { Text(stringResource(R.string.decl_label_declaration)) },
+            placeholder = { Text(stringResource(R.string.decl_placeholder)) },
             minLines = 4,
             modifier = Modifier.fillMaxWidth().padding(bottom = 12.dp)
         )
-        OutlinedTextField(
-            value = place, onValueChange = { place = it }, label = { Text("Place") },
+        AppTextField(
+            value = place, onValueChange = { place = it }, label = { Text(stringResource(R.string.decl_label_place)) },
             singleLine = true, modifier = Modifier.fillMaxWidth().padding(bottom = 12.dp)
         )
-        OutlinedTextField(
+        AppTextField(
             value = date,
             onValueChange = {},
-            label = { Text("Date") },
+            label = { Text(stringResource(R.string.decl_label_date)) },
             readOnly = true,
             singleLine = true,
             modifier = Modifier.fillMaxWidth().padding(bottom = 20.dp),
-            trailingIcon = { TextButton(onClick = { showDatePicker = true }) { Text("Change") } }
+            trailingIcon = { TextButton(onClick = { showDatePicker = true }) { Text(stringResource(R.string.btn_change)) } }
         )
+        val isDirty = declaration != initialDeclaration || place != initialPlace || date != initialDate
+        val isValid = declaration.isNotBlank() && place.isNotBlank() && date.isNotBlank()
+
         Button(
             onClick = {
-                if (declaration.isBlank() || place.isBlank() || date.isBlank()) {
-                    Toast.makeText(context, "Please fill the mandatory details.", Toast.LENGTH_SHORT).show()
-                } else {
-                    onSave(declaration, place, date)
-                    Toast.makeText(context, "Details saved successfully.", Toast.LENGTH_SHORT).show()
-                }
+                onSave(declaration, place, date)
+                Toast.makeText(context, savedMsg, Toast.LENGTH_SHORT).show()
+                onBack()
             },
+            enabled = isDirty && isValid,
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text("Save")
+            Text(stringResource(R.string.btn_save))
         }
     }
 
@@ -100,9 +105,9 @@ fun DeclarationSection(
                 TextButton(onClick = {
                     state.selectedDateMillis?.let { date = displayFormat.format(Date(it)) }
                     showDatePicker = false
-                }) { Text("OK") }
+                }) { Text(stringResource(R.string.btn_ok)) }
             },
-            dismissButton = { TextButton(onClick = { showDatePicker = false }) { Text("Cancel") } }
+            dismissButton = { TextButton(onClick = { showDatePicker = false }) { Text(stringResource(R.string.btn_cancel)) } }
         ) {
             DatePicker(state = state)
         }

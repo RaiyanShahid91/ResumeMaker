@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import co.resume.data.repository.ResumeRepository
 import co.resume.domain.export.ResumeHtmlRenderer
+import co.resumeai.R
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.SharingStarted
@@ -27,10 +28,11 @@ class ResumePreviewViewModel @Inject constructor(
 
     val uiState: StateFlow<ResumePreviewUiState> = repository.observeResume(resumeId)
         .map { details ->
+            val defaultTitle = context.getString(R.string.editor_default_title)
             if (details == null) {
-                ResumePreviewUiState(html = null, fileTitle = "Resume")
+                ResumePreviewUiState(html = null, fileTitle = defaultTitle)
             } else {
-                val title = details.resume.name.ifBlank { "Resume" }
+                val title = details.resume.name.ifBlank { defaultTitle }
                 ResumePreviewUiState(html = ResumeHtmlRenderer.render(context, details), fileTitle = "$title's Resume")
             }
         }

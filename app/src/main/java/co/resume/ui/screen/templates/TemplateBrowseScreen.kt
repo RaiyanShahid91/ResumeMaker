@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -19,12 +20,11 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalBottomSheet
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -34,6 +34,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
@@ -41,6 +42,8 @@ import androidx.compose.ui.window.DialogProperties
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import co.resumeai.R
+import co.resume.ui.component.AppBottomSheet
+import co.resume.ui.component.AppTextField
 import co.resume.ui.component.BannerAdView
 import co.resume.ui.component.ResumeWebPreview
 import co.resume.utils.ImeLocaleHint
@@ -64,8 +67,10 @@ fun TemplateBrowseScreen(
     var createWithTemplateId by remember { mutableIntStateOf(-1) }
 
     Scaffold(
+        containerColor = Color.Transparent,
         topBar = {
             TopAppBar(
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Transparent),
                 title = { Text(stringResource(R.string.browse_templates)) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
@@ -138,7 +143,7 @@ private fun BrowsePreviewDialog(
     onCreateResume: () -> Unit
 ) {
     Dialog(onDismissRequest = onDismiss, properties = DialogProperties(usePlatformDefaultWidth = false)) {
-        Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
+        Surface(modifier = Modifier.fillMaxSize(), color = Color.Transparent) {
             Scaffold(
                 topBar = {
                     TopAppBar(
@@ -160,11 +165,16 @@ private fun BrowsePreviewDialog(
                     )
                 },
                 bottomBar = {
-                    Button(
-                        onClick = onCreateResume,
-                        modifier = Modifier.fillMaxWidth().padding(16.dp)
-                    ) {
-                        Text(stringResource(R.string.create_with_template))
+                    Surface(color = MaterialTheme.colorScheme.background) {
+                        Button(
+                            onClick = onCreateResume,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .navigationBarsPadding()
+                                .padding(16.dp)
+                        ) {
+                            Text(stringResource(R.string.create_with_template))
+                        }
                     }
                 }
             ) { innerPadding ->
@@ -188,11 +198,14 @@ private fun CreateWithTemplateSheet(
     var designation by remember { mutableStateOf("") }
 
     ImeLocaleHint()
-    ModalBottomSheet(onDismissRequest = onDismiss, sheetState = sheetState) {
+    AppBottomSheet(
+        onDismissRequest = onDismiss,
+        sheetState = sheetState
+    ) {
         Column(modifier = Modifier.padding(24.dp)) {
             Text(stringResource(R.string.create_resume_heading), style = MaterialTheme.typography.titleLarge)
 
-            OutlinedTextField(
+            AppTextField(
                 value = name,
                 onValueChange = { name = it },
                 label = { Text(stringResource(R.string.label_full_name)) },
@@ -200,7 +213,7 @@ private fun CreateWithTemplateSheet(
                 modifier = Modifier.fillMaxWidth().padding(top = 16.dp)
             )
 
-            OutlinedTextField(
+            AppTextField(
                 value = designation,
                 onValueChange = { designation = it },
                 label = { Text(stringResource(R.string.label_designation)) },

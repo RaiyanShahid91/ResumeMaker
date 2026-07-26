@@ -16,7 +16,6 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.DatePicker
@@ -26,7 +25,6 @@ import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -38,9 +36,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import co.resumeai.R
 import co.resume.data.local.entity.EducationEntity
+import co.resume.ui.component.AppDialog
+import co.resume.ui.component.AppTextField
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -51,6 +54,9 @@ private val monthYearFormat = SimpleDateFormat("MM/yyyy", Locale.getDefault())
 @Composable
 fun EducationSection(items: List<EducationEntity>, resumeId: Long, onSave: (List<EducationEntity>) -> Unit) {
     val context = LocalContext.current
+    val fillMandatoryMsg = stringResource(R.string.msg_fill_mandatory)
+    val deletedMsg = stringResource(R.string.msg_deleted_successfully)
+    val savedMsg = stringResource(R.string.edu_msg_saved)
     var showDialog by remember { mutableStateOf(false) }
     var editingIndex by remember { mutableStateOf(-1) }
     var course by remember { mutableStateOf("") }
@@ -75,16 +81,17 @@ fun EducationSection(items: List<EducationEntity>, resumeId: Long, onSave: (List
     }
 
     Scaffold(
+        containerColor = Color.Transparent,
         floatingActionButton = {
             FloatingActionButton(onClick = { openAdd() }) {
-                Icon(Icons.Filled.Add, contentDescription = "Add education")
+                Icon(Icons.Filled.Add, contentDescription = stringResource(R.string.edu_cd_add))
             }
         }
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             if (items.isEmpty()) {
                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    Text("Nothing to show", color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text(stringResource(R.string.msg_nothing_to_show), color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             } else {
                 LazyColumn(contentPadding = PaddingValues(20.dp)) {
@@ -105,19 +112,19 @@ fun EducationSection(items: List<EducationEntity>, resumeId: Long, onSave: (List
                                             val tmp = updated[index - 1]; updated[index - 1] = updated[index]; updated[index] = tmp
                                             onSave(reindex(updated))
                                         }
-                                    }, enabled = index > 0) { Icon(Icons.Filled.KeyboardArrowUp, contentDescription = "Move up") }
+                                    }, enabled = index > 0) { Icon(Icons.Filled.KeyboardArrowUp, contentDescription = stringResource(R.string.cd_move_up)) }
                                     IconButton(onClick = {
                                         if (index < items.size - 1) {
                                             val updated = items.toMutableList()
                                             val tmp = updated[index + 1]; updated[index + 1] = updated[index]; updated[index] = tmp
                                             onSave(reindex(updated))
                                         }
-                                    }, enabled = index < items.size - 1) { Icon(Icons.Filled.KeyboardArrowDown, contentDescription = "Move down") }
-                                    IconButton(onClick = { openEdit(index) }) { Icon(Icons.Filled.Edit, contentDescription = "Edit") }
+                                    }, enabled = index < items.size - 1) { Icon(Icons.Filled.KeyboardArrowDown, contentDescription = stringResource(R.string.cd_move_down)) }
+                                    IconButton(onClick = { openEdit(index) }) { Icon(Icons.Filled.Edit, contentDescription = stringResource(R.string.cd_edit)) }
                                     IconButton(onClick = {
                                         onSave(reindex(items.toMutableList().apply { removeAt(index) }))
-                                        Toast.makeText(context, "Deleted successfully.", Toast.LENGTH_SHORT).show()
-                                    }) { Icon(Icons.Filled.Delete, contentDescription = "Delete") }
+                                        Toast.makeText(context, deletedMsg, Toast.LENGTH_SHORT).show()
+                                    }) { Icon(Icons.Filled.Delete, contentDescription = stringResource(R.string.cd_delete)) }
                                 }
                             }
                         }
@@ -128,30 +135,30 @@ fun EducationSection(items: List<EducationEntity>, resumeId: Long, onSave: (List
     }
 
     if (showDialog) {
-        AlertDialog(
+        AppDialog(
             onDismissRequest = { showDialog = false },
-            title = { Text(if (editingIndex >= 0) "Edit Education" else "Add Education") },
+            title = { Text(if (editingIndex >= 0) stringResource(R.string.edu_title_edit) else stringResource(R.string.edu_title_add)) },
             text = {
                 Column {
-                    OutlinedTextField(value = course, onValueChange = { course = it }, label = { Text("Degree / Course") }, modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp))
-                    OutlinedTextField(value = university, onValueChange = { university = it }, label = { Text("University / School") }, modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp))
-                    OutlinedTextField(value = grade, onValueChange = { grade = it }, label = { Text("Grade / Score") }, modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp))
-                    OutlinedTextField(
-                        value = durationFrom, onValueChange = {}, readOnly = true, label = { Text("From") },
+                    AppTextField(value = course, onValueChange = { course = it }, label = { Text(stringResource(R.string.edu_label_course)) }, modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp))
+                    AppTextField(value = university, onValueChange = { university = it }, label = { Text(stringResource(R.string.edu_label_university)) }, modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp))
+                    AppTextField(value = grade, onValueChange = { grade = it }, label = { Text(stringResource(R.string.edu_label_grade)) }, modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp))
+                    AppTextField(
+                        value = durationFrom, onValueChange = {}, readOnly = true, label = { Text(stringResource(R.string.work_label_from)) },
                         modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp),
-                        trailingIcon = { TextButton(onClick = { showDatePickerFor = 0 }) { Text("Pick") } }
+                        trailingIcon = { TextButton(onClick = { showDatePickerFor = 0 }) { Text(stringResource(R.string.btn_pick)) } }
                     )
-                    OutlinedTextField(
-                        value = durationTo, onValueChange = {}, readOnly = true, label = { Text("To") },
+                    AppTextField(
+                        value = durationTo, onValueChange = {}, readOnly = true, label = { Text(stringResource(R.string.work_label_to)) },
                         modifier = Modifier.fillMaxWidth(),
-                        trailingIcon = { TextButton(onClick = { showDatePickerFor = 1 }) { Text("Pick") } }
+                        trailingIcon = { TextButton(onClick = { showDatePickerFor = 1 }) { Text(stringResource(R.string.btn_pick)) } }
                     )
                 }
             },
             confirmButton = {
                 TextButton(onClick = {
                     if (course.isBlank() || university.isBlank() || grade.isBlank() || durationFrom.isBlank() || durationTo.isBlank()) {
-                        Toast.makeText(context, "Please fill the mandatory details.", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, fillMandatoryMsg, Toast.LENGTH_SHORT).show()
                     } else {
                         val entry = EducationEntity(
                             id = if (editingIndex >= 0) items[editingIndex].id else 0,
@@ -164,11 +171,11 @@ fun EducationSection(items: List<EducationEntity>, resumeId: Long, onSave: (List
                         if (editingIndex >= 0) updated[editingIndex] = entry else updated.add(entry)
                         onSave(reindex(updated))
                         showDialog = false
-                        Toast.makeText(context, "Educational details saved.", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, savedMsg, Toast.LENGTH_SHORT).show()
                     }
-                }) { Text("Save") }
+                }) { Text(stringResource(R.string.btn_save)) }
             },
-            dismissButton = { TextButton(onClick = { showDialog = false }) { Text("Cancel") } }
+            dismissButton = { TextButton(onClick = { showDialog = false }) { Text(stringResource(R.string.btn_cancel)) } }
         )
     }
 
@@ -183,9 +190,9 @@ fun EducationSection(items: List<EducationEntity>, resumeId: Long, onSave: (List
                         if (which == 0) durationFrom = formatted else durationTo = formatted
                     }
                     showDatePickerFor = null
-                }) { Text("OK") }
+                }) { Text(stringResource(R.string.btn_ok)) }
             },
-            dismissButton = { TextButton(onClick = { showDatePickerFor = null }) { Text("Cancel") } }
+            dismissButton = { TextButton(onClick = { showDatePickerFor = null }) { Text(stringResource(R.string.btn_cancel)) } }
         ) {
             DatePicker(state = state)
         }

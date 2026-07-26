@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.pager.HorizontalPager
@@ -28,8 +29,6 @@ import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.filled.GridView
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.WavingHand
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -43,10 +42,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import co.resumeai.R
+import co.resume.ui.component.AppButton
 import kotlinx.coroutines.launch
 
 private data class OnboardingPage(
@@ -56,41 +57,43 @@ private data class OnboardingPage(
     val highlight: String = ""
 )
 
-private val pages = listOf(
+@Composable
+private fun onboardingPages(): List<OnboardingPage> = listOf(
     OnboardingPage(
         icon = Icons.Filled.WavingHand,
-        title = "Welcome to ResumeAI",
-        description = "Create a polished, professional resume right on your phone — no account needed, no data leaves your device.",
-        highlight = "100% private & offline"
+        title = stringResource(R.string.onboard_page1_title),
+        description = stringResource(R.string.onboard_page1_desc),
+        highlight = stringResource(R.string.onboard_page1_highlight)
     ),
     OnboardingPage(
         icon = Icons.Filled.Description,
-        title = "Fill In Your Details",
-        description = "Add personal info, work experience, education, skills, projects, achievements, languages, and more — all in dedicated sections.",
-        highlight = "13 resume sections"
+        title = stringResource(R.string.onboard_page2_title),
+        description = stringResource(R.string.onboard_page2_desc),
+        highlight = stringResource(R.string.onboard_page2_highlight)
     ),
     OnboardingPage(
         icon = Icons.Filled.GridView,
-        title = "Pick a Beautiful Template",
-        description = "Choose from 13 professionally designed templates — Classic, Modern, Creative, Developer, Designer, and many more. Customise the accent colour to match your style.",
-        highlight = "13 templates · any colour"
+        title = stringResource(R.string.onboard_page3_title),
+        description = stringResource(R.string.onboard_page3_desc),
+        highlight = stringResource(R.string.onboard_page3_highlight)
     ),
     OnboardingPage(
         icon = Icons.Filled.AutoAwesome,
-        title = "Write Smarter with AI",
-        description = "Tap the ✨ sparkle button inside Objective, Work Experience, Skills, Projects, or Achievements to generate and improve content instantly. Or open the AI Chat for a full writing session.",
-        highlight = "Powered by Llama 3.1 via Groq"
+        title = stringResource(R.string.onboard_page4_title),
+        description = stringResource(R.string.onboard_page4_desc),
+        highlight = stringResource(R.string.onboard_page4_highlight)
     ),
     OnboardingPage(
         icon = Icons.Filled.Download,
-        title = "Export & Share",
-        description = "Preview your resume live, then export it as a high-quality PDF or editable MS Word (.doc) file — ready to send to employers or customise further. Your data is always saved locally.",
-        highlight = "PDF & Word export · always saved"
+        title = stringResource(R.string.onboard_page5_title),
+        description = stringResource(R.string.onboard_page5_desc),
+        highlight = stringResource(R.string.onboard_page5_highlight)
     )
 )
 
 @Composable
 fun OnboardingScreen(onFinish: () -> Unit) {
+    val pages = onboardingPages()
     val pagerState = rememberPagerState { pages.size }
     val scope = rememberCoroutineScope()
     val isLastPage = pagerState.currentPage == pages.lastIndex
@@ -123,8 +126,8 @@ fun OnboardingScreen(onFinish: () -> Unit) {
         label = "bg"
     )
 
-    Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-        Column(modifier = Modifier.fillMaxSize()) {
+    Surface(modifier = Modifier.fillMaxSize(), color = Color.Transparent) {
+        Column(modifier = Modifier.fillMaxSize().statusBarsPadding()) {
 
             // ── Top: Skip button ────────────────────────────────────────────
             Box(
@@ -135,7 +138,7 @@ fun OnboardingScreen(onFinish: () -> Unit) {
             ) {
                 if (!isLastPage) {
                     TextButton(onClick = onFinish) {
-                        Text("Skip", color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        Text(stringResource(R.string.onboard_skip), color = MaterialTheme.colorScheme.onSurfaceVariant)
                     }
                 }
             }
@@ -246,7 +249,8 @@ fun OnboardingScreen(onFinish: () -> Unit) {
 
                 Spacer(Modifier.height(28.dp))
 
-                Button(
+                AppButton(
+                    text = if (isLastPage) stringResource(R.string.onboard_get_started) else stringResource(R.string.onboard_next),
                     onClick = {
                         if (isLastPage) {
                             onFinish()
@@ -256,17 +260,8 @@ fun OnboardingScreen(onFinish: () -> Unit) {
                             }
                         }
                     },
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(52.dp),
-                    shape = RoundedCornerShape(14.dp)
-                ) {
-                    Text(
-                        if (isLastPage) "Get Started" else "Next",
-                        style = MaterialTheme.typography.labelLarge,
-                        fontWeight = FontWeight.SemiBold
-                    )
-                }
+                    modifier = Modifier.fillMaxWidth()
+                )
             }
         }
     }

@@ -24,7 +24,6 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -37,8 +36,6 @@ import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalBottomSheet
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SmallFloatingActionButton
 import androidx.compose.material3.Text
@@ -52,11 +49,17 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import co.resumeai.R
 import co.resume.ai.AiClient
 import co.resume.ai.ResumeAiService
 import co.resume.data.local.entity.SkillEntity
+import co.resume.ui.component.AppBottomSheet
+import co.resume.ui.component.AppDialog
+import co.resume.ui.component.AppTextField
 import kotlinx.coroutines.launch
 
 private val skillLevels = listOf("Beginner", "Intermediate", "Advanced", "Expert")
@@ -70,6 +73,9 @@ fun SkillsSection(
     onSave: (List<SkillEntity>) -> Unit
 ) {
     val context = LocalContext.current
+    val fillMandatoryMsg = stringResource(R.string.msg_fill_mandatory)
+    val deletedMsg = stringResource(R.string.msg_deleted_successfully)
+    val addedMsg = stringResource(R.string.skills_msg_added)
     var showDialog by remember { mutableStateOf(false) }
     var editingIndex by remember { mutableStateOf(-1) }
     var skillName by remember { mutableStateOf("") }
@@ -89,6 +95,7 @@ fun SkillsSection(
     }
 
     Scaffold(
+        containerColor = Color.Transparent,
         floatingActionButton = {
             Column(
                 horizontalAlignment = Alignment.End,
@@ -100,11 +107,11 @@ fun SkillsSection(
                         containerColor = MaterialTheme.colorScheme.secondaryContainer,
                         contentColor = MaterialTheme.colorScheme.onSecondaryContainer
                     ) {
-                        Icon(Icons.Filled.AutoAwesome, contentDescription = "Suggest skills with AI")
+                        Icon(Icons.Filled.AutoAwesome, contentDescription = stringResource(R.string.skills_cd_suggest_ai))
                     }
                 }
                 FloatingActionButton(onClick = { openAdd() }) {
-                    Icon(Icons.Filled.Add, contentDescription = "Add skill")
+                    Icon(Icons.Filled.Add, contentDescription = stringResource(R.string.skills_cd_add))
                 }
             }
         }
@@ -112,7 +119,7 @@ fun SkillsSection(
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             if (items.isEmpty()) {
                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    Text("Nothing to show", color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text(stringResource(R.string.msg_nothing_to_show), color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             } else {
                 LazyColumn(contentPadding = PaddingValues(20.dp)) {
@@ -132,19 +139,19 @@ fun SkillsSection(
                                         val tmp = updated[index - 1]; updated[index - 1] = updated[index]; updated[index] = tmp
                                         onSave(reindex(updated))
                                     }
-                                }, enabled = index > 0) { Icon(Icons.Filled.KeyboardArrowUp, contentDescription = "Move up") }
+                                }, enabled = index > 0) { Icon(Icons.Filled.KeyboardArrowUp, contentDescription = stringResource(R.string.cd_move_up)) }
                                 IconButton(onClick = {
                                     if (index < items.size - 1) {
                                         val updated = items.toMutableList()
                                         val tmp = updated[index + 1]; updated[index + 1] = updated[index]; updated[index] = tmp
                                         onSave(reindex(updated))
                                     }
-                                }, enabled = index < items.size - 1) { Icon(Icons.Filled.KeyboardArrowDown, contentDescription = "Move down") }
-                                IconButton(onClick = { openEdit(index) }) { Icon(Icons.Filled.Edit, contentDescription = "Edit") }
+                                }, enabled = index < items.size - 1) { Icon(Icons.Filled.KeyboardArrowDown, contentDescription = stringResource(R.string.cd_move_down)) }
+                                IconButton(onClick = { openEdit(index) }) { Icon(Icons.Filled.Edit, contentDescription = stringResource(R.string.cd_edit)) }
                                 IconButton(onClick = {
                                     onSave(reindex(items.toMutableList().apply { removeAt(index) }))
-                                    Toast.makeText(context, "Deleted successfully.", Toast.LENGTH_SHORT).show()
-                                }) { Icon(Icons.Filled.Delete, contentDescription = "Delete") }
+                                    Toast.makeText(context, deletedMsg, Toast.LENGTH_SHORT).show()
+                                }) { Icon(Icons.Filled.Delete, contentDescription = stringResource(R.string.cd_delete)) }
                             }
                         }
                     }
@@ -154,15 +161,15 @@ fun SkillsSection(
     }
 
     if (showDialog) {
-        AlertDialog(
+        AppDialog(
             onDismissRequest = { showDialog = false },
-            title = { Text(if (editingIndex >= 0) "Edit Skill" else "Add Skill") },
+            title = { Text(if (editingIndex >= 0) stringResource(R.string.skills_title_edit) else stringResource(R.string.skills_title_add)) },
             text = {
                 Column {
-                    OutlinedTextField(value = skillName, onValueChange = { skillName = it }, label = { Text("Skill Name") }, modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp))
+                    AppTextField(value = skillName, onValueChange = { skillName = it }, label = { Text(stringResource(R.string.skills_label_name)) }, modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp))
                     ExposedDropdownMenuBox(expanded = levelExpanded, onExpandedChange = { levelExpanded = it }) {
-                        OutlinedTextField(
-                            value = skillLevel, onValueChange = {}, readOnly = true, label = { Text("Skill Level") },
+                        AppTextField(
+                            value = skillLevel, onValueChange = {}, readOnly = true, label = { Text(stringResource(R.string.skills_label_level)) },
                             trailingIcon = { Icon(Icons.Filled.ArrowDropDown, contentDescription = null) },
                             modifier = Modifier.fillMaxWidth()
                         )
@@ -177,7 +184,7 @@ fun SkillsSection(
             confirmButton = {
                 TextButton(onClick = {
                     if (skillName.isBlank() || skillLevel.isBlank()) {
-                        Toast.makeText(context, "Please fill the mandatory details.", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, fillMandatoryMsg, Toast.LENGTH_SHORT).show()
                     } else {
                         val entry = SkillEntity(
                             id = if (editingIndex >= 0) items[editingIndex].id else 0,
@@ -189,11 +196,11 @@ fun SkillsSection(
                         if (editingIndex >= 0) updated[editingIndex] = entry else updated.add(entry)
                         onSave(reindex(updated))
                         showDialog = false
-                        Toast.makeText(context, "Skill added successfully.", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, addedMsg, Toast.LENGTH_SHORT).show()
                     }
-                }) { Text("Save") }
+                }) { Text(stringResource(R.string.btn_save)) }
             },
-            dismissButton = { TextButton(onClick = { showDialog = false }) { Text("Cancel") } }
+            dismissButton = { TextButton(onClick = { showDialog = false }) { Text(stringResource(R.string.btn_cancel)) } }
         )
     }
 
@@ -205,7 +212,7 @@ fun SkillsSection(
             nextOrderIndex = items.size,
             onAddSkills = { newSkills ->
                 onSave(reindex(items + newSkills))
-                Toast.makeText(context, "${newSkills.size} skill(s) added.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, context.getString(R.string.skills_msg_count_added, newSkills.size), Toast.LENGTH_SHORT).show()
             },
             onDismiss = { showSuggestSheet = false }
         )
@@ -225,13 +232,19 @@ private fun AiSkillSuggestSheet(
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val enterRoleMsg = stringResource(R.string.skills_msg_enter_role)
+    val aiFailedMsg = stringResource(R.string.skills_msg_ai_failed)
+    val selectOneMsg = stringResource(R.string.skills_msg_select_one)
 
     var role by remember { mutableStateOf(designation) }
     var suggestions by remember { mutableStateOf<List<String>>(emptyList()) }
     var selected by remember { mutableStateOf<Set<String>>(emptySet()) }
     var isLoading by remember { mutableStateOf(false) }
 
-    ModalBottomSheet(onDismissRequest = onDismiss, sheetState = sheetState) {
+    AppBottomSheet(
+        onDismissRequest = onDismiss,
+        sheetState = sheetState
+    ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
@@ -241,31 +254,31 @@ private fun AiSkillSuggestSheet(
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Icon(Icons.Filled.AutoAwesome, contentDescription = null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(20.dp))
                 Text(
-                    "  AI Skill Suggestions",
+                    "  " + stringResource(R.string.skills_ai_sheet_title),
                     style = MaterialTheme.typography.titleMedium,
                     modifier = Modifier.weight(1f)
                 )
             }
             Spacer(Modifier.height(4.dp))
             Text(
-                "Enter your job role and tap Generate. Select the skills you want to add.",
+                stringResource(R.string.skills_ai_sheet_subtitle),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
             Spacer(Modifier.height(16.dp))
 
             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                OutlinedTextField(
+                AppTextField(
                     value = role,
                     onValueChange = { role = it },
-                    label = { Text("Your Role / Job Title") },
+                    label = { Text(stringResource(R.string.skills_label_role)) },
                     modifier = Modifier.weight(1f),
                     singleLine = true
                 )
                 TextButton(
                     onClick = {
                         if (role.isBlank()) {
-                            Toast.makeText(context, "Enter a job title first.", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, enterRoleMsg, Toast.LENGTH_SHORT).show()
                             return@TextButton
                         }
                         isLoading = true
@@ -274,7 +287,7 @@ private fun AiSkillSuggestSheet(
                             try {
                                 suggestions = ResumeAiService.suggestSkills(role)
                             } catch (e: Exception) {
-                                Toast.makeText(context, "AI failed. Check connection.", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(context, aiFailedMsg, Toast.LENGTH_SHORT).show()
                             } finally {
                                 isLoading = false
                             }
@@ -283,13 +296,13 @@ private fun AiSkillSuggestSheet(
                     enabled = !isLoading
                 ) {
                     if (isLoading) CircularProgressIndicator(modifier = Modifier.size(18.dp), strokeWidth = 2.dp)
-                    else Text("Generate")
+                    else Text(stringResource(R.string.skills_btn_generate))
                 }
             }
 
             if (suggestions.isNotEmpty()) {
                 Spacer(Modifier.height(16.dp))
-                Text("Tap to select:", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text(stringResource(R.string.skills_tap_to_select), style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 Spacer(Modifier.height(8.dp))
                 FlowRow(
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -317,7 +330,7 @@ private fun AiSkillSuggestSheet(
                             SkillEntity(resumeId = resumeId, orderIndex = nextOrderIndex + i, skillName = name, skillLevel = "Intermediate")
                         }
                         if (newSkills.isEmpty()) {
-                            Toast.makeText(context, "Select at least one skill.", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, selectOneMsg, Toast.LENGTH_SHORT).show()
                         } else {
                             onAddSkills(newSkills)
                             onDismiss()
@@ -325,7 +338,10 @@ private fun AiSkillSuggestSheet(
                     },
                     modifier = Modifier.fillMaxWidth()
                 ) {
-                    Text("Add ${if (selected.isEmpty()) "Selected" else "${selected.size} Selected"} (Intermediate level)")
+                    Text(
+                        if (selected.isEmpty()) stringResource(R.string.skills_btn_add_selected_none)
+                        else stringResource(R.string.skills_btn_add_selected_count, selected.size)
+                    )
                 }
             }
         }

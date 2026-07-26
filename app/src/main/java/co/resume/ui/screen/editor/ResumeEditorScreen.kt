@@ -11,7 +11,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -26,11 +26,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import co.resumeai.R
 
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -42,6 +41,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TooltipBox
 import androidx.compose.material3.TooltipDefaults
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberTooltipState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -54,7 +54,9 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
 import co.resume.data.local.entity.ResumeWithDetails
+import co.resume.ui.component.AppCard
 import co.resume.ui.component.BannerAdView
+import co.resume.ui.component.StaggeredEntrance
 import co.resume.ui.viewmodel.ResumeEditorViewModel
 
 private val hubSections = listOf(
@@ -67,10 +69,7 @@ private val hubSections = listOf(
     EditorSectionType.PROJECTS,
     EditorSectionType.ACHIEVEMENTS,
     EditorSectionType.LANGUAGES,
-    EditorSectionType.INTERESTS,
-    EditorSectionType.HOBBIES,
-    EditorSectionType.DECLARATION,
-    EditorSectionType.SIGNATURE
+    EditorSectionType.DECLARATION
 )
 
 private fun isSectionComplete(type: EditorSectionType, details: ResumeWithDetails): Boolean = when (type) {
@@ -84,10 +83,7 @@ private fun isSectionComplete(type: EditorSectionType, details: ResumeWithDetail
     EditorSectionType.PROJECTS -> details.projects.isNotEmpty()
     EditorSectionType.ACHIEVEMENTS -> details.achievements.isNotEmpty()
     EditorSectionType.LANGUAGES -> details.languages.isNotEmpty()
-    EditorSectionType.INTERESTS -> details.interests.isNotEmpty()
-    EditorSectionType.HOBBIES -> details.hobbies.isNotEmpty()
     EditorSectionType.DECLARATION -> details.resume.declaration.isNotBlank()
-    EditorSectionType.SIGNATURE -> !details.resume.signaturePath.isNullOrBlank()
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -104,12 +100,14 @@ fun ResumeEditorScreen(
     var showColorPicker by remember { mutableStateOf(false) }
 
     Scaffold(
+        containerColor = Color.Transparent,
         topBar = {
             TopAppBar(
-                title = { Text(details?.resume?.name?.ifBlank { "Resume" } ?: "Resume") },
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Transparent),
+                title = { Text(details?.resume?.name?.ifBlank { stringResource(R.string.editor_default_title) } ?: stringResource(R.string.editor_default_title)) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(R.string.cd_back))
                     }
                 },
                 actions = {
@@ -146,7 +144,7 @@ fun ResumeEditorScreen(
         bottomBar = { BannerAdView() }
     ) { padding ->
         val resumeDetails = details
-        Surface(modifier = Modifier.fillMaxSize().padding(padding), color = MaterialTheme.colorScheme.background) {
+        Surface(modifier = Modifier.fillMaxSize().padding(padding), color = Color.Transparent) {
             if (resumeDetails == null) {
                 Box(modifier = Modifier.fillMaxSize())
             } else {
@@ -169,7 +167,7 @@ fun ResumeEditorScreen(
                                 } else {
                                     AsyncImage(
                                         model = photoPath,
-                                        contentDescription = "Profile photo",
+                                        contentDescription = stringResource(R.string.editor_cd_profile_photo),
                                         contentScale = ContentScale.Crop,
                                         modifier = Modifier.fillMaxSize()
                                     )
@@ -177,7 +175,7 @@ fun ResumeEditorScreen(
                             }
                             Column(modifier = Modifier.padding(start = 16.dp)) {
                                 Text(
-                                    resumeDetails.resume.name.ifBlank { "Untitled resume" },
+                                    resumeDetails.resume.name.ifBlank { stringResource(R.string.editor_untitled) },
                                     style = MaterialTheme.typography.titleLarge
                                 )
                                 Text(
@@ -189,28 +187,29 @@ fun ResumeEditorScreen(
                         }
                     }
 
-                    items(hubSections) { type ->
+                    itemsIndexed(hubSections) { index, type ->
                         val complete = isSectionComplete(type, resumeDetails)
-                        Card(
-                            onClick = { onOpenSection(type.key) },
-                            modifier = Modifier.fillMaxWidth().padding(bottom = 10.dp),
-                            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
-                        ) {
-                            Row(
-                                modifier = Modifier.fillMaxWidth().padding(16.dp),
-                                verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.SpaceBetween
+                        StaggeredEntrance(index = index) {
+                            AppCard(
+                                onClick = { onOpenSection(type.key) },
+                                modifier = Modifier.fillMaxWidth().padding(bottom = 10.dp)
                             ) {
-                                Row(verticalAlignment = Alignment.CenterVertically) {
-                                    Icon(
-                                        if (complete) Icons.Filled.CheckCircle else Icons.Filled.RadioButtonUnchecked,
-                                        contentDescription = null,
-                                        tint = if (complete) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
-                                        modifier = Modifier.padding(end = 16.dp)
-                                    )
-                                    Text(stringResource(type.titleRes), style = MaterialTheme.typography.titleMedium)
+                                Row(
+                                    modifier = Modifier.fillMaxWidth().padding(16.dp),
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    horizontalArrangement = Arrangement.SpaceBetween
+                                ) {
+                                    Row(verticalAlignment = Alignment.CenterVertically) {
+                                        Icon(
+                                            if (complete) Icons.Filled.CheckCircle else Icons.Filled.RadioButtonUnchecked,
+                                            contentDescription = null,
+                                            tint = if (complete) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
+                                            modifier = Modifier.padding(end = 16.dp)
+                                        )
+                                        Text(stringResource(type.titleRes), style = MaterialTheme.typography.titleMedium)
+                                    }
+                                    Icon(Icons.Filled.ChevronRight, contentDescription = null)
                                 }
-                                Icon(Icons.Filled.ChevronRight, contentDescription = null)
                             }
                         }
                     }

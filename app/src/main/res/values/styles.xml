@@ -1,5 +1,12 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
+    <!--
+        Both themes below opt out of Android 15's (API 35) enforced edge-to-edge display.
+        We target SDK 35, so without this the OS draws content full-bleed under the status/
+        navigation bars regardless of manifest theme, and neither our Compose screens (e.g.
+        Onboarding, which doesn't route through Scaffold) nor the third-party UCrop activity
+        add insets padding for that — content gets clipped behind the system bars.
+    -->
     <style name="Theme.ResumeBuilder" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:fontFamily">@font/quicksand_font</item>
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
@@ -9,6 +16,11 @@
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="android:windowOptOutEdgeToEdgeEnforcement" tools:targetApi="35">true</item>
+    </style>
+
+    <style name="Theme.ResumeBuilder.Crop" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowOptOutEdgeToEdgeEnforcement" tools:targetApi="35">true</item>
     </style>
 
 </resources>

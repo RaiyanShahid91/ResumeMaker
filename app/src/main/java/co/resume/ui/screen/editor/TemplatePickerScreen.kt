@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -30,6 +31,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -37,6 +39,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
@@ -61,12 +64,14 @@ fun TemplatePickerScreen(
     var previewTemplate by remember { mutableStateOf<TemplateUiModel?>(null) }
 
     Scaffold(
+        containerColor = Color.Transparent,
         topBar = {
             TopAppBar(
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Transparent),
                 title = { Text(stringResource(R.string.choose_template)) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(R.string.cd_back))
                     }
                 }
             )
@@ -154,7 +159,7 @@ fun TemplateCard(template: TemplateUiModel, isSelected: Boolean, onClick: () -> 
                 if (isSelected) {
                     Icon(
                         Icons.Filled.CheckCircle,
-                        contentDescription = "Selected",
+                        contentDescription = stringResource(R.string.template_cd_selected),
                         tint = MaterialTheme.colorScheme.primary,
                         modifier = Modifier.align(Alignment.TopEnd).padding(8.dp)
                     )
@@ -181,7 +186,7 @@ private fun TemplatePreviewDialog(
     onApply: () -> Unit
 ) {
     Dialog(onDismissRequest = onDismiss, properties = DialogProperties(usePlatformDefaultWidth = false)) {
-        Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
+        Surface(modifier = Modifier.fillMaxSize(), color = Color.Transparent) {
             Scaffold(
                 topBar = {
                     TopAppBar(
@@ -197,18 +202,23 @@ private fun TemplatePreviewDialog(
                         },
                         navigationIcon = {
                             IconButton(onClick = onDismiss) {
-                                Icon(Icons.Filled.Close, contentDescription = "Close")
+                                Icon(Icons.Filled.Close, contentDescription = stringResource(R.string.template_cd_close))
                             }
                         }
                     )
                 },
                 bottomBar = {
-                    Button(
-                        onClick = onApply,
-                        enabled = !isSelected,
-                        modifier = Modifier.fillMaxWidth().padding(16.dp)
-                    ) {
-                        Text(if (isSelected) "Already using this template" else "Use this template")
+                    Surface(color = MaterialTheme.colorScheme.background) {
+                        Button(
+                            onClick = onApply,
+                            enabled = !isSelected,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .navigationBarsPadding()
+                                .padding(16.dp)
+                        ) {
+                            Text(stringResource(if (isSelected) R.string.already_using_template else R.string.use_this_template))
+                        }
                     }
                 }
             ) { innerPadding ->

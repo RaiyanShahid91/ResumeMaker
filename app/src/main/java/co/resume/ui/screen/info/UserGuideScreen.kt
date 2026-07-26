@@ -12,6 +12,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -22,28 +23,35 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import co.resumeai.R
 
 private data class GuideStep(val title: String, val description: String)
 
-private val steps = listOf(
-    GuideStep("Create a resume", "From the Home or My Resume tab, tap \"Create Resume\" and enter a name and designation."),
-    GuideStep("Fill in your details", "Open the resume and work through each section — Personal Details, Objective, Education, Work Experience, Skills, and more."),
-    GuideStep("Add a photo or signature", "Use the Profile Photo and Signature sections to capture or pick an image."),
-    GuideStep("Choose a template", "Tap the palette icon to pick from several professional designs — switching templates never loses your entered data."),
-    GuideStep("Preview and download", "Tap the eye icon to see exactly how your resume will look, then tap the print icon to save it as a PDF or print it.")
+@Composable
+private fun guideSteps(): List<GuideStep> = listOf(
+    GuideStep(stringResource(R.string.guide_s1_title), stringResource(R.string.guide_s1_desc)),
+    GuideStep(stringResource(R.string.guide_s2_title), stringResource(R.string.guide_s2_desc)),
+    GuideStep(stringResource(R.string.guide_s3_title), stringResource(R.string.guide_s3_desc)),
+    GuideStep(stringResource(R.string.guide_s4_title), stringResource(R.string.guide_s4_desc)),
+    GuideStep(stringResource(R.string.guide_s5_title), stringResource(R.string.guide_s5_desc))
 )
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun UserGuideScreen(onBack: () -> Unit) {
+    val steps = guideSteps()
     Scaffold(
+        containerColor = Color.Transparent,
         topBar = {
             TopAppBar(
-                title = { Text("User Guide") },
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Transparent),
+                title = { Text(stringResource(R.string.settings_user_guide)) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(R.string.cd_back))
                     }
                 }
             )

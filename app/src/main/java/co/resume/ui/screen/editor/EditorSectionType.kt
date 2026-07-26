@@ -13,10 +13,7 @@ enum class EditorSectionType(val key: String, @StringRes val titleRes: Int) {
     PROJECTS("projects",          R.string.section_projects),
     ACHIEVEMENTS("achievements",  R.string.section_achievements),
     LANGUAGES("languages",        R.string.section_languages),
-    INTERESTS("interests",        R.string.section_interests),
-    HOBBIES("hobbies",            R.string.section_hobbies),
-    DECLARATION("declaration",    R.string.section_declaration),
-    SIGNATURE("signature",        R.string.section_signature);
+    DECLARATION("declaration",    R.string.section_declaration);
 
     companion object {
         fun fromKey(key: String): EditorSectionType = entries.first { it.key == key }

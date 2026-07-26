@@ -5,11 +5,16 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.ui.Modifier
 import androidx.lifecycle.lifecycleScope
 import co.resume.ads.AdManager
 import co.resume.data.migration.TinyDbImporter
 import co.resume.navigation.RootNavHost
 import co.resume.navigation.Screen
+import co.resume.ui.theme.AppBackgroundGradient
 import co.resume.ui.theme.ResumeBuilderTheme
 import co.resume.utils.Constants
 import co.resume.utils.LanguageManager
@@ -45,13 +50,17 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             ResumeBuilderTheme {
-                RootNavHost(
-                    startDestination = startDestination,
-                    onLanguageSelected = { code -> applyLanguageAndRestart(code) },
-                    onOnboardingFinished = {
-                        sharedPref.saveBoolean(Constants.ONBOARDING_DONE, true)
-                    }
-                )
+                // Single continuous gradient painted once behind the whole nav host, so it
+                // never scrolls, resets, or tiles per-screen — every screen sits on top of it.
+                Box(modifier = Modifier.fillMaxSize().background(AppBackgroundGradient)) {
+                    RootNavHost(
+                        startDestination = startDestination,
+                        onLanguageSelected = { code -> applyLanguageAndRestart(code) },
+                        onOnboardingFinished = {
+                            sharedPref.saveBoolean(Constants.ONBOARDING_DONE, true)
+                        }
+                    )
+                }
             }
         }
     }

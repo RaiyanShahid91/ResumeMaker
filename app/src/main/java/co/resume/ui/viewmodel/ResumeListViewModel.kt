@@ -7,6 +7,7 @@ import co.resume.data.repository.ResumeRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -18,6 +19,11 @@ class ResumeListViewModel @Inject constructor(
 
     val resumes: StateFlow<List<ResumeEntity>> = repository.observeAllResumes()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+
+    /** True until the first emission arrives from the database, used to drive a shimmer skeleton. */
+    val isLoading: StateFlow<Boolean> = resumes
+        .map { false }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), true)
 
     fun createResume(name: String, designation: String, onCreated: (Long) -> Unit) {
         viewModelScope.launch {

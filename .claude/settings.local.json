@@ -19,7 +19,23 @@
       "Bash(javap -p /Users/raiyanshahid/Library/Android/sdk/platforms/android-34/android.jar)",
       "Bash(javap -classpath /Users/raiyanshahid/Library/Android/sdk/platforms/android-34/android.jar android.print.PrintDocumentAdapter)",
       "Bash(javap -classpath /Users/raiyanshahid/Library/Android/sdk/platforms/android-34/android.jar 'android.print.PrintDocumentAdapter$LayoutResultCallback')",
-      "Bash(javap -classpath /Users/raiyanshahid/Library/Android/sdk/platforms/android-34/android.jar 'android.print.PrintDocumentAdapter$WriteResultCallback')"
+      "Bash(javap -classpath /Users/raiyanshahid/Library/Android/sdk/platforms/android-34/android.jar 'android.print.PrintDocumentAdapter$WriteResultCallback')",
+      "Bash(grep -rn \"^import.*\\\\.R$\" /Users/raiyanshahid/Downloads/ResumeMaker/app/src/main/java --include=\"*.kt\")",
+      "Bash(uniq -c -f1)",
+      "Bash(grep -rhn \"^import.*\\\\.R$\" /Users/raiyanshahid/Downloads/ResumeMaker/app/src/main/java --include=\"*.kt\")",
+      "Bash(java -version)",
+      "Bash(./gradlew :app:compileDebugKotlin --console=plain -q)",
+      "Bash(comm -23 /tmp/used_keys.txt /tmp/values-de_keys.txt)",
+      "Bash(comm -23 /tmp/used_keys.txt /tmp/values-es_keys.txt)",
+      "Bash(python3 -)",
+      "Bash(./gradlew :app:compileDebugKotlin -q)",
+      "Bash(awk -F: '{s+=$2} END{print \"Total Button\\( occurrences:\", s}')",
+      "Bash(awk -F: '{s+=$2} END{print \"Total Card\\( occurrences:\", s}')",
+      "Bash(./gradlew :app:assembleDebug -q)",
+      "Bash(adb devices *)",
+      "WebFetch(domain:dribbble.com)",
+      "Bash(grep *)",
+      "Bash(./gradlew :app:compileDebugKotlin --rerun-tasks -q)"
     ]
   }
 }

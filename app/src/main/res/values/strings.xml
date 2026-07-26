@@ -256,6 +256,8 @@
     <string name="settings_contact">Contact</string>
     <string name="settings_rate_app">Rate Our App</string>
     <string name="settings_write_us">Write Us</string>
+    <string name="settings_share_app">Share App</string>
+    <string name="share_chooser_title">Share app via</string>
     <string name="settings_version">App version: %1$s</string>
     <string name="settings_currently">Currently: %1$s</string>
 
@@ -332,4 +334,282 @@
     <string name="home_action_ai_chat_desc">Chat with AI to write and improve resume content.</string>
     <string name="home_ai_banner_title">Powered by AI</string>
     <string name="home_ai_banner_body">Use the AI sparkle button ✨ in Objective, Work Experience, Skills, Projects, and Achievements to generate and improve content instantly.</string>
+
+    <!-- Common actions / messages -->
+    <string name="btn_save">Save</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_pick">Pick</string>
+    <string name="btn_change">Change</string>
+    <string name="msg_nothing_to_show">Nothing to show</string>
+    <string name="msg_deleted_successfully">Deleted successfully.</string>
+    <string name="resume_delete_confirm_title">Delete resume?</string>
+    <string name="resume_delete_confirm_message">Are you sure you want to delete \"%1$s\"? This can\'t be undone.</string>
+    <string name="btn_delete">Delete</string>
+    <string name="msg_fill_mandatory">Please fill the mandatory details.</string>
+    <string name="msg_details_saved">Details saved successfully.</string>
+    <string name="cd_back">Back</string>
+    <string name="cd_move_up">Move up</string>
+    <string name="cd_move_down">Move down</string>
+    <string name="cd_edit">Edit</string>
+    <string name="cd_delete">Delete</string>
+
+    <!-- Personal Details section -->
+    <string name="personal_label_name">Name</string>
+    <string name="personal_label_email">Email ID</string>
+    <string name="personal_label_phone">Phone</string>
+    <string name="personal_label_address">Address</string>
+    <string name="personal_error_email_invalid">Enter a valid email address</string>
+    <string name="personal_error_phone_invalid">Phone number must contain digits only</string>
+
+    <!-- Work Experience section -->
+    <string name="work_cd_add">Add work experience</string>
+    <string name="work_title_edit">Edit Work Experience</string>
+    <string name="work_title_add">Add Work Experience</string>
+    <string name="work_label_job_title">Job Title</string>
+    <string name="work_label_company">Company</string>
+    <string name="work_label_from">From</string>
+    <string name="work_label_to">To</string>
+    <string name="work_label_ongoing">Ongoing</string>
+    <string name="work_label_description">Description</string>
+    <string name="work_cd_improve_ai">Improve with AI</string>
+    <string name="work_msg_saved">Work experience saved.</string>
+    <string name="work_msg_ai_failed">AI failed. Try again.</string>
+
+    <!-- Education section -->
+    <string name="edu_cd_add">Add education</string>
+    <string name="edu_title_edit">Edit Education</string>
+    <string name="edu_title_add">Add Education</string>
+    <string name="edu_label_course">Degree / Course</string>
+    <string name="edu_label_university">University / School</string>
+    <string name="edu_label_grade">Grade / Score</string>
+    <string name="edu_msg_saved">Educational details saved.</string>
+
+    <!-- Skills section -->
+    <string name="skills_cd_add">Add skill</string>
+    <string name="skills_cd_suggest_ai">Suggest skills with AI</string>
+    <string name="skills_title_edit">Edit Skill</string>
+    <string name="skills_title_add">Add Skill</string>
+    <string name="skills_label_name">Skill Name</string>
+    <string name="skills_label_level">Skill Level</string>
+    <string name="skills_msg_added">Skill added successfully.</string>
+    <string name="skills_ai_sheet_title">AI Skill Suggestions</string>
+    <string name="skills_ai_sheet_subtitle">Enter your job role and tap Generate. Select the skills you want to add.</string>
+    <string name="skills_label_role">Your Role / Job Title</string>
+    <string name="skills_btn_generate">Generate</string>
+    <string name="skills_msg_enter_role">Enter a job title first.</string>
+    <string name="skills_msg_ai_failed">AI failed. Check connection.</string>
+    <string name="skills_tap_to_select">Tap to select:</string>
+    <string name="skills_msg_select_one">Select at least one skill.</string>
+    <string name="skills_btn_add_selected_none">Add Selected (Intermediate level)</string>
+    <string name="skills_btn_add_selected_count">Add %1$d Selected (Intermediate level)</string>
+    <string name="skills_msg_count_added">%1$d skill(s) added.</string>
+
+    <!-- Projects section -->
+    <string name="proj_cd_add">Add project</string>
+    <string name="proj_title_edit">Edit Project</string>
+    <string name="proj_title_add">Add Project</string>
+    <string name="proj_label_name">Project Name</string>
+    <string name="proj_label_description">Description</string>
+    <string name="proj_label_from">From</string>
+    <string name="proj_label_to">To</string>
+    <string name="proj_label_link">Project Link</string>
+    <string name="proj_cd_generate_ai">Generate with AI</string>
+    <string name="proj_msg_saved">Project details saved.</string>
+    <string name="proj_msg_ai_failed">AI failed. Try again.</string>
+
+    <!-- Objective section -->
+    <string name="obj_label_objective">Resume Objective</string>
+    <string name="obj_placeholder">I am seeking employment with a company where I can grow professionally and personally</string>
+    <string name="obj_btn_generating">Generating…</string>
+    <string name="obj_btn_generate_ai">Generate with AI</string>
+    <string name="obj_btn_improve_ai">Improve with AI</string>
+    <string name="obj_suggested_title">Suggested objectives</string>
+    <string name="obj_msg_enter">Please enter the objective.</string>
+    <string name="obj_ai_error">AI error: %1$s</string>
+    <string name="obj_suggestion_1">Data-driven professional skilled in Python, SQL, and data visualization tools, seeking to leverage analytical expertise to drive business insights.</string>
+    <string name="obj_suggestion_2">Results-driven project manager with 5 years of experience in agile software development, seeking to lead high-performing teams toward delivering impactful products.</string>
+    <string name="obj_suggestion_3">Creative and detail-oriented UI/UX designer passionate about crafting intuitive, user-centered digital experiences.</string>
+    <string name="obj_suggestion_4">Motivated computer science graduate with a strong foundation in full stack development, eager to contribute to innovative engineering teams.</string>
+    <string name="obj_suggestion_5">Seeking a software developer position to leverage my skills in Java, Kotlin, and Android development to build high-quality mobile applications.</string>
+
+    <!-- Declaration section -->
+    <string name="decl_label_declaration">Declaration</string>
+    <string name="decl_placeholder">I do hereby confirm that the information given above is true to the best of my knowledge</string>
+    <string name="decl_label_place">Place</string>
+    <string name="decl_label_date">Date</string>
+
+    <!-- Simple list sections (Achievements / Languages / Interests / Hobbies) -->
+    <string name="field_achievement">Achievement</string>
+    <string name="field_achievement_placeholder">Secured first place in the national level hackathon</string>
+    <string name="field_language">Language</string>
+    <string name="field_language_placeholder">English</string>
+    <string name="field_interest">Interest</string>
+    <string name="field_interest_placeholder">Full stack application development</string>
+    <string name="field_hobby">Hobby</string>
+    <string name="field_hobby_placeholder">Reading books</string>
+    <string name="list_cd_add">Add %1$s</string>
+    <string name="list_title_edit">Edit %1$s</string>
+    <string name="list_title_add">Add %1$s</string>
+    <string name="list_msg_saved">Saved successfully.</string>
+
+    <!-- Image capture section -->
+    <string name="img_msg_save_error">Error saving image</string>
+    <string name="img_msg_camera_denied">Camera permission denied</string>
+    <string name="img_btn_add_change">Add / Change %1$s</string>
+    <string name="img_dialog_title">Select Image</string>
+    <string name="img_dialog_text">Choose a source for your %1$s</string>
+    <string name="img_btn_camera">Camera</string>
+    <string name="img_btn_gallery">Gallery</string>
+
+    <!-- Resume editor hub -->
+    <string name="editor_default_title">Resume</string>
+    <string name="editor_untitled">Untitled resume</string>
+    <string name="editor_cd_profile_photo">Profile photo</string>
+
+    <!-- Resume preview / export -->
+    <string name="preview_title">Preview</string>
+    <string name="preview_cd_download">Download</string>
+    <string name="preview_cd_share">Share resume</string>
+    <string name="preview_share_chooser_title">Share resume via</string>
+    <string name="preview_export_title">Export Resume</string>
+    <string name="preview_export_subtitle">Choose a format to export your resume:</string>
+    <string name="preview_pdf_title">PDF</string>
+    <string name="preview_pdf_subtitle">Best for printing &amp; sharing</string>
+    <string name="preview_word_title">MS Word (.doc)</string>
+    <string name="preview_word_subtitle">Edit in Word or Google Docs</string>
+    <string name="preview_msg_pdf_failed">PDF export failed: %1$s</string>
+    <string name="preview_msg_export_failed">Export failed: %1$s</string>
+    <string name="preview_msg_save_failed">Save failed: %1$s</string>
+    <string name="preview_dialog_saved_title">File Downloaded</string>
+    <string name="preview_dialog_saved_msg">\"%1$s\" has been saved to your Downloads folder.</string>
+    <string name="preview_btn_open_file">Open File</string>
+    <string name="preview_btn_open_folder">Open Folder</string>
+    <string name="preview_msg_no_app_found">No app found to open this file</string>
+    <string name="preview_msg_saved_to_downloads">Saved to Downloads</string>
+    <string name="preview_chooser_save">Save Resume</string>
+    <string name="preview_chooser_open_with">Open with</string>
+
+    <!-- Onboarding -->
+    <string name="onboard_skip">Skip</string>
+    <string name="onboard_next">Next</string>
+    <string name="onboard_get_started">Get Started</string>
+    <string name="onboard_page1_title">Welcome to ResumeAI</string>
+    <string name="onboard_page1_desc">Create a polished, professional resume right on your phone — no account needed, no data leaves your device.</string>
+    <string name="onboard_page1_highlight">100% private &amp; offline</string>
+    <string name="onboard_page2_title">Fill In Your Details</string>
+    <string name="onboard_page2_desc">Add personal info, work experience, education, skills, projects, achievements, languages, and more — all in dedicated sections.</string>
+    <string name="onboard_page2_highlight">13 resume sections</string>
+    <string name="onboard_page3_title">Pick a Beautiful Template</string>
+    <string name="onboard_page3_desc">Choose from 13 professionally designed templates — Classic, Modern, Creative, Developer, Designer, and many more. Customise the accent colour to match your style.</string>
+    <string name="onboard_page3_highlight">13 templates · any colour</string>
+    <string name="onboard_page4_title">Write Smarter with AI</string>
+    <string name="onboard_page4_desc">Tap the ✨ sparkle button inside Objective, Work Experience, Skills, Projects, or Achievements to generate and improve content instantly. Or open the AI Chat for a full writing session.</string>
+    <string name="onboard_page4_highlight">Powered by Llama 3.1 via Groq</string>
+    <string name="onboard_page5_title">Export &amp; Share</string>
+    <string name="onboard_page5_desc">Preview your resume live, then export it as a high-quality PDF or editable MS Word (.doc) file — ready to send to employers or customise further. Your data is always saved locally.</string>
+    <string name="onboard_page5_highlight">PDF &amp; Word export · always saved</string>
+
+    <!-- About screen -->
+    <string name="about_title">About</string>
+    <string name="about_app_name">ResumeAI</string>
+    <string name="about_version">Version %1$s</string>
+    <string name="about_tagline">Build a professional resume in minutes, on your device.</string>
+    <string name="about_what_title">What is ResumeAI?</string>
+    <string name="about_what_body">ResumeAI is a fully offline, privacy-first Android app that helps you create polished, professional resumes from scratch. Fill in your details, pick a template, customise the accent colour, and export a ready-to-share PDF — no account, no sign-up, and no data ever leaves your phone.</string>
+    <string name="about_features_title">Core Features</string>
+    <string name="about_feat_personal_title">Personal Details</string>
+    <string name="about_feat_personal_desc">Name, designation, email, phone, and address.</string>
+    <string name="about_feat_objective_title">Objective</string>
+    <string name="about_feat_objective_desc">Write or AI-generate a compelling career objective.</string>
+    <string name="about_feat_education_title">Education</string>
+    <string name="about_feat_education_desc">Add multiple education entries with dates and grades.</string>
+    <string name="about_feat_work_title">Work Experience</string>
+    <string name="about_feat_work_desc">Log jobs with AI-improved bullet-point descriptions.</string>
+    <string name="about_feat_skills_title">Skills</string>
+    <string name="about_feat_skills_desc">Add skills manually or let AI suggest 10 relevant ones.</string>
+    <string name="about_feat_projects_title">Projects</string>
+    <string name="about_feat_projects_desc">Showcase projects with links and AI-generated summaries.</string>
+    <string name="about_feat_achievements_title">Achievements</string>
+    <string name="about_feat_achievements_desc">Highlight awards and accomplishments, AI-assisted.</string>
+    <string name="about_feat_languages_title">Languages &amp; More</string>
+    <string name="about_feat_languages_desc">Languages, interests, hobbies, and a declaration section.</string>
+    <string name="about_feat_photo_title">Profile Photo</string>
+    <string name="about_feat_photo_desc">Attach a profile photo and signature directly from your camera or gallery.</string>
+    <string name="about_templates_title">Templates &amp; Design</string>
+    <string name="about_templates13_title">13 Templates</string>
+    <string name="about_templates13_desc">Classic, Modern, Minimal, Bold, Elegant, Creative, Two-Column, Academic, Developer, Designer, Portfolio, Teacher, Code Dark.</string>
+    <string name="about_accent_title">Accent Colour</string>
+    <string name="about_accent_desc">Pick any colour — it applies to your header, section titles, and dividers instantly.</string>
+    <string name="about_pdf_title">PDF Export</string>
+    <string name="about_pdf_desc">Export your resume as a high-quality PDF, ready to send to employers.</string>
+    <string name="about_ai_title">AI-Powered Features</string>
+    <string name="about_ai_intro">The app integrates an AI assistant to help you write and refine resume content. Tap the ✨ sparkle icon inside any supported section to generate or improve text instantly.</string>
+    <string name="about_ai_objective_title">Objective Generator</string>
+    <string name="about_ai_objective_desc">Writes a professional career objective tailored to your designation.</string>
+    <string name="about_ai_job_title">Job Description AI</string>
+    <string name="about_ai_job_desc">Rewrites work experience bullet points with strong action verbs.</string>
+    <string name="about_ai_skills_title">Skill Suggestions</string>
+    <string name="about_ai_skills_desc">Suggests 10 relevant skills based on your job role.</string>
+    <string name="about_ai_projects_title">Project Summaries</string>
+    <string name="about_ai_projects_desc">Generates concise project descriptions from just a project name.</string>
+    <string name="about_ai_achievements_title">Achievement Writer</string>
+    <string name="about_ai_achievements_desc">Crafts impactful, quantified achievement statements.</string>
+    <string name="about_ai_chat_title">AI Chat Assistant</string>
+    <string name="about_ai_chat_desc">Open-ended chat to brainstorm, draft, or refine any part of your resume.</string>
+    <string name="about_tech_title">Technology</string>
+    <string name="about_tech_built_label">Built with</string>
+    <string name="about_tech_built_value">Kotlin &amp; Jetpack Compose</string>
+    <string name="about_tech_ui_label">UI toolkit</string>
+    <string name="about_tech_ui_value">Material Design 3</string>
+    <string name="about_tech_storage_label">Local storage</string>
+    <string name="about_tech_storage_value">Room (SQLite) — all data stays on your device</string>
+    <string name="about_tech_model_label">AI model</string>
+    <string name="about_tech_model_value">Llama 3.1 8B Instant</string>
+    <string name="about_tech_provider_label">AI provider</string>
+    <string name="about_tech_provider_value">Groq Cloud API (fast inference)</string>
+    <string name="about_tech_pdf_label">PDF export</string>
+    <string name="about_tech_pdf_value">Android WebView → Print API</string>
+    <string name="about_privacy_title">Privacy</string>
+    <string name="about_privacy_body">Your resume data is stored locally on your device using an encrypted database. It is never uploaded or shared with any server. The only time the app accesses the internet is when you use an AI feature — your text prompt is sent to Groq\'s API to generate a response and nothing else is transmitted.</string>
+    <string name="about_contact_title">Contact &amp; Support</string>
+    <string name="about_contact_body">Have a question, found a bug, or want to suggest a feature? We\'d love to hear from you. Go to Settings → Write Us to send us an email.</string>
+
+    <!-- Privacy policy screen -->
+    <string name="privacy_s1_heading">No account, no cloud</string>
+    <string name="privacy_s1_body">ResumeAI works entirely on your device. There is no sign-in, no account, and no server that your resumes are sent to.</string>
+    <string name="privacy_s2_heading">What\'s stored, and where</string>
+    <string name="privacy_s2_body">Everything you enter — personal details, education, work experience, skills, projects, photos, and your signature — is saved only in this app\'s private storage on your device, never uploaded anywhere.</string>
+    <string name="privacy_s3_heading">Nothing leaves your device</string>
+    <string name="privacy_s3_body">We don\'t collect, transmit, sell, or share your resume data with anyone. There is no analytics or tracking of what you type.</string>
+    <string name="privacy_s4_heading">Permissions we ask for</string>
+    <string name="privacy_s4_body">Camera and photo access are used only so you can add a profile photo or signature image, and that image is stored locally like the rest of your resume.</string>
+    <string name="privacy_s5_heading">Deleting your data</string>
+    <string name="privacy_s5_body">Deleting a resume in the app removes it and its photos from your device. Uninstalling the app removes everything, since nothing is kept anywhere else.</string>
+
+    <!-- User guide screen -->
+    <string name="guide_s1_title">Create a resume</string>
+    <string name="guide_s1_desc">From the Home or My Resume tab, tap \"Create Resume\" and enter a name and designation.</string>
+    <string name="guide_s2_title">Fill in your details</string>
+    <string name="guide_s2_desc">Open the resume and work through each section — Personal Details, Objective, Education, Work Experience, Skills, and more.</string>
+    <string name="guide_s3_title">Add a photo or signature</string>
+    <string name="guide_s3_desc">Use the Profile Photo and Signature sections to capture or pick an image.</string>
+    <string name="guide_s4_title">Choose a template</string>
+    <string name="guide_s4_desc">Tap the palette icon to pick from several professional designs — switching templates never loses your entered data.</string>
+    <string name="guide_s5_title">Preview and download</string>
+    <string name="guide_s5_desc">Tap the eye icon to see exactly how your resume will look, then tap the print icon to save it as a PDF or print it.</string>
+
+    <!-- Update app sheet -->
+    <string name="update_title">Update available</string>
+    <string name="update_body">A new version of ResumeAI is available. Update now for the latest features and fixes.</string>
+    <string name="update_btn">Update Now</string>
+
+    <!-- AI Chat extras -->
+    <string name="ai_chat_copy">Copy</string>
+    <string name="ai_chat_copied">Copied</string>
+    <string name="ai_chat_error_response">Sorry, I couldn\'t get a response. Please try again.</string>
+
+    <!-- Template picker -->
+    <string name="template_cd_selected">Selected</string>
+    <string name="template_cd_close">Close</string>
 </resources>

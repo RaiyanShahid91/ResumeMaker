@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 const val DEFAULT_SECTION_ORDER =
-    "objective,education,work_experience,skills,projects,achievements,languages,interests,hobbies,declaration"
+    "objective,education,work_experience,skills,projects,achievements,languages,declaration"
 
 @Entity(tableName = "resumes")
 data class ResumeEntity(

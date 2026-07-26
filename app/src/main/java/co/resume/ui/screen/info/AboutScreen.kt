@@ -2,6 +2,7 @@ package co.resume.ui.screen.info
 
 import android.content.Context
 import androidx.compose.foundation.background
+import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -36,6 +37,7 @@ import androidx.compose.material.icons.filled.Work
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -49,8 +51,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import co.resumeai.R
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
@@ -61,12 +65,14 @@ fun AboutScreen(onBack: () -> Unit) {
     }.getOrDefault("—")
 
     Scaffold(
+        containerColor = Color.Transparent,
         topBar = {
             TopAppBar(
-                title = { Text("About") },
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Transparent),
+                title = { Text(stringResource(R.string.about_title)) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(R.string.cd_back))
                     }
                 }
             )
@@ -101,19 +107,19 @@ fun AboutScreen(onBack: () -> Unit) {
                     }
                     Spacer(Modifier.height(14.dp))
                     Text(
-                        "ResumeAI",
+                        stringResource(R.string.about_app_name),
                         style = MaterialTheme.typography.headlineMedium,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.onPrimaryContainer
                     )
                     Text(
-                        "Version $versionName",
+                        stringResource(R.string.about_version, versionName ?: ""),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.7f),
                         modifier = Modifier.padding(top = 4.dp)
                     )
                     Text(
-                        "Build a professional resume in minutes, on your device.",
+                        stringResource(R.string.about_tagline),
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.85f),
                         modifier = Modifier.padding(top = 10.dp)
@@ -123,9 +129,9 @@ fun AboutScreen(onBack: () -> Unit) {
 
             // ── What is this app ────────────────────────────────────────────
             item {
-                AboutSection(title = "What is ResumeAI?") {
+                AboutSection(title = stringResource(R.string.about_what_title)) {
                     Text(
-                        "ResumeAI is a fully offline, privacy-first Android app that helps you create polished, professional resumes from scratch. Fill in your details, pick a template, customise the accent colour, and export a ready-to-share PDF — no account, no sign-up, and no data ever leaves your phone.",
+                        stringResource(R.string.about_what_body),
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -134,17 +140,17 @@ fun AboutScreen(onBack: () -> Unit) {
 
             // ── Core features ───────────────────────────────────────────────
             item {
-                AboutSection(title = "Core Features") {
+                AboutSection(title = stringResource(R.string.about_features_title)) {
                     val features = listOf(
-                        FeatureItem(Icons.Filled.Person,      "Personal Details",    "Name, designation, email, phone, and address."),
-                        FeatureItem(Icons.Filled.Psychology,  "Objective",           "Write or AI-generate a compelling career objective."),
-                        FeatureItem(Icons.Filled.School,      "Education",           "Add multiple education entries with dates and grades."),
-                        FeatureItem(Icons.Filled.Work,        "Work Experience",     "Log jobs with AI-improved bullet-point descriptions."),
-                        FeatureItem(Icons.Filled.Star,        "Skills",              "Add skills manually or let AI suggest 10 relevant ones."),
-                        FeatureItem(Icons.Filled.Description, "Projects",            "Showcase projects with links and AI-generated summaries."),
-                        FeatureItem(Icons.Filled.Star,        "Achievements",        "Highlight awards and accomplishments, AI-assisted."),
-                        FeatureItem(Icons.Filled.Language,    "Languages & More",    "Languages, interests, hobbies, and a declaration section."),
-                        FeatureItem(Icons.Filled.Person,      "Profile Photo",       "Attach a profile photo and signature directly from your camera or gallery."),
+                        FeatureItem(Icons.Filled.Person,      stringResource(R.string.about_feat_personal_title),    stringResource(R.string.about_feat_personal_desc)),
+                        FeatureItem(Icons.Filled.Psychology,  stringResource(R.string.about_feat_objective_title),   stringResource(R.string.about_feat_objective_desc)),
+                        FeatureItem(Icons.Filled.School,      stringResource(R.string.about_feat_education_title),   stringResource(R.string.about_feat_education_desc)),
+                        FeatureItem(Icons.Filled.Work,        stringResource(R.string.about_feat_work_title),        stringResource(R.string.about_feat_work_desc)),
+                        FeatureItem(Icons.Filled.Star,        stringResource(R.string.about_feat_skills_title),      stringResource(R.string.about_feat_skills_desc)),
+                        FeatureItem(Icons.Filled.Description, stringResource(R.string.about_feat_projects_title),    stringResource(R.string.about_feat_projects_desc)),
+                        FeatureItem(Icons.Filled.Star,        stringResource(R.string.about_feat_achievements_title), stringResource(R.string.about_feat_achievements_desc)),
+                        FeatureItem(Icons.Filled.Language,    stringResource(R.string.about_feat_languages_title),   stringResource(R.string.about_feat_languages_desc)),
+                        FeatureItem(Icons.Filled.Person,      stringResource(R.string.about_feat_photo_title),       stringResource(R.string.about_feat_photo_desc)),
                     )
                     features.forEach { FeatureRow(it) }
                 }
@@ -152,11 +158,11 @@ fun AboutScreen(onBack: () -> Unit) {
 
             // ── Templates & Design ──────────────────────────────────────────
             item {
-                AboutSection(title = "Templates & Design") {
+                AboutSection(title = stringResource(R.string.about_templates_title)) {
                     val items = listOf(
-                        FeatureItem(Icons.Filled.GridView,   "13 Templates",        "Classic, Modern, Minimal, Bold, Elegant, Creative, Two-Column, Academic, Developer, Designer, Portfolio, Teacher, Code Dark."),
-                        FeatureItem(Icons.Filled.ColorLens,  "Accent Colour",       "Pick any colour — it applies to your header, section titles, and dividers instantly."),
-                        FeatureItem(Icons.Filled.Download,   "PDF Export",          "Export your resume as a high-quality PDF, ready to send to employers."),
+                        FeatureItem(Icons.Filled.GridView,   stringResource(R.string.about_templates13_title), stringResource(R.string.about_templates13_desc)),
+                        FeatureItem(Icons.Filled.ColorLens,  stringResource(R.string.about_accent_title),      stringResource(R.string.about_accent_desc)),
+                        FeatureItem(Icons.Filled.Download,   stringResource(R.string.about_pdf_title),         stringResource(R.string.about_pdf_desc)),
                     )
                     items.forEach { FeatureRow(it) }
                 }
@@ -180,7 +186,7 @@ fun AboutScreen(onBack: () -> Unit) {
                             )
                             Spacer(Modifier.width(8.dp))
                             Text(
-                                "AI-Powered Features",
+                                stringResource(R.string.about_ai_title),
                                 style = MaterialTheme.typography.titleMedium,
                                 fontWeight = FontWeight.SemiBold,
                                 color = MaterialTheme.colorScheme.onSecondaryContainer
@@ -188,18 +194,18 @@ fun AboutScreen(onBack: () -> Unit) {
                         }
                         Spacer(Modifier.height(10.dp))
                         Text(
-                            "The app integrates an AI assistant to help you write and refine resume content. Tap the ✨ sparkle icon inside any supported section to generate or improve text instantly.",
+                            stringResource(R.string.about_ai_intro),
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSecondaryContainer.copy(alpha = 0.85f)
                         )
                         Spacer(Modifier.height(12.dp))
                         val aiFeatures = listOf(
-                            FeatureItem(Icons.Filled.AutoAwesome, "Objective Generator",   "Writes a professional career objective tailored to your designation."),
-                            FeatureItem(Icons.Filled.Work,        "Job Description AI",    "Rewrites work experience bullet points with strong action verbs."),
-                            FeatureItem(Icons.Filled.Star,        "Skill Suggestions",     "Suggests 10 relevant skills based on your job role."),
-                            FeatureItem(Icons.Filled.Description, "Project Summaries",     "Generates concise project descriptions from just a project name."),
-                            FeatureItem(Icons.Filled.Star,        "Achievement Writer",    "Crafts impactful, quantified achievement statements."),
-                            FeatureItem(Icons.Filled.Chat,        "AI Chat Assistant",     "Open-ended chat to brainstorm, draft, or refine any part of your resume."),
+                            FeatureItem(Icons.Filled.AutoAwesome, stringResource(R.string.about_ai_objective_title),   stringResource(R.string.about_ai_objective_desc)),
+                            FeatureItem(Icons.Filled.Work,        stringResource(R.string.about_ai_job_title),         stringResource(R.string.about_ai_job_desc)),
+                            FeatureItem(Icons.Filled.Star,        stringResource(R.string.about_ai_skills_title),      stringResource(R.string.about_ai_skills_desc)),
+                            FeatureItem(Icons.Filled.Description, stringResource(R.string.about_ai_projects_title),    stringResource(R.string.about_ai_projects_desc)),
+                            FeatureItem(Icons.Filled.Star,        stringResource(R.string.about_ai_achievements_title), stringResource(R.string.about_ai_achievements_desc)),
+                            FeatureItem(Icons.Filled.Chat,        stringResource(R.string.about_ai_chat_title),        stringResource(R.string.about_ai_chat_desc)),
                         )
                         aiFeatures.forEach { item ->
                             Row(
@@ -234,14 +240,14 @@ fun AboutScreen(onBack: () -> Unit) {
 
             // ── Technology ──────────────────────────────────────────────────
             item {
-                AboutSection(title = "Technology") {
+                AboutSection(title = stringResource(R.string.about_tech_title)) {
                     val tech = listOf(
-                        "Built with" to "Kotlin & Jetpack Compose",
-                        "UI toolkit" to "Material Design 3",
-                        "Local storage" to "Room (SQLite) — all data stays on your device",
-                        "AI model" to "Llama 3.1 8B Instant",
-                        "AI provider" to "Groq Cloud API (fast inference)",
-                        "PDF export" to "Android WebView → Print API",
+                        stringResource(R.string.about_tech_built_label) to stringResource(R.string.about_tech_built_value),
+                        stringResource(R.string.about_tech_ui_label) to stringResource(R.string.about_tech_ui_value),
+                        stringResource(R.string.about_tech_storage_label) to stringResource(R.string.about_tech_storage_value),
+                        stringResource(R.string.about_tech_model_label) to stringResource(R.string.about_tech_model_value),
+                        stringResource(R.string.about_tech_provider_label) to stringResource(R.string.about_tech_provider_value),
+                        stringResource(R.string.about_tech_pdf_label) to stringResource(R.string.about_tech_pdf_value),
                     )
                     tech.forEach { (label, value) ->
                         Row(
@@ -268,7 +274,7 @@ fun AboutScreen(onBack: () -> Unit) {
 
             // ── Privacy ─────────────────────────────────────────────────────
             item {
-                AboutSection(title = "Privacy") {
+                AboutSection(title = stringResource(R.string.about_privacy_title)) {
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         verticalAlignment = Alignment.Top
@@ -281,7 +287,7 @@ fun AboutScreen(onBack: () -> Unit) {
                         )
                         Spacer(Modifier.width(8.dp))
                         Text(
-                            "Your resume data is stored locally on your device using an encrypted database. It is never uploaded or shared with any server. The only time the app accesses the internet is when you use an AI feature — your text prompt is sent to Groq's API to generate a response and nothing else is transmitted.",
+                            stringResource(R.string.about_privacy_body),
                             style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
@@ -291,9 +297,9 @@ fun AboutScreen(onBack: () -> Unit) {
 
             // ── Contact ─────────────────────────────────────────────────────
             item {
-                AboutSection(title = "Contact & Support") {
+                AboutSection(title = stringResource(R.string.about_contact_title)) {
                     Text(
-                        "Have a question, found a bug, or want to suggest a feature? We'd love to hear from you. Go to Settings → Write Us to send us an email.",
+                        stringResource(R.string.about_contact_body),
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
