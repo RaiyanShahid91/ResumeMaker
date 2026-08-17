@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ResumeAI</string>
+    <string name="app_name">FileForge</string>
 
 
     <string name="first_check">Entiendo que no se tolerará el intercambio de contenido inapropiado.</string>
@@ -41,7 +41,7 @@
     <string name="build_a_professional_resume_for_free">Crea un Currículum Profesional Gratis</string>
     <string name="create_a_resume_easily_with_our_free_builder_and_professional_templates">Crea un currículum fácilmente con nuestro creador gratuito y plantillas profesionales.</string>
     <string name="already_have_an_account">¿Ya tienes una cuenta?</string>
-    <string name="new_to_craft_cv">¿Nuevo en ResumeAI?</string>
+    <string name="new_to_craft_cv">¿Nuevo en FileForge?</string>
     <string name="joined_us_before">¿Ya te has unido antes?</string>
     <string name="login">Iniciar Sesión</string>
     <string name="register">Registrarse</string>
@@ -212,7 +212,7 @@
     <string name="new_update_is_available">Nueva actualización disponible</string>
     <string name="update">Actualizar ahora</string>
     <string name="udpate_app_with_new_version">Actualiza tu aplicación a la última versión</string>
-    <string name="version_info">Hay una nueva versión de ResumeAI disponible en Play Store. Actualiza tu aplicación para usar todas las nuevas funciones.</string>
+    <string name="version_info">Hay una nueva versión de FileForge disponible en Play Store. Actualiza tu aplicación para usar todas las nuevas funciones.</string>
     <string name="delete_account">Eliminar cuenta</string>
     <string name="are_you_sure_want_to_delete_account">¿Estás segura de que quieres eliminar tu cuenta?</string>
 
@@ -277,12 +277,6 @@
     <string name="create_with_template">Crear currículum con esta plantilla</string>
 
     <!-- Template categories -->
-    <string name="template_cat_all">Todos</string>
-    <string name="template_cat_professional">Profesional</string>
-    <string name="template_cat_creative">Creativo</string>
-    <string name="template_cat_developer">Desarrollador</string>
-    <string name="template_cat_designer">Diseñador</string>
-    <string name="template_cat_teacher">Docente</string>
 
     <!-- Resume editor sections -->
     <string name="section_personal">Datos personales</string>
@@ -433,8 +427,6 @@
     <string name="preview_export_subtitle">Elige un formato para exportar tu currículum:</string>
     <string name="preview_pdf_title">PDF</string>
     <string name="preview_pdf_subtitle">Ideal para imprimir y compartir</string>
-    <string name="preview_word_title">MS Word (.doc)</string>
-    <string name="preview_word_subtitle">Editar en Word o Google Docs</string>
     <string name="preview_msg_pdf_failed">Error al exportar el PDF: %1$s</string>
     <string name="preview_msg_export_failed">Error al exportar: %1$s</string>
     <string name="preview_msg_save_failed">Error al guardar: %1$s</string>
@@ -449,7 +441,7 @@
     <string name="onboard_skip">Omitir</string>
     <string name="onboard_next">Siguiente</string>
     <string name="onboard_get_started">Comenzar</string>
-    <string name="onboard_page1_title">Bienvenido a ResumeAI</string>
+    <string name="onboard_page1_title">Bienvenido a FileForge</string>
     <string name="onboard_page1_desc">Crea un currículum pulido y profesional directamente en tu teléfono — sin necesidad de cuenta, sin que ningún dato salga de tu dispositivo.</string>
     <string name="onboard_page1_highlight">100% privado y sin conexión</string>
     <string name="onboard_page2_title">Completa tus datos</string>
@@ -462,14 +454,14 @@
     <string name="onboard_page4_desc">Toca el botón de destello ✨ dentro de Objetivo, Experiencia laboral, Habilidades, Proyectos o Logros para generar y mejorar contenido al instante. O abre el Chat de IA para una sesión de escritura completa.</string>
     <string name="onboard_page4_highlight">Con tecnología de Llama 3.1 vía Groq</string>
     <string name="onboard_page5_title">Exporta y comparte</string>
-    <string name="onboard_page5_desc">Previsualiza tu currículum en vivo y luego expórtalo como PDF de alta calidad o archivo editable de MS Word (.doc) — listo para enviar a empleadores o seguir personalizando. Tus datos siempre se guardan localmente.</string>
-    <string name="onboard_page5_highlight">Exportación a PDF y Word · siempre guardado</string>
+    <string name="onboard_page5_desc">Previsualiza tu currículum en vivo y luego expórtalo como PDF de alta calidad — listo para enviar a empleadores o imprimir. Tus datos siempre se guardan localmente.</string>
+    <string name="onboard_page5_highlight">Exportación a PDF · siempre guardado</string>
     <string name="about_title">Acerca de</string>
-    <string name="about_app_name">ResumeAI</string>
+    <string name="about_app_name">FileForge</string>
     <string name="about_version">Versión %1$s</string>
     <string name="about_tagline">Crea un currículum profesional en minutos, en tu dispositivo.</string>
-    <string name="about_what_title">¿Qué es ResumeAI?</string>
-    <string name="about_what_body">ResumeAI es una app de Android totalmente sin conexión y centrada en la privacidad que te ayuda a crear currículums pulidos y profesionales desde cero. Completa tus datos, elige una plantilla, personaliza el color de acento y exporta un PDF listo para compartir — sin cuenta, sin registro, y ningún dato sale nunca de tu teléfono.</string>
+    <string name="about_what_title">¿Qué es FileForge?</string>
+    <string name="about_what_body">FileForge es una app de Android totalmente sin conexión y centrada en la privacidad que te ayuda a crear currículums pulidos y profesionales desde cero. Completa tus datos, elige una plantilla, personaliza el color de acento y exporta un PDF listo para compartir — sin cuenta, sin registro, y ningún dato sale nunca de tu teléfono.</string>
     <string name="about_features_title">Funciones principales</string>
     <string name="about_feat_personal_title">Datos personales</string>
     <string name="about_feat_personal_desc">Nombre, puesto, correo electrónico, teléfono y dirección.</string>
@@ -528,7 +520,7 @@
     <string name="about_contact_title">Contacto y soporte</string>
     <string name="about_contact_body">¿Tienes una pregunta, encontraste un error o quieres sugerir una función? Nos encantaría saber de ti. Ve a Configuración → Escríbenos para enviarnos un correo electrónico.</string>
     <string name="privacy_s1_heading">Sin cuenta, sin nube</string>
-    <string name="privacy_s1_body">ResumeAI funciona completamente en tu dispositivo. No hay inicio de sesión, ni cuenta, ni servidor al que se envíen tus currículums.</string>
+    <string name="privacy_s1_body">FileForge funciona completamente en tu dispositivo. No hay inicio de sesión, ni cuenta, ni servidor al que se envíen tus currículums.</string>
     <string name="privacy_s2_heading">Qué se almacena y dónde</string>
     <string name="privacy_s2_body">Todo lo que ingresas — datos personales, educación, experiencia laboral, habilidades, proyectos, fotos y tu firma — se guarda únicamente en el almacenamiento privado de esta app en tu dispositivo, nunca se sube a ningún sitio.</string>
     <string name="privacy_s3_heading">Nada sale de tu dispositivo</string>
@@ -548,11 +540,245 @@
     <string name="guide_s5_title">Previsualiza y descarga</string>
     <string name="guide_s5_desc">Toca el ícono de ojo para ver exactamente cómo se verá tu currículum, luego toca el ícono de impresión para guardarlo como PDF o imprimirlo.</string>
     <string name="update_title">Actualización disponible</string>
-    <string name="update_body">Hay una nueva versión de ResumeAI disponible. Actualiza ahora para obtener las últimas funciones y correcciones.</string>
+    <string name="update_body">Hay una nueva versión de FileForge disponible. Actualiza ahora para obtener las últimas funciones y correcciones.</string>
     <string name="update_btn">Actualizar ahora</string>
     <string name="ai_chat_copy">Copiar</string>
     <string name="ai_chat_copied">Copiado</string>
     <string name="ai_chat_error_response">Lo siento, no pude obtener una respuesta. Inténtalo de nuevo.</string>
     <string name="template_cd_selected">Seleccionada</string>
     <string name="template_cd_close">Cerrar</string>
+    <string name="nav_documents">Mis documentos</string>
+    <string name="settings_subtitle">Idioma, ayuda e información de la app</string>
+    <string name="nav_scan_document">Escanear documento</string>
+    <string name="scan_msg_camera_denied">Se necesita permiso de cámara para escanear documentos.</string>
+    <string name="scan_msg_unavailable">El escáner no está disponible en este dispositivo.</string>
+    <string name="scan_title">Resultado del escaneo</string>
+    <string name="scan_extracting">Extrayendo texto…</string>
+    <string name="scan_page_label">Página %1$d de %2$d</string>
+    <string name="scan_needs_review">Esta página puede necesitar revisión — por favor verifica el texto a continuación.</string>
+    <string name="scan_btn_save_pdf">Guardar como PDF</string>
+    <string name="scan_btn_save_document">Guardar como documento</string>
+    <string name="scan_btn_share">Compartir</string>
+    <string name="scan_save_dialog_title">Guardar escaneo</string>
+    <string name="scan_save_name_label">Nombre del documento</string>
+    <string name="scan_save_success">Escaneo guardado.</string>
+    <string name="scan_save_failed">No se pudo guardar el escaneo.</string>
+    <string name="scan_pdf_saved">PDF guardado en Descargas.</string>
+    <string name="scan_pdf_save_failed">No se pudo guardar el PDF.</string>
+    <string name="scan_share_chooser_title">Compartir documento vía</string>
+    <string name="scan_error_generic">Algo salió mal: %1$s</string>
+    <string name="scan_cd_page_image">Imagen de página escaneada</string>
+    <string name="scan_cd_save_options">Opciones de guardado</string>
+    <string name="scan_cd_close_save_options">Cerrar opciones de guardado</string>
+    <string name="home_featured_cover_letters">Cartas de presentación destacadas</string>
+    <string name="home_action_my_cover_letters">Mis cartas de presentación</string>
+    <string name="home_action_my_cover_letters_desc">Ver y gestionar tus cartas de presentación guardadas.</string>
+    <string name="home_action_scan_document">Escanear documento</string>
+    <string name="home_action_scan_document_desc">Escanea un documento en papel con tu cámara.</string>
+    <string name="home_action_my_scanned_documents">Mis documentos escaneados</string>
+    <string name="home_action_my_scanned_documents_desc">Ver tus documentos escaneados anteriormente.</string>
+    <string name="home_action_convert">Convertir archivos</string>
+    <string name="home_action_convert_desc">Convierte imágenes y PDFs — combina, comprime y más.</string>
+    <string name="home_ai_search_title">Pregúntale al asistente de IA</string>
+    <string name="home_ai_search_subtitle">Chatea y pregunta lo que quieras sobre tu currículum</string>
+    <string name="settings_share_app">Compartir app</string>
+    <string name="share_chooser_title">Compartir app vía</string>
+    <string name="create_resume_choose_mode_heading">Comienza tu currículum</string>
+    <string name="create_resume_mode_new_title">Crear nuevo</string>
+    <string name="create_resume_mode_new_desc">Completa tus datos desde cero</string>
+    <string name="create_resume_mode_existing_title">Usar currículum existente</string>
+    <string name="create_resume_mode_existing_desc">Importar desde un PDF o una foto</string>
+    <string name="import_resume_choose_source_heading">¿Dónde está tu currículum?</string>
+    <string name="import_resume_source_gallery_title">Foto de la galería</string>
+    <string name="import_resume_source_gallery_desc">Elige una foto de tu currículum</string>
+    <string name="import_resume_source_file_title">PDF o archivo</string>
+    <string name="import_resume_source_file_desc">Elige un PDF desde tu dispositivo</string>
+    <string name="import_resume_importing_message">Leyendo tu currículum…</string>
+    <string name="import_resume_error_ai_not_configured">La importación no está disponible en este momento. Aún puedes crear tu currículum manualmente.</string>
+    <string name="import_resume_error_unreadable">No se pudo leer ese archivo. Prueba con otro, o con una foto clara de tu currículum.</string>
+    <string name="import_resume_error_generic">Algo salió mal al importar ese currículum. Por favor, inténtalo de nuevo.</string>
+    <string name="btn_try_again">Intentar de nuevo</string>
+    <string name="browse_cover_letter_templates">Explorar plantillas de cartas de presentación</string>
+    <string name="coach_browse_templates">Toca una plantilla para previsualizarla, prueba un color y luego crea tu documento con ella.</string>
+    <string name="color_picker_default">Predeterminado</string>
+    <string name="template_preview_color_label">Probar un color</string>
+    <string name="template_preview_font_label">Probar una fuente</string>
+    <string name="template_preview_position_label">Posición de la barra lateral</string>
+    <string name="template_position_left">Izquierda</string>
+    <string name="template_position_right">Derecha</string>
+    <string name="rich_text_bold">Negrita</string>
+    <string name="rich_text_italic">Cursiva</string>
+    <string name="rich_text_bullets">Lista con viñetas</string>
+    <string name="rich_text_numbers">Lista numerada</string>
+    <string name="settings_ai_status">Estado</string>
+    <string name="ai_chat_subtitle">Siempre listo para ayudar</string>
+    <string name="ai_chat_thinking">Pensando…</string>
+    <string name="home_ai_section_title">Funciones de IA</string>
+    <string name="support_ad_title">¡Guardado!</string>
+    <string name="support_ad_body">Tu trabajo ya está guardado de cualquier forma — ver un anuncio corto solo ayuda a apoyar la app. Totalmente opcional.</string>
+    <string name="support_ad_watch">Ver un anuncio rápido</string>
+    <string name="support_ad_skip">No, gracias</string>
+    <string name="resume_delete_confirm_title">¿Eliminar currículum?</string>
+    <string name="resume_delete_confirm_message">¿Seguro que deseas eliminar \"%1$s\"? Esta acción no se puede deshacer.</string>
+    <string name="no_documents_hint">Aún no hay documentos escaneados. \nToca el botón de escanear para añadir uno.</string>
+    <string name="document_delete_confirm_title">¿Eliminar documento?</string>
+    <string name="document_delete_confirm_message">¿Seguro que deseas eliminar \"%1$s\"? Esta acción no se puede deshacer.</string>
+    <string name="document_pages_label">%1$d página(s) · %2$s</string>
+    <string name="document_open_failed">No se encontró ninguna app para abrir este documento.</string>
+    <string name="pdf_viewer_load_failed">No se pudo cargar este PDF.</string>
+    <string name="pdf_viewer_page_cd">Página %1$d del PDF</string>
+    <string name="btn_delete">Eliminar</string>
+    <string name="converter_hub_title">Convertir archivos</string>
+    <string name="converter_hub_subtitle">Convierte imágenes en PDFs, combina, comprime y más.</string>
+    <string name="converter_tool_image_to_pdf_title">Imagen a PDF</string>
+    <string name="converter_tool_image_to_pdf_desc">Combina una o más fotos en un solo PDF.</string>
+    <string name="converter_tool_merge_pdf_title">Combinar PDF</string>
+    <string name="converter_tool_merge_pdf_desc">Combina dos o más PDFs en un solo documento.</string>
+    <string name="converter_tool_compress_pdf_title">Comprimir PDF</string>
+    <string name="converter_tool_compress_pdf_desc">Reduce el tamaño de archivo de un PDF.</string>
+    <string name="converter_tool_pdf_to_jpg_title">PDF a JPG</string>
+    <string name="converter_tool_pdf_to_jpg_desc">Guarda cada página de un PDF como una imagen JPG.</string>
+    <string name="converter_select_images_btn">Seleccionar imágenes</string>
+    <string name="converter_select_pdfs_btn">Seleccionar PDFs</string>
+    <string name="converter_select_pdf_btn">Seleccionar PDF</string>
+    <string name="converter_add_image_btn">Añadir archivo</string>
+    <string name="converter_add_another_image_btn">Añadir otra imagen</string>
+    <string name="converter_add_pdf_btn">Añadir archivo</string>
+    <string name="converter_add_another_pdf_btn">Añadir otro PDF</string>
+    <string name="converter_selected_count">%1$d archivo(s) seleccionado(s)</string>
+    <string name="converter_merge_min_hint">Selecciona al menos 2 PDFs para combinar.</string>
+    <string name="converter_title_label">Nombre</string>
+    <string name="converter_name_sheet_title">Nombra tu archivo</string>
+    <string name="converter_convert_btn">Convertir</string>
+    <string name="converter_processing">Convirtiendo…</string>
+    <string name="converter_success_title">¡Listo!</string>
+    <string name="converter_success_message">\"%1$s\" se guardó en tus documentos.</string>
+    <string name="converter_error_generic">Algo salió mal. Por favor, inténtalo de nuevo.</string>
+    <string name="converter_convert_another_btn">Convertir otro</string>
+    <string name="converter_go_to_documents_btn">Ir a documentos</string>
+    <string name="converter_download_btn">Descargar</string>
+    <string name="converter_download_success">Guardado en Descargas</string>
+    <string name="converter_download_failed">No se pudo guardar en Descargas</string>
+    <string name="cd_drag_reorder">Arrastrar para reordenar</string>
+    <string name="coach_drag_reorder">Mantén presionado el controlador ⠿ y luego arrastra una tarjeta hacia arriba o abajo para reordenarla.</string>
+    <string name="coach_tap_edit_swipe_delete">Toca una tarjeta para editarla, o deslízala hacia la izquierda para eliminarla.</string>
+    <string name="personal_error_email_invalid">Ingresa un correo electrónico válido</string>
+    <string name="personal_error_phone_invalid">El número de teléfono debe contener solo dígitos</string>
+    <string name="editor_ats_score_title">Puntuación del currículum</string>
+    <string name="editor_ats_score_percent">%1$d%%</string>
+    <string name="editor_ats_score_missing">Añade %1$s para mejorar tu puntuación</string>
+    <string name="my_resumes_tab_resumes">Currículum</string>
+    <string name="my_resumes_tab_cover_letters">Cartas de presentación</string>
+    <string name="documents_tab_scans">Escaneos</string>
+    <string name="no_cover_letters_hint">Aún no hay cartas de presentación. Crea una desde la pestaña Inicio.</string>
+    <string name="cover_letter_untitled">Carta de presentación sin título</string>
+    <string name="cover_letter_default_title">Carta de presentación</string>
+    <string name="cover_letter_delete_confirm_title">¿Eliminar carta de presentación?</string>
+    <string name="cover_letter_delete_confirm_message">Esto eliminará permanentemente la carta de presentación de \"%1$s\".</string>
+    <string name="cover_letter_editor_title">Carta de presentación</string>
+    <string name="cover_letter_section_sender">Tus datos</string>
+    <string name="cover_letter_section_recipient">Destinatario</string>
+    <string name="cover_letter_section_letter">Carta</string>
+    <string name="cover_letter_label_email">Correo electrónico</string>
+    <string name="cover_letter_label_phone">Teléfono</string>
+    <string name="cover_letter_label_recipient">Nombre del destinatario</string>
+    <string name="cover_letter_label_company">Empresa</string>
+    <string name="cover_letter_label_job_title">Puesto</string>
+    <string name="cover_letter_label_date">Fecha</string>
+    <string name="cover_letter_label_salutation">Saludo</string>
+    <string name="cover_letter_label_body">Cuerpo de la carta</string>
+    <string name="cover_letter_label_closing">Despedida</string>
+    <string name="cover_letter_cd_generate_ai">Generar con IA</string>
+    <string name="cover_letter_share_chooser_title">Compartir carta de presentación vía</string>
+    <string name="home_action_cover_letter">Carta de presentación</string>
+    <string name="home_action_cover_letter_desc">Genera una carta de presentación adaptada con IA en segundos</string>
+    <string name="onboard_page_cover_letter_title">Cartas de presentación con IA</string>
+    <string name="onboard_page_cover_letter_desc">Genera una carta de presentación profesional y adaptada para acompañar tu currículum — elige una plantilla y deja que la IA escriba el cuerpo.</string>
+    <string name="onboard_page_cover_letter_highlight">Nuevo: Generador de cartas de presentación</string>
+    <string name="preview_multi_page_notice">Tu contenido es extenso — este currículum se exportará en %1$d páginas.</string>
+    <string name="preview_cd_share">Compartir currículum</string>
+    <string name="preview_share_chooser_title">Compartir currículum vía</string>
+    <string name="onboard_page_scan_title">Escanea documentos y extrae texto</string>
+    <string name="onboard_page_scan_desc">Escanea currículums antiguos, certificados o documentos de identidad con tu cámara — guárdalos como PDFs con texto buscable y extrae el texto automáticamente con OCR en el dispositivo.</string>
+    <string name="onboard_page_scan_highlight">Escaneo con cámara · extracción automática de texto</string>
+    <string name="onboard_page_import_title">¿Ya tienes un currículum?</string>
+    <string name="onboard_page_import_desc">Importa un currículum existente desde un PDF o una foto — lo leeremos y completaremos tus datos automáticamente, para que empieces a editar en lugar de volver a escribir todo.</string>
+    <string name="onboard_page_import_highlight">Nuevo: Importar desde PDF o foto</string>
+    <string name="onboard_page_ai_popup_title">Pregúntale a la IA sin salir de la página</string>
+    <string name="onboard_page_ai_popup_desc">Toca el botón flotante de IA mientras completas tu currículum o carta de presentación para hacer preguntas y recibir sugerencias — copia las respuestas directamente, y tu conversación se guarda para ese documento.</string>
+    <string name="onboard_page_ai_popup_highlight">Nuevo: Asistente de IA integrado en el editor</string>
+    <string name="onboard_page_reorder_title">Organízalo a tu manera</string>
+    <string name="onboard_page_reorder_desc">Mantén presionado y arrastra para reordenar tus currículums, o cualquier entrada dentro de una sección como Experiencia laboral o Educación — todo encaja en su lugar con una leve vibración.</string>
+    <string name="onboard_page_reorder_highlight">Nuevo: Arrastrar para reordenar</string>
+    <string name="privacy_s6_heading">Eliminar tus datos</string>
+    <string name="privacy_s6_body">Eliminar un currículum o carta de presentación en la app lo elimina junto con sus fotos y su conversación guardada con el asistente de IA de tu dispositivo. Desinstalar la app elimina todo lo almacenado localmente, ya que no conservamos una copia en el servidor.</string>
+    <string-array name="home_greeting_titles">
+        <item>¡Bienvenido de nuevo!</item>
+        <item>Construyamos algo grandioso.</item>
+        <item>¿Listo para destacar?</item>
+        <item>¡Hola!</item>
+        <item>Tu próxima oportunidad te espera.</item>
+        <item>Qué gusto verte de nuevo.</item>
+    </string-array>
+    <string-array name="home_greeting_subtitles">
+        <item>Currículums, cartas de presentación, escaneos y herramientas de PDF — todo en un solo lugar.</item>
+        <item>Crea currículums y cartas de presentación, escanea documentos y convierte PDFs — todo en una app.</item>
+        <item>Elabora un currículum, genera una carta de presentación, escanea papeleo o convierte un archivo — elige un punto de partida.</item>
+        <item>Tu caja de herramientas para currículums, cartas de presentación, escaneo de documentos y conversión de PDF.</item>
+        <item>Desde currículums hasta conversión de archivos, todo lo que necesitas está aquí.</item>
+        <item>Crea documentos, escanea papeleo y convierte PDFs — todo en un solo lugar.</item>
+    </string-array>
+
+    <!-- Auth: Login / Register / Terms -->
+    <string name="auth_login_title">Bienvenido de nuevo</string>
+    <string name="auth_login_subtitle">Inicia sesión para acceder a tu cuenta.</string>
+    <string name="auth_email_label">Correo electrónico</string>
+    <string name="auth_password_label">Contraseña</string>
+    <string name="auth_forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="auth_logging_in">Iniciando sesión…</string>
+    <string name="auth_login_button">Iniciar sesión</string>
+    <string name="auth_google_continue">Continuar con Google</string>
+    <string name="auth_or_divider">o</string>
+    <string name="auth_no_account">¿No tienes una cuenta?</string>
+    <string name="auth_sign_up">Regístrate</string>
+    <string name="auth_change_language_cd">Cambiar idioma</string>
+    <string name="auth_valid_email">Correo electrónico válido</string>
+    <string name="auth_reset_title">Restablecer tu contraseña</string>
+    <string name="auth_reset_sent">Si existe una cuenta con ese correo, un enlace para restablecer la contraseña está en camino — revisa tu bandeja de entrada.</string>
+    <string name="auth_reset_instruction">Ingresa el correo de tu cuenta y te enviaremos un enlace para restablecer tu contraseña.</string>
+    <string name="auth_reset_done">Listo</string>
+    <string name="auth_reset_send">Enviar enlace</string>
+    <string name="auth_reset_sending">Enviando…</string>
+    <string name="auth_register_title">Crea tu cuenta</string>
+    <string name="auth_register_subtitle">Solo tu nombre, correo y una contraseña.</string>
+    <string name="auth_full_name_label">Nombre completo</string>
+    <string name="auth_creating_account">Creando cuenta…</string>
+    <string name="auth_create_account_button">Crear cuenta</string>
+    <string name="auth_agree_prefix">Acepto los</string>
+    <string name="auth_terms_link">Términos y Condiciones</string>
+    <string name="auth_have_account">¿Ya tienes una cuenta?</string>
+    <string name="auth_login_link">Iniciar sesión</string>
+    <string name="auth_pw_req_length">Al menos %1$d caracteres</string>
+    <string name="auth_pw_req_number">Al menos 1 número</string>
+    <string name="auth_pw_req_special">Al menos 1 carácter especial (p. ej. @ # !)</string>
+    <string name="terms_s1_heading">Qué recopilamos para tu cuenta</string>
+    <string name="terms_s1_body">Al registrarte, recopilamos tu nombre y correo mediante Firebase Authentication (o los datos de tu cuenta de Google si usas Google para iniciar sesión). Eso es todo — se usa solo para identificar tu cuenta, mantener tu sesión iniciada y vincular tu suscripción Premium contigo.</string>
+    <string name="terms_s2_heading">Qué permanece en tu dispositivo</string>
+    <string name="terms_s2_body">Tus currículums, cartas de presentación, documentos escaneados y todo lo que crees en el editor se almacenan solo en el almacenamiento local de este dispositivo. Ese contenido nunca se sube a nosotros ni a ningún servidor que controlemos — al eliminar la app o tu cuenta se elimina permanentemente y no hay copia en la nube para recuperarlo.</string>
+    <string name="terms_s3_heading">Funciones de IA</string>
+    <string name="terms_s3_body">Cuando usas una función asistida por IA (mejorar una descripción, generar una carta de presentación, etc.), el texto correspondiente se envía a nuestro proveedor de IA (Groq) para generar una respuesta. No se incluye información de la cuenta en esa solicitud.</string>
+    <string name="terms_s4_heading">Servicios que ofrecemos</string>
+    <string name="terms_s4_body">Un creador de currículums con plantillas profesionales, ayuda de escritura con IA, un generador de cartas de presentación, un escáner de documentos con OCR, herramientas PDF (combinar, comprimir, imagen a PDF, PDF a JPG) y una suscripción Premium opcional que elimina los anuncios y desbloquea todas las herramientas.</string>
+    <string name="terms_s5_heading">Suscripciones y pagos</string>
+    <string name="terms_s5_body">Las suscripciones Premium (mensual o anual) se facturan exclusivamente a través de Google Play Billing — ese es el único método de pago que usamos. Nunca integramos un procesador de pagos aparte ni vemos o almacenamos tus datos de tarjeta, PayPal u otro método de pago directamente; todo eso lo gestiona Google. Puedes administrar o cancelar tu suscripción en cualquier momento desde Configuración, que enlaza directamente con la gestión de suscripciones de Google Play.</string>
+    <string name="terms_s6_heading">Eliminar tu cuenta</string>
+    <string name="terms_s6_body">Puedes eliminar tu cuenta en cualquier momento desde Configuración → Perfil → Eliminar cuenta. Esto elimina permanentemente tu inicio de sesión y cada currículum, carta de presentación y escaneo guardado en ese dispositivo. Esto NO cancela una suscripción activa de Play Store — debes cancelarla por separado en Google Play, o los cargos continuarán.</string>
+    <string name="terms_s7_heading">Tus responsabilidades</string>
+    <string name="terms_s7_body">Mantén tus credenciales de acceso confidenciales, proporciona información precisa y no uses mal la app ni interfieras con su funcionamiento. Podemos suspender el acceso a cuentas que infrinjan estos términos.</string>
+    <string name="terms_s8_heading">Preguntas</string>
+    <string name="terms_s8_body">Escríbenos cuando quieras a rssphere0@gmail.com.</string>
+    <string name="terms_s_login_heading">Por qué te pedimos iniciar sesión y cómo puedes hacerlo</string>
+    <string name="terms_s_login_body">Iniciar sesión mantiene tu suscripción Premium vinculada a tu cuenta y te permite volver a acceder sin perderla. No sube tus currículums ni documentos a ningún lado — eso permanece en tu dispositivo (ver abajo). Puedes iniciar sesión de dos formas: con correo y contraseña, o con Google. Ambas se gestionan de forma segura mediante Firebase Authentication, y nunca vemos ni almacenamos la contraseña de tu cuenta de Google.</string>
+    <string name="terms_s_perm_heading">Permisos que solicitamos</string>
+    <string name="terms_s_perm_body">Cámara: para escanear documentos y capturar tu foto de perfil directamente en la app. Internet y estado de red: necesarios para que funcionen las funciones de IA, el inicio de sesión y la facturación Premium, y para comprobar tu conexión antes de esas solicitudes. ID de publicidad: se usa para mostrar anuncios a usuarios del plan gratuito mediante Google AdMob — no se usa en absoluto si tienes Premium, ya que los anuncios se eliminan por completo. No solicitamos acceso a tus contactos, ubicación, micrófono ni mensajes.</string>
 </resources>

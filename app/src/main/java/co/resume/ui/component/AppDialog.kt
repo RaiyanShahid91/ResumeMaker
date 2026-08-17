@@ -11,14 +11,18 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
+import co.resume.ui.theme.ResumeBuilderTheme
 import co.resume.ui.theme.SheetBackgroundGradient
 
 private val DialogShape = RoundedCornerShape(28.dp)
@@ -69,5 +73,19 @@ fun AppDialog(
                 confirmButton()
             }
         }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun AppDialogPreview() {
+    ResumeBuilderTheme {
+        AppDialog(
+            onDismissRequest = {},
+            title = { Text("Delete resume?") },
+            text = { Text("This action cannot be undone.") },
+            dismissButton = { TextButton(onClick = {}) { Text("Cancel") } },
+            confirmButton = { TextButton(onClick = {}) { Text("Delete") } }
+        )
     }
 }

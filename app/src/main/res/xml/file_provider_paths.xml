@@ -2,4 +2,8 @@
 <paths>
     <cache-path name="exports" path="exports/" />
     <cache-path name="cache_root" path="." />
+    <files-path name="scanned_documents" path="scanned_documents/" />
+    <files-path name="scanned_pages" path="scanned_pages/" />
+    <files-path name="converted_documents" path="converted_documents/" />
+    <files-path name="converted_images" path="converted_images/" />
 </paths>

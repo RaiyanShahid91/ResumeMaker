@@ -34,6 +34,11 @@ val ErrorRed = Color(0xFFD92D20)
 val ErrorContainer = Color(0xFFFDE8E7)
 val OnErrorContainer = Color(0xFF7A1712)
 
+// "Done"/success accent — used for completed-section checkmarks, distinct from InkPrimary
+// (near-black) so a filled-in section reads as an unambiguous green check, not just a dark icon
+// blending into the rest of the near-monochrome palette.
+val SuccessGreen = Color(0xFF1DA34C)
+
 // Gradient accent for hero/AI surfaces — soft sky-blue fading to near-white
 val GradientStart = Color(0xFFBBD3F0)
 val GradientEnd = Color(0xFFF3F6FC)

@@ -1,0 +1,92 @@
+<meta name='viewport' content='user-scalable=0, width=device-width' />
+
+<html>
+
+    <body>
+
+        <div class="sidebar">
+            <p class="template_sender_name"></p>
+            <p class="template_sender_contact"></p>
+        </div>
+
+        <div class="content">
+
+            <p class="template_date"></p>
+
+            <div class="template_recipient_block"></div>
+
+            <p class="template_job_title_line"><span class="template_job_title"></span></p>
+
+            <p class="template_salutation"></p>
+
+            <div class="template_body"></div>
+
+            <div class="template_closing"></div>
+
+        </div>
+
+    </body>
+
+</html>
+
+<script>
+    function moveEverything(){
+        document.getElementsByClassName("template_sender_name")[0].innerHTML = document.getElementsByClassName("sample_sender_name")[0].innerHTML;
+        document.getElementsByClassName("sample_sender_name")[0].innerHTML = "";
+        document.getElementsByClassName("template_sender_contact")[0].innerHTML = document.getElementsByClassName("sample_sender_contact")[0].innerHTML;
+        document.getElementsByClassName("sample_sender_contact")[0].innerHTML = "";
+        document.getElementsByClassName("template_date")[0].innerHTML = document.getElementsByClassName("sample_date")[0].innerHTML;
+        document.getElementsByClassName("sample_date")[0].innerHTML = "";
+        document.getElementsByClassName("template_recipient_block")[0].innerHTML = document.getElementsByClassName("sample_recipient_block")[0].innerHTML;
+        document.getElementsByClassName("sample_recipient_block")[0].innerHTML = "";
+        document.getElementsByClassName("template_job_title")[0].innerHTML = document.getElementsByClassName("sample_job_title")[0].innerHTML;
+        document.getElementsByClassName("sample_job_title")[0].innerHTML = "";
+        document.getElementsByClassName("template_salutation")[0].innerHTML = document.getElementsByClassName("sample_salutation")[0].innerHTML;
+        document.getElementsByClassName("sample_salutation")[0].innerHTML = "";
+        document.getElementsByClassName("template_body")[0].innerHTML = document.getElementsByClassName("sample_body")[0].innerHTML;
+        document.getElementsByClassName("sample_body")[0].innerHTML = "";
+        document.getElementsByClassName("template_closing")[0].innerHTML = document.getElementsByClassName("sample_closing")[0].innerHTML;
+        document.getElementsByClassName("sample_closing")[0].innerHTML = "";
+        if (!document.getElementsByClassName("template_job_title")[0].innerText.trim()) {
+            document.getElementsByClassName("template_job_title_line")[0].style.display = "none";
+        }
+    }
+    moveEverything();
+</script>
+
+<style>
+    :root{
+        --color-one: #1d4ed8;
+        --color-two: #93c5fd;
+        --font-size: 13px;
+    }
+
+    html{ font-size: var(--font-size); word-wrap: break-word; }
+    body{ margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; color: #222; line-height: 1.6; display: flex; align-items: flex-start; min-height: 100vh; }
+    p{ margin: 2px 0; }
+
+    .sidebar{
+        width: 34%;
+        box-sizing: border-box;
+        background: var(--color-one);
+        color: white;
+        padding: 32px 20px;
+        min-height: 100vh;
+    }
+    .template_sender_name{ font-size: calc(var(--font-size) + 6px); font-weight: 700; line-height: 1.3; word-break: break-word; }
+    .template_sender_contact{ color: var(--color-two); font-size: calc(var(--font-size) - 1px); margin-top: 10px; line-height: 1.8; word-break: break-word; }
+
+    .content{
+        width: 66%;
+        box-sizing: border-box;
+        padding: 32px 28px;
+    }
+
+    .template_date{ margin-bottom: 16px; color: #888; }
+    .template_recipient_block{ margin-bottom: 16px; }
+    .template_job_title_line{ margin-bottom: 16px; font-weight: 700; font-size: calc(var(--font-size) + 2px); color: var(--color-one); text-transform: uppercase; letter-spacing: 0.5px; }
+
+    .template_salutation{ margin-bottom: 12px; }
+    .template_body{ margin-bottom: 12px; }
+    .template_closing{ margin-top: 20px; }
+</style>

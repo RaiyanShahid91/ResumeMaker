@@ -11,9 +11,13 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.lifecycleScope
 import co.resume.ads.AdManager
+import co.resume.analytics.Analytics
+import co.resume.auth.AuthRepository
+import co.resume.billing.BillingManager
 import co.resume.data.migration.TinyDbImporter
 import co.resume.navigation.RootNavHost
 import co.resume.navigation.Screen
+import co.resume.ui.component.FloatingBlobsBackground
 import co.resume.ui.theme.AppBackgroundGradient
 import co.resume.ui.theme.ResumeBuilderTheme
 import co.resume.utils.Constants
@@ -28,7 +32,9 @@ class MainActivity : ComponentActivity() {
 
     @Inject lateinit var tinyDbImporter: TinyDbImporter
     @Inject lateinit var adManager: AdManager
+    @Inject lateinit var billingManager: BillingManager
     @Inject lateinit var sharedPref: SharedPref
+    @Inject lateinit var authRepository: AuthRepository
 
     /**
      * Called before onCreate — wraps the base context with the saved locale so that
@@ -43,21 +49,29 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         lifecycleScope.launch { tinyDbImporter.importIfNeeded() }
+        billingManager.startConnection()
         adManager.preload()
 
         val onboardingDone = sharedPref.getBoolean(Constants.ONBOARDING_DONE, false)
-        val startDestination = if (onboardingDone) Screen.Dashboard.route else Screen.Onboarding.route
+        val startDestination = when {
+            !onboardingDone -> Screen.Onboarding.route
+            !authRepository.isLoggedIn -> Screen.Login.route
+            else -> Screen.Dashboard.route
+        }
 
         setContent {
             ResumeBuilderTheme {
-                // Single continuous gradient painted once behind the whole nav host, so it
-                // never scrolls, resets, or tiles per-screen — every screen sits on top of it.
+                // Single continuous gradient + slowly floating blobs painted once behind the
+                // whole nav host, so they never scroll, reset, or tile per-screen — every screen
+                // sits on top of the same, continuously-animating background.
                 Box(modifier = Modifier.fillMaxSize().background(AppBackgroundGradient)) {
+                    FloatingBlobsBackground()
                     RootNavHost(
                         startDestination = startDestination,
                         onLanguageSelected = { code -> applyLanguageAndRestart(code) },
                         onOnboardingFinished = {
                             sharedPref.saveBoolean(Constants.ONBOARDING_DONE, true)
+                            Analytics.logEvent(Analytics.Event.ONBOARDING_COMPLETED)
                         }
                     )
                 }
@@ -66,6 +80,7 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun applyLanguageAndRestart(languageCode: String) {
+        Analytics.logEvent(Analytics.Event.LANGUAGE_CHANGED, mapOf(Analytics.Param.LANGUAGE_CODE to languageCode))
         getSharedPreferences("Settings", Context.MODE_PRIVATE)
             .edit()
             .putString(Constants.APP_LANG, languageCode)

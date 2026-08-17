@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="template_cat_all">All</string>
+    <string name="template_cat_professional">Professional</string>
+    <string name="template_cat_creative">Creative</string>
+    <string name="template_cat_developer">Developer</string>
+    <string name="template_cat_designer">Designer</string>
+    <string name="template_cat_teacher">Teacher</string>
+</resources>

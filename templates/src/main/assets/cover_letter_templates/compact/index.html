@@ -1,0 +1,78 @@
+<meta name='viewport' content='user-scalable=0, width=device-width' />
+
+<html>
+
+    <body>
+
+        <div class="header_row">
+            <p class="template_sender_name"></p>
+            <p class="template_sender_contact"></p>
+        </div>
+
+        <div class="meta_row">
+            <p class="template_date"></p>
+            <div class="template_recipient_block"></div>
+        </div>
+
+        <p class="template_job_title_line"><span class="template_job_title"></span></p>
+
+        <p class="template_salutation"></p>
+
+        <div class="template_body"></div>
+
+        <div class="template_closing"></div>
+
+    </body>
+
+</html>
+
+<script>
+    function moveEverything(){
+        document.getElementsByClassName("template_sender_name")[0].innerHTML = document.getElementsByClassName("sample_sender_name")[0].innerHTML;
+        document.getElementsByClassName("sample_sender_name")[0].innerHTML = "";
+        document.getElementsByClassName("template_sender_contact")[0].innerHTML = document.getElementsByClassName("sample_sender_contact")[0].innerHTML;
+        document.getElementsByClassName("sample_sender_contact")[0].innerHTML = "";
+        document.getElementsByClassName("template_date")[0].innerHTML = document.getElementsByClassName("sample_date")[0].innerHTML;
+        document.getElementsByClassName("sample_date")[0].innerHTML = "";
+        document.getElementsByClassName("template_recipient_block")[0].innerHTML = document.getElementsByClassName("sample_recipient_block")[0].innerHTML;
+        document.getElementsByClassName("sample_recipient_block")[0].innerHTML = "";
+        document.getElementsByClassName("template_job_title")[0].innerHTML = document.getElementsByClassName("sample_job_title")[0].innerHTML;
+        document.getElementsByClassName("sample_job_title")[0].innerHTML = "";
+        document.getElementsByClassName("template_salutation")[0].innerHTML = document.getElementsByClassName("sample_salutation")[0].innerHTML;
+        document.getElementsByClassName("sample_salutation")[0].innerHTML = "";
+        document.getElementsByClassName("template_body")[0].innerHTML = document.getElementsByClassName("sample_body")[0].innerHTML;
+        document.getElementsByClassName("sample_body")[0].innerHTML = "";
+        document.getElementsByClassName("template_closing")[0].innerHTML = document.getElementsByClassName("sample_closing")[0].innerHTML;
+        document.getElementsByClassName("sample_closing")[0].innerHTML = "";
+        if (!document.getElementsByClassName("template_job_title")[0].innerText.trim()) {
+            document.getElementsByClassName("template_job_title_line")[0].style.display = "none";
+        }
+    }
+    moveEverything();
+</script>
+
+<style>
+    :root{
+        --color-one: #1d4ed8;
+        --color-two: #93c5fd;
+        --font-size: 13px;
+    }
+
+    html{ font-size: calc(var(--font-size) - 1px); word-wrap: break-word; }
+    body{ margin: 20px 26px; font-family: Arial, Helvetica, sans-serif; color: #222; line-height: 1.35; }
+    p{ margin: 1px 0; }
+
+    .header_row{ display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; border-bottom: 1px solid var(--color-one); padding-bottom: 6px; margin-bottom: 8px; }
+    .template_sender_name{ font-size: calc(var(--font-size) + 3px); font-weight: 700; color: var(--color-one); margin-right: 12px; }
+    .template_sender_contact{ color: #666; font-size: calc(var(--font-size) - 2px); }
+
+    .meta_row{ display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 8px; }
+    .template_date{ color: #666; font-size: calc(var(--font-size) - 1px); white-space: nowrap; }
+    .template_recipient_block{ font-size: calc(var(--font-size) - 1px); text-align: right; }
+
+    .template_job_title_line{ margin-bottom: 8px; font-weight: 700; color: var(--color-one); font-size: calc(var(--font-size) - 1px); }
+
+    .template_salutation{ margin-bottom: 6px; }
+    .template_body{ margin-bottom: 6px; }
+    .template_closing{ margin-top: 10px; }
+</style>

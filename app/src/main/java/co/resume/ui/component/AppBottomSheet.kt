@@ -14,13 +14,16 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.SheetState
+import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import co.resume.ui.theme.ResumeBuilderTheme
 import co.resume.ui.theme.SheetBackgroundGradient
 
 private val SheetShape = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp)
@@ -67,6 +70,20 @@ fun AppBottomSheet(
                     .background(MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.4f))
             )
             content()
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Preview(showBackground = true)
+@Composable
+private fun AppBottomSheetPreview() {
+    ResumeBuilderTheme {
+        AppBottomSheet(onDismissRequest = {}) {
+            Column(modifier = Modifier.padding(24.dp)) {
+                Text("Sheet title", style = MaterialTheme.typography.titleLarge)
+                Text("Sheet body content goes here.", modifier = Modifier.padding(top = 8.dp))
+            }
         }
     }
 }

@@ -1,0 +1,82 @@
+<meta name='viewport' content='user-scalable=0, width=device-width' />
+
+<html>
+
+    <body>
+
+        <div class="accent_bar"></div>
+
+        <div class="header">
+            <p class="template_sender_name"></p>
+            <p class="template_sender_contact"></p>
+        </div>
+
+        <p class="template_date"></p>
+
+        <div class="template_recipient_block"></div>
+
+        <p class="template_job_title_line">Application for <span class="template_job_title"></span></p>
+
+        <p class="template_salutation"></p>
+
+        <div class="template_body"></div>
+
+        <div class="template_closing"></div>
+
+    </body>
+
+</html>
+
+<script>
+    function moveEverything(){
+        document.getElementsByClassName("template_sender_name")[0].innerHTML = document.getElementsByClassName("sample_sender_name")[0].innerHTML;
+        document.getElementsByClassName("sample_sender_name")[0].innerHTML = "";
+        document.getElementsByClassName("template_sender_contact")[0].innerHTML = document.getElementsByClassName("sample_sender_contact")[0].innerHTML;
+        document.getElementsByClassName("sample_sender_contact")[0].innerHTML = "";
+        document.getElementsByClassName("template_date")[0].innerHTML = document.getElementsByClassName("sample_date")[0].innerHTML;
+        document.getElementsByClassName("sample_date")[0].innerHTML = "";
+        document.getElementsByClassName("template_recipient_block")[0].innerHTML = document.getElementsByClassName("sample_recipient_block")[0].innerHTML;
+        document.getElementsByClassName("sample_recipient_block")[0].innerHTML = "";
+        document.getElementsByClassName("template_job_title")[0].innerHTML = document.getElementsByClassName("sample_job_title")[0].innerHTML;
+        document.getElementsByClassName("sample_job_title")[0].innerHTML = "";
+        document.getElementsByClassName("template_salutation")[0].innerHTML = document.getElementsByClassName("sample_salutation")[0].innerHTML;
+        document.getElementsByClassName("sample_salutation")[0].innerHTML = "";
+        document.getElementsByClassName("template_body")[0].innerHTML = document.getElementsByClassName("sample_body")[0].innerHTML;
+        document.getElementsByClassName("sample_body")[0].innerHTML = "";
+        document.getElementsByClassName("template_closing")[0].innerHTML = document.getElementsByClassName("sample_closing")[0].innerHTML;
+        document.getElementsByClassName("sample_closing")[0].innerHTML = "";
+        if (!document.getElementsByClassName("template_job_title")[0].innerText.trim()) {
+            document.getElementsByClassName("template_job_title_line")[0].style.display = "none";
+        }
+    }
+    moveEverything();
+</script>
+
+<style>
+    :root{
+        --color-one: #1d4ed8;
+        --color-two: #93c5fd;
+        --font-size: 13px;
+    }
+
+    html{ font-size: var(--font-size); word-wrap: break-word; }
+    body{ margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; color: #222; line-height: 1.6; padding-bottom: 32px; }
+    p{ margin: 2px 0; }
+
+    .accent_bar{ height: 10px; background: linear-gradient(90deg, var(--color-one), var(--color-two)); }
+
+    .header{ padding: 24px 32px 12px 32px; }
+    .template_sender_name{ font-size: calc(var(--font-size) + 8px); font-weight: 700; color: var(--color-one); }
+    .template_sender_contact{ color: #666; font-size: calc(var(--font-size) - 1px); margin-top: 2px; }
+
+    .template_date, .template_recipient_block, .template_job_title_line, .template_salutation, .template_body, .template_closing{
+        padding: 0 32px;
+    }
+    .template_date{ margin: 16px 0 12px 0; color: #666; }
+    .template_recipient_block{ margin-bottom: 16px; font-weight: 600; }
+    .template_job_title_line{ margin-bottom: 16px; font-weight: 600; color: var(--color-one); }
+
+    .template_salutation{ margin-bottom: 12px; }
+    .template_body{ margin-bottom: 12px; }
+    .template_closing{ margin-top: 20px; }
+</style>

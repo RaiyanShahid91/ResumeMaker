@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ResumeAI</string>
+    <string name="app_name">FileForge</string>
 
     <string name="first_check">I understand that sharing of inappropriate content will not be tolerated.</string>
     <string name="second_check">I confirm that Im 18 years old or above.</string>
@@ -39,7 +39,7 @@
     <string name="build_a_professional_resume_for_free">Build a Professional Resume for Free</string>
     <string name="create_a_resume_easily_with_our_free_builder_and_professional_templates">Create a resume easily with our free builder and professional templates.</string>
     <string name="already_have_an_account">Already have an account?</string>
-    <string name="new_to_craft_cv">New to ResumeAI?</string>
+    <string name="new_to_craft_cv">New to FileForge?</string>
     <string name="joined_us_before">Joined us before?</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
@@ -87,7 +87,7 @@
     <string name="point_8"><b>Avoid Personal Details</b>\nSkip unnecessary details like age, marital status, or religion unless required.</string>
 
     //privacy policy
-    <string name="p_first_point">Thank you for using <b>ResumeAI</b>. Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you use our App.</string>
+    <string name="p_first_point">Thank you for using <b>FileForge</b>. Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you use our App.</string>
     <string name="p_second_point"><b>Information We Collect</b> We collect the following personal information to provide and improve our services:\n<b>Personal Details:</b>Name, email,mobile no, profile photo and address.\n<b>Education &amp; Work Experience:</b>Information about your education, skills, and work history.\n<b>Device Permissions:</b>The App may request access to your camera, storage, and network to enhance your experience.</string>
     <string name="p_third_point"><b>How We Use Your Information</b>We use your information to:\nCreate and manage your resume.\nImprove user experience and functionality.\nProvide customer support and resolve issues.\nEnsure compliance with legal and security requirements.</string>
     <string name="p_fourth_point"><b>Data Sharing and Security</b>\nWe do not sell or share your personal information with third parties except as required by law.\nWe implement security measures to protect your data from unauthorized access or misuse.</string>
@@ -95,7 +95,7 @@
     <string name="p_sixth_point"><b>Your Rights and Choices</b>You have the right to:\nAccess, update, or delete your personal information within the App.\nRevoke permissions granted to the App via your device settings.\nContact us for any concerns related to your privacy.</string>
 
     //term of use
-    <string name="t_first_point"><b>Acceptance of Terms</b> By using ResumeAI, you agree to comply with these Terms of Use. If you do not agree, please do not use the App.</string>
+    <string name="t_first_point"><b>Acceptance of Terms</b> By using FileForge, you agree to comply with these Terms of Use. If you do not agree, please do not use the App.</string>
     <string name="t_second_point"><b>User Responsibilities</b>\nYou are responsible for maintaining the confidentiality of your login credentials.\nYou agree to provide accurate and truthful information while using the App.\nYou must not misuse the App or attempt to interfere with its functionality.</string>
     <string name="t_third_point"><b>License and Restrictions</b>\nWe grant you a limited, non-exclusive, and non-transferable license to use the App.\nYou may not modify, distribute, or reverse-engineer any part of the App.</string>
     <string name="t_fourth_point"><b>Termination</b> We reserve the right to terminate or restrict your access to the App if you violate these terms.</string>
@@ -216,14 +216,58 @@
     <!-- Compose UI – Navigation -->
     <string name="nav_home">Home</string>
     <string name="nav_my_resume">My Resume</string>
+    <string name="nav_documents">My Documents</string>
     <string name="nav_settings">Settings</string>
+    <string name="settings_subtitle">Language, help, and app info</string>
     <string name="nav_create_resume">Create resume</string>
+    <string name="nav_scan_document">Scan document</string>
+
+    <!-- Document scanner -->
+    <string name="scan_msg_camera_denied">Camera permission is needed to scan documents.</string>
+    <string name="scan_msg_unavailable">Scanner unavailable on this device.</string>
+    <string name="scan_title">Scan result</string>
+    <string name="scan_extracting">Extracting text…</string>
+    <string name="scan_page_label">Page %1$d of %2$d</string>
+    <string name="scan_needs_review">This page may need review — please check the text below.</string>
+    <string name="scan_btn_save_pdf">Save as PDF</string>
+    <string name="scan_btn_save_document">Save as document</string>
+    <string name="scan_btn_share">Share</string>
+    <string name="scan_save_dialog_title">Save scan</string>
+    <string name="scan_save_name_label">Document name</string>
+    <string name="scan_save_success">Scan saved.</string>
+    <string name="scan_save_failed">Couldn\'t save the scan.</string>
+    <string name="scan_pdf_saved">PDF saved to Downloads.</string>
+    <string name="scan_pdf_save_failed">Couldn\'t save the PDF.</string>
+    <string name="scan_share_chooser_title">Share document via</string>
+    <string name="scan_error_generic">Something went wrong: %1$s</string>
+    <string name="scan_cd_page_image">Scanned page image</string>
+    <string name="scan_cd_save_options">Save options</string>
+    <string name="scan_cd_close_save_options">Close save options</string>
 
     <!-- Compose UI – Home screen -->
     <string name="home_welcome">Welcome back!</string>
-    <string name="home_subtitle">Build your perfect resume and land your dream job.</string>
+    <string name="home_subtitle">Resumes, cover letters, scans, and PDF tools — all in one place.</string>
     <string name="home_create_btn">Create New Resume</string>
+
+    <!-- Home greeting — one is picked at random each time the Home tab is freshly opened, see HomeTab.kt -->
+    <string-array name="home_greeting_titles">
+        <item>Welcome back!</item>
+        <item>Let\'s build something great.</item>
+        <item>Ready to stand out?</item>
+        <item>Hey there!</item>
+        <item>Your next opportunity awaits.</item>
+        <item>Great to see you again.</item>
+    </string-array>
+    <string-array name="home_greeting_subtitles">
+        <item>Resumes, cover letters, scans, and PDF tools — all in one place.</item>
+        <item>Build resumes and cover letters, scan documents, and convert PDFs — all in one app.</item>
+        <item>Craft a resume, generate a cover letter, scan paperwork, or convert a file — pick a starting point.</item>
+        <item>Your toolkit for resumes, cover letters, document scanning, and PDF conversion.</item>
+        <item>From resumes to file conversion, everything you need is right here.</item>
+        <item>Create documents, scan paperwork, and convert PDFs — all in one place.</item>
+    </string-array>
     <string name="home_featured_templates">Featured Templates</string>
+    <string name="home_featured_cover_letters">Featured Cover Letters</string>
     <string name="home_see_all">See all</string>
     <string name="home_quick_actions">Quick Actions</string>
     <string name="home_action_create">Create Resume</string>
@@ -232,6 +276,16 @@
     <string name="home_action_resumes_desc">View and manage your saved resumes.</string>
     <string name="home_action_templates">All Templates</string>
     <string name="home_action_templates_desc">Browse templates by category.</string>
+    <string name="home_action_my_cover_letters">My Cover Letters</string>
+    <string name="home_action_my_cover_letters_desc">View and manage your saved cover letters.</string>
+    <string name="home_action_scan_document">Scan Document</string>
+    <string name="home_action_scan_document_desc">Scan a paper document with your camera.</string>
+    <string name="home_action_my_scanned_documents">My Scanned Documents</string>
+    <string name="home_action_my_scanned_documents_desc">View your previously scanned documents.</string>
+    <string name="home_action_convert">Convert Files</string>
+    <string name="home_action_convert_desc">Convert images and PDFs — merge, compress and more.</string>
+    <string name="home_ai_search_title">Ask AI Assistant</string>
+    <string name="home_ai_search_subtitle">Chat and ask anything about your resume</string>
     <string name="home_tips_title">Resume Tips</string>
     <string name="tip_one_page_title">Keep it to one page</string>
     <string name="tip_one_page_body">Recruiters spend ~7 seconds on a resume. Focus on impact, not length.</string>
@@ -268,20 +322,33 @@
     <string name="btn_create">Create</string>
     <string name="no_resumes_hint">No resumes yet. Tap + to create your first resume.</string>
 
+    <!-- Compose UI – Create resume: new vs. import from existing file -->
+    <string name="create_resume_choose_mode_heading">Start your resume</string>
+    <string name="create_resume_mode_new_title">Create new</string>
+    <string name="create_resume_mode_new_desc">Fill in your details from scratch</string>
+    <string name="create_resume_mode_existing_title">Use existing resume</string>
+    <string name="create_resume_mode_existing_desc">Import from a PDF or a photo</string>
+    <string name="import_resume_choose_source_heading">Where\'s your resume?</string>
+    <string name="import_resume_source_gallery_title">Photo from gallery</string>
+    <string name="import_resume_source_gallery_desc">Pick a photo of your resume</string>
+    <string name="import_resume_source_file_title">PDF or file</string>
+    <string name="import_resume_source_file_desc">Pick a PDF from your device</string>
+    <string name="import_resume_importing_message">Reading your resume…</string>
+    <string name="import_resume_error_ai_not_configured">Import isn\'t available right now. You can still create your resume manually.</string>
+    <string name="import_resume_error_unreadable">Couldn\'t read that file. Try a different one, or a clear photo of your resume.</string>
+    <string name="import_resume_error_generic">Something went wrong importing that resume. Please try again.</string>
+    <string name="btn_try_again">Try again</string>
+
     <!-- Compose UI – Template picker -->
     <string name="choose_template">Choose Template</string>
     <string name="browse_templates">Browse Templates</string>
+    <string name="browse_cover_letter_templates">Browse Cover Letter Templates</string>
+    <string name="coach_browse_templates">Tap a template to preview it, try a color, then create your document with it.</string>
     <string name="use_this_template">Use this template</string>
     <string name="already_using_template">Already using this template</string>
     <string name="create_with_template">Create Resume with this Template</string>
 
     <!-- Template categories -->
-    <string name="template_cat_all">All</string>
-    <string name="template_cat_professional">Professional</string>
-    <string name="template_cat_creative">Creative</string>
-    <string name="template_cat_developer">Developer</string>
-    <string name="template_cat_designer">Designer</string>
-    <string name="template_cat_teacher">Teacher</string>
 
     <!-- Resume editor section names -->
     <string name="section_personal">Personal Details</string>
@@ -302,6 +369,16 @@
     <string name="color_picker_title">Resume Color</string>
     <string name="color_picker_subtitle">This color appears in your resume header, section titles, and dividers</string>
     <string name="color_picker_apply">Apply Color</string>
+    <string name="color_picker_default">Default</string>
+    <string name="template_preview_color_label">Try a color</string>
+    <string name="template_preview_font_label">Try a font</string>
+    <string name="template_preview_position_label">Sidebar position</string>
+    <string name="template_position_left">Left</string>
+    <string name="template_position_right">Right</string>
+    <string name="rich_text_bold">Bold</string>
+    <string name="rich_text_italic">Italic</string>
+    <string name="rich_text_bullets">Bullet list</string>
+    <string name="rich_text_numbers">Numbered list</string>
 
     <!-- Toolbar tooltips -->
     <string name="tooltip_accent_color">Accent Color</string>
@@ -322,6 +399,7 @@
 
     <!-- AI Chat -->
     <string name="ai_chat_title">AI Resume Assistant</string>
+    <string name="ai_chat_subtitle">Always ready to help</string>
     <string name="ai_chat_input_hint">Ask me to write an objective, improve a description…</string>
     <string name="ai_chat_send">Send</string>
     <string name="ai_chat_thinking">Thinking…</string>
@@ -339,18 +417,65 @@
     <string name="btn_save">Save</string>
     <string name="btn_cancel">Cancel</string>
     <string name="btn_ok">OK</string>
+    <string name="support_ad_title">Saved!</string>
+    <string name="support_ad_body">Your work is already saved either way — watching a short ad just helps support the app. Totally optional.</string>
+    <string name="support_ad_watch">Watch a quick ad</string>
+    <string name="support_ad_skip">No thanks</string>
     <string name="btn_pick">Pick</string>
     <string name="btn_change">Change</string>
     <string name="msg_nothing_to_show">Nothing to show</string>
     <string name="msg_deleted_successfully">Deleted successfully.</string>
     <string name="resume_delete_confirm_title">Delete resume?</string>
     <string name="resume_delete_confirm_message">Are you sure you want to delete \"%1$s\"? This can\'t be undone.</string>
+    <string name="no_documents_hint">No scanned documents yet. \nTap the scan button to add one.</string>
+    <string name="document_delete_confirm_title">Delete document?</string>
+    <string name="document_delete_confirm_message">Are you sure you want to delete \"%1$s\"? This can\'t be undone.</string>
+    <string name="document_pages_label">%1$d page(s) · %2$s</string>
+    <string name="document_open_failed">No app found to open this document.</string>
+    <string name="pdf_viewer_load_failed">Couldn\'t load this PDF.</string>
+    <string name="pdf_viewer_page_cd">PDF page %1$d</string>
     <string name="btn_delete">Delete</string>
+
+    <!-- Converter toolkit -->
+    <string name="converter_hub_title">Convert Files</string>
+    <string name="converter_hub_subtitle">Turn images into PDFs, merge, compress and more.</string>
+    <string name="converter_tool_image_to_pdf_title">Image to PDF</string>
+    <string name="converter_tool_image_to_pdf_desc">Combine one or more photos into a single PDF.</string>
+    <string name="converter_tool_merge_pdf_title">Merge PDF</string>
+    <string name="converter_tool_merge_pdf_desc">Combine two or more PDFs into one document.</string>
+    <string name="converter_tool_compress_pdf_title">Compress PDF</string>
+    <string name="converter_tool_compress_pdf_desc">Shrink a PDF\'s file size.</string>
+    <string name="converter_tool_pdf_to_jpg_title">PDF to JPG</string>
+    <string name="converter_tool_pdf_to_jpg_desc">Save each page of a PDF as a JPG image.</string>
+    <string name="converter_select_images_btn">Select images</string>
+    <string name="converter_select_pdfs_btn">Select PDFs</string>
+    <string name="converter_select_pdf_btn">Select PDF</string>
+    <string name="converter_add_image_btn">Add file</string>
+    <string name="converter_add_another_image_btn">Add another image</string>
+    <string name="converter_add_pdf_btn">Add file</string>
+    <string name="converter_add_another_pdf_btn">Add another PDF</string>
+    <string name="converter_selected_count">%1$d file(s) selected</string>
+    <string name="converter_merge_min_hint">Select at least 2 PDFs to merge.</string>
+    <string name="converter_title_label">Name</string>
+    <string name="converter_name_sheet_title">Name your file</string>
+    <string name="converter_convert_btn">Convert</string>
+    <string name="converter_processing">Converting…</string>
+    <string name="converter_success_title">Done!</string>
+    <string name="converter_success_message">\"%1$s\" was saved to your Documents.</string>
+    <string name="converter_error_generic">Something went wrong. Please try again.</string>
+    <string name="converter_convert_another_btn">Convert another</string>
+    <string name="converter_go_to_documents_btn">Go to Documents</string>
+    <string name="converter_download_btn">Download</string>
+    <string name="converter_download_success">Saved to Downloads</string>
+    <string name="converter_download_failed">Couldn\'t save to Downloads</string>
     <string name="msg_fill_mandatory">Please fill the mandatory details.</string>
     <string name="msg_details_saved">Details saved successfully.</string>
     <string name="cd_back">Back</string>
     <string name="cd_move_up">Move up</string>
     <string name="cd_move_down">Move down</string>
+    <string name="cd_drag_reorder">Drag to reorder</string>
+    <string name="coach_drag_reorder">Press and hold the ⠿ handle, then drag a card up or down to reorder it.</string>
+    <string name="coach_tap_edit_swipe_delete">Tap a card to edit it, or swipe it left to delete.</string>
     <string name="cd_edit">Edit</string>
     <string name="cd_delete">Delete</string>
 
@@ -466,9 +591,43 @@
     <string name="editor_default_title">Resume</string>
     <string name="editor_untitled">Untitled resume</string>
     <string name="editor_cd_profile_photo">Profile photo</string>
+    <string name="editor_ats_score_title">Resume Score</string>
+    <string name="editor_ats_score_percent">%1$d%%</string>
+    <string name="editor_ats_score_missing">Add %1$s to improve your score</string>
+
+    <!-- Cover letters -->
+    <string name="my_resumes_tab_resumes">Resume</string>
+    <string name="my_resumes_tab_cover_letters">Cover Letters</string>
+    <string name="documents_tab_scans">Scans</string>
+    <string name="no_cover_letters_hint">No cover letters yet. Create one from the Home tab.</string>
+    <string name="cover_letter_untitled">Untitled cover letter</string>
+    <string name="cover_letter_default_title">Cover Letter</string>
+    <string name="cover_letter_delete_confirm_title">Delete cover letter?</string>
+    <string name="cover_letter_delete_confirm_message">This will permanently delete the cover letter for \"%1$s\".</string>
+    <string name="cover_letter_editor_title">Cover Letter</string>
+    <string name="cover_letter_section_sender">Your details</string>
+    <string name="cover_letter_section_recipient">Recipient</string>
+    <string name="cover_letter_section_letter">Letter</string>
+    <string name="cover_letter_label_email">Email</string>
+    <string name="cover_letter_label_phone">Phone</string>
+    <string name="cover_letter_label_recipient">Recipient name</string>
+    <string name="cover_letter_label_company">Company</string>
+    <string name="cover_letter_label_job_title">Job title</string>
+    <string name="cover_letter_label_date">Date</string>
+    <string name="cover_letter_label_salutation">Salutation</string>
+    <string name="cover_letter_label_body">Letter body</string>
+    <string name="cover_letter_label_closing">Closing</string>
+    <string name="cover_letter_cd_generate_ai">Generate with AI</string>
+    <string name="cover_letter_share_chooser_title">Share cover letter via</string>
+    <string name="home_action_cover_letter">Cover Letter</string>
+    <string name="home_action_cover_letter_desc">Generate an AI-tailored cover letter in seconds</string>
+    <string name="onboard_page_cover_letter_title">AI Cover Letters</string>
+    <string name="onboard_page_cover_letter_desc">Generate a tailored, professional cover letter to go with your resume — pick a template and let AI write the body.</string>
+    <string name="onboard_page_cover_letter_highlight">New: Cover Letter Generator</string>
 
     <!-- Resume preview / export -->
     <string name="preview_title">Preview</string>
+    <string name="preview_multi_page_notice">Your content is long — this resume will export as %1$d pages.</string>
     <string name="preview_cd_download">Download</string>
     <string name="preview_cd_share">Share resume</string>
     <string name="preview_share_chooser_title">Share resume via</string>
@@ -476,8 +635,6 @@
     <string name="preview_export_subtitle">Choose a format to export your resume:</string>
     <string name="preview_pdf_title">PDF</string>
     <string name="preview_pdf_subtitle">Best for printing &amp; sharing</string>
-    <string name="preview_word_title">MS Word (.doc)</string>
-    <string name="preview_word_subtitle">Edit in Word or Google Docs</string>
     <string name="preview_msg_pdf_failed">PDF export failed: %1$s</string>
     <string name="preview_msg_export_failed">Export failed: %1$s</string>
     <string name="preview_msg_save_failed">Save failed: %1$s</string>
@@ -494,7 +651,7 @@
     <string name="onboard_skip">Skip</string>
     <string name="onboard_next">Next</string>
     <string name="onboard_get_started">Get Started</string>
-    <string name="onboard_page1_title">Welcome to ResumeAI</string>
+    <string name="onboard_page1_title">Welcome to FileForge</string>
     <string name="onboard_page1_desc">Create a polished, professional resume right on your phone — no account needed, no data leaves your device.</string>
     <string name="onboard_page1_highlight">100% private &amp; offline</string>
     <string name="onboard_page2_title">Fill In Your Details</string>
@@ -507,16 +664,28 @@
     <string name="onboard_page4_desc">Tap the ✨ sparkle button inside Objective, Work Experience, Skills, Projects, or Achievements to generate and improve content instantly. Or open the AI Chat for a full writing session.</string>
     <string name="onboard_page4_highlight">Powered by Llama 3.1 via Groq</string>
     <string name="onboard_page5_title">Export &amp; Share</string>
-    <string name="onboard_page5_desc">Preview your resume live, then export it as a high-quality PDF or editable MS Word (.doc) file — ready to send to employers or customise further. Your data is always saved locally.</string>
-    <string name="onboard_page5_highlight">PDF &amp; Word export · always saved</string>
+    <string name="onboard_page5_desc">Preview your resume live, then export it as a high-quality PDF — ready to send to employers or print. Your data is always saved locally.</string>
+    <string name="onboard_page5_highlight">PDF export · always saved</string>
+    <string name="onboard_page_scan_title">Scan Documents &amp; Extract Text</string>
+    <string name="onboard_page_scan_desc">Scan old resumes, certificates, or ID documents with your camera — save them as searchable PDFs and pull the text out automatically with on-device OCR.</string>
+    <string name="onboard_page_scan_highlight">Camera scan · auto text extraction</string>
+    <string name="onboard_page_import_title">Already Have a Resume?</string>
+    <string name="onboard_page_import_desc">Import an existing resume from a PDF or a photo — we\'ll read it and fill in your details automatically, so you start editing instead of retyping everything.</string>
+    <string name="onboard_page_import_highlight">New: Import from PDF or photo</string>
+    <string name="onboard_page_ai_popup_title">Ask AI Without Leaving the Page</string>
+    <string name="onboard_page_ai_popup_desc">Tap the floating AI button while filling in your resume or cover letter to ask questions and get suggestions — copy answers straight in, and your conversation is saved for that document.</string>
+    <string name="onboard_page_ai_popup_highlight">New: In-editor AI assistant</string>
+    <string name="onboard_page_reorder_title">Organise It Your Way</string>
+    <string name="onboard_page_reorder_desc">Long-press and drag to reorder your resumes, or any entries inside a section like Work Experience or Education — everything snaps into place with a light haptic tap.</string>
+    <string name="onboard_page_reorder_highlight">New: Drag to reorder</string>
 
     <!-- About screen -->
     <string name="about_title">About</string>
-    <string name="about_app_name">ResumeAI</string>
+    <string name="about_app_name">FileForge</string>
     <string name="about_version">Version %1$s</string>
     <string name="about_tagline">Build a professional resume in minutes, on your device.</string>
-    <string name="about_what_title">What is ResumeAI?</string>
-    <string name="about_what_body">ResumeAI is a fully offline, privacy-first Android app that helps you create polished, professional resumes from scratch. Fill in your details, pick a template, customise the accent colour, and export a ready-to-share PDF — no account, no sign-up, and no data ever leaves your phone.</string>
+    <string name="about_what_title">What is FileForge?</string>
+    <string name="about_what_body">FileForge is a fully offline, privacy-first Android app that helps you create polished, professional resumes from scratch. Fill in your details, pick a template, customise the accent colour, and export a ready-to-share PDF — no account, no sign-up, and no data ever leaves your phone.</string>
     <string name="about_features_title">Core Features</string>
     <string name="about_feat_personal_title">Personal Details</string>
     <string name="about_feat_personal_desc">Name, designation, email, phone, and address.</string>
@@ -576,16 +745,18 @@
     <string name="about_contact_body">Have a question, found a bug, or want to suggest a feature? We\'d love to hear from you. Go to Settings → Write Us to send us an email.</string>
 
     <!-- Privacy policy screen -->
-    <string name="privacy_s1_heading">No account, no cloud</string>
-    <string name="privacy_s1_body">ResumeAI works entirely on your device. There is no sign-in, no account, and no server that your resumes are sent to.</string>
+    <string name="privacy_s1_heading">No account required</string>
+    <string name="privacy_s1_body">FileForge works without requiring sign-in or an account. Your resumes and cover letters are created and stored locally on your device. Building, editing, previewing, and exporting a resume all work without an internet connection.</string>
     <string name="privacy_s2_heading">What\'s stored, and where</string>
-    <string name="privacy_s2_body">Everything you enter — personal details, education, work experience, skills, projects, photos, and your signature — is saved only in this app\'s private storage on your device, never uploaded anywhere.</string>
-    <string name="privacy_s3_heading">Nothing leaves your device</string>
-    <string name="privacy_s3_body">We don\'t collect, transmit, sell, or share your resume data with anyone. There is no analytics or tracking of what you type.</string>
-    <string name="privacy_s4_heading">Permissions we ask for</string>
-    <string name="privacy_s4_body">Camera and photo access are used only so you can add a profile photo or signature image, and that image is stored locally like the rest of your resume.</string>
-    <string name="privacy_s5_heading">Deleting your data</string>
-    <string name="privacy_s5_body">Deleting a resume in the app removes it and its photos from your device. Uninstalling the app removes everything, since nothing is kept anywhere else.</string>
+    <string name="privacy_s2_body">Everything you enter — personal details, education, work experience, skills, projects, photos, and your signature — is saved in this app\'s private local storage on your device. We do not operate a server that stores your resume content.</string>
+    <string name="privacy_s3_heading">AI features and what they send</string>
+    <string name="privacy_s3_body">Optional AI features — writing suggestions, cover letter generation, the AI assistant, and importing a resume from a PDF or photo — send the relevant text (including text read from an imported file) to Groq, our third-party AI provider, solely to generate a response. This only happens when you actively use an AI feature; it does not happen automatically. Groq processes this data under its own privacy policy (groq.com/privacy).</string>
+    <string name="privacy_s4_heading">Analytics, crash reporting &amp; ads</string>
+    <string name="privacy_s4_body">We use Firebase Analytics and Firebase Crashlytics (Google) to understand feature usage and diagnose crashes, and Google AdMob to show ads, which may use your advertising ID. These services can collect device, usage, and diagnostic data as described in Google\'s privacy policy (policies.google.com/privacy). This does not include the content of your resume or cover letter.</string>
+    <string name="privacy_s5_heading">Permissions we ask for</string>
+    <string name="privacy_s5_body">Camera and photo/file access are used so you can add a profile photo or signature, scan a document, or import an existing resume from a photo or PDF. Files you pick are read only to fill in your resume and are not uploaded anywhere except as described above for AI import.</string>
+    <string name="privacy_s6_heading">Deleting your data</string>
+    <string name="privacy_s6_body">Deleting a resume or cover letter in the app removes it, its photos, and its saved AI assistant conversation from your device. Uninstalling the app removes everything stored locally, since we don\'t keep a server-side copy.</string>
 
     <!-- User guide screen -->
     <string name="guide_s1_title">Create a resume</string>
@@ -601,7 +772,7 @@
 
     <!-- Update app sheet -->
     <string name="update_title">Update available</string>
-    <string name="update_body">A new version of ResumeAI is available. Update now for the latest features and fixes.</string>
+    <string name="update_body">A new version of FileForge is available. Update now for the latest features and fixes.</string>
     <string name="update_btn">Update Now</string>
 
     <!-- AI Chat extras -->
@@ -612,4 +783,61 @@
     <!-- Template picker -->
     <string name="template_cd_selected">Selected</string>
     <string name="template_cd_close">Close</string>
+
+    <!-- Auth: Login / Register -->
+    <string name="auth_login_title">Welcome back</string>
+    <string name="auth_login_subtitle">Log in to sync and access your account.</string>
+    <string name="auth_email_label">Email</string>
+    <string name="auth_password_label">Password</string>
+    <string name="auth_forgot_password">Forgot password?</string>
+    <string name="auth_logging_in">Logging in…</string>
+    <string name="auth_login_button">Log in</string>
+    <string name="auth_google_continue">Continue with Google</string>
+    <string name="auth_or_divider">or</string>
+    <string name="auth_no_account">Don\'t have an account?</string>
+    <string name="auth_sign_up">Sign up</string>
+    <string name="auth_change_language_cd">Change language</string>
+    <string name="auth_valid_email">Valid email address</string>
+
+    <string name="auth_reset_title">Reset your password</string>
+    <string name="auth_reset_sent">If an account exists for that email, a reset link is on its way — check your inbox.</string>
+    <string name="auth_reset_instruction">Enter your account email and we\'ll send you a link to reset your password.</string>
+    <string name="auth_reset_done">Done</string>
+    <string name="auth_reset_send">Send link</string>
+    <string name="auth_reset_sending">Sending…</string>
+
+    <string name="auth_register_title">Create your account</string>
+    <string name="auth_register_subtitle">Just your name, email, and a password.</string>
+    <string name="auth_full_name_label">Full name</string>
+    <string name="auth_creating_account">Creating account…</string>
+    <string name="auth_create_account_button">Create account</string>
+    <string name="auth_agree_prefix">I agree to the</string>
+    <string name="auth_terms_link">Terms &amp; Conditions</string>
+    <string name="auth_have_account">Already have an account?</string>
+    <string name="auth_login_link">Log in</string>
+    <string name="auth_pw_req_length">At least %1$d characters</string>
+    <string name="auth_pw_req_number">At least 1 number</string>
+    <string name="auth_pw_req_special">At least 1 special character (e.g. @ # !)</string>
+
+    <!-- Terms & Conditions -->
+    <string name="terms_s1_heading">What we collect for your account</string>
+    <string name="terms_s1_body">When you sign up, we collect your name and email through Firebase Authentication (or your Google account info if you use Sign in with Google). That\'s it — this is only used to identify your account, keep you signed in, and link your Premium subscription to you.</string>
+    <string name="terms_s_login_heading">Why we ask you to log in, and how you can sign in</string>
+    <string name="terms_s_login_body">Logging in keeps your Premium subscription linked to your account and lets you sign back in without losing access to it. It does not upload your resumes or documents anywhere — those stay on your device (see below). You can sign in two ways: with an email and password, or with Sign in with Google. Both are handled securely through Firebase Authentication, and we never see or store your Google account password.</string>
+    <string name="terms_s2_heading">What stays on your device</string>
+    <string name="terms_s2_body">Your resumes, cover letters, scanned documents, and everything you create in the editor are stored only in this app\'s local storage on your device. None of that content is ever uploaded to us or to any server we control — deleting the app or your account removes it permanently and there is no cloud copy to recover it from.</string>
+    <string name="terms_s_perm_heading">Permissions we ask for</string>
+    <string name="terms_s_perm_body">Camera: to scan documents and capture your profile photo directly in the app. Internet and network state: required for AI features, account sign-in, and Premium billing to work, and to check you\'re online before making those requests. Advertising ID: used to show ads to free-tier users through Google AdMob — this is not used at all once you\'re on Premium, since ads are removed entirely. We don\'t request access to your contacts, location, microphone, or messages.</string>
+    <string name="terms_s3_heading">AI features</string>
+    <string name="terms_s3_body">When you use an AI-assisted feature (improving a description, generating a cover letter, etc.), the relevant text is sent to our AI provider (Groq) to generate a response. No account information is included in that request.</string>
+    <string name="terms_s4_heading">Services we provide</string>
+    <string name="terms_s4_body">A resume builder with professional templates, AI-assisted writing help, a cover letter generator, a document scanner with OCR, PDF tools (merge, compress, image-to-PDF, PDF-to-JPG conversion), and an optional Premium subscription that removes ads and unlocks the full toolkit.</string>
+    <string name="terms_s5_heading">Subscriptions and payments</string>
+    <string name="terms_s5_body">Premium subscriptions (monthly or yearly) are billed entirely through Google Play Billing — that\'s the only payment method we use. We never integrate a separate payment processor and never see or store your card, PayPal, or any other payment details directly; all of that is handled by Google. You can manage or cancel your subscription anytime from Settings, which links directly to Google Play\'s subscription management.</string>
+    <string name="terms_s6_heading">Deleting your account</string>
+    <string name="terms_s6_body">You can delete your account anytime from Settings → Profile → Delete account. This permanently removes your login and every resume, cover letter, and scan stored on that device. It does not cancel an active Play Store subscription — that must be cancelled separately in Google Play, or billing will continue.</string>
+    <string name="terms_s7_heading">Your responsibilities</string>
+    <string name="terms_s7_body">Keep your login credentials confidential, provide accurate information, and don\'t misuse the app or attempt to interfere with how it works. We may suspend access for accounts that violate these terms.</string>
+    <string name="terms_s8_heading">Questions</string>
+    <string name="terms_s8_body">Reach us anytime at rssphere0@gmail.com.</string>
 </resources>

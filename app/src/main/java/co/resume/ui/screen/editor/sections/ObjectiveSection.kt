@@ -33,11 +33,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import co.resumeai.R
 import co.resume.ai.AiClient
 import co.resume.ai.ResumeAiService
-import co.resume.ui.component.AppTextField
+import co.resume.ui.component.RichTextField
+import co.resume.ui.theme.ResumeBuilderTheme
 import kotlinx.coroutines.launch
 
 @Composable
@@ -71,7 +73,7 @@ fun ObjectiveSection(
             .verticalScroll(rememberScrollState())
             .padding(20.dp)
     ) {
-        AppTextField(
+        RichTextField(
             value = objective,
             onValueChange = { objective = it },
             label = { Text(stringResource(R.string.obj_label_objective)) },
@@ -139,5 +141,18 @@ fun ObjectiveSection(
         ) {
             Text(stringResource(R.string.btn_save))
         }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun ObjectiveSectionPreview() {
+    ResumeBuilderTheme {
+        ObjectiveSection(
+            initialObjective = "Product designer with 6+ years crafting user-centered web and mobile experiences.",
+            designation = "Product Designer",
+            onBack = {},
+            onSave = {}
+        )
     }
 }

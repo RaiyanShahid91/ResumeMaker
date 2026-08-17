@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -14,18 +13,13 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.AutoAwesome
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.KeyboardArrowDown
-import androidx.compose.material.icons.filled.KeyboardArrowUp
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
@@ -34,7 +28,6 @@ import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SmallFloatingActionButton
@@ -52,14 +45,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import co.resumeai.R
 import co.resume.ai.AiClient
 import co.resume.ai.ResumeAiService
 import co.resume.data.local.entity.SkillEntity
 import co.resume.ui.component.AppBottomSheet
-import co.resume.ui.component.AppDialog
 import co.resume.ui.component.AppTextField
+import co.resume.ui.component.DragHandle
+import co.resume.ui.component.DragReorderColumn
+import co.resume.ui.component.OneTimeCoachMark
+import co.resume.ui.component.SwipeEditableCard
+import co.resume.ui.theme.ResumeBuilderTheme
 import kotlinx.coroutines.launch
 
 private val skillLevels = listOf("Beginner", "Intermediate", "Advanced", "Expert")
@@ -122,36 +120,45 @@ fun SkillsSection(
                     Text(stringResource(R.string.msg_nothing_to_show), color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             } else {
-                LazyColumn(contentPadding = PaddingValues(20.dp)) {
-                    itemsIndexed(items) { index, item ->
-                        Card(
-                            modifier = Modifier.fillMaxWidth().padding(bottom = 10.dp),
-                            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .verticalScroll(rememberScrollState())
+                        .padding(20.dp)
+                ) {
+                    OneTimeCoachMark(
+                        id = "coach_tap_edit_swipe_delete",
+                        message = stringResource(R.string.coach_tap_edit_swipe_delete),
+                        modifier = Modifier.padding(bottom = 10.dp)
+                    )
+                    if (items.size > 1) {
+                        OneTimeCoachMark(
+                            id = "coach_drag_reorder",
+                            message = stringResource(R.string.coach_drag_reorder),
+                            modifier = Modifier.padding(bottom = 10.dp)
+                        )
+                    }
+                    DragReorderColumn(
+                        items = items,
+                        onMove = { from, to ->
+                            val updated = items.toMutableList()
+                            val moved = updated.removeAt(from)
+                            updated.add(to, moved)
+                            onSave(reindex(updated))
+                        }
+                    ) { index, item, dragHandleModifier ->
+                        SwipeEditableCard(
+                            onEdit = { openEdit(index) },
+                            onDelete = {
+                                onSave(reindex(items.toMutableList().apply { removeAt(index) }))
+                                Toast.makeText(context, deletedMsg, Toast.LENGTH_SHORT).show()
+                            },
+                            dragHandleModifier = dragHandleModifier,
+                            modifier = Modifier.fillMaxWidth().padding(bottom = 10.dp)
                         ) {
-                            Row(modifier = Modifier.fillMaxWidth().padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
-                                Column(modifier = Modifier.weight(1f)) {
-                                    Text(item.skillName, style = MaterialTheme.typography.titleMedium)
-                                    Text(item.skillLevel, style = MaterialTheme.typography.bodySmall)
-                                }
-                                IconButton(onClick = {
-                                    if (index > 0) {
-                                        val updated = items.toMutableList()
-                                        val tmp = updated[index - 1]; updated[index - 1] = updated[index]; updated[index] = tmp
-                                        onSave(reindex(updated))
-                                    }
-                                }, enabled = index > 0) { Icon(Icons.Filled.KeyboardArrowUp, contentDescription = stringResource(R.string.cd_move_up)) }
-                                IconButton(onClick = {
-                                    if (index < items.size - 1) {
-                                        val updated = items.toMutableList()
-                                        val tmp = updated[index + 1]; updated[index + 1] = updated[index]; updated[index] = tmp
-                                        onSave(reindex(updated))
-                                    }
-                                }, enabled = index < items.size - 1) { Icon(Icons.Filled.KeyboardArrowDown, contentDescription = stringResource(R.string.cd_move_down)) }
-                                IconButton(onClick = { openEdit(index) }) { Icon(Icons.Filled.Edit, contentDescription = stringResource(R.string.cd_edit)) }
-                                IconButton(onClick = {
-                                    onSave(reindex(items.toMutableList().apply { removeAt(index) }))
-                                    Toast.makeText(context, deletedMsg, Toast.LENGTH_SHORT).show()
-                                }) { Icon(Icons.Filled.Delete, contentDescription = stringResource(R.string.cd_delete)) }
+                            Column(modifier = Modifier.weight(1f).padding(vertical = 8.dp)) {
+                                Text(item.skillName, style = MaterialTheme.typography.titleMedium)
+                                Text(item.skillLevel, style = MaterialTheme.typography.bodySmall)
                             }
                         }
                     }
@@ -161,47 +168,56 @@ fun SkillsSection(
     }
 
     if (showDialog) {
-        AppDialog(
-            onDismissRequest = { showDialog = false },
-            title = { Text(if (editingIndex >= 0) stringResource(R.string.skills_title_edit) else stringResource(R.string.skills_title_add)) },
-            text = {
-                Column {
-                    AppTextField(value = skillName, onValueChange = { skillName = it }, label = { Text(stringResource(R.string.skills_label_name)) }, modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp))
-                    ExposedDropdownMenuBox(expanded = levelExpanded, onExpandedChange = { levelExpanded = it }) {
-                        AppTextField(
-                            value = skillLevel, onValueChange = {}, readOnly = true, label = { Text(stringResource(R.string.skills_label_level)) },
-                            trailingIcon = { Icon(Icons.Filled.ArrowDropDown, contentDescription = null) },
-                            modifier = Modifier.fillMaxWidth()
-                        )
-                        DropdownMenu(expanded = levelExpanded, onDismissRequest = { levelExpanded = false }) {
-                            skillLevels.forEach { level ->
-                                DropdownMenuItem(text = { Text(level) }, onClick = { skillLevel = level; levelExpanded = false })
-                            }
+        AppBottomSheet(
+            sheetState = rememberModalBottomSheetState(),
+            onDismissRequest = { showDialog = false }
+        ) {
+            Column(modifier = Modifier.padding(horizontal = 24.dp).padding(bottom = 24.dp)) {
+                Text(
+                    if (editingIndex >= 0) stringResource(R.string.skills_title_edit) else stringResource(R.string.skills_title_add),
+                    style = MaterialTheme.typography.titleLarge,
+                    modifier = Modifier.padding(bottom = 16.dp)
+                )
+                AppTextField(value = skillName, onValueChange = { skillName = it }, label = { Text(stringResource(R.string.skills_label_name)) }, modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp))
+                ExposedDropdownMenuBox(expanded = levelExpanded, onExpandedChange = { levelExpanded = it }) {
+                    AppTextField(
+                        value = skillLevel, onValueChange = {}, readOnly = true, label = { Text(stringResource(R.string.skills_label_level)) },
+                        trailingIcon = { Icon(Icons.Filled.ArrowDropDown, contentDescription = null) },
+                        modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp)
+                    )
+                    DropdownMenu(expanded = levelExpanded, onDismissRequest = { levelExpanded = false }) {
+                        skillLevels.forEach { level ->
+                            DropdownMenuItem(text = { Text(level) }, onClick = { skillLevel = level; levelExpanded = false })
                         }
                     }
                 }
-            },
-            confirmButton = {
-                TextButton(onClick = {
-                    if (skillName.isBlank() || skillLevel.isBlank()) {
-                        Toast.makeText(context, fillMandatoryMsg, Toast.LENGTH_SHORT).show()
-                    } else {
-                        val entry = SkillEntity(
-                            id = if (editingIndex >= 0) items[editingIndex].id else 0,
-                            resumeId = resumeId,
-                            orderIndex = if (editingIndex >= 0) editingIndex else items.size,
-                            skillName = skillName, skillLevel = skillLevel
-                        )
-                        val updated = items.toMutableList()
-                        if (editingIndex >= 0) updated[editingIndex] = entry else updated.add(entry)
-                        onSave(reindex(updated))
-                        showDialog = false
-                        Toast.makeText(context, addedMsg, Toast.LENGTH_SHORT).show()
+                Row(modifier = Modifier.fillMaxWidth()) {
+                    TextButton(onClick = { showDialog = false }, modifier = Modifier.weight(1f)) {
+                        Text(stringResource(R.string.btn_cancel))
                     }
-                }) { Text(stringResource(R.string.btn_save)) }
-            },
-            dismissButton = { TextButton(onClick = { showDialog = false }) { Text(stringResource(R.string.btn_cancel)) } }
-        )
+                    Button(
+                        onClick = {
+                            if (skillName.isBlank() || skillLevel.isBlank()) {
+                                Toast.makeText(context, fillMandatoryMsg, Toast.LENGTH_SHORT).show()
+                            } else {
+                                val entry = SkillEntity(
+                                    id = if (editingIndex >= 0) items[editingIndex].id else 0,
+                                    resumeId = resumeId,
+                                    orderIndex = if (editingIndex >= 0) editingIndex else items.size,
+                                    skillName = skillName, skillLevel = skillLevel
+                                )
+                                val updated = items.toMutableList()
+                                if (editingIndex >= 0) updated[editingIndex] = entry else updated.add(entry)
+                                onSave(reindex(updated))
+                                showDialog = false
+                                Toast.makeText(context, addedMsg, Toast.LENGTH_SHORT).show()
+                            }
+                        },
+                        modifier = Modifier.weight(1f)
+                    ) { Text(stringResource(R.string.btn_save)) }
+                }
+            }
+        }
     }
 
     if (showSuggestSheet) {
@@ -287,7 +303,7 @@ private fun AiSkillSuggestSheet(
                             try {
                                 suggestions = ResumeAiService.suggestSkills(role)
                             } catch (e: Exception) {
-                                Toast.makeText(context, aiFailedMsg, Toast.LENGTH_SHORT).show()
+                                Toast.makeText(context, co.resume.ai.aiErrorMessage(e, aiFailedMsg), Toast.LENGTH_SHORT).show()
                             } finally {
                                 isLoading = false
                             }
@@ -350,3 +366,35 @@ private fun AiSkillSuggestSheet(
 
 private fun reindex(items: List<SkillEntity>): List<SkillEntity> =
     items.mapIndexed { index, item -> item.copy(orderIndex = index) }
+
+@Preview(showBackground = true)
+@Composable
+private fun SkillsSectionPreview() {
+    ResumeBuilderTheme {
+        SkillsSection(
+            items = listOf(
+                SkillEntity(resumeId = 1, orderIndex = 0, skillName = "UI/UX Design", skillLevel = "Expert"),
+                SkillEntity(resumeId = 1, orderIndex = 1, skillName = "Figma", skillLevel = "Expert")
+            ),
+            resumeId = 1,
+            designation = "Product Designer",
+            onSave = {}
+        )
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
+@Preview(showBackground = true)
+@Composable
+private fun AiSkillSuggestSheetPreview() {
+    ResumeBuilderTheme {
+        AiSkillSuggestSheet(
+            designation = "Product Designer",
+            existingSkillNames = listOf("Figma"),
+            resumeId = 1,
+            nextOrderIndex = 1,
+            onAddSkills = {},
+            onDismiss = {}
+        )
+    }
+}

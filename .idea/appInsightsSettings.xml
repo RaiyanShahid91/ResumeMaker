@@ -36,10 +36,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="co.resumeai" />
+                  <option name="mobileSdkAppId" value="1:461034011055:android:b8be67026f4acdede8175a" />
+                  <option name="projectId" value="resumeai-7c5e7" />
+                  <option name="projectNumber" value="461034011055" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

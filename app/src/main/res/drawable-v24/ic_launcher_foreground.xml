@@ -5,75 +5,101 @@
     android:viewportHeight="108">
 
     <!--
-        Adaptive icon safe zone: center 72×72 → x:18–90, y:18–90
-        Document kept well inside: x:36–72, y:30–78  (36×48 units)
-        Leaves ~18dp of background visible on all sides inside the mask
+        Adaptive icon safe zone: keep essential content within x:21-87, y:21-87
+        Scanner viewfinder brackets + document + AI sparkle
     -->
+
+    <!-- Scanner viewfinder brackets -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeAlpha="0.92"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M22,34 L22,22 L34,22" />
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeAlpha="0.92"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M74,22 L86,22 L86,34" />
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeAlpha="0.92"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M22,74 L22,86 L34,86" />
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeAlpha="0.92"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M86,74 L86,86 L74,86" />
 
     <!-- Document shadow -->
     <path
-        android:fillColor="#18000000"
-        android:pathData="M38,32 L72,32 L80,40 L80,80 L38,80 Z" />
+        android:fillColor="#12131A"
+        android:fillAlpha="0.18"
+        android:pathData="M42,34 L70,34 L77,41 L77,80 L42,80 Z" />
 
     <!-- Document body -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M36,30 L70,30 L78,38 L78,78 L36,78 Z" />
+        android:pathData="M40,32 L68,32 L75,39 L75,78 L40,78 Z" />
 
     <!-- Folded corner -->
     <path
-        android:fillColor="#C7D2FE"
-        android:pathData="M70,30 L78,38 L70,38 Z" />
+        android:fillColor="#D7E3FF"
+        android:pathData="M68,32 L75,39 L68,39 Z" />
 
-    <!-- Header line — indigo bold -->
+    <!-- Header line — amber bold -->
     <path
-        android:strokeColor="#4F46E5"
-        android:strokeWidth="2.8"
+        android:strokeColor="#F5A623"
+        android:strokeWidth="2.6"
         android:strokeLineCap="round"
-        android:pathData="M42,47 L72,47" />
+        android:pathData="M46,48 L69,48" />
 
     <!-- Subtitle line -->
     <path
-        android:strokeColor="#A5B4FC"
-        android:strokeWidth="1.8"
+        android:strokeColor="#AEB8CC"
+        android:strokeWidth="1.7"
         android:strokeLineCap="round"
-        android:pathData="M42,53 L60,53" />
+        android:pathData="M46,54 L60,54" />
 
     <!-- Divider -->
     <path
         android:strokeColor="#E5E7EB"
         android:strokeWidth="0.8"
-        android:pathData="M42,58 L72,58" />
+        android:pathData="M46,59 L69,59" />
 
     <!-- Content line 1 -->
     <path
         android:strokeColor="#9CA3AF"
-        android:strokeWidth="1.6"
+        android:strokeWidth="1.5"
         android:strokeLineCap="round"
-        android:pathData="M42,63 L72,63" />
+        android:pathData="M46,64 L69,64" />
 
     <!-- Content line 2 (shorter) -->
     <path
         android:strokeColor="#9CA3AF"
-        android:strokeWidth="1.6"
+        android:strokeWidth="1.5"
         android:strokeLineCap="round"
-        android:pathData="M42,68 L65,68" />
+        android:pathData="M46,69 L63,69" />
 
     <!-- Content line 3 -->
     <path
         android:strokeColor="#9CA3AF"
-        android:strokeWidth="1.6"
+        android:strokeWidth="1.5"
         android:strokeLineCap="round"
-        android:pathData="M42,73 L72,73" />
+        android:pathData="M46,74 L69,74" />
 
     <!-- AI sparkle — 4-pointed star -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M80,27 L81.2,30.8 L85,32 L81.2,33.2 L80,37 L78.8,33.2 L75,32 L78.8,30.8 Z" />
+        android:pathData="M78,54 L79.4,58.4 L83.8,59.8 L79.4,61.2 L78,65.6 L76.6,61.2 L72.2,59.8 L76.6,58.4 Z" />
 
     <!-- Small accent sparkle -->
     <path
-        android:fillColor="#C7D2FE"
-        android:pathData="M84,40 L84.7,41.8 L86.5,42.5 L84.7,43.2 L84,45 L83.3,43.2 L81.5,42.5 L83.3,41.8 Z" />
+        android:fillColor="#F5A623"
+        android:pathData="M83,66 L83.8,68.2 L86,69 L83.8,69.8 L83,72 L82.2,69.8 L80,69 L82.2,68.2 Z" />
 
 </vector>

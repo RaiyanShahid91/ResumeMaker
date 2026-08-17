@@ -12,9 +12,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import co.resumeai.R
 import co.resume.ui.component.AppBottomSheet
+import co.resume.ui.theme.ResumeBuilderTheme
 import co.resume.utils.VersionCheckUtils
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -45,4 +47,10 @@ fun UpdateAppSheet(onDismiss: () -> Unit) {
             }
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun UpdateAppSheetPreview() {
+    ResumeBuilderTheme { UpdateAppSheet(onDismiss = {}) }
 }

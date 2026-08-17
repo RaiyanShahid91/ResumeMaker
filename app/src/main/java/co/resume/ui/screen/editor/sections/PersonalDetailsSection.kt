@@ -21,10 +21,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import co.resumeai.R
 import co.resume.data.local.entity.ResumeEntity
 import co.resume.ui.component.AppTextField
+import co.resume.ui.theme.ResumeBuilderTheme
 
 @Composable
 fun PersonalDetailsSection(
@@ -102,5 +104,23 @@ fun PersonalDetailsSection(
         ) {
             Text(stringResource(R.string.btn_save))
         }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun PersonalDetailsSectionPreview() {
+    ResumeBuilderTheme {
+        PersonalDetailsSection(
+            resume = ResumeEntity(
+                name = "Alex Morgan",
+                designation = "Product Designer",
+                email = "alex.morgan@email.com",
+                phone = "5550102030",
+                address = "San Francisco, CA"
+            ),
+            onBack = {},
+            onSave = { _, _, _, _, _ -> }
+        )
     }
 }

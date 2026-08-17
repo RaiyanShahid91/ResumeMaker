@@ -30,8 +30,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import co.resume.ui.theme.ResumeBuilderTheme
 import kotlinx.coroutines.delay
 
 /** Default time every shimmer skeleton stays visible for, regardless of how fast real data arrives. */
@@ -137,17 +139,39 @@ fun ListRowSkeleton(
 
 /** Skeleton placeholder mimicking a template thumbnail card in the featured carousel. */
 @Composable
-fun TemplateThumbnailSkeleton(width: Dp = 130.dp) {
+fun TemplateThumbnailSkeleton(width: Dp = 184.dp) {
     Column(modifier = Modifier.width(width)) {
         ShimmerBlock(
             modifier = Modifier
                 .fillMaxWidth()
-                .height((width.value * 1.4f).dp),
+                .height((width.value * 0.72f).dp),
             shape = MaterialTheme.shapes.medium
         )
         Spacer(Modifier.height(8.dp))
         ShimmerBlock(modifier = Modifier.fillMaxWidth(0.7f).height(12.dp))
         Spacer(Modifier.height(4.dp))
         ShimmerBlock(modifier = Modifier.fillMaxWidth(0.4f).height(10.dp))
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun ResumeCardSkeletonPreview() {
+    ResumeBuilderTheme { ResumeCardSkeleton(modifier = Modifier.padding(16.dp)) }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun ListRowSkeletonPreview() {
+    ResumeBuilderTheme { ListRowSkeleton() }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun TemplateThumbnailSkeletonPreview() {
+    ResumeBuilderTheme {
+        androidx.compose.foundation.layout.Box(modifier = Modifier.padding(16.dp)) {
+            TemplateThumbnailSkeleton()
+        }
     }
 }

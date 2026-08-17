@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'com.google.devtools.ksp'
+
+android {
+    namespace "co.resume.templates"
+    compileSdkVersion 35
+
+    defaultConfig {
+        minSdkVersion 26
+        targetSdkVersion 35
+        multiDexEnabled true
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/DEPENDENCIES', 'META-INF/LICENSE', 'META-INF/LICENSE.txt',
+                          'META-INF/NOTICE', 'META-INF/NOTICE.txt', 'META-INF/*.RSA', 'META-INF/*.SF', 'META-INF/*.DSA']
+        }
+    }
+}
+
+dependencies {
+    implementation project(':data')
+    implementation 'androidx.annotation:annotation:1.7.1'
+
+    // hilt (module-only: no @AndroidEntryPoint/@HiltAndroidApp here, so no Hilt Gradle plugin needed)
+    implementation 'com.google.dagger:hilt-android:2.51.1'
+    ksp 'com.google.dagger:hilt-android-compiler:2.51.1'
+
+    // coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1'
+
+    // real selectable-text PDF export (Android-compatible fork of PDFBox)
+    implementation 'com.tom-roush:pdfbox-android:2.0.27.0'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ResumeAI</string>
+    <string name="app_name">FileForge</string>
 
 
     <string name="first_check">I understand that sharing of inappropriate content will not be tolerated.</string>
@@ -42,7 +42,7 @@
     <string name="build_a_professional_resume_for_free">Build a Professional Resume for Free</string>
     <string name="create_a_resume_easily_with_our_free_builder_and_professional_templates">Create a resume easily with our free builder and professional templates.</string>
     <string name="already_have_an_account">Already have an account?</string>
-    <string name="new_to_craft_cv">New to ResumeAI?</string>
+    <string name="new_to_craft_cv">New to FileForge?</string>
     <string name="joined_us_before">Joined us before?</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
@@ -90,7 +90,7 @@
     <string name="point_8"><b>Avoid Personal Details</b>\nSkip unnecessary details like age, marital status, or religion unless required.</string>
 
     //privacy policy
-    <string name="p_first_point">Thank you for using <b>ResumeAI</b>. Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you use our App.</string>
+    <string name="p_first_point">Thank you for using <b>FileForge</b>. Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you use our App.</string>
     <string name="p_second_point"><b>Information We Collect</b> We collect the following personal information to provide and improve our services:\n<b>Personal Details:</b>Name, email,mobile no, profile photo and address.\n<b>Education &amp; Work Experience:</b>Information about your education, skills, and work history.\n<b>Device Permissions:</b>The App may request access to your camera, storage, and network to enhance your experience.</string>
     <string name="p_third_point"><b>How We Use Your Information</b>We use your information to:\nCreate and manage your resume.\nImprove user experience and functionality.\nProvide customer support and resolve issues.\nEnsure compliance with legal and security requirements.</string>
     <string name="p_fourth_point"><b>Data Sharing and Security</b>\nWe do not sell or share your personal information with third parties except as required by law.\nWe implement security measures to protect your data from unauthorized access or misuse.</string>
@@ -98,7 +98,7 @@
     <string name="p_sixth_point"><b>Your Rights and Choices</b>You have the right to:\nAccess, update, or delete your personal information within the App.\nRevoke permissions granted to the App via your device settings.\nContact us for any concerns related to your privacy.</string>
 
     //term of use
-    <string name="t_first_point"><b>Acceptance of Terms</b> By using ResumeAI, you agree to comply with these Terms of Use. If you do not agree, please do not use the App.</string>
+    <string name="t_first_point"><b>Acceptance of Terms</b> By using FileForge, you agree to comply with these Terms of Use. If you do not agree, please do not use the App.</string>
     <string name="t_second_point"><b>User Responsibilities</b>\nYou are responsible for maintaining the confidentiality of your login credentials.\nYou agree to provide accurate and truthful information while using the App.\nYou must not misuse the App or attempt to interfere with its functionality.</string>
     <string name="t_third_point"><b>License and Restrictions</b>\nWe grant you a limited, non-exclusive, and non-transferable license to use the App.\nYou may not modify, distribute, or reverse-engineer any part of the App.</string>
     <string name="t_fourth_point"><b>Termination</b> We reserve the right to terminate or restrict your access to the App if you violate these terms.</string>

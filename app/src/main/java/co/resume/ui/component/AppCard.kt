@@ -7,17 +7,23 @@ import androidx.compose.animation.core.spring
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import co.resume.ui.theme.ResumeBuilderTheme
 
 /**
  * Drop-in replacement for M3 [Card] that adds a subtle press-down scale + elevation
@@ -29,11 +35,13 @@ fun AppCard(
     onClick: (() -> Unit)? = null,
     containerColor: Color = MaterialTheme.colorScheme.surface,
     restingElevation: Dp = 1.dp,
+    shape: Shape = CardDefaults.shape,
     content: @Composable ColumnScope.() -> Unit
 ) {
     if (onClick == null) {
         Card(
             modifier = modifier,
+            shape = shape,
             colors = CardDefaults.cardColors(containerColor = containerColor),
             elevation = CardDefaults.cardElevation(defaultElevation = restingElevation),
             content = content
@@ -57,8 +65,19 @@ fun AppCard(
         onClick = onClick,
         interactionSource = interactionSource,
         modifier = modifier.graphicsLayer { scaleX = scale; scaleY = scale },
+        shape = shape,
         colors = CardDefaults.cardColors(containerColor = containerColor),
         elevation = CardDefaults.cardElevation(defaultElevation = elevation),
         content = content
     )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun AppCardPreview() {
+    ResumeBuilderTheme {
+        AppCard(onClick = {}, modifier = Modifier.fillMaxWidth().padding(16.dp)) {
+            Text("Tappable card", modifier = Modifier.padding(16.dp))
+        }
+    }
 }

@@ -31,11 +31,13 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import co.resumeai.R
 import co.resume.domain.ImageStorage
 import co.resume.ui.component.AppDialog
+import co.resume.ui.theme.ResumeBuilderTheme
 import com.yalantis.ucrop.UCrop
 import java.io.File
 
@@ -145,6 +147,21 @@ fun ImageCaptureSection(
                     galleryLauncher.launch(androidx.activity.result.PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
                 }) { Text(stringResource(R.string.img_btn_gallery)) }
             }
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun ImageCaptureSectionPreview() {
+    ResumeBuilderTheme {
+        ImageCaptureSection(
+            title = "Profile photo",
+            currentPath = null,
+            storageFileName = "profile.jpg",
+            jpegQuality = 85,
+            onImageSaved = {},
+            onBack = {}
         )
     }
 }
