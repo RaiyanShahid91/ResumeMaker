@@ -35,7 +35,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.DocumentScanner
-import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.WavingHand
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -90,12 +89,6 @@ private fun onboardingPages(): List<OnboardingPage> = listOf(
         title = "Scan, import & convert",
         description = "Scan paper documents with automatic edge detection, import an existing resume from a PDF or photo, or use the built-in tools to merge, compress, and convert PDFs.",
         highlight = "Document scanner + PDF toolkit"
-    ),
-    OnboardingPage(
-        icon = Icons.Filled.Lock,
-        title = "Why we ask you to log in",
-        description = "An account just keeps your subscription and login linked to you — it's not used to store your work. Your resumes, cover letters, and scans are saved only on your device, never uploaded to us.",
-        highlight = "Your documents stay on your device"
     )
 )
 

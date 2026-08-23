@@ -92,7 +92,6 @@
     <string name="fourth_para">אנו מעודדים את כל המשתמשים לדווח על כל הפרה של ההנחיות שלנו באמצעות תכונת הדיווח שבתוך האפליקציה. הדיווחים שלך ייבדקו במהירות ויינקטו הפעולות המתאימות.</string>
     <string name="five_para">כמשתמש/ת ב-<b>Craft MyCV</b>, הנך אחראי/ת לוודא שהתוכן שאת/ה יוצר/ת ומשתף/ת עומד בהנחיות שלנו. הנך מסכים/ה שלא להשתמש באפליקציה למטרות בלתי חוקיות, בלתי אתיות או מזיקות.</string>
     <string name="six_para">אנו עשויים לעדכן מדיניות פרטיות זו מעת לעת. כל שינוי ישתקף בתוך האפליקציה, והמשך השימוש ב-<b>Craft MyCV</b> מהווה הסכמה לתנאים המעודכנים.</string>
-    <string name="terms_of_use">מדיניות פרטיות / תנאי שימוש</string>
     <string name="get_started">התחל</string>
     <string name="rate_app">דרג את האפליקציה</string>
     <string name="exit">יציאה</string>
@@ -165,7 +164,7 @@
     <string name="t_fourth_point"><b>סיום</b> אנו שומרים לעצמנו את הזכות לסיים או להגביל את הגישה שלך לאפליקציה אם תפר/י תנאים אלה.</string>
     <string name="t_fifth_point"><b>הגבלת אחריות</b> איננו אחראים לכל נזק ישיר, עקיף או תוצאתי הנובע מהשימוש באפליקציה.</string>
     <string name="t_sixth_point">אנו עשויים לעדכן מדיניות פרטיות זו ותנאי שימוש אלה מעת לעת. המשך השימוש באפליקציה לאחר עדכונים מהווה הסכמה לשינויים.</string>
-    <string name="t_seven_point">לכל שאלה, אנא צור/י קשר בכתובת rssphere0@gmail.com.</string>
+    <string name="t_seven_point">לכל שאלה, אנא צור/י קשר בכתובת contact@brynflow.com.</string>
     <string name="hey">היי,</string>
     <string name="create_your_own_resume_to_apply_for_jobs">צור/י קורות חיים משלך כדי להגיש מועמדות למשרות.</string>
     <string name="recent">אחרונים</string>
@@ -713,55 +712,4 @@
     </string-array>
 
     <!-- Auth: Login / Register / Terms -->
-    <string name="auth_login_title">ברוך שובך</string>
-    <string name="auth_login_subtitle">התחבר כדי לגשת לחשבונך.</string>
-    <string name="auth_email_label">אימייל</string>
-    <string name="auth_password_label">סיסמה</string>
-    <string name="auth_forgot_password">שכחת סיסמה?</string>
-    <string name="auth_logging_in">מתחבר…</string>
-    <string name="auth_login_button">התחברות</string>
-    <string name="auth_google_continue">המשך עם Google</string>
-    <string name="auth_or_divider">או</string>
-    <string name="auth_no_account">אין לך חשבון?</string>
-    <string name="auth_sign_up">הרשמה</string>
-    <string name="auth_change_language_cd">שינוי שפה</string>
-    <string name="auth_valid_email">כתובת אימייל תקינה</string>
-    <string name="auth_reset_title">איפוס הסיסמה שלך</string>
-    <string name="auth_reset_sent">אם קיים חשבון עם אימייל זה, קישור לאיפוס בדרך אליך — בדוק את תיבת הדואר הנכנס.</string>
-    <string name="auth_reset_instruction">הזן את כתובת האימייל של חשבונך ונשלח לך קישור לאיפוס הסיסמה.</string>
-    <string name="auth_reset_done">בוצע</string>
-    <string name="auth_reset_send">שלח קישור</string>
-    <string name="auth_reset_sending">שולח…</string>
-    <string name="auth_register_title">צור את חשבונך</string>
-    <string name="auth_register_subtitle">רק שם, אימייל וסיסמה.</string>
-    <string name="auth_full_name_label">שם מלא</string>
-    <string name="auth_creating_account">יוצר חשבון…</string>
-    <string name="auth_create_account_button">צור חשבון</string>
-    <string name="auth_agree_prefix">אני מסכים ל</string>
-    <string name="auth_terms_link">תנאים והגבלות</string>
-    <string name="auth_have_account">כבר יש לך חשבון?</string>
-    <string name="auth_login_link">התחברות</string>
-    <string name="auth_pw_req_length">לפחות %1$d תווים</string>
-    <string name="auth_pw_req_number">לפחות ספרה אחת</string>
-    <string name="auth_pw_req_special">לפחות תו מיוחד אחד (למשל @ # !)</string>
-    <string name="terms_s1_heading">מה אנחנו אוספים עבור חשבונך</string>
-    <string name="terms_s1_body">בעת ההרשמה, אנחנו אוספים את שמך ואימייל שלך דרך Firebase Authentication (או פרטי חשבון Google אם אתה נכנס עם Google). זהו — זה משמש רק לזיהוי חשבונך, לשמור אותך מחובר ולקשר את מנוי הפרימיום שלך אליך.</string>
-    <string name="terms_s2_heading">מה נשאר במכשיר שלך</string>
-    <string name="terms_s2_body">קורות החיים, מכתבי המקדימים, המסמכים הסרוקים וכל מה שאתה יוצר בעורך נשמרים רק באחסון המקומי של המכשיר שלך. תוכן זה לעולם לא מועלה אלינו או לשרת כלשהו שבשליטתנו — מחיקת האפליקציה או החשבון מסירה אותו לצמיתות, ואין עותק בענן לשחזור.</string>
-    <string name="terms_s3_heading">תכונות בינה מלאכותית</string>
-    <string name="terms_s3_body">כאשר אתה משתמש בתכונה מבוססת בינה מלאכותית (שיפור תיאור, יצירת מכתב מקדים וכו׳), הטקסט הרלוונטי נשלח לספק הבינה המלאכותית שלנו (Groq) כדי ליצור תגובה. שום מידע על החשבון אינו נכלל בבקשה זו.</string>
-    <string name="terms_s4_heading">השירותים שאנו מספקים</string>
-    <string name="terms_s4_body">בונה קורות חיים עם תבניות מקצועיות, סיוע כתיבה מבוסס בינה מלאכותית, מחולל מכתבי מקדימים, סורק מסמכים עם זיהוי טקסט (OCR), כלי PDF (מיזוג, דחיסה, המרת תמונה ל-PDF ו-PDF ל-JPG), ומנוי פרימיום אופציונלי שמסיר פרסומות ופותח את כל ערכת הכלים.</string>
-    <string name="terms_s5_heading">מנויים ותשלומים</string>
-    <string name="terms_s5_body">מנויי פרימיום (חודשי או שנתי) מחויבים אך ורק דרך Google Play Billing — זו אמצעי התשלום היחיד שבו אנו משתמשים. איננו משלבים ספק תשלומים נפרד ולעולם לא רואים או שומרים ישירות את פרטי הכרטיס, PayPal או אמצעי תשלום אחר שלך; הכל מנוהל על ידי Google. תוכל לנהל או לבטל את המנוי בכל עת מההגדרות, המקשרות ישירות לניהול המנויים של Google Play.</string>
-    <string name="terms_s6_heading">מחיקת החשבון שלך</string>
-    <string name="terms_s6_body">תוכל למחוק את חשבונך בכל עת מהגדרות ← פרופיל ← מחיקת חשבון. פעולה זו מסירה לצמיתות את ההתחברות שלך ואת כל קורות החיים, מכתבי המקדימים והסריקות השמורים במכשיר זה. פעולה זו אינה מבטלת מנוי פעיל ב-Play Store — יש לבטל זאת בנפרד ב-Google Play, אחרת החיוב יימשך.</string>
-    <string name="terms_s7_heading">האחריות שלך</string>
-    <string name="terms_s7_body">שמור על סודיות פרטי הכניסה שלך, מסור מידע מדויק, ואל תעשה שימוש לרעה באפליקציה או תנסה להפריע לפעולתה. אנו רשאים להשעות גישה לחשבונות שמפרים תנאים אלה.</string>
-    <string name="terms_s8_heading">שאלות</string>
-    <string name="terms_s8_body">צור איתנו קשר בכל עת בכתובת rssphere0@gmail.com.</string>
-    <string name="terms_s_login_heading">למה אנחנו מבקשים ממך להתחבר, ואיך אפשר להתחבר</string>
-    <string name="terms_s_login_body">ההתחברות שומרת על קישור מנוי הפרימיום שלך לחשבונך ומאפשרת לך להתחבר שוב מבלי לאבד את הגישה אליו. היא אינה מעלה את קורות החיים או המסמכים שלך לשום מקום — הם נשארים במכשיר שלך (ראה למטה). אפשר להתחבר בשתי דרכים: עם אימייל וסיסמה, או עם Google. שתיהן מנוהלות בבטחה דרך Firebase Authentication, ואנחנו לעולם לא רואים או שומרים את סיסמת חשבון ה-Google שלך.</string>
-    <string name="terms_s_perm_heading">הרשאות שאנו מבקשים</string>
-    <string name="terms_s_perm_body">מצלמה: לסריקת מסמכים ולצילום תמונת הפרופיל שלך ישירות באפליקציה. אינטרנט ומצב רשת: נדרשים כדי שתכונות הבינה המלאכותית, ההתחברות לחשבון וחיוב הפרימיום יעבדו, וכדי לבדוק שאתה מחובר לפני ביצוע בקשות אלה. מזהה פרסום: משמש להצגת פרסומות למשתמשים בתוכנית החינמית דרך Google AdMob — אינו בשימוש כלל כשיש לך פרימיום, מכיוון שהפרסומות מוסרות לגמרי. אנחנו לא מבקשים גישה לאנשי הקשר, למיקום, למיקרופון או להודעות שלך.</string>
 </resources>

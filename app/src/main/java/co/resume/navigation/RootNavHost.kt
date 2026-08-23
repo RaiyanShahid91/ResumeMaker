@@ -25,11 +25,7 @@ import co.resume.ui.screen.editor.TemplatePickerScreen
 import co.resume.ui.screen.info.AboutScreen
 import co.resume.ui.screen.info.PrivacyPolicyScreen
 import co.resume.ui.screen.info.UserGuideScreen
-import co.resume.ui.screen.auth.LoginScreen
-import co.resume.ui.screen.auth.RegisterScreen
-import co.resume.ui.screen.auth.TermsScreen
 import co.resume.ui.screen.onboarding.OnboardingScreen
-import co.resume.ui.screen.paywall.PaywallScreen
 import co.resume.ui.screen.convert.ConverterToolScreen
 import co.resume.ui.screen.pdf.PdfViewerScreen
 import co.resume.ui.screen.preview.CoverLetterPreviewScreen
@@ -75,36 +71,11 @@ fun RootNavHost(
             OnboardingScreen(
                 onFinish = {
                     onOnboardingFinished()
-                    navController.navigate(Screen.Login.route) {
+                    navController.navigate(Screen.Dashboard.route) {
                         popUpTo(Screen.Onboarding.route) { inclusive = true }
                     }
                 }
             )
-        }
-        composable(Screen.Login.route) {
-            LoginScreen(
-                onLoggedIn = {
-                    navController.navigate(Screen.Dashboard.route) {
-                        popUpTo(0)
-                    }
-                },
-                onGoToRegister = { navController.navigate(Screen.Register.route) },
-                onLanguageSelected = onLanguageSelected
-            )
-        }
-        composable(Screen.Register.route) {
-            RegisterScreen(
-                onRegistered = {
-                    navController.navigate(Screen.Dashboard.route) {
-                        popUpTo(0)
-                    }
-                },
-                onGoToLogin = { navController.popBackStack() },
-                onOpenTerms = { navController.navigate(Screen.Terms.route) }
-            )
-        }
-        composable(Screen.Terms.route) {
-            TermsScreen(onBack = { navController.popBackStack() })
         }
         composable(Screen.Dashboard.route) { backStackEntry ->
             val scannerViewModel: ScannerViewModel = hiltViewModel(backStackEntry)
@@ -123,12 +94,6 @@ fun RootNavHost(
                 onOpenAbout = { navController.navigate(Screen.About.route) },
                 onOpenGuide = { navController.navigate(Screen.Guide.route) },
                 onOpenAiChat = { navController.navigate(Screen.AiChat.route) },
-                onOpenPaywall = { navController.navigate(Screen.Paywall.route) },
-                onLoggedOut = {
-                    navController.navigate(Screen.Login.route) {
-                        popUpTo(0)
-                    }
-                },
                 onScanReady = { navController.navigate(Screen.ScanResult.route) },
                 onOpenPdfViewer = { path, title ->
                     navController.navigate(Screen.PdfViewer.createRoute(path, title))
@@ -147,8 +112,7 @@ fun RootNavHost(
                 onBack = { navController.popBackStack() },
                 onGoToDocuments = {
                     navController.popBackStack(Screen.Dashboard.route, false)
-                },
-                onOpenPaywall = { navController.navigate(Screen.Paywall.route) }
+                }
             )
         }
         composable(
@@ -178,9 +142,6 @@ fun RootNavHost(
         }
         composable(Screen.AiChat.route) {
             AiChatScreen(onBack = { navController.popBackStack() })
-        }
-        composable(Screen.Paywall.route) {
-            PaywallScreen(onBack = { navController.popBackStack() })
         }
         composable(Screen.TemplateBrowse.route) {
             TemplateBrowseScreen(
@@ -243,8 +204,7 @@ fun RootNavHost(
             arguments = listOf(navArgument("resumeId") { type = NavType.LongType })
         ) {
             ResumePreviewScreen(
-                onBack = { navController.popBackStack() },
-                onOpenPaywall = { navController.navigate(Screen.Paywall.route) }
+                onBack = { navController.popBackStack() }
             )
         }
         composable(
@@ -270,8 +230,7 @@ fun RootNavHost(
             arguments = listOf(navArgument("coverLetterId") { type = NavType.LongType })
         ) {
             CoverLetterPreviewScreen(
-                onBack = { navController.popBackStack() },
-                onOpenPaywall = { navController.navigate(Screen.Paywall.route) }
+                onBack = { navController.popBackStack() }
             )
         }
     }

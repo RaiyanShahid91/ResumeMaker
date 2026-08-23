@@ -97,7 +97,6 @@
     <string name="fourth_para">हम सभी उपयोगकर्ताओं को इन-ऐप रिपोर्टिंग सुविधा का उपयोग करके हमारे दिशा-निर्देशों के किसी भी उल्लंघन की रिपोर्ट करने के लिए प्रोत्साहित करते हैं। आपकी रिपोर्ट की तुरंत समीक्षा की जाएगी और उचित कार्रवाई की जाएगी।</string>
     <string name="five_para"><b>Craft MyCV</b> के उपयोगकर्ता के रूप में, यह सुनिश्चित करना आपकी ज़िम्मेदारी है कि आपके द्वारा बनाई और साझा की गई सामग्री हमारे दिशा-निर्देशों का पालन करती है। आप ऐप्लिकेशन का उपयोग अवैध, अनैतिक या हानिकारक उद्देश्यों के लिए न करने पर सहमत होते हैं।</string>
     <string name="six_para">हम समय-समय पर इस गोपनीयता नीति को अपडेट कर सकते हैं। कोई भी बदलाव ऐप के भीतर दिखाया जाएगा, और <b>Craft MyCV</b> का निरंतर उपयोग अपडेट की गई शर्तों के प्रति आपकी सहमति दर्शाता है।</string>
-    <string name="terms_of_use">गोपनीयता नीति / उपयोग की शर्तें</string>
     <string name="get_started">शुरू करें</string>
     <string name="rate_app">ऐप को रेट करें</string>
     <string name="exit">बाहर जाएं</string>
@@ -170,7 +169,7 @@
     <string name="t_fourth_point"><b>समाप्ति</b> यदि आप इन शर्तों का उल्लंघन करते हैं तो हम ऐप तक आपकी पहुंच समाप्त या सीमित करने का अधिकार सुरक्षित रखते हैं।</string>
     <string name="t_fifth_point"><b>दायित्व की सीमा</b> हम ऐप के उपयोग से उत्पन्न होने वाले किसी भी प्रत्यक्ष, अप्रत्यक्ष या आकस्मिक नुकसान के लिए ज़िम्मेदार नहीं हैं।</string>
     <string name="t_sixth_point">हम समय-समय पर इस गोपनीयता नीति और उपयोग की शर्तों को अपडेट कर सकते हैं। अपडेट के बाद ऐप का निरंतर उपयोग करने का अर्थ है कि आप बदलावों को स्वीकार करते हैं।</string>
-    <string name="t_seven_point">किसी भी प्रश्न के लिए, कृपया हमसे rssphere0@gmail.com पर संपर्क करें।</string>
+    <string name="t_seven_point">किसी भी प्रश्न के लिए, कृपया हमसे contact@brynflow.com पर संपर्क करें।</string>
     <string name="hey">हे,</string>
     <string name="create_your_own_resume_to_apply_for_jobs">नौकरियों के लिए आवेदन करने हेतु अपना खुद का रेज़्यूमे बनाएं।</string>
     <string name="recent">हाल ही में</string>
@@ -719,55 +718,4 @@
     </string-array>
 
     <!-- Auth: Login / Register / Terms -->
-    <string name="auth_login_title">वापसी पर स्वागत है</string>
-    <string name="auth_login_subtitle">अपने खाते तक पहुँचने के लिए लॉग इन करें।</string>
-    <string name="auth_email_label">ईमेल</string>
-    <string name="auth_password_label">पासवर्ड</string>
-    <string name="auth_forgot_password">पासवर्ड भूल गए?</string>
-    <string name="auth_logging_in">लॉग इन हो रहा है…</string>
-    <string name="auth_login_button">लॉग इन करें</string>
-    <string name="auth_google_continue">Google के साथ जारी रखें</string>
-    <string name="auth_or_divider">या</string>
-    <string name="auth_no_account">खाता नहीं है?</string>
-    <string name="auth_sign_up">साइन अप करें</string>
-    <string name="auth_change_language_cd">भाषा बदलें</string>
-    <string name="auth_valid_email">मान्य ईमेल पता</string>
-    <string name="auth_reset_title">अपना पासवर्ड रीसेट करें</string>
-    <string name="auth_reset_sent">अगर उस ईमेल से कोई खाता मौजूद है, तो रीसेट लिंक भेजा जा रहा है — अपना इनबॉक्स देखें।</string>
-    <string name="auth_reset_instruction">अपने खाते का ईमेल दर्ज करें, हम आपको पासवर्ड रीसेट करने के लिए एक लिंक भेजेंगे।</string>
-    <string name="auth_reset_done">हो गया</string>
-    <string name="auth_reset_send">लिंक भेजें</string>
-    <string name="auth_reset_sending">भेजा जा रहा है…</string>
-    <string name="auth_register_title">अपना खाता बनाएं</string>
-    <string name="auth_register_subtitle">बस आपका नाम, ईमेल और एक पासवर्ड।</string>
-    <string name="auth_full_name_label">पूरा नाम</string>
-    <string name="auth_creating_account">खाता बनाया जा रहा है…</string>
-    <string name="auth_create_account_button">खाता बनाएं</string>
-    <string name="auth_agree_prefix">मैं सहमत हूँ</string>
-    <string name="auth_terms_link">नियम और शर्तें</string>
-    <string name="auth_have_account">पहले से खाता है?</string>
-    <string name="auth_login_link">लॉग इन करें</string>
-    <string name="auth_pw_req_length">कम से कम %1$d वर्ण</string>
-    <string name="auth_pw_req_number">कम से कम 1 अंक</string>
-    <string name="auth_pw_req_special">कम से कम 1 विशेष वर्ण (जैसे @ # !)</string>
-    <string name="terms_s1_heading">आपके खाते के लिए हम क्या एकत्र करते हैं</string>
-    <string name="terms_s1_body">जब आप साइन अप करते हैं, तो हम Firebase Authentication के माध्यम से आपका नाम और ईमेल एकत्र करते हैं (या यदि आप Google से साइन इन करते हैं तो आपकी Google खाता जानकारी)। बस इतना ही — इसका उपयोग केवल आपके खाते की पहचान करने, आपको साइन इन रखने और आपकी प्रीमियम सदस्यता को आपसे जोड़ने के लिए किया जाता है।</string>
-    <string name="terms_s2_heading">आपके डिवाइस पर क्या रहता है</string>
-    <string name="terms_s2_body">आपके रिज्यूमे, कवर लेटर, स्कैन किए गए दस्तावेज़ और एडिटर में आपके द्वारा बनाई गई हर चीज़ केवल इस डिवाइस के लोकल स्टोरेज में सहेजी जाती है। यह सामग्री कभी भी हमें या हमारे नियंत्रण वाले किसी सर्वर पर अपलोड नहीं की जाती — ऐप या आपका खाता हटाने पर यह स्थायी रूप से हट जाती है और इसे पुनर्प्राप्त करने के लिए कोई क्लाउड कॉपी नहीं है।</string>
-    <string name="terms_s3_heading">AI सुविधाएं</string>
-    <string name="terms_s3_body">जब आप किसी AI-सहायता प्राप्त सुविधा का उपयोग करते हैं (विवरण सुधारना, कवर लेटर बनाना, आदि), तो संबंधित टेक्स्ट प्रतिक्रिया बनाने के लिए हमारे AI प्रदाता (Groq) को भेजा जाता है। उस अनुरोध में कोई खाता जानकारी शामिल नहीं होती।</string>
-    <string name="terms_s4_heading">हमारे द्वारा प्रदान की जाने वाली सेवाएं</string>
-    <string name="terms_s4_body">पेशेवर टेम्पलेट्स के साथ रिज्यूमे बिल्डर, AI-सहायता प्राप्त लेखन सहायता, कवर लेटर जेनरेटर, OCR के साथ डॉक्यूमेंट स्कैनर, PDF टूल्स (मर्ज, कम्प्रेस, इमेज-टू-PDF, PDF-टू-JPG रूपांतरण), और एक वैकल्पिक प्रीमियम सदस्यता जो विज्ञापन हटाती है और पूरा टूलकिट अनलॉक करती है।</string>
-    <string name="terms_s5_heading">सदस्यता और भुगतान</string>
-    <string name="terms_s5_body">प्रीमियम सदस्यता (मासिक या वार्षिक) केवल Google Play Billing के माध्यम से बिल की जाती है — यही एकमात्र भुगतान तरीका है जिसका हम उपयोग करते हैं। हम कोई अलग भुगतान प्रोसेसर एकीकृत नहीं करते और आपके कार्ड, PayPal या किसी अन्य भुगतान विवरण को कभी सीधे नहीं देखते या सहेजते — यह सब पूरी तरह Google द्वारा संभाला जाता है। आप किसी भी समय सेटिंग्स से अपनी सदस्यता प्रबंधित या रद्द कर सकते हैं, जो सीधे Google Play की सदस्यता प्रबंधन से जुड़ती है।</string>
-    <string name="terms_s6_heading">अपना खाता हटाना</string>
-    <string name="terms_s6_body">आप किसी भी समय सेटिंग्स → प्रोफ़ाइल → खाता हटाएं से अपना खाता हटा सकते हैं। यह आपके लॉगिन और उस डिवाइस पर सहेजे गए हर रिज्यूमे, कवर लेटर और स्कैन को स्थायी रूप से हटा देता है। यह किसी सक्रिय Play Store सदस्यता को रद्द नहीं करता — इसे Google Play में अलग से रद्द करना होगा, अन्यथा बिलिंग जारी रहेगी।</string>
-    <string name="terms_s7_heading">आपकी जिम्मेदारियां</string>
-    <string name="terms_s7_body">अपने लॉगिन क्रेडेंशियल गोपनीय रखें, सटीक जानकारी प्रदान करें, और ऐप का दुरुपयोग न करें या इसके कामकाज में हस्तक्षेप करने का प्रयास न करें। इन शर्तों का उल्लंघन करने वाले खातों की पहुंच हम निलंबित कर सकते हैं।</string>
-    <string name="terms_s8_heading">प्रश्न</string>
-    <string name="terms_s8_body">किसी भी समय rssphere0@gmail.com पर हमसे संपर्क करें।</string>
-    <string name="terms_s_login_heading">हम आपसे लॉग इन करने के लिए क्यों कहते हैं, और आप कैसे लॉग इन कर सकते हैं</string>
-    <string name="terms_s_login_body">लॉग इन करने से आपकी प्रीमियम सदस्यता आपके खाते से जुड़ी रहती है और आप बिना पहुंच खोए फिर से लॉग इन कर सकते हैं। इससे आपके रिज्यूमे या दस्तावेज़ कहीं भी अपलोड नहीं होते — वे आपके डिवाइस पर ही रहते हैं (नीचे देखें)। आप दो तरीकों से लॉग इन कर सकते हैं: ईमेल और पासवर्ड से, या Google से। दोनों को Firebase Authentication के माध्यम से सुरक्षित रूप से संभाला जाता है, और हम आपके Google खाते का पासवर्ड कभी नहीं देखते या सहेजते।</string>
-    <string name="terms_s_perm_heading">हम जिन अनुमतियों का अनुरोध करते हैं</string>
-    <string name="terms_s_perm_body">कैमरा: दस्तावेज़ स्कैन करने और सीधे ऐप में आपकी प्रोफ़ाइल फ़ोटो लेने के लिए। इंटरनेट और नेटवर्क स्थिति: AI सुविधाओं, खाता लॉगिन और प्रीमियम बिलिंग के काम करने के लिए, और इन अनुरोधों से पहले आपके ऑनलाइन होने की जांच के लिए आवश्यक। विज्ञापन ID: Google AdMob के माध्यम से मुफ़्त उपयोगकर्ताओं को विज्ञापन दिखाने के लिए उपयोग किया जाता है — प्रीमियम पर होने पर इसका बिल्कुल उपयोग नहीं होता, क्योंकि विज्ञापन पूरी तरह हटा दिए जाते हैं। हम आपके संपर्कों, स्थान, माइक्रोफ़ोन या संदेशों तक पहुंच का अनुरोध नहीं करते।</string>
 </resources>

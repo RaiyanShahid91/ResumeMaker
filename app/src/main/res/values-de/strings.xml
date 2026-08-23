@@ -346,7 +346,6 @@
     <string name="fourth_para">Wir ermutigen alle Nutzer, Verstöße gegen unsere Richtlinien über die In-App-Meldefunktion zu melden. Deine Meldungen werden zeitnah geprüft, und es werden angemessene Maßnahmen ergriffen.</string>
     <string name="five_para">Als Nutzer von <b>Craft MyCV</b> bist du dafür verantwortlich sicherzustellen, dass die von dir erstellten und geteilten Inhalte unseren Richtlinien entsprechen. Du stimmst zu, die Anwendung nicht für illegale, unethische oder schädliche Zwecke zu nutzen.</string>
     <string name="six_para">Wir können diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Änderungen werden in der App angezeigt, und die fortgesetzte Nutzung von <b>Craft MyCV</b> bedeutet, dass du den aktualisierten Bedingungen zustimmst.</string>
-    <string name="terms_of_use">Datenschutzrichtlinie / Nutzungsbedingungen</string>
     <string name="get_started">Loslegen</string>
     <string name="rate_app">App bewerten</string>
     <string name="exit">Beenden</string>
@@ -419,7 +418,7 @@
     <string name="t_fourth_point"><b>Kündigung</b> Wir behalten uns das Recht vor, deinen Zugriff auf die App zu kündigen oder einzuschränken, wenn du gegen diese Bedingungen verstößt.</string>
     <string name="t_fifth_point"><b>Haftungsbeschränkung</b> Wir sind nicht verantwortlich für direkte, indirekte oder zufällige Schäden, die aus der Nutzung der App entstehen.</string>
     <string name="t_sixth_point">Wir können diese Datenschutzrichtlinie und Nutzungsbedingungen von Zeit zu Zeit aktualisieren. Die fortgesetzte Nutzung der App nach Aktualisierungen bedeutet, dass du den Änderungen zustimmst.</string>
-    <string name="t_seven_point">Bei Fragen kontaktiere uns bitte unter rssphere0@gmail.com.</string>
+    <string name="t_seven_point">Bei Fragen kontaktiere uns bitte unter contact@brynflow.com.</string>
     <string name="hey">Hallo,</string>
     <string name="create_your_own_resume_to_apply_for_jobs">Erstelle deinen eigenen Lebenslauf, um dich auf Jobs zu bewerben.</string>
     <string name="recent">Zuletzt verwendet</string>
@@ -712,55 +711,4 @@
     </string-array>
 
     <!-- Auth: Login / Register / Terms -->
-    <string name="auth_login_title">Willkommen zurück</string>
-    <string name="auth_login_subtitle">Melde dich an, um auf dein Konto zuzugreifen.</string>
-    <string name="auth_email_label">E-Mail</string>
-    <string name="auth_password_label">Passwort</string>
-    <string name="auth_forgot_password">Passwort vergessen?</string>
-    <string name="auth_logging_in">Anmeldung läuft…</string>
-    <string name="auth_login_button">Anmelden</string>
-    <string name="auth_google_continue">Mit Google fortfahren</string>
-    <string name="auth_or_divider">oder</string>
-    <string name="auth_no_account">Du hast noch kein Konto?</string>
-    <string name="auth_sign_up">Registrieren</string>
-    <string name="auth_change_language_cd">Sprache ändern</string>
-    <string name="auth_valid_email">Gültige E-Mail-Adresse</string>
-    <string name="auth_reset_title">Passwort zurücksetzen</string>
-    <string name="auth_reset_sent">Falls ein Konto mit dieser E-Mail existiert, ist ein Link zum Zurücksetzen unterwegs — schau in dein Postfach.</string>
-    <string name="auth_reset_instruction">Gib deine E-Mail-Adresse ein und wir senden dir einen Link zum Zurücksetzen deines Passworts.</string>
-    <string name="auth_reset_done">Fertig</string>
-    <string name="auth_reset_send">Link senden</string>
-    <string name="auth_reset_sending">Wird gesendet…</string>
-    <string name="auth_register_title">Konto erstellen</string>
-    <string name="auth_register_subtitle">Nur Name, E-Mail und ein Passwort.</string>
-    <string name="auth_full_name_label">Vollständiger Name</string>
-    <string name="auth_creating_account">Konto wird erstellt…</string>
-    <string name="auth_create_account_button">Konto erstellen</string>
-    <string name="auth_agree_prefix">Ich stimme den</string>
-    <string name="auth_terms_link">Nutzungsbedingungen</string>
-    <string name="auth_have_account">Bereits ein Konto?</string>
-    <string name="auth_login_link">Anmelden</string>
-    <string name="auth_pw_req_length">Mindestens %1$d Zeichen</string>
-    <string name="auth_pw_req_number">Mindestens 1 Zahl</string>
-    <string name="auth_pw_req_special">Mindestens 1 Sonderzeichen (z. B. @ # !)</string>
-    <string name="terms_s1_heading">Was wir für dein Konto erfassen</string>
-    <string name="terms_s1_body">Bei der Anmeldung erfassen wir deinen Namen und deine E-Mail-Adresse über Firebase Authentication (oder deine Google-Kontodaten, wenn du dich mit Google anmeldest). Das ist alles — dies dient nur dazu, dein Konto zu identifizieren, dich angemeldet zu halten und dein Premium-Abo mit dir zu verknüpfen.</string>
-    <string name="terms_s2_heading">Was auf deinem Gerät bleibt</string>
-    <string name="terms_s2_body">Deine Lebensläufe, Anschreiben, gescannten Dokumente und alles, was du im Editor erstellst, werden ausschließlich lokal auf deinem Gerät gespeichert. Diese Inhalte werden niemals zu uns oder einem von uns kontrollierten Server hochgeladen — wenn du die App oder dein Konto löschst, sind sie unwiderruflich weg, es gibt keine Cloud-Kopie.</string>
-    <string name="terms_s3_heading">KI-Funktionen</string>
-    <string name="terms_s3_body">Wenn du eine KI-gestützte Funktion nutzt (z. B. eine Beschreibung verbessern oder ein Anschreiben erstellen), wird der entsprechende Text zur Verarbeitung an unseren KI-Anbieter (Groq) gesendet. Dabei werden keine Kontoinformationen übermittelt.</string>
-    <string name="terms_s4_heading">Unsere Leistungen</string>
-    <string name="terms_s4_body">Ein Lebenslauf-Builder mit professionellen Vorlagen, KI-gestützte Schreibhilfe, ein Anschreiben-Generator, ein Dokumentenscanner mit OCR, PDF-Tools (zusammenführen, komprimieren, Bild-zu-PDF, PDF-zu-JPG) sowie ein optionales Premium-Abo, das Werbung entfernt und alle Funktionen freischaltet.</string>
-    <string name="terms_s5_heading">Abonnements und Zahlungen</string>
-    <string name="terms_s5_body">Premium-Abos (monatlich oder jährlich) werden ausschließlich über Google Play Billing abgerechnet — das ist die einzige Zahlungsmethode, die wir verwenden. Wir binden keinen separaten Zahlungsanbieter ein und sehen oder speichern niemals deine Karten-, PayPal- oder sonstigen Zahlungsdaten direkt; das übernimmt vollständig Google. Du kannst dein Abo jederzeit in den Einstellungen verwalten oder kündigen, was dich direkt zur Abo-Verwaltung von Google Play führt.</string>
-    <string name="terms_s6_heading">Konto löschen</string>
-    <string name="terms_s6_body">Du kannst dein Konto jederzeit unter Einstellungen → Profil → Konto löschen entfernen. Dadurch werden dein Login sowie jeder Lebenslauf, jedes Anschreiben und jeder Scan auf diesem Gerät unwiderruflich gelöscht. Ein aktives Play-Store-Abo wird dadurch NICHT gekündigt — das musst du separat in Google Play tun, sonst läuft die Abrechnung weiter.</string>
-    <string name="terms_s7_heading">Deine Pflichten</string>
-    <string name="terms_s7_body">Halte deine Zugangsdaten vertraulich, mache wahrheitsgemäße Angaben und missbrauche die App nicht bzw. störe nicht ihre Funktion. Wir können den Zugang bei Verstößen gegen diese Bedingungen sperren.</string>
-    <string name="terms_s8_heading">Fragen</string>
-    <string name="terms_s8_body">Erreiche uns jederzeit unter rssphere0@gmail.com.</string>
-    <string name="terms_s_login_heading">Warum wir dich zur Anmeldung bitten und wie du dich anmelden kannst</string>
-    <string name="terms_s_login_body">Die Anmeldung verknüpft dein Premium-Abo mit deinem Konto und ermöglicht dir, dich wieder anzumelden, ohne den Zugriff darauf zu verlieren. Dabei werden keine Lebensläufe oder Dokumente hochgeladen — die bleiben auf deinem Gerät (siehe unten). Du kannst dich auf zwei Arten anmelden: mit E-Mail und Passwort oder mit Google-Anmeldung. Beides läuft sicher über Firebase Authentication, und wir sehen oder speichern niemals dein Google-Kontopasswort.</string>
-    <string name="terms_s_perm_heading">Berechtigungen, um die wir bitten</string>
-    <string name="terms_s_perm_body">Kamera: zum Scannen von Dokumenten und Aufnehmen deines Profilfotos direkt in der App. Internet und Netzwerkstatus: erforderlich für KI-Funktionen, Kontoanmeldung und Premium-Abrechnung sowie um zu prüfen, ob du online bist, bevor diese Anfragen gestellt werden. Werbe-ID: wird verwendet, um kostenlosen Nutzern Werbung über Google AdMob zu zeigen — dies wird bei Premium überhaupt nicht verwendet, da Werbung dann vollständig entfernt ist. Wir fordern keinen Zugriff auf deine Kontakte, deinen Standort, dein Mikrofon oder deine Nachrichten an.</string>
 </resources>

@@ -91,7 +91,6 @@
     <string name="fourth_para">Tüm kullanıcıları, uygulama içi raporlama özelliğini kullanarak kurallarımızın ihlallerini bildirmeye teşvik ediyoruz. Bildirimleriniz derhal incelenecek ve gerekli önlemler alınacaktır.</string>
     <string name="five_para"><b>Craft MyCV</b> kullanıcısı olarak, oluşturduğunuz ve paylaştığınız içeriğin kurallarımıza uygun olmasını sağlamaktan siz sorumlusunuz. Uygulamayı yasa dışı, etik olmayan veya zararlı amaçlarla kullanmamayı kabul edersiniz.</string>
     <string name="six_para">Bu gizlilik politikasını zaman zaman güncelleyebiliriz. Yapılan değişiklikler uygulama içinde yansıtılacak olup, <b>Craft MyCV</b>\'yi kullanmaya devam etmeniz güncellenmiş şartları kabul ettiğiniz anlamına gelir.</string>
-    <string name="terms_of_use">Gizlilik Politikası / Kullanım Şartları</string>
     <string name="get_started">Başlayın</string>
     <string name="rate_app">Uygulamayı Değerlendir</string>
     <string name="exit">Çıkış</string>
@@ -164,7 +163,7 @@
     <string name="t_fourth_point"><b>Fesih</b> Bu şartları ihlal etmeniz durumunda Uygulamaya erişiminizi sonlandırma veya kısıtlama hakkını saklı tutarız.</string>
     <string name="t_fifth_point"><b>Sorumluluğun Sınırlandırılması</b> Uygulamanın kullanımından kaynaklanan doğrudan, dolaylı veya arızi zararlardan sorumlu değiliz.</string>
     <string name="t_sixth_point">Bu Gizlilik Politikasını ve Kullanım Şartlarını zaman zaman güncelleyebiliriz. Güncellemelerden sonra Uygulamayı kullanmaya devam etmeniz değişiklikleri kabul ettiğiniz anlamına gelir.</string>
-    <string name="t_seven_point">Herhangi bir sorunuz için lütfen rssphere0@gmail.com adresinden bizimle iletişime geçin.</string>
+    <string name="t_seven_point">Herhangi bir sorunuz için lütfen contact@brynflow.com adresinden bizimle iletişime geçin.</string>
     <string name="hey">Merhaba,</string>
     <string name="create_your_own_resume_to_apply_for_jobs">İş başvurularınız için kendi özgeçmişinizi oluşturun.</string>
     <string name="recent">Son Kullanılanlar</string>
@@ -712,55 +711,4 @@
     </string-array>
 
     <!-- Auth: Login / Register / Terms -->
-    <string name="auth_login_title">Tekrar hoş geldiniz</string>
-    <string name="auth_login_subtitle">Hesabınıza erişmek için giriş yapın.</string>
-    <string name="auth_email_label">E-posta</string>
-    <string name="auth_password_label">Şifre</string>
-    <string name="auth_forgot_password">Şifrenizi mi unuttunuz?</string>
-    <string name="auth_logging_in">Giriş yapılıyor…</string>
-    <string name="auth_login_button">Giriş yap</string>
-    <string name="auth_google_continue">Google ile devam et</string>
-    <string name="auth_or_divider">veya</string>
-    <string name="auth_no_account">Hesabınız yok mu?</string>
-    <string name="auth_sign_up">Kayıt ol</string>
-    <string name="auth_change_language_cd">Dili değiştir</string>
-    <string name="auth_valid_email">Geçerli e-posta adresi</string>
-    <string name="auth_reset_title">Şifrenizi sıfırlayın</string>
-    <string name="auth_reset_sent">Bu e-postaya ait bir hesap varsa, sıfırlama bağlantısı gönderiliyor — gelen kutunuzu kontrol edin.</string>
-    <string name="auth_reset_instruction">Hesap e-postanızı girin, şifrenizi sıfırlamanız için bir bağlantı gönderelim.</string>
-    <string name="auth_reset_done">Tamam</string>
-    <string name="auth_reset_send">Bağlantı gönder</string>
-    <string name="auth_reset_sending">Gönderiliyor…</string>
-    <string name="auth_register_title">Hesabınızı oluşturun</string>
-    <string name="auth_register_subtitle">Sadece adınız, e-postanız ve bir şifre.</string>
-    <string name="auth_full_name_label">Ad soyad</string>
-    <string name="auth_creating_account">Hesap oluşturuluyor…</string>
-    <string name="auth_create_account_button">Hesap oluştur</string>
-    <string name="auth_agree_prefix">Şunu kabul ediyorum:</string>
-    <string name="auth_terms_link">Kullanım Koşulları</string>
-    <string name="auth_have_account">Zaten hesabınız var mı?</string>
-    <string name="auth_login_link">Giriş yap</string>
-    <string name="auth_pw_req_length">En az %1$d karakter</string>
-    <string name="auth_pw_req_number">En az 1 rakam</string>
-    <string name="auth_pw_req_special">En az 1 özel karakter (örn. @ # !)</string>
-    <string name="terms_s1_heading">Hesabınız için topladıklarımız</string>
-    <string name="terms_s1_body">Kayıt olduğunuzda, Firebase Authentication üzerinden adınızı ve e-postanızı (veya Google ile giriş yapıyorsanız Google hesap bilgilerinizi) topluyoruz. Hepsi bu kadar — bu yalnızca hesabınızı tanımlamak, oturumunuzu açık tutmak ve Premium aboneliğinizi sizinle ilişkilendirmek için kullanılır.</string>
-    <string name="terms_s2_heading">Cihazınızda kalanlar</string>
-    <string name="terms_s2_body">Özgeçmişleriniz, ön yazılarınız, taranmış belgeleriniz ve düzenleyicide oluşturduğunuz her şey yalnızca bu cihazın yerel depolama alanında saklanır. Bu içerikler asla bize veya kontrolümüzdeki herhangi bir sunucuya yüklenmez — uygulamayı veya hesabınızı silmek bunları kalıcı olarak kaldırır, kurtarılabilecek bir bulut kopyası yoktur.</string>
-    <string name="terms_s3_heading">Yapay zeka özellikleri</string>
-    <string name="terms_s3_body">Yapay zeka destekli bir özellik kullandığınızda (bir açıklamayı geliştirme, ön yazı oluşturma vb.), ilgili metin yanıt oluşturmak için yapay zeka sağlayıcımıza (Groq) gönderilir. Bu istekte hiçbir hesap bilgisi yer almaz.</string>
-    <string name="terms_s4_heading">Sunduğumuz hizmetler</string>
-    <string name="terms_s4_body">Profesyonel şablonlarla özgeçmiş oluşturucu, yapay zeka destekli yazım yardımı, ön yazı oluşturucu, OCR\'lı belge tarayıcı, PDF araçları (birleştirme, sıkıştırma, resimden PDF\'e, PDF\'ten JPG\'ye dönüştürme) ve reklamları kaldırıp tüm araç setinin kilidini açan isteğe bağlı bir Premium abonelik.</string>
-    <string name="terms_s5_heading">Abonelikler ve ödemeler</string>
-    <string name="terms_s5_body">Premium abonelikler (aylık veya yıllık) yalnızca Google Play Billing üzerinden faturalandırılır — kullandığımız tek ödeme yöntemi budur. Ayrı bir ödeme sağlayıcısı entegre etmeyiz ve kart, PayPal veya başka ödeme bilgilerinizi doğrudan asla görmeyiz ya da saklamayız; bunların tümünü Google yönetir. Aboneliğinizi istediğiniz zaman Ayarlar\'dan yönetebilir veya iptal edebilirsiniz; bu, doğrudan Google Play abonelik yönetimine yönlendirir.</string>
-    <string name="terms_s6_heading">Hesabınızı silme</string>
-    <string name="terms_s6_body">Hesabınızı istediğiniz zaman Ayarlar → Profil → Hesabı sil üzerinden silebilirsiniz. Bu işlem, oturumunuzu ve o cihazda saklanan her özgeçmiş, ön yazı ve taramayı kalıcı olarak kaldırır. Aktif bir Play Store aboneliğini İPTAL ETMEZ — bunu ayrıca Google Play\'de iptal etmeniz gerekir, aksi halde faturalandırma devam eder.</string>
-    <string name="terms_s7_heading">Sorumluluklarınız</string>
-    <string name="terms_s7_body">Giriş bilgilerinizi gizli tutun, doğru bilgi verin ve uygulamayı kötüye kullanmayın veya çalışmasına müdahale etmeyin. Bu koşulları ihlal eden hesapların erişimini askıya alabiliriz.</string>
-    <string name="terms_s8_heading">Sorular</string>
-    <string name="terms_s8_body">Bize istediğiniz zaman rssphere0@gmail.com adresinden ulaşabilirsiniz.</string>
-    <string name="terms_s_login_heading">Neden giriş yapmanızı istiyoruz ve nasıl giriş yapabilirsiniz</string>
-    <string name="terms_s_login_body">Giriş yapmak, Premium aboneliğinizi hesabınızla bağlantılı tutar ve erişiminizi kaybetmeden tekrar giriş yapmanızı sağlar. Bu işlem özgeçmişlerinizi veya belgelerinizi hiçbir yere yüklemez — bunlar cihazınızda kalır (aşağıya bakın). İki şekilde giriş yapabilirsiniz: e-posta ve şifre ile veya Google ile. Her ikisi de Firebase Authentication aracılığıyla güvenli şekilde işlenir ve Google hesap şifrenizi asla görmeyiz veya saklamayız.</string>
-    <string name="terms_s_perm_heading">İstediğimiz izinler</string>
-    <string name="terms_s_perm_body">Kamera: belgeleri taramak ve profil fotoğrafınızı doğrudan uygulama içinde çekmek için. İnternet ve ağ durumu: yapay zeka özelliklerinin, hesap girişinin ve Premium faturalandırmanın çalışması ve bu istekleri yapmadan önce bağlantınızı kontrol etmek için gereklidir. Reklam Kimliği: Google AdMob aracılığıyla ücretsiz kullanıcılara reklam göstermek için kullanılır — Premium\'dayken reklamlar tamamen kaldırıldığından bu hiç kullanılmaz. Kişilerinize, konumunuza, mikrofonunuza veya mesajlarınıza erişim talep etmiyoruz.</string>
 </resources>

@@ -7,7 +7,7 @@ apply plugin: 'com.google.firebase.crashlytics'
 
 android {
     namespace "co.resumeai"
-    compileSdkVersion 35
+    compileSdkVersion 36
 
     def keystoreProps = new Properties()
     def keystorePropsFile = rootProject.file('keystore.properties')
@@ -27,9 +27,9 @@ android {
     defaultConfig {
         applicationId "co.resumeai"
         minSdkVersion 26
-        targetSdkVersion 35
-        versionCode 2
-        versionName "1.1"
+        targetSdkVersion 36
+        versionCode 5
+        versionName "1.4"
 testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
 
         // Get a free key at https://aistudio.google.com/ then add GEMINI_API_KEY=your_key to local.properties
@@ -129,22 +129,13 @@ implementation 'com.github.Yalantis:ucrop:2.2.6'
     implementation 'com.google.android.gms:play-services-ads:23.5.0'
     implementation 'androidx.lifecycle:lifecycle-process:2.8.7'
 
-    //Google Play Billing — premium subscriptions (monthly/yearly)
-    implementation 'com.android.billingclient:billing-ktx:7.1.1'
-
-    //Firebase - Analytics + Crashlytics + Auth
+    //Firebase - Analytics + Crashlytics
     implementation platform('com.google.firebase:firebase-bom:33.5.1')
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation 'com.google.firebase:firebase-crashlytics-ktx'
-    implementation 'com.google.firebase:firebase-auth-ktx'
     implementation 'com.google.firebase:firebase-firestore-ktx'
     implementation 'com.google.firebase:firebase-config-ktx'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.8.1'
-
-    //Sign in with Google (via Credential Manager)
-    implementation 'androidx.credentials:credentials:1.3.0'
-    implementation 'androidx.credentials:credentials-play-services-auth:1.3.0'
-    implementation 'com.google.android.libraries.identity.googleid:googleid:1.1.1'
 
     //AI - Groq (free: 14,400 req/day — https://console.groq.com/)
     implementation 'com.squareup.okhttp3:okhttp:4.12.0'

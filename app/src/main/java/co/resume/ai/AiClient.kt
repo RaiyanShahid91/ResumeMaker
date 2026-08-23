@@ -31,7 +31,7 @@ object AiClient {
             messagesArray.put(JSONObject().put("role", msg.role).put("content", msg.content))
         }
         val body = JSONObject().apply {
-            put("model", "llama-3.1-8b-instant")
+            put("model", "openai/gpt-oss-20b")
             put("messages", messagesArray)
             put("max_tokens", 600)
             put("temperature", 0.7)
@@ -41,7 +41,7 @@ object AiClient {
 
     suspend fun generate(prompt: String): String {
         val body = JSONObject().apply {
-            put("model", "llama-3.1-8b-instant")
+            put("model", "openai/gpt-oss-20b")
             put("messages", JSONArray().put(JSONObject().put("role", "user").put("content", prompt)))
             put("max_tokens", 400)
             put("temperature", 0.7)
@@ -58,7 +58,7 @@ object AiClient {
      */
     suspend fun generateJson(prompt: String, maxTokens: Int = 3000): String {
         val body = JSONObject().apply {
-            put("model", "llama-3.1-8b-instant")
+            put("model", "openai/gpt-oss-20b")
             put("messages", JSONArray().put(JSONObject().put("role", "user").put("content", prompt)))
             put("max_tokens", maxTokens)
             put("temperature", 0.2)

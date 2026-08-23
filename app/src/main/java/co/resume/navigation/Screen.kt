@@ -25,15 +25,11 @@ sealed class Screen(val route: String) {
     data object CoverLetterPreview : Screen("cover_letter_editor/{coverLetterId}/preview") {
         fun createRoute(coverLetterId: Long) = "cover_letter_editor/$coverLetterId/preview"
     }
-    data object Paywall : Screen("paywall")
     data object Privacy : Screen("privacy")
     data object About : Screen("about")
     data object Guide : Screen("guide")
     data object AiChat : Screen("ai_chat")
     data object Onboarding : Screen("onboarding")
-    data object Login : Screen("login")
-    data object Register : Screen("register")
-    data object Terms : Screen("terms")
     data object ScanResult : Screen("scan_result")
     data object Converter : Screen("converter/{tool}") {
         fun createRoute(tool: String) = "converter/$tool"

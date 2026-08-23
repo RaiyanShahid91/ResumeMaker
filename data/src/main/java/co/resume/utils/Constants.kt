@@ -13,9 +13,5 @@ class Constants {
         const val APP_LANG = "App_Lang"
         const val TINY_DB_IMPORTED = "tinyDbImportedToRoom"
         const val ONBOARDING_DONE = "onboardingDone"
-        const val PREMIUM_ACTIVE = "premiumActive"
-        const val SUBSCRIPTION_BASE_PLAN = "subscriptionBasePlan"
-        const val SUBSCRIPTION_ORDER_ID = "subscriptionOrderId"
-        const val SUBSCRIPTION_PURCHASE_TIME = "subscriptionPurchaseTimeMillis"
     }
 }

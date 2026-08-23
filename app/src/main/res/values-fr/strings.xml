@@ -352,7 +352,6 @@
     <string name="fourth_para">Nous encourageons tous les utilisateurs à signaler toute violation de nos règles via la fonction de signalement intégrée à l\'application. Vos signalements seront examinés rapidement et les mesures appropriées seront prises.</string>
     <string name="five_para">En tant qu\'utilisateur de <b>Craft MyCV</b>, vous êtes responsable de vous assurer que le contenu que vous créez et partagez respecte nos règles. Vous acceptez de ne pas utiliser l\'application à des fins illégales, contraires à l\'éthique ou nuisibles.</string>
     <string name="six_para">Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Tout changement sera reflété dans l\'application, et la poursuite de l\'utilisation de <b>Craft MyCV</b> signifie que vous acceptez les conditions mises à jour.</string>
-    <string name="terms_of_use">Politique de confidentialité / Conditions d\'utilisation</string>
     <string name="get_started">Commencer</string>
     <string name="rate_app">Évaluer l\'application</string>
     <string name="exit">Quitter</string>
@@ -425,7 +424,7 @@
     <string name="t_fourth_point"><b>Résiliation</b> Nous nous réservons le droit de résilier ou de restreindre votre accès à l\'application si vous enfreignez ces conditions.</string>
     <string name="t_fifth_point"><b>Limitation de responsabilité</b> Nous ne sommes pas responsables des dommages directs, indirects ou accessoires résultant de l\'utilisation de l\'application.</string>
     <string name="t_sixth_point">Nous pouvons mettre à jour cette politique de confidentialité et ces conditions d\'utilisation de temps à autre. La poursuite de l\'utilisation de l\'application après ces mises à jour signifie que vous en acceptez les modifications.</string>
-    <string name="t_seven_point">Pour toute question, veuillez nous contacter à rssphere0@gmail.com.</string>
+    <string name="t_seven_point">Pour toute question, veuillez nous contacter à contact@brynflow.com.</string>
     <string name="hey">Salut,</string>
     <string name="create_your_own_resume_to_apply_for_jobs">Créez votre propre CV pour postuler à des emplois.</string>
     <string name="recent">Récents</string>
@@ -718,55 +717,4 @@
     </string-array>
 
     <!-- Auth: Login / Register / Terms -->
-    <string name="auth_login_title">Content de vous revoir</string>
-    <string name="auth_login_subtitle">Connectez-vous pour accéder à votre compte.</string>
-    <string name="auth_email_label">E-mail</string>
-    <string name="auth_password_label">Mot de passe</string>
-    <string name="auth_forgot_password">Mot de passe oublié ?</string>
-    <string name="auth_logging_in">Connexion…</string>
-    <string name="auth_login_button">Se connecter</string>
-    <string name="auth_google_continue">Continuer avec Google</string>
-    <string name="auth_or_divider">ou</string>
-    <string name="auth_no_account">Vous n’avez pas de compte ?</string>
-    <string name="auth_sign_up">S’inscrire</string>
-    <string name="auth_change_language_cd">Changer de langue</string>
-    <string name="auth_valid_email">Adresse e-mail valide</string>
-    <string name="auth_reset_title">Réinitialiser votre mot de passe</string>
-    <string name="auth_reset_sent">Si un compte existe pour cette adresse, un lien de réinitialisation est en route — vérifiez votre boîte de réception.</string>
-    <string name="auth_reset_instruction">Saisissez l’e-mail de votre compte et nous vous enverrons un lien pour réinitialiser votre mot de passe.</string>
-    <string name="auth_reset_done">Terminé</string>
-    <string name="auth_reset_send">Envoyer le lien</string>
-    <string name="auth_reset_sending">Envoi…</string>
-    <string name="auth_register_title">Créez votre compte</string>
-    <string name="auth_register_subtitle">Juste votre nom, e-mail et un mot de passe.</string>
-    <string name="auth_full_name_label">Nom complet</string>
-    <string name="auth_creating_account">Création du compte…</string>
-    <string name="auth_create_account_button">Créer un compte</string>
-    <string name="auth_agree_prefix">J’accepte les</string>
-    <string name="auth_terms_link">Conditions d’utilisation</string>
-    <string name="auth_have_account">Vous avez déjà un compte ?</string>
-    <string name="auth_login_link">Se connecter</string>
-    <string name="auth_pw_req_length">Au moins %1$d caractères</string>
-    <string name="auth_pw_req_number">Au moins 1 chiffre</string>
-    <string name="auth_pw_req_special">Au moins 1 caractère spécial (ex. @ # !)</string>
-    <string name="terms_s1_heading">Ce que nous collectons pour votre compte</string>
-    <string name="terms_s1_body">Lors de votre inscription, nous collectons votre nom et votre e-mail via Firebase Authentication (ou les informations de votre compte Google si vous utilisez la connexion Google). C’est tout — cela sert uniquement à identifier votre compte, vous garder connecté et lier votre abonnement Premium à vous.</string>
-    <string name="terms_s2_heading">Ce qui reste sur votre appareil</string>
-    <string name="terms_s2_body">Vos CV, lettres de motivation, documents scannés et tout ce que vous créez dans l’éditeur sont stockés uniquement en local sur votre appareil. Ce contenu n’est jamais envoyé vers nous ou vers un serveur que nous contrôlons — supprimer l’application ou votre compte le supprime définitivement, sans copie cloud pour le récupérer.</string>
-    <string name="terms_s3_heading">Fonctionnalités IA</string>
-    <string name="terms_s3_body">Lorsque vous utilisez une fonctionnalité assistée par IA (améliorer une description, générer une lettre de motivation, etc.), le texte concerné est envoyé à notre fournisseur IA (Groq) pour générer une réponse. Aucune information de compte n’est incluse dans cette requête.</string>
-    <string name="terms_s4_heading">Services proposés</string>
-    <string name="terms_s4_body">Un créateur de CV avec des modèles professionnels, une aide à la rédaction par IA, un générateur de lettres de motivation, un scanner de documents avec OCR, des outils PDF (fusion, compression, image vers PDF, PDF vers JPG), et un abonnement Premium optionnel qui supprime les publicités et débloque tous les outils.</string>
-    <string name="terms_s5_heading">Abonnements et paiements</string>
-    <string name="terms_s5_body">Les abonnements Premium (mensuel ou annuel) sont facturés exclusivement via Google Play Billing — c’est le seul moyen de paiement que nous utilisons. Nous n’intégrons aucun autre prestataire de paiement et ne voyons ni ne stockons jamais directement vos informations de carte, PayPal ou autre — tout est géré par Google. Vous pouvez gérer ou annuler votre abonnement à tout moment depuis les Paramètres, qui renvoie directement à la gestion des abonnements de Google Play.</string>
-    <string name="terms_s6_heading">Supprimer votre compte</string>
-    <string name="terms_s6_body">Vous pouvez supprimer votre compte à tout moment depuis Paramètres → Profil → Supprimer le compte. Cela supprime définitivement votre connexion ainsi que chaque CV, lettre de motivation et scan stocké sur cet appareil. Cela n’annule PAS un abonnement Play Store actif — vous devez l’annuler séparément dans Google Play, sinon la facturation continuera.</string>
-    <string name="terms_s7_heading">Vos responsabilités</string>
-    <string name="terms_s7_body">Gardez vos identifiants confidentiels, fournissez des informations exactes et n’utilisez pas l’application de façon abusive ni ne tentez d’en perturber le fonctionnement. Nous pouvons suspendre l’accès des comptes qui enfreignent ces conditions.</string>
-    <string name="terms_s8_heading">Questions</string>
-    <string name="terms_s8_body">Contactez-nous à tout moment à rssphere0@gmail.com.</string>
-    <string name="terms_s_login_heading">Pourquoi nous vous demandons de vous connecter, et comment</string>
-    <string name="terms_s_login_body">La connexion garde votre abonnement Premium lié à votre compte et vous permet de vous reconnecter sans perdre l’accès. Elle ne téléverse ni vos CV ni vos documents — ceux-ci restent sur votre appareil (voir ci-dessous). Vous pouvez vous connecter de deux façons : avec un e-mail et un mot de passe, ou avec Google. Les deux sont gérées de façon sécurisée via Firebase Authentication, et nous ne voyons ni ne stockons jamais le mot de passe de votre compte Google.</string>
-    <string name="terms_s_perm_heading">Autorisations que nous demandons</string>
-    <string name="terms_s_perm_body">Appareil photo : pour scanner des documents et prendre votre photo de profil directement dans l’application. Internet et état du réseau : nécessaires au fonctionnement des fonctionnalités IA, de la connexion au compte et de la facturation Premium, et pour vérifier votre connexion avant ces requêtes. Identifiant publicitaire : utilisé pour afficher des publicités aux utilisateurs gratuits via Google AdMob — non utilisé du tout avec Premium, les publicités étant entièrement supprimées. Nous ne demandons pas l’accès à vos contacts, votre position, votre micro ou vos messages.</string>
 </resources>

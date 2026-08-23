@@ -15,7 +15,6 @@
     <string name="fourth_para">私たちは、すべてのユーザーにガイドライン違反をアプリ内の報告機能を使用して報告することを奨励しています。報告は迅速に審査され、適切な措置が取られます。</string>
     <string name="five_para"><b>Craft MyCV</b>のユーザーとして、あなたは作成および共有するコンテンツが私たちのガイドラインに準拠していることを確認する責任があります。アプリを違法、非倫理的、または有害な目的で使用しないことに同意します。</string>
     <string name="six_para">私たちは、このプライバシーポリシーを随時更新する場合があります。変更はアプリ内に反映され、<b>Craft MyCV</b>の継続的な使用は更新された条件に同意したことを意味します。</string>
-    <string name="terms_of_use">プライバシーポリシー / 利用規約</string>
     <string name="get_started">開始</string>
     <string name="rate_app">アプリを評価</string>
     <string name="exit">終了</string>
@@ -88,7 +87,7 @@
     <string name="t_fourth_point"><b>終了</b> これらの規約に違反した場合、アプリへのアクセスを終了または制限する権利を留保します。</string>
     <string name="t_fifth_point"><b>責任の制限</b> アプリの使用に起因する直接的、間接的、または偶発的な損害について責任を負いません。</string>
     <string name="t_sixth_point">このプライバシーポリシーと利用規約を随時更新する場合があります。更新後もアプリを使用し続けることで、変更に同意したものとみなされます。</string>
-    <string name="t_seven_point">ご質問がある場合は、rssphere0@gmail.comまでご連絡ください。</string>
+    <string name="t_seven_point">ご質問がある場合は、contact@brynflow.comまでご連絡ください。</string>
     <string name="hey">こんにちは、</string>
     <string name="create_your_own_resume_to_apply_for_jobs">求職のために自分の履歴書を作成しましょう。</string>
     <string name="recent">最近</string>
@@ -713,55 +712,4 @@
     </string-array>
 
     <!-- Auth: Login / Register / Terms -->
-    <string name="auth_login_title">おかえりなさい</string>
-    <string name="auth_login_subtitle">アカウントにアクセスするにはログインしてください。</string>
-    <string name="auth_email_label">メールアドレス</string>
-    <string name="auth_password_label">パスワード</string>
-    <string name="auth_forgot_password">パスワードをお忘れですか?</string>
-    <string name="auth_logging_in">ログイン中…</string>
-    <string name="auth_login_button">ログイン</string>
-    <string name="auth_google_continue">Googleで続ける</string>
-    <string name="auth_or_divider">または</string>
-    <string name="auth_no_account">アカウントをお持ちでないですか?</string>
-    <string name="auth_sign_up">新規登録</string>
-    <string name="auth_change_language_cd">言語を変更</string>
-    <string name="auth_valid_email">有効なメールアドレス</string>
-    <string name="auth_reset_title">パスワードをリセット</string>
-    <string name="auth_reset_sent">そのメールアドレスのアカウントが存在する場合、リセットリンクが送信されます — 受信トレイをご確認ください。</string>
-    <string name="auth_reset_instruction">アカウントのメールアドレスを入力すると、パスワードをリセットするリンクをお送りします。</string>
-    <string name="auth_reset_done">完了</string>
-    <string name="auth_reset_send">リンクを送信</string>
-    <string name="auth_reset_sending">送信中…</string>
-    <string name="auth_register_title">アカウントを作成</string>
-    <string name="auth_register_subtitle">お名前、メールアドレス、パスワードだけで結構です。</string>
-    <string name="auth_full_name_label">氏名</string>
-    <string name="auth_creating_account">アカウントを作成中…</string>
-    <string name="auth_create_account_button">アカウントを作成</string>
-    <string name="auth_agree_prefix">同意します:</string>
-    <string name="auth_terms_link">利用規約</string>
-    <string name="auth_have_account">すでにアカウントをお持ちですか?</string>
-    <string name="auth_login_link">ログイン</string>
-    <string name="auth_pw_req_length">%1$d文字以上</string>
-    <string name="auth_pw_req_number">数字を1つ以上</string>
-    <string name="auth_pw_req_special">特殊文字を1つ以上（例: @ # !）</string>
-    <string name="terms_s1_heading">アカウントのために収集する情報</string>
-    <string name="terms_s1_body">登録時には、Firebase Authenticationを通じてお名前とメールアドレス（Googleでサインインする場合はGoogleアカウント情報）を収集します。それだけです — これはアカウントの識別、ログイン状態の維持、プレミアムサブスクリプションとの紐付けにのみ使用されます。</string>
-    <string name="terms_s2_heading">端末内に保存される情報</string>
-    <string name="terms_s2_body">履歴書、カバーレター、スキャンした書類、エディタで作成したものはすべて、この端末のローカルストレージにのみ保存されます。これらのコンテンツが私たちや私たちが管理するサーバーにアップロードされることは一切ありません — アプリまたはアカウントを削除すると完全に消去され、復元できるクラウドコピーは存在しません。</string>
-    <string name="terms_s3_heading">AI機能</string>
-    <string name="terms_s3_body">AIによる支援機能（説明文の改善、カバーレターの生成など）を使用すると、該当するテキストが応答を生成するためにAIプロバイダー（Groq）に送信されます。そのリクエストにアカウント情報は含まれません。</string>
-    <string name="terms_s4_heading">提供するサービス</string>
-    <string name="terms_s4_body">プロ仕様のテンプレートを備えた履歴書ビルダー、AIによる文章作成支援、カバーレター生成ツール、OCR付き書類スキャナー、PDFツール（結合、圧縮、画像からPDFへの変換、PDFからJPGへの変換）、広告を削除しすべての機能を利用できるオプションのプレミアムサブスクリプション。</string>
-    <string name="terms_s5_heading">サブスクリプションと支払い</string>
-    <string name="terms_s5_body">プレミアムサブスクリプション（月額または年額）はGoogle Play Billingのみを通じて請求されます — これが私たちが使用する唯一の支払い方法です。別の決済プロバイダーを組み込むことはなく、カード情報やPayPalなどの支払い情報を直接見たり保存したりすることも一切ありません。すべてGoogleが管理します。サブスクリプションはいつでも設定から管理・解約でき、Google Playのサブスクリプション管理に直接リンクします。</string>
-    <string name="terms_s6_heading">アカウントの削除</string>
-    <string name="terms_s6_body">アカウントは設定 → プロフィール → アカウントを削除からいつでも削除できます。これによりログイン情報と、その端末に保存されているすべての履歴書、カバーレター、スキャンが完全に削除されます。有効なPlayストアのサブスクリプションは解約されません — Google Playで別途解約しないと、請求は継続されます。</string>
-    <string name="terms_s7_heading">あなたの責任</string>
-    <string name="terms_s7_body">ログイン情報を秘密にし、正確な情報を提供し、アプリを悪用したり動作を妨害したりしないでください。これらの規約に違反したアカウントへのアクセスを停止する場合があります。</string>
-    <string name="terms_s8_heading">お問い合わせ</string>
-    <string name="terms_s8_body">いつでもrssphere0@gmail.comまでご連絡ください。</string>
-    <string name="terms_s_login_heading">ログインをお願いする理由とログイン方法</string>
-    <string name="terms_s_login_body">ログインすることで、プレミアムサブスクリプションがアカウントに紐付けられ、アクセスを失うことなく再度ログインできます。これにより履歴書や書類がどこかにアップロードされることはありません — それらは端末に保存されたままです（下記参照）。ログイン方法は2通りあります：メールアドレスとパスワード、またはGoogleでのログインです。どちらもFirebase Authenticationを通じて安全に処理され、Googleアカウントのパスワードを私たちが見たり保存したりすることは一切ありません。</string>
-    <string name="terms_s_perm_heading">リクエストする権限</string>
-    <string name="terms_s_perm_body">カメラ：書類のスキャンと、アプリ内で直接プロフィール写真を撮影するために使用します。インターネットとネットワーク状態：AI機能、アカウントへのサインイン、プレミアムの請求を機能させるため、またこれらのリクエストの前にオンライン状態を確認するために必要です。広告ID：Google AdMobを通じて無料プランのユーザーに広告を表示するために使用されます — プレミアムでは広告が完全に削除されるため、まったく使用されません。連絡先、位置情報、マイク、メッセージへのアクセスは要求しません。</string>
 </resources>

@@ -24,7 +24,6 @@
     <string name="fourth_para">We encourage all users to report any violations of our guidelines using the in-app reporting feature. Your reports will be reviewed promptly, and appropriate actions will be taken.</string>
     <string name="five_para">As a user of <b>Craft MyCV</b>, you are responsible for ensuring that the content you create and share complies with our guidelines. You agree not to use the application for illegal, unethical, or harmful purposes.</string>
     <string name="six_para">We may update this privacy policy from time to time. Any changes will be reflected within the app, and continued use of <b>Craft MyCV</b> signifies your agreement to the updated terms.</string>
-    <string name="terms_of_use">Privacy Policy / Terms of Use</string>
     <string name="get_started">Get Started</string>
     <string name="rate_app">Rate App</string>
     <string name="exit">Exit</string>
@@ -101,7 +100,7 @@
     <string name="t_fourth_point"><b>Termination</b> We reserve the right to terminate or restrict your access to the App if you violate these terms.</string>
     <string name="t_fifth_point"><b>Limitation of Liability</b> We are not responsible for any direct, indirect, or incidental damages arising from the use of the App.</string>
     <string name="t_sixth_point">We may update this Privacy Policy and Terms of Use from time to time. Continued use of the App after updates means you accept the changes.</string>
-    <string name="t_seven_point">For any questions, please contact us at rssphere0@gmail.com.</string>
+    <string name="t_seven_point">For any questions, please contact us at contact@brynflow.com.</string>
 
     <string name="hey">Hey,</string>
     <string name="create_your_own_resume_to_apply_for_jobs">Create your own resume to apply for jobs.</string>
@@ -307,6 +306,8 @@
     <string name="settings_user_guide">User Guide</string>
     <string name="settings_about">About</string>
     <string name="settings_privacy">Privacy Policy</string>
+    <string name="privacy_load_failed">Couldn\'t load the privacy policy. Check your internet connection and try again.</string>
+    <string name="privacy_load_retry">Retry</string>
     <string name="settings_contact">Contact</string>
     <string name="settings_rate_app">Rate Our App</string>
     <string name="settings_write_us">Write Us</string>
@@ -391,7 +392,7 @@
     <string name="settings_ai_active">Active</string>
     <string name="settings_ai_not_configured">Not configured</string>
     <string name="settings_ai_model">AI Model</string>
-    <string name="settings_ai_model_name">Llama 3.1 8B Instant</string>
+    <string name="settings_ai_model_name">GPT-OSS 20B</string>
     <string name="settings_ai_provider">Powered by</string>
     <string name="settings_ai_provider_name">Groq Cloud API</string>
     <string name="settings_ai_available_in">Available in</string>
@@ -662,7 +663,7 @@
     <string name="onboard_page3_highlight">13 templates · any colour</string>
     <string name="onboard_page4_title">Write Smarter with AI</string>
     <string name="onboard_page4_desc">Tap the ✨ sparkle button inside Objective, Work Experience, Skills, Projects, or Achievements to generate and improve content instantly. Or open the AI Chat for a full writing session.</string>
-    <string name="onboard_page4_highlight">Powered by Llama 3.1 via Groq</string>
+    <string name="onboard_page4_highlight">Powered by GPT-OSS via Groq</string>
     <string name="onboard_page5_title">Export &amp; Share</string>
     <string name="onboard_page5_desc">Preview your resume live, then export it as a high-quality PDF — ready to send to employers or print. Your data is always saved locally.</string>
     <string name="onboard_page5_highlight">PDF export · always saved</string>
@@ -683,9 +684,9 @@
     <string name="about_title">About</string>
     <string name="about_app_name">FileForge</string>
     <string name="about_version">Version %1$s</string>
-    <string name="about_tagline">Build a professional resume in minutes, on your device.</string>
+    <string name="about_tagline">Resumes, cover letters, document scanning, and PDF tools — all in one app.</string>
     <string name="about_what_title">What is FileForge?</string>
-    <string name="about_what_body">FileForge is a fully offline, privacy-first Android app that helps you create polished, professional resumes from scratch. Fill in your details, pick a template, customise the accent colour, and export a ready-to-share PDF — no account, no sign-up, and no data ever leaves your phone.</string>
+    <string name="about_what_body">FileForge is an all-in-one document toolkit: build a professional resume and cover letter, scan paper documents with automatic edge detection, and convert, merge, or compress PDFs — all from your phone, with AI writing help built in. No account, no sign-up required.</string>
     <string name="about_features_title">Core Features</string>
     <string name="about_feat_personal_title">Personal Details</string>
     <string name="about_feat_personal_desc">Name, designation, email, phone, and address.</string>
@@ -705,6 +706,28 @@
     <string name="about_feat_languages_desc">Languages, interests, hobbies, and a declaration section.</string>
     <string name="about_feat_photo_title">Profile Photo</string>
     <string name="about_feat_photo_desc">Attach a profile photo and signature directly from your camera or gallery.</string>
+    <string name="about_coverletter_title">Cover Letters</string>
+    <string name="about_coverletter_create_title">AI-Tailored Drafting</string>
+    <string name="about_coverletter_create_desc">Generate a cover letter tailored to a specific job description, or write one from scratch.</string>
+    <string name="about_coverletter_templates_title">Matching Templates</string>
+    <string name="about_coverletter_templates_desc">Pick a design and export as a polished PDF, just like your resume.</string>
+
+    <string name="about_scan_title">Document Scanner</string>
+    <string name="about_scan_capture_title">Edge-Detected Capture</string>
+    <string name="about_scan_capture_desc">Scan paper documents with your camera — edges are detected and cropped automatically.</string>
+    <string name="about_scan_ocr_title">Editable Text (OCR)</string>
+    <string name="about_scan_ocr_desc">Extracted text is editable per page, then save the scan as a PDF or share it directly.</string>
+
+    <string name="about_convert_title">PDF Tools</string>
+    <string name="about_convert_image_title">Image to PDF</string>
+    <string name="about_convert_image_desc">Combine one or more photos into a single PDF.</string>
+    <string name="about_convert_merge_title">Merge PDF</string>
+    <string name="about_convert_merge_desc">Combine two or more PDFs into one document.</string>
+    <string name="about_convert_compress_title">Compress PDF</string>
+    <string name="about_convert_compress_desc">Shrink a PDF\'s file size for easier sharing.</string>
+    <string name="about_convert_topdf_title">PDF to JPG</string>
+    <string name="about_convert_topdf_desc">Save each page of a PDF as a JPG image.</string>
+
     <string name="about_templates_title">Templates &amp; Design</string>
     <string name="about_templates13_title">13 Templates</string>
     <string name="about_templates13_desc">Classic, Modern, Minimal, Bold, Elegant, Creative, Two-Column, Academic, Developer, Designer, Portfolio, Teacher, Code Dark.</string>
@@ -734,7 +757,7 @@
     <string name="about_tech_storage_label">Local storage</string>
     <string name="about_tech_storage_value">Room (SQLite) — all data stays on your device</string>
     <string name="about_tech_model_label">AI model</string>
-    <string name="about_tech_model_value">Llama 3.1 8B Instant</string>
+    <string name="about_tech_model_value">GPT-OSS 20B</string>
     <string name="about_tech_provider_label">AI provider</string>
     <string name="about_tech_provider_value">Groq Cloud API (fast inference)</string>
     <string name="about_tech_pdf_label">PDF export</string>
@@ -759,6 +782,7 @@
     <string name="privacy_s6_body">Deleting a resume or cover letter in the app removes it, its photos, and its saved AI assistant conversation from your device. Uninstalling the app removes everything stored locally, since we don\'t keep a server-side copy.</string>
 
     <!-- User guide screen -->
+    <string name="guide_section_resume">Resume Builder</string>
     <string name="guide_s1_title">Create a resume</string>
     <string name="guide_s1_desc">From the Home or My Resume tab, tap \"Create Resume\" and enter a name and designation.</string>
     <string name="guide_s2_title">Fill in your details</string>
@@ -769,6 +793,34 @@
     <string name="guide_s4_desc">Tap the palette icon to pick from several professional designs — switching templates never loses your entered data.</string>
     <string name="guide_s5_title">Preview and download</string>
     <string name="guide_s5_desc">Tap the eye icon to see exactly how your resume will look, then tap the print icon to save it as a PDF or print it.</string>
+
+    <string name="guide_section_cover_letter">Cover Letters</string>
+    <string name="guide_cl_s1_title">Create a cover letter</string>
+    <string name="guide_cl_s1_desc">From Home, tap \"Cover Letter\" to start one from scratch or let AI draft one tailored to a job description.</string>
+    <string name="guide_cl_s2_title">Choose a template</string>
+    <string name="guide_cl_s2_desc">Pick a design from the template picker — you can switch anytime without losing what you\'ve written.</string>
+    <string name="guide_cl_s3_title">Preview and export</string>
+    <string name="guide_cl_s3_desc">Tap preview to check the layout, then share or download it as a PDF.</string>
+
+    <string name="guide_section_scan">Document Scanner</string>
+    <string name="guide_scan_s1_title">Scan a document</string>
+    <string name="guide_scan_s1_desc">From Home, tap \"Scan Document\" and capture a page — edges are detected and cropped automatically.</string>
+    <string name="guide_scan_s2_title">Review and edit text</string>
+    <string name="guide_scan_s2_desc">Extracted text for each page is editable, so you can fix anything OCR misread.</string>
+    <string name="guide_scan_s3_title">Save or share</string>
+    <string name="guide_scan_s3_desc">Save the scan as a PDF or share it directly — everything scanned is also kept under \"My Scanned Documents\".</string>
+
+    <string name="guide_section_convert">PDF Tools</string>
+    <string name="guide_convert_s1_title">Pick a tool</string>
+    <string name="guide_convert_s1_desc">From Home, tap \"Convert Files\" to turn images into a PDF, merge multiple PDFs, compress a large PDF, or convert a PDF\'s pages to JPGs.</string>
+    <string name="guide_convert_s2_title">Select files and convert</string>
+    <string name="guide_convert_s2_desc">Choose your file(s), give the result a name, and download it once it\'s ready.</string>
+
+    <string name="guide_section_ai">AI Assistant</string>
+    <string name="guide_ai_s1_title">Get writing help in any section</string>
+    <string name="guide_ai_s1_desc">Look for the AI sparkle button inside Objective, Work Experience, Skills, Projects, and Achievements to improve or generate wording.</string>
+    <string name="guide_ai_s2_title">Ask the AI Chat</string>
+    <string name="guide_ai_s2_desc">Tap \"Ask AI Assistant\" on Home for open-ended help — resume advice, interview prep, or general questions.</string>
 
     <!-- Update app sheet -->
     <string name="update_title">Update available</string>
@@ -785,59 +837,7 @@
     <string name="template_cd_close">Close</string>
 
     <!-- Auth: Login / Register -->
-    <string name="auth_login_title">Welcome back</string>
-    <string name="auth_login_subtitle">Log in to sync and access your account.</string>
-    <string name="auth_email_label">Email</string>
-    <string name="auth_password_label">Password</string>
-    <string name="auth_forgot_password">Forgot password?</string>
-    <string name="auth_logging_in">Logging in…</string>
-    <string name="auth_login_button">Log in</string>
-    <string name="auth_google_continue">Continue with Google</string>
-    <string name="auth_or_divider">or</string>
-    <string name="auth_no_account">Don\'t have an account?</string>
-    <string name="auth_sign_up">Sign up</string>
-    <string name="auth_change_language_cd">Change language</string>
-    <string name="auth_valid_email">Valid email address</string>
 
-    <string name="auth_reset_title">Reset your password</string>
-    <string name="auth_reset_sent">If an account exists for that email, a reset link is on its way — check your inbox.</string>
-    <string name="auth_reset_instruction">Enter your account email and we\'ll send you a link to reset your password.</string>
-    <string name="auth_reset_done">Done</string>
-    <string name="auth_reset_send">Send link</string>
-    <string name="auth_reset_sending">Sending…</string>
 
-    <string name="auth_register_title">Create your account</string>
-    <string name="auth_register_subtitle">Just your name, email, and a password.</string>
-    <string name="auth_full_name_label">Full name</string>
-    <string name="auth_creating_account">Creating account…</string>
-    <string name="auth_create_account_button">Create account</string>
-    <string name="auth_agree_prefix">I agree to the</string>
-    <string name="auth_terms_link">Terms &amp; Conditions</string>
-    <string name="auth_have_account">Already have an account?</string>
-    <string name="auth_login_link">Log in</string>
-    <string name="auth_pw_req_length">At least %1$d characters</string>
-    <string name="auth_pw_req_number">At least 1 number</string>
-    <string name="auth_pw_req_special">At least 1 special character (e.g. @ # !)</string>
 
-    <!-- Terms & Conditions -->
-    <string name="terms_s1_heading">What we collect for your account</string>
-    <string name="terms_s1_body">When you sign up, we collect your name and email through Firebase Authentication (or your Google account info if you use Sign in with Google). That\'s it — this is only used to identify your account, keep you signed in, and link your Premium subscription to you.</string>
-    <string name="terms_s_login_heading">Why we ask you to log in, and how you can sign in</string>
-    <string name="terms_s_login_body">Logging in keeps your Premium subscription linked to your account and lets you sign back in without losing access to it. It does not upload your resumes or documents anywhere — those stay on your device (see below). You can sign in two ways: with an email and password, or with Sign in with Google. Both are handled securely through Firebase Authentication, and we never see or store your Google account password.</string>
-    <string name="terms_s2_heading">What stays on your device</string>
-    <string name="terms_s2_body">Your resumes, cover letters, scanned documents, and everything you create in the editor are stored only in this app\'s local storage on your device. None of that content is ever uploaded to us or to any server we control — deleting the app or your account removes it permanently and there is no cloud copy to recover it from.</string>
-    <string name="terms_s_perm_heading">Permissions we ask for</string>
-    <string name="terms_s_perm_body">Camera: to scan documents and capture your profile photo directly in the app. Internet and network state: required for AI features, account sign-in, and Premium billing to work, and to check you\'re online before making those requests. Advertising ID: used to show ads to free-tier users through Google AdMob — this is not used at all once you\'re on Premium, since ads are removed entirely. We don\'t request access to your contacts, location, microphone, or messages.</string>
-    <string name="terms_s3_heading">AI features</string>
-    <string name="terms_s3_body">When you use an AI-assisted feature (improving a description, generating a cover letter, etc.), the relevant text is sent to our AI provider (Groq) to generate a response. No account information is included in that request.</string>
-    <string name="terms_s4_heading">Services we provide</string>
-    <string name="terms_s4_body">A resume builder with professional templates, AI-assisted writing help, a cover letter generator, a document scanner with OCR, PDF tools (merge, compress, image-to-PDF, PDF-to-JPG conversion), and an optional Premium subscription that removes ads and unlocks the full toolkit.</string>
-    <string name="terms_s5_heading">Subscriptions and payments</string>
-    <string name="terms_s5_body">Premium subscriptions (monthly or yearly) are billed entirely through Google Play Billing — that\'s the only payment method we use. We never integrate a separate payment processor and never see or store your card, PayPal, or any other payment details directly; all of that is handled by Google. You can manage or cancel your subscription anytime from Settings, which links directly to Google Play\'s subscription management.</string>
-    <string name="terms_s6_heading">Deleting your account</string>
-    <string name="terms_s6_body">You can delete your account anytime from Settings → Profile → Delete account. This permanently removes your login and every resume, cover letter, and scan stored on that device. It does not cancel an active Play Store subscription — that must be cancelled separately in Google Play, or billing will continue.</string>
-    <string name="terms_s7_heading">Your responsibilities</string>
-    <string name="terms_s7_body">Keep your login credentials confidential, provide accurate information, and don\'t misuse the app or attempt to interfere with how it works. We may suspend access for accounts that violate these terms.</string>
-    <string name="terms_s8_heading">Questions</string>
-    <string name="terms_s8_body">Reach us anytime at rssphere0@gmail.com.</string>
 </resources>

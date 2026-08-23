@@ -66,6 +66,7 @@ import co.resume.ui.component.AppBottomSheet
 import co.resume.ui.component.AppButton
 import co.resume.ui.component.AppCard
 import co.resume.ui.component.AppTextField
+import co.resume.ui.component.SupportWithAdDialog
 import co.resume.ui.theme.ResumeBuilderTheme
 import co.resume.ui.viewmodel.ScanUiState
 import co.resume.ui.viewmodel.ScannedPageUi
@@ -88,6 +89,13 @@ fun ScanResultScreen(
     val savePdfFailedMsg = stringResource(R.string.scan_pdf_save_failed)
     val shareChooserTitle = stringResource(R.string.scan_share_chooser_title)
 
+    // Save/share run immediately — never gated behind an ad. Afterward we may offer an
+    // opt-in "watch an ad to support us" prompt (see SupportWithAdDialog), same as the resume
+    // and cover letter editors, subject to AdManager's own cooldown.
+    fun offerAdAfter() {
+        if (adManager.canOfferRewardedPrompt()) showAdPrompt = true
+    }
+
     ScanResultContent(
         uiState = uiState,
         onBack = onBack,
@@ -96,6 +104,7 @@ fun ScanResultScreen(
         onShareClick = {
             val pdfUri = uiState.pdfUri
             if (pdfUri != null) shareScanPdf(context, pdfUri, shareChooserTitle)
+            offerAdAfter()
         }
     )
 
@@ -106,14 +115,14 @@ fun ScanResultScreen(
                 showSavePdfDialog = false
                 viewModel.saveAsPdf(context, title) { success ->
                     Toast.makeText(context, if (success) savePdfSuccessMsg else savePdfFailedMsg, Toast.LENGTH_SHORT).show()
-                    if (success && adManager.canOfferRewardedPrompt()) showAdPrompt = true
                 }
+                offerAdAfter()
             }
         )
     }
 
     if (showAdPrompt) {
-        co.resume.ui.component.SupportWithAdDialog(
+        SupportWithAdDialog(
             onWatchAd = {
                 showAdPrompt = false
                 adManager.markRewardedPromptShown()
@@ -160,7 +169,8 @@ private fun ScanResultContent(
                     onShareClick = { fabExpanded = false; onShareClick() }
                 )
             }
-        }
+        },
+        bottomBar = { co.resume.ui.component.BannerAdView() }
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize()) {
             Column(

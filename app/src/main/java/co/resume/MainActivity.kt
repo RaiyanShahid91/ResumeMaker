@@ -12,8 +12,6 @@ import androidx.compose.ui.Modifier
 import androidx.lifecycle.lifecycleScope
 import co.resume.ads.AdManager
 import co.resume.analytics.Analytics
-import co.resume.auth.AuthRepository
-import co.resume.billing.BillingManager
 import co.resume.data.migration.TinyDbImporter
 import co.resume.navigation.RootNavHost
 import co.resume.navigation.Screen
@@ -32,9 +30,7 @@ class MainActivity : ComponentActivity() {
 
     @Inject lateinit var tinyDbImporter: TinyDbImporter
     @Inject lateinit var adManager: AdManager
-    @Inject lateinit var billingManager: BillingManager
     @Inject lateinit var sharedPref: SharedPref
-    @Inject lateinit var authRepository: AuthRepository
 
     /**
      * Called before onCreate — wraps the base context with the saved locale so that
@@ -49,15 +45,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         lifecycleScope.launch { tinyDbImporter.importIfNeeded() }
-        billingManager.startConnection()
         adManager.preload()
 
         val onboardingDone = sharedPref.getBoolean(Constants.ONBOARDING_DONE, false)
-        val startDestination = when {
-            !onboardingDone -> Screen.Onboarding.route
-            !authRepository.isLoggedIn -> Screen.Login.route
-            else -> Screen.Dashboard.route
-        }
+        val startDestination = if (onboardingDone) Screen.Dashboard.route else Screen.Onboarding.route
 
         setContent {
             ResumeBuilderTheme {

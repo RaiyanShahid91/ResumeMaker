@@ -63,9 +63,9 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import co.resumeai.R
-import co.resume.billing.requirePremium
 import co.resume.domain.convert.PdfConverter
 import co.resume.ui.component.AppBottomSheet
+import co.resume.ui.component.SupportWithAdDialog
 import co.resume.ui.viewmodel.AdViewModel
 import co.resume.ui.viewmodel.ConverterTool
 import co.resume.ui.viewmodel.ConverterViewModel
@@ -81,14 +81,15 @@ fun ConverterToolScreen(
     viewModel: ConverterViewModel = hiltViewModel(),
     adViewModel: AdViewModel = hiltViewModel(),
     onBack: () -> Unit,
-    onGoToDocuments: () -> Unit,
-    onOpenPaywall: () -> Unit = {}
+    onGoToDocuments: () -> Unit
 ) {
     val context = LocalContext.current
+    val activity = context as? android.app.Activity
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
-    val isPremium by adViewModel.isPremium.collectAsStateWithLifecycle()
     var selectedUris by remember { mutableStateOf<List<Uri>>(emptyList()) }
     var showNameSheet by remember { mutableStateOf(false) }
+    var showAdPrompt by remember { mutableStateOf(false) }
+    val adManager = adViewModel.adManager
 
     val isMultiSelect = tool == ConverterTool.IMAGE_TO_PDF || tool == ConverterTool.MERGE_PDF
 
@@ -144,7 +145,8 @@ fun ConverterToolScreen(
                     }
                 }
             )
-        }
+        },
+        bottomBar = { co.resume.ui.component.BannerAdView() }
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             when {
@@ -159,7 +161,10 @@ fun ConverterToolScreen(
                     resultImagePaths = uiState.resultImagePaths,
                     isDownloading = uiState.isDownloading,
                     downloadedMessage = uiState.downloadedMessage,
-                    onDownload = { requirePremium(isPremium, onOpenPaywall) { viewModel.downloadResult(context) } },
+                    onDownload = {
+                        viewModel.downloadResult(context)
+                        if (adManager.canOfferRewardedPrompt()) showAdPrompt = true
+                    },
                     onConvertAnother = {
                         viewModel.reset()
                         selectedUris = emptyList()
@@ -225,6 +230,20 @@ fun ConverterToolScreen(
             onConfirm = { name ->
                 showNameSheet = false
                 startConvert(name)
+            }
+        )
+    }
+
+    if (showAdPrompt) {
+        SupportWithAdDialog(
+            onWatchAd = {
+                showAdPrompt = false
+                adManager.markRewardedPromptShown()
+                activity?.let { adManager.showRewarded(it) {} }
+            },
+            onSkip = {
+                showAdPrompt = false
+                adManager.markRewardedPromptShown()
             }
         )
     }

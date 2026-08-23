@@ -19,18 +19,24 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.Article
 import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material.icons.filled.Chat
 import androidx.compose.material.icons.filled.ColorLens
+import androidx.compose.material.icons.filled.Compress
 import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.Download
+import androidx.compose.material.icons.filled.DocumentScanner
 import androidx.compose.material.icons.filled.GridView
+import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.Language
 import androidx.compose.material.icons.filled.Lock
+import androidx.compose.material.icons.filled.MergeType
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Psychology
 import androidx.compose.material.icons.filled.School
 import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.filled.TextSnippet
 import androidx.compose.material.icons.filled.Work
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.TopAppBarDefaults
@@ -53,6 +59,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import co.resumeai.R
 import co.resume.ui.component.AppCard
+import co.resume.ui.component.BannerAdView
 import co.resume.ui.theme.ResumeBuilderTheme
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
@@ -75,7 +82,8 @@ fun AboutScreen(onBack: () -> Unit) {
                     }
                 }
             )
-        }
+        },
+        bottomBar = { BannerAdView() }
     ) { padding ->
         val primary = MaterialTheme.colorScheme.primary
         val secondary = MaterialTheme.colorScheme.secondary
@@ -156,6 +164,44 @@ fun AboutScreen(onBack: () -> Unit) {
                     )
                     val gradients = listOf(listOf(primary, tertiary), listOf(secondary, primary), listOf(tertiary, secondary))
                     features.forEachIndexed { index, item -> FeatureRow(item, gradients[index % gradients.size]) }
+                }
+            }
+
+            // ── Cover letters ───────────────────────────────────────────────
+            item {
+                AboutSectionCard(title = stringResource(R.string.about_coverletter_title), icon = Icons.AutoMirrored.Filled.Article) {
+                    val items = listOf(
+                        FeatureItem(Icons.Filled.AutoAwesome, stringResource(R.string.about_coverletter_create_title), stringResource(R.string.about_coverletter_create_desc)),
+                        FeatureItem(Icons.AutoMirrored.Filled.Article, stringResource(R.string.about_coverletter_templates_title), stringResource(R.string.about_coverletter_templates_desc)),
+                    )
+                    val gradients = listOf(listOf(tertiary, secondary), listOf(primary, tertiary))
+                    items.forEachIndexed { index, item -> FeatureRow(item, gradients[index % gradients.size]) }
+                }
+            }
+
+            // ── Document scanner ────────────────────────────────────────────
+            item {
+                AboutSectionCard(title = stringResource(R.string.about_scan_title), icon = Icons.Filled.DocumentScanner) {
+                    val items = listOf(
+                        FeatureItem(Icons.Filled.DocumentScanner, stringResource(R.string.about_scan_capture_title), stringResource(R.string.about_scan_capture_desc)),
+                        FeatureItem(Icons.Filled.TextSnippet,     stringResource(R.string.about_scan_ocr_title),     stringResource(R.string.about_scan_ocr_desc)),
+                    )
+                    val gradients = listOf(listOf(secondary, tertiary), listOf(tertiary, primary))
+                    items.forEachIndexed { index, item -> FeatureRow(item, gradients[index % gradients.size]) }
+                }
+            }
+
+            // ── PDF tools ────────────────────────────────────────────────────
+            item {
+                AboutSectionCard(title = stringResource(R.string.about_convert_title), icon = Icons.Filled.MergeType) {
+                    val items = listOf(
+                        FeatureItem(Icons.Filled.Image,      stringResource(R.string.about_convert_image_title),    stringResource(R.string.about_convert_image_desc)),
+                        FeatureItem(Icons.Filled.MergeType,  stringResource(R.string.about_convert_merge_title),    stringResource(R.string.about_convert_merge_desc)),
+                        FeatureItem(Icons.Filled.Compress,   stringResource(R.string.about_convert_compress_title), stringResource(R.string.about_convert_compress_desc)),
+                        FeatureItem(Icons.Filled.Image,      stringResource(R.string.about_convert_topdf_title),    stringResource(R.string.about_convert_topdf_desc)),
+                    )
+                    val gradients = listOf(listOf(primary, secondary), listOf(secondary, tertiary), listOf(tertiary, primary), listOf(primary, tertiary))
+                    items.forEachIndexed { index, item -> FeatureRow(item, gradients[index % gradients.size]) }
                 }
             }
 

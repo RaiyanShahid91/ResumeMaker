@@ -26,7 +26,6 @@
     <string name="fourth_para">Alentamos a todos los usuarios a informar cualquier violación de nuestras pautas utilizando la función de informe dentro de la aplicación. Tus informes serán revisados rápidamente y se tomarán las medidas apropiadas.</string>
     <string name="five_para">Como usuario de <b>Craft MyCV</b>, eres responsable de asegurarte de que el contenido que creas y compartes cumpla con nuestras pautas. Aceptas no utilizar la aplicación para fines ilegales, poco éticos o dañinos.</string>
     <string name="six_para">Podemos actualizar esta política de privacidad de vez en cuando. Cualquier cambio se reflejará dentro de la aplicación, y el uso continuo de <b>Craft MyCV</b> significa que aceptas los términos actualizados.</string>
-    <string name="terms_of_use">Política de Privacidad / Términos de Uso</string>
     <string name="get_started">Comenzar</string>
     <string name="rate_app">Calificar App</string>
     <string name="exit">Salir</string>
@@ -103,7 +102,7 @@
     <string name="t_fourth_point"><b>Terminación</b> Nos reservamos el derecho de terminar o restringir tu acceso a la App si violas estos términos.</string>
     <string name="t_fifth_point"><b>Limitación de Responsabilidad</b> No somos responsables por ningún daño directo, indirecto o incidental derivado del uso de la App.</string>
     <string name="t_sixth_point">Podemos actualizar esta Política de Privacidad y Términos de Uso de vez en cuando. El uso continuo de la App después de las actualizaciones significa que aceptas los cambios.</string>
-    <string name="t_seven_point">Para cualquier pregunta, por favor contáctanos en rssphere0@gmail.com.</string>
+    <string name="t_seven_point">Para cualquier pregunta, por favor contáctanos en contact@brynflow.com.</string>
 
     <string name="hey">Hola,</string>
     <string name="create_your_own_resume_to_apply_for_jobs">Crea tu propio currículum para solicitar empleos.</string>
@@ -730,55 +729,4 @@
     </string-array>
 
     <!-- Auth: Login / Register / Terms -->
-    <string name="auth_login_title">Bienvenido de nuevo</string>
-    <string name="auth_login_subtitle">Inicia sesión para acceder a tu cuenta.</string>
-    <string name="auth_email_label">Correo electrónico</string>
-    <string name="auth_password_label">Contraseña</string>
-    <string name="auth_forgot_password">¿Olvidaste tu contraseña?</string>
-    <string name="auth_logging_in">Iniciando sesión…</string>
-    <string name="auth_login_button">Iniciar sesión</string>
-    <string name="auth_google_continue">Continuar con Google</string>
-    <string name="auth_or_divider">o</string>
-    <string name="auth_no_account">¿No tienes una cuenta?</string>
-    <string name="auth_sign_up">Regístrate</string>
-    <string name="auth_change_language_cd">Cambiar idioma</string>
-    <string name="auth_valid_email">Correo electrónico válido</string>
-    <string name="auth_reset_title">Restablecer tu contraseña</string>
-    <string name="auth_reset_sent">Si existe una cuenta con ese correo, un enlace para restablecer la contraseña está en camino — revisa tu bandeja de entrada.</string>
-    <string name="auth_reset_instruction">Ingresa el correo de tu cuenta y te enviaremos un enlace para restablecer tu contraseña.</string>
-    <string name="auth_reset_done">Listo</string>
-    <string name="auth_reset_send">Enviar enlace</string>
-    <string name="auth_reset_sending">Enviando…</string>
-    <string name="auth_register_title">Crea tu cuenta</string>
-    <string name="auth_register_subtitle">Solo tu nombre, correo y una contraseña.</string>
-    <string name="auth_full_name_label">Nombre completo</string>
-    <string name="auth_creating_account">Creando cuenta…</string>
-    <string name="auth_create_account_button">Crear cuenta</string>
-    <string name="auth_agree_prefix">Acepto los</string>
-    <string name="auth_terms_link">Términos y Condiciones</string>
-    <string name="auth_have_account">¿Ya tienes una cuenta?</string>
-    <string name="auth_login_link">Iniciar sesión</string>
-    <string name="auth_pw_req_length">Al menos %1$d caracteres</string>
-    <string name="auth_pw_req_number">Al menos 1 número</string>
-    <string name="auth_pw_req_special">Al menos 1 carácter especial (p. ej. @ # !)</string>
-    <string name="terms_s1_heading">Qué recopilamos para tu cuenta</string>
-    <string name="terms_s1_body">Al registrarte, recopilamos tu nombre y correo mediante Firebase Authentication (o los datos de tu cuenta de Google si usas Google para iniciar sesión). Eso es todo — se usa solo para identificar tu cuenta, mantener tu sesión iniciada y vincular tu suscripción Premium contigo.</string>
-    <string name="terms_s2_heading">Qué permanece en tu dispositivo</string>
-    <string name="terms_s2_body">Tus currículums, cartas de presentación, documentos escaneados y todo lo que crees en el editor se almacenan solo en el almacenamiento local de este dispositivo. Ese contenido nunca se sube a nosotros ni a ningún servidor que controlemos — al eliminar la app o tu cuenta se elimina permanentemente y no hay copia en la nube para recuperarlo.</string>
-    <string name="terms_s3_heading">Funciones de IA</string>
-    <string name="terms_s3_body">Cuando usas una función asistida por IA (mejorar una descripción, generar una carta de presentación, etc.), el texto correspondiente se envía a nuestro proveedor de IA (Groq) para generar una respuesta. No se incluye información de la cuenta en esa solicitud.</string>
-    <string name="terms_s4_heading">Servicios que ofrecemos</string>
-    <string name="terms_s4_body">Un creador de currículums con plantillas profesionales, ayuda de escritura con IA, un generador de cartas de presentación, un escáner de documentos con OCR, herramientas PDF (combinar, comprimir, imagen a PDF, PDF a JPG) y una suscripción Premium opcional que elimina los anuncios y desbloquea todas las herramientas.</string>
-    <string name="terms_s5_heading">Suscripciones y pagos</string>
-    <string name="terms_s5_body">Las suscripciones Premium (mensual o anual) se facturan exclusivamente a través de Google Play Billing — ese es el único método de pago que usamos. Nunca integramos un procesador de pagos aparte ni vemos o almacenamos tus datos de tarjeta, PayPal u otro método de pago directamente; todo eso lo gestiona Google. Puedes administrar o cancelar tu suscripción en cualquier momento desde Configuración, que enlaza directamente con la gestión de suscripciones de Google Play.</string>
-    <string name="terms_s6_heading">Eliminar tu cuenta</string>
-    <string name="terms_s6_body">Puedes eliminar tu cuenta en cualquier momento desde Configuración → Perfil → Eliminar cuenta. Esto elimina permanentemente tu inicio de sesión y cada currículum, carta de presentación y escaneo guardado en ese dispositivo. Esto NO cancela una suscripción activa de Play Store — debes cancelarla por separado en Google Play, o los cargos continuarán.</string>
-    <string name="terms_s7_heading">Tus responsabilidades</string>
-    <string name="terms_s7_body">Mantén tus credenciales de acceso confidenciales, proporciona información precisa y no uses mal la app ni interfieras con su funcionamiento. Podemos suspender el acceso a cuentas que infrinjan estos términos.</string>
-    <string name="terms_s8_heading">Preguntas</string>
-    <string name="terms_s8_body">Escríbenos cuando quieras a rssphere0@gmail.com.</string>
-    <string name="terms_s_login_heading">Por qué te pedimos iniciar sesión y cómo puedes hacerlo</string>
-    <string name="terms_s_login_body">Iniciar sesión mantiene tu suscripción Premium vinculada a tu cuenta y te permite volver a acceder sin perderla. No sube tus currículums ni documentos a ningún lado — eso permanece en tu dispositivo (ver abajo). Puedes iniciar sesión de dos formas: con correo y contraseña, o con Google. Ambas se gestionan de forma segura mediante Firebase Authentication, y nunca vemos ni almacenamos la contraseña de tu cuenta de Google.</string>
-    <string name="terms_s_perm_heading">Permisos que solicitamos</string>
-    <string name="terms_s_perm_body">Cámara: para escanear documentos y capturar tu foto de perfil directamente en la app. Internet y estado de red: necesarios para que funcionen las funciones de IA, el inicio de sesión y la facturación Premium, y para comprobar tu conexión antes de esas solicitudes. ID de publicidad: se usa para mostrar anuncios a usuarios del plan gratuito mediante Google AdMob — no se usa en absoluto si tienes Premium, ya que los anuncios se eliminan por completo. No solicitamos acceso a tus contactos, ubicación, micrófono ni mensajes.</string>
 </resources>

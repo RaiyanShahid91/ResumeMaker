@@ -27,7 +27,6 @@
     <string name="fourth_para">We encourage all users to report any violations of our guidelines using the in-app reporting feature. Your reports will be reviewed promptly, and appropriate actions will be taken.</string>
     <string name="five_para">As a user of <b>Craft MyCV</b>, you are responsible for ensuring that the content you create and share complies with our guidelines. You agree not to use the application for illegal, unethical, or harmful purposes.</string>
     <string name="six_para">We may update this privacy policy from time to time. Any changes will be reflected within the app, and continued use of <b>Craft MyCV</b> signifies your agreement to the updated terms.</string>
-    <string name="terms_of_use">Privacy Policy / Terms of Use</string>
     <string name="get_started">Get Started</string>
     <string name="rate_app">Rate App</string>
     <string name="exit">Exit</string>
@@ -104,7 +103,7 @@
     <string name="t_fourth_point"><b>Termination</b> We reserve the right to terminate or restrict your access to the App if you violate these terms.</string>
     <string name="t_fifth_point"><b>Limitation of Liability</b> We are not responsible for any direct, indirect, or incidental damages arising from the use of the App.</string>
     <string name="t_sixth_point">We may update this Privacy Policy and Terms of Use from time to time. Continued use of the App after updates means you accept the changes.</string>
-    <string name="t_seven_point">For any questions, please contact us at rssphere0@gmail.com.</string>
+    <string name="t_seven_point">For any questions, please contact us at contact@brynflow.com.</string>
 
     <string name="hey">Hey,</string>
     <string name="create_your_own_resume_to_apply_for_jobs">Create your own resume to apply for jobs.</string>

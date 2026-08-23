@@ -97,7 +97,6 @@
     <string name="fourth_para">نشجّع جميع المستخدمين على الإبلاغ عن أي مخالفات لإرشاداتنا باستخدام ميزة الإبلاغ داخل التطبيق. سيتم مراجعة بلاغاتكم على الفور واتخاذ الإجراءات المناسبة.</string>
     <string name="five_para">بصفتك مستخدمًا لتطبيق <b>Craft MyCV</b>، فإنك مسؤول عن التأكد من أن المحتوى الذي تنشئه وتشاركه يتوافق مع إرشاداتنا. أنت توافق على عدم استخدام التطبيق لأغراض غير قانونية أو غير أخلاقية أو ضارة.</string>
     <string name="six_para">قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سيتم إظهار أي تغييرات داخل التطبيق، واستمرار استخدامك لتطبيق <b>Craft MyCV</b> يعني موافقتك على الشروط المحدثة.</string>
-    <string name="terms_of_use">سياسة الخصوصية / شروط الاستخدام</string>
     <string name="get_started">ابدأ الآن</string>
     <string name="rate_app">قيّم التطبيق</string>
     <string name="exit">خروج</string>
@@ -170,7 +169,7 @@
     <string name="t_fourth_point"><b>الإنهاء</b> نحتفظ بالحق في إنهاء أو تقييد وصولك إلى التطبيق في حال انتهاكك لهذه الشروط.</string>
     <string name="t_fifth_point"><b>حدود المسؤولية</b> نحن غير مسؤولين عن أي أضرار مباشرة أو غير مباشرة أو عرضية ناتجة عن استخدام التطبيق.</string>
     <string name="t_sixth_point">قد نقوم بتحديث سياسة الخصوصية وشروط الاستخدام هذه من وقت لآخر. استمرار استخدام التطبيق بعد التحديثات يعني قبولك للتغييرات.</string>
-    <string name="t_seven_point">لأي استفسارات، يرجى التواصل معنا على rssphere0@gmail.com.</string>
+    <string name="t_seven_point">لأي استفسارات، يرجى التواصل معنا على contact@brynflow.com.</string>
     <string name="hey">مرحبًا،</string>
     <string name="create_your_own_resume_to_apply_for_jobs">أنشئ سيرتك الذاتية الخاصة للتقدم للوظائف.</string>
     <string name="recent">الأخيرة</string>
@@ -721,55 +720,4 @@
 
 
     <!-- Auth: Login / Register / Terms -->
-    <string name="auth_login_title">مرحبًا بعودتك</string>
-    <string name="auth_login_subtitle">سجّل الدخول للوصول إلى حسابك.</string>
-    <string name="auth_email_label">البريد الإلكتروني</string>
-    <string name="auth_password_label">كلمة المرور</string>
-    <string name="auth_forgot_password">نسيت كلمة المرور؟</string>
-    <string name="auth_logging_in">جارٍ تسجيل الدخول…</string>
-    <string name="auth_login_button">تسجيل الدخول</string>
-    <string name="auth_google_continue">المتابعة باستخدام Google</string>
-    <string name="auth_or_divider">أو</string>
-    <string name="auth_no_account">ليس لديك حساب؟</string>
-    <string name="auth_sign_up">إنشاء حساب</string>
-    <string name="auth_change_language_cd">تغيير اللغة</string>
-    <string name="auth_valid_email">بريد إلكتروني صالح</string>
-    <string name="auth_reset_title">إعادة تعيين كلمة المرور</string>
-    <string name="auth_reset_sent">إذا كان هناك حساب مرتبط بهذا البريد، فسيصلك رابط لإعادة التعيين — تحقق من بريدك الوارد.</string>
-    <string name="auth_reset_instruction">أدخل بريد حسابك الإلكتروني وسنرسل لك رابطًا لإعادة تعيين كلمة المرور.</string>
-    <string name="auth_reset_done">تم</string>
-    <string name="auth_reset_send">إرسال الرابط</string>
-    <string name="auth_reset_sending">جارٍ الإرسال…</string>
-    <string name="auth_register_title">أنشئ حسابك</string>
-    <string name="auth_register_subtitle">فقط اسمك وبريدك الإلكتروني وكلمة مرور.</string>
-    <string name="auth_full_name_label">الاسم الكامل</string>
-    <string name="auth_creating_account">جارٍ إنشاء الحساب…</string>
-    <string name="auth_create_account_button">إنشاء حساب</string>
-    <string name="auth_agree_prefix">أوافق على</string>
-    <string name="auth_terms_link">الشروط والأحكام</string>
-    <string name="auth_have_account">لديك حساب بالفعل؟</string>
-    <string name="auth_login_link">تسجيل الدخول</string>
-    <string name="auth_pw_req_length">%1$d أحرف على الأقل</string>
-    <string name="auth_pw_req_number">رقم واحد على الأقل</string>
-    <string name="auth_pw_req_special">حرف خاص واحد على الأقل (مثل @ # !)</string>
-    <string name="terms_s1_heading">ما نجمعه لحسابك</string>
-    <string name="terms_s1_body">عند التسجيل، نجمع اسمك وبريدك الإلكتروني عبر Firebase Authentication (أو بيانات حساب Google إذا استخدمت تسجيل الدخول عبر Google). هذا كل شيء — يُستخدم هذا فقط لتحديد حسابك، وإبقائك مسجّلاً للدخول، وربط اشتراكك المميز بك.</string>
-    <string name="terms_s2_heading">ما يبقى على جهازك</string>
-    <string name="terms_s2_body">سيرتك الذاتية وخطابات التقديم والمستندات الممسوحة ضوئيًا وكل ما تنشئه في المحرر يتم تخزينه محليًا على جهازك فقط. لا يتم رفع هذا المحتوى إلينا أو إلى أي خادم نتحكم به — حذف التطبيق أو حسابك يزيله نهائيًا، ولا توجد نسخة سحابية لاستعادته.</string>
-    <string name="terms_s3_heading">ميزات الذكاء الاصطناعي</string>
-    <string name="terms_s3_body">عند استخدام ميزة مدعومة بالذكاء الاصطناعي (تحسين وصف، إنشاء خطاب تقديم، إلخ)، يتم إرسال النص المعني إلى مزوّد الذكاء الاصطناعي لدينا (Groq) لإنشاء رد. لا تُضمَّن أي معلومات عن الحساب في ذلك الطلب.</string>
-    <string name="terms_s4_heading">الخدمات التي نقدمها</string>
-    <string name="terms_s4_body">منشئ سير ذاتية بقوالب احترافية، مساعدة كتابة بالذكاء الاصطناعي، منشئ خطابات تقديم، ماسح مستندات مع تحويل الصور إلى نص (OCR)، أدوات PDF (دمج، ضغط، تحويل صورة إلى PDF، وPDF إلى JPG)، واشتراك مميز اختياري يزيل الإعلانات ويفتح مجموعة الأدوات الكاملة.</string>
-    <string name="terms_s5_heading">الاشتراكات والمدفوعات</string>
-    <string name="terms_s5_body">تُفوتر الاشتراكات المميزة (شهرية أو سنوية) حصريًا عبر Google Play Billing — وهي وسيلة الدفع الوحيدة التي نستخدمها. نحن لا ندمج أي معالج دفع منفصل ولا نرى أو نخزّن بيانات بطاقتك أو PayPal أو أي وسيلة دفع أخرى مباشرة أبدًا؛ كل ذلك تديره Google بالكامل. يمكنك إدارة اشتراكك أو إلغاؤه في أي وقت من الإعدادات، والتي تنقلك مباشرة إلى إدارة اشتراكات Google Play.</string>
-    <string name="terms_s6_heading">حذف حسابك</string>
-    <string name="terms_s6_body">يمكنك حذف حسابك في أي وقت من الإعدادات ← الملف الشخصي ← حذف الحساب. يؤدي هذا إلى إزالة تسجيل دخولك نهائيًا وكل سيرة ذاتية وخطاب تقديم ومستند ممسوح مخزَّن على ذلك الجهاز. هذا لا يلغي اشتراك Play Store النشط — يجب إلغاؤه بشكل منفصل عبر Google Play، وإلا استمرت الفوترة.</string>
-    <string name="terms_s7_heading">مسؤولياتك</string>
-    <string name="terms_s7_body">حافظ على سرية بيانات تسجيل الدخول الخاصة بك، وقدّم معلومات دقيقة، ولا تسئ استخدام التطبيق أو تحاول التدخل في عمله. يجوز لنا تعليق الوصول للحسابات التي تنتهك هذه الشروط.</string>
-    <string name="terms_s8_heading">أسئلة</string>
-    <string name="terms_s8_body">تواصل معنا في أي وقت عبر rssphere0@gmail.com.</string>
-    <string name="terms_s_login_heading">لماذا نطلب منك تسجيل الدخول، وكيف يمكنك ذلك</string>
-    <string name="terms_s_login_body">يحافظ تسجيل الدخول على ربط اشتراكك المميز بحسابك، ويتيح لك العودة لتسجيل الدخول دون فقدان الوصول إليه. لا يتم رفع سيرك الذاتية أو مستنداتك إلى أي مكان — تبقى على جهازك (انظر أدناه). يمكنك تسجيل الدخول بطريقتين: بالبريد الإلكتروني وكلمة المرور، أو عبر Google. تتم إدارة كلتا الطريقتين بأمان من خلال Firebase Authentication، ولا نرى أو نخزّن أبدًا كلمة مرور حساب Google الخاص بك.</string>
-    <string name="terms_s_perm_heading">الأذونات التي نطلبها</string>
-    <string name="terms_s_perm_body">الكاميرا: لمسح المستندات ضوئيًا والتقاط صورة ملفك الشخصي مباشرة داخل التطبيق. الإنترنت وحالة الشبكة: ضروريان لعمل ميزات الذكاء الاصطناعي، وتسجيل الدخول إلى الحساب، وفوترة الاشتراك المميز، وللتحقق من اتصالك قبل تنفيذ هذه الطلبات. معرّف الإعلانات: يُستخدم لعرض الإعلانات لمستخدمي الفئة المجانية عبر Google AdMob — لا يُستخدم إطلاقًا عند الاشتراك في النسخة المميزة لأن الإعلانات تُزال بالكامل. نحن لا نطلب الوصول إلى جهات اتصالك أو موقعك أو الميكروفون أو رسائلك.</string>
 </resources>

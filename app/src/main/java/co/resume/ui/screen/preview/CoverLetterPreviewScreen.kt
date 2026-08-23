@@ -33,9 +33,9 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import co.resumeai.R
-import co.resume.billing.requirePremium
 import co.resume.domain.export.DocumentExporter
 import co.resume.ui.component.CoverLetterPagePreview
+import co.resume.ui.component.SupportWithAdDialog
 import co.resume.ui.theme.ResumeBuilderTheme
 import co.resume.ui.viewmodel.AdViewModel
 import co.resume.ui.viewmodel.CoverLetterPreviewViewModel
@@ -44,15 +44,19 @@ import co.resume.ui.viewmodel.CoverLetterPreviewViewModel
 @Composable
 fun CoverLetterPreviewScreen(
     onBack: () -> Unit,
-    onOpenPaywall: () -> Unit = {},
     viewModel: CoverLetterPreviewViewModel = hiltViewModel(),
     adViewModel: AdViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     var webView by remember { mutableStateOf<WebView?>(null) }
     val context = LocalContext.current
-    val isPremium by adViewModel.isPremium.collectAsStateWithLifecycle()
+    val activity = context as? android.app.Activity
     val shareChooserTitle = stringResource(R.string.cover_letter_share_chooser_title)
+    val adManager = adViewModel.adManager
+    var showAdPrompt by remember { mutableStateOf(false) }
+    fun offerAdAfter() {
+        if (adManager.canOfferRewardedPrompt()) showAdPrompt = true
+    }
 
     CoverLetterPreviewContent(
         html = uiState.html,
@@ -60,17 +64,29 @@ fun CoverLetterPreviewScreen(
         onWebViewReady = { webView = it },
         onShare = {
             val wv = webView ?: return@CoverLetterPreviewContent
-            requirePremium(isPremium, onOpenPaywall) {
-                DocumentExporter.sharePdf(context, wv, uiState.fileTitle, shareChooserTitle, "cover_letter")
-            }
+            DocumentExporter.sharePdf(context, wv, uiState.fileTitle, shareChooserTitle, "cover_letter")
+            offerAdAfter()
         },
         onDownload = {
             val wv = webView ?: return@CoverLetterPreviewContent
-            requirePremium(isPremium, onOpenPaywall) {
-                DocumentExporter.exportAsPdf(context, wv, uiState.fileTitle, "cover_letter")
-            }
+            DocumentExporter.exportAsPdf(context, wv, uiState.fileTitle, "cover_letter")
+            offerAdAfter()
         }
     )
+
+    if (showAdPrompt) {
+        SupportWithAdDialog(
+            onWatchAd = {
+                showAdPrompt = false
+                adManager.markRewardedPromptShown()
+                activity?.let { adManager.showRewarded(it) {} }
+            },
+            onSkip = {
+                showAdPrompt = false
+                adManager.markRewardedPromptShown()
+            }
+        )
+    }
 }
 
 /**
@@ -111,7 +127,8 @@ private fun CoverLetterPreviewContent(
                     Icon(Icons.Filled.Download, contentDescription = stringResource(R.string.preview_cd_download))
                 }
             }
-        }
+        },
+        bottomBar = { co.resume.ui.component.BannerAdView() }
     ) { padding ->
         // CoverLetterPagePreview gives every cover letter preview surface (this screen, plus the
         // template-browse and template-picker preview dialogs) an identical, reliable 40dp gap on

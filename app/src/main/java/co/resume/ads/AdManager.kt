@@ -10,7 +10,6 @@ import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.google.android.gms.ads.rewarded.RewardedAd
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
-import co.resume.billing.SubscriptionRepository
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -21,19 +20,17 @@ import javax.inject.Singleton
  *  every single field they save, which is exactly the "frustrated by ads" outcome to avoid. */
 private const val REWARDED_PROMPT_COOLDOWN_MS = 5 * 60 * 1000L
 
+/** Ad-supported app: every user sees interstitials/banners/rewarded ads, there is no premium
+ *  tier to opt out of. */
 @Singleton
 class AdManager @Inject constructor(
-    @ApplicationContext private val context: Context,
-    private val subscriptionRepository: SubscriptionRepository
+    @ApplicationContext private val context: Context
 ) {
     private var interstitial: InterstitialAd? = null
     private var rewarded: RewardedAd? = null
     private var lastRewardedPromptAt = 0L
 
-    private val isPremium: Boolean get() = subscriptionRepository.isPremium.value
-
     fun preload() {
-        if (isPremium) return
         if (interstitial != null) return
         InterstitialAd.load(
             context,
@@ -48,7 +45,6 @@ class AdManager @Inject constructor(
     }
 
     fun showInterstitial(activity: Activity, onComplete: () -> Unit) {
-        if (isPremium) { onComplete(); return }
         val ad = interstitial
         if (ad == null) { onComplete(); return }
         ad.fullScreenContentCallback = object : FullScreenContentCallback() {
@@ -80,7 +76,7 @@ class AdManager @Inject constructor(
      *  once they actually show it (not just when the user agrees) so a declined prompt still
      *  starts the cooldown rather than being re-offered on the very next save. */
     fun canOfferRewardedPrompt(): Boolean =
-        !isPremium && rewarded != null && System.currentTimeMillis() - lastRewardedPromptAt > REWARDED_PROMPT_COOLDOWN_MS
+        rewarded != null && System.currentTimeMillis() - lastRewardedPromptAt > REWARDED_PROMPT_COOLDOWN_MS
 
     fun markRewardedPromptShown() {
         lastRewardedPromptAt = System.currentTimeMillis()
@@ -90,7 +86,6 @@ class AdManager @Inject constructor(
      *  earned, ad dismissed without finishing, or failed to show) since watching it is always
      *  optional and never blocks whatever the user was already doing. */
     fun showRewarded(activity: Activity, onFinished: () -> Unit) {
-        if (isPremium) { onFinished(); return }
         val ad = rewarded
         if (ad == null) { onFinished(); return }
         ad.fullScreenContentCallback = object : FullScreenContentCallback() {

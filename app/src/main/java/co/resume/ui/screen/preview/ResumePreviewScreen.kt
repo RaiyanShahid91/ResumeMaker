@@ -28,6 +28,9 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -37,8 +40,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import co.resumeai.R
-import co.resume.billing.requirePremium
 import co.resume.ui.component.ResumeWebPreview
+import co.resume.ui.component.SupportWithAdDialog
 import co.resume.ui.theme.ResumeBuilderTheme
 import co.resume.ui.viewmodel.AdViewModel
 import co.resume.ui.viewmodel.ResumePreviewViewModel
@@ -47,15 +50,19 @@ import co.resume.ui.viewmodel.ResumePreviewViewModel
 @Composable
 fun ResumePreviewScreen(
     onBack: () -> Unit,
-    onOpenPaywall: () -> Unit = {},
     viewModel: ResumePreviewViewModel = hiltViewModel(),
     adViewModel: AdViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     val localContext = LocalContext.current
-    val isPremium by adViewModel.isPremium.collectAsStateWithLifecycle()
+    val activity = localContext as? android.app.Activity
     val shareChooserTitle = stringResource(R.string.preview_share_chooser_title)
     val estimatedPages = uiState.layout?.pages?.size ?: 1
+    val adManager = adViewModel.adManager
+    var showAdPrompt by remember { mutableStateOf(false) }
+    fun offerAdAfter() {
+        if (adManager.canOfferRewardedPrompt()) showAdPrompt = true
+    }
 
     Scaffold(
         containerColor = androidx.compose.ui.graphics.Color.Transparent,
@@ -75,9 +82,8 @@ fun ResumePreviewScreen(
                 FloatingActionButton(
                     onClick = {
                         val layout = uiState.layout ?: return@FloatingActionButton
-                        requirePremium(isPremium, onOpenPaywall) {
-                            viewModel.sharePdf(layout, uiState.fileTitle, shareChooserTitle, localContext)
-                        }
+                        viewModel.sharePdf(layout, uiState.fileTitle, shareChooserTitle, localContext)
+                        offerAdAfter()
                     }
                 ) {
                     Icon(Icons.Filled.Share, contentDescription = stringResource(R.string.preview_cd_share))
@@ -85,15 +91,15 @@ fun ResumePreviewScreen(
                 FloatingActionButton(
                     onClick = {
                         val layout = uiState.layout ?: return@FloatingActionButton
-                        requirePremium(isPremium, onOpenPaywall) {
-                            viewModel.exportPdf(layout, uiState.fileTitle, localContext)
-                        }
+                        viewModel.exportPdf(layout, uiState.fileTitle, localContext)
+                        offerAdAfter()
                     }
                 ) {
                     Icon(Icons.Filled.Download, contentDescription = stringResource(R.string.preview_cd_download))
                 }
             }
-        }
+        },
+        bottomBar = { co.resume.ui.component.BannerAdView() }
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize()) {
             Column(
@@ -122,6 +128,20 @@ fun ResumePreviewScreen(
                 }
             }
         }
+    }
+
+    if (showAdPrompt) {
+        SupportWithAdDialog(
+            onWatchAd = {
+                showAdPrompt = false
+                adManager.markRewardedPromptShown()
+                activity?.let { adManager.showRewarded(it) {} }
+            },
+            onSkip = {
+                showAdPrompt = false
+                adManager.markRewardedPromptShown()
+            }
+        )
     }
 }
 

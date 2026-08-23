@@ -332,14 +332,7 @@ private fun CoverLetterEditorScreenPreview() {
             onOpenTemplatePicker = {},
             onOpenPreview = {},
             onSave = {},
-            adManager = co.resume.ads.AdManager(
-                androidx.compose.ui.platform.LocalContext.current,
-                co.resume.billing.SubscriptionRepository(
-                    co.resume.utils.SharedPref(androidx.compose.ui.platform.LocalContext.current),
-                    co.resume.auth.AuthRepository(co.resume.auth.UserProfileRepository()),
-                    co.resume.auth.UserProfileRepository()
-                )
-            )
+            adManager = co.resume.ads.AdManager(androidx.compose.ui.platform.LocalContext.current)
         )
     }
 }

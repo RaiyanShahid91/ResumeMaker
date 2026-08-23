@@ -69,8 +69,6 @@ fun DashboardScreen(
     onOpenAbout: () -> Unit,
     onOpenGuide: () -> Unit,
     onOpenAiChat: () -> Unit = {},
-    onOpenPaywall: () -> Unit = {},
-    onLoggedOut: () -> Unit = {},
     onScanReady: () -> Unit = {},
     onOpenPdfViewer: (path: String, title: String) -> Unit = { _, _ -> },
     onOpenConverterTool: (co.resume.ui.viewmodel.ConverterTool) -> Unit = {}
@@ -183,9 +181,7 @@ fun DashboardScreen(
                         onLanguageSelected = onLanguageSelected,
                         onOpenPrivacy = onOpenPrivacy,
                         onOpenAbout = onOpenAbout,
-                        onOpenGuide = onOpenGuide,
-                        onOpenPaywall = onOpenPaywall,
-                        onLoggedOut = onLoggedOut
+                        onOpenGuide = onOpenGuide
                     )
                 }
             }
